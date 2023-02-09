@@ -1,0 +1,29 @@
+.new_member_card {
+    padding: 1.5rem;
+    position: relative;
+    .item {
+        height: 442px;
+        width: 317px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        background-image: url("/assets/new-family-card.png");
+
+        figure {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+            }
+        }
+    }
+}

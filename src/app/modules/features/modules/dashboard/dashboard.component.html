@@ -1,0 +1,34 @@
+<section>
+    <header>
+        <div class="emp_basic_info">
+            <div class="emp_image">
+                <img src="/assets/default_male.jpg" alt="user_image">
+            </div>
+            <div class="emp_name">
+                <span>Hello!</span>
+                <h2>Shiva Saroj</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+    <div class="main_wraper">
+        <div class="latest_opeanings">
+            <app-latest-job-opening></app-latest-job-opening>
+        </div>
+        <div class="referral_bonus">
+            <h3 class="heading">Our Referral Bonus Program</h3>
+            <div class="referral_bonus_cards">
+
+                <ng-container *ngFor="let data of referralData">
+                    <app-referral-bonous-program [referalData]="data"></app-referral-bonous-program>
+                </ng-container>
+            </div>
+        </div>
+        <div class="new_members">
+            <h3 class="heading">New Family Members</h3>
+            <app-new-family-member></app-new-family-member>
+        </div>
+    </div>
+    </main>
+
+</section>

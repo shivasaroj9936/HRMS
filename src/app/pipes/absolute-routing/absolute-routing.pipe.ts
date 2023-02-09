@@ -1,0 +1,21 @@
+import { Pipe, PipeTransform } from "@angular/core";
+import * as routes from "../../constants/routes";
+@Pipe({
+  name: "absolutePath",
+})
+export class AbsoluteRoutingPipe implements PipeTransform {
+  transform(route: string, id?: any): any {
+
+    try {
+      if (id) {
+        //@ts-ignore: unreachable code error
+        return routes[route].fullUrl + "/" + id;
+      }
+      //@ts-ignore: unreachable code error
+
+      return routes[route].fullUrl;
+    } catch (error) {
+      return "";
+    }
+  }
+}

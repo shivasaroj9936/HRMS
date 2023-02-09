@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="example-toolbar">
+    <div class="left">
+        <img class="logo_dash" *ngIf="isExpanded ||smallWindow" src="/assets/applogo _dashBoard.png" alt="logo">
+        <img class="logo_app" *ngIf="!isExpanded && !smallWindow" src="/assets/ic-logo.svg" alt="logo">
+        <button class="menu_icon" (click)="expand()"><mat-icon>menu</mat-icon></button>
+    </div>
+    <div class="right">
+        <div class="profile">
+            <span>User Name</span>
+            <img class="user_image" src="/assets/default_male.jpg" alt="user_logo">
+            <mat-icon [matMenuTriggerFor]="belowMenu" class="menu_button" (click)="profileOpen=!profileOpen" [ngClass]="{'rotated' : profileOpen}"  >expand_more</mat-icon>
+            <mat-menu #belowMenu="matMenu" yPosition="below" (click)="profileOpen=!profileOpen" >
+                <button mat-menu-item>  <mat-icon>person</mat-icon> My Profile </button>
+                <button mat-menu-item><mat-icon>key</mat-icon>Change Password </button>
+                <button mat-menu-item><mat-icon>logout</mat-icon> Sign out</button>
+
+            </mat-menu>
+        </div>
+        <div class="help">
+            <button class="help_button">Help</button>
+        </div>
+        <div class="notification">
+            <mat-icon>notifications</mat-icon>
+        </div>
+    </div>
+        <span class="muted_text">Last Login Feb-01-2023 12:25 PM from 172.31.76.182  </span>
+</mat-toolbar>

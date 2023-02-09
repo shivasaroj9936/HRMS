@@ -1,0 +1,32 @@
+
+  <ng-container *ngIf="wait">
+    
+    <ngu-carousel class="crr" #myCarousel [inputs]="carouselConfig" [dataSource]="listToShow">
+      
+      <ngu-item NguCarouselItem *nguCarouselDef="let item; let j = index">
+        <ng-container *ngTemplateOutlet="item"></ng-container>
+      </ngu-item>
+      
+
+      <section>
+      <!-- <div class="btns"> -->
+
+        <button NguCarouselNext  (click)="ckk()" class="rightRs"> > </button>
+        <button NguCarouselPrev class="leftRs"> < </button>
+        
+      </section>
+      <!-- </div> -->
+
+
+
+
+      
+      <!-- <ul class="myPoint" NguCarouselPoint>
+      <li
+      *ngFor="let js of myCarousel.pointNumbers; let j = index"
+      [class.active]="js == myCarousel.activePoint"
+      (click)="myCarousel.moveTo(j)"
+      ></li>
+    </ul> -->
+    </ngu-carousel>
+  </ng-container>
