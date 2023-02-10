@@ -8,25 +8,21 @@
       </ngu-item>
       
 
-      <section>
-      <!-- <div class="btns"> -->
 
-        <button NguCarouselNext  (click)="ckk()" class="rightRs"> > </button>
-        <button NguCarouselPrev class="leftRs"> < </button>
+        <button NguCarouselPrev class="leftRs"  [style.z-index]="9999" >&lt;</button>
+        <button NguCarouselNext class="rightRs" [style.z-index]="9999" >&gt;</button>
         
-      </section>
-      <!-- </div> -->
 
 
 
 
-      
-      <!-- <ul class="myPoint" NguCarouselPoint>
-      <li
-      *ngFor="let js of myCarousel.pointNumbers; let j = index"
-      [class.active]="js == myCarousel.activePoint"
-      (click)="myCarousel.moveTo(j)"
-      ></li>
-    </ul> -->
-    </ngu-carousel>
-  </ng-container>
+      </ngu-carousel>
+    </ng-container>
+    
+    <!-- <ul class="myPoint" NguCarouselPoint>
+    <li
+    *ngFor="let js of myCarousel.pointNumbers; let j = index"
+    [class.active]="js == myCarousel.activePoint"
+    (click)="myCarousel.moveTo(j)"
+    ></li>
+  </ul> -->

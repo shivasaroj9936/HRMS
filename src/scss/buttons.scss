@@ -10,8 +10,18 @@
     }
 
     .btn_cancel {
+        // border: 1.5px solid rgba(150, 165, 184, 0.5);
+        // background-color: #ffffff;
+        // @include font('Lato', 14px, #96A5B8, 500, 1.4);
+        // border-radius: 4px;
+
+
         border: 1.5px solid rgba(150, 165, 184, 0.5);
         background-color: #ffffff;
-        // @include font('Lato', 14px, #96A5B8, 500, 1.4);
+        font-family: "Lato";
+        font-size: 14px;
+        color: #96A5B8;
+        font-weight: 500;
+        line-height: 1.4;
         border-radius: 4px;
     }

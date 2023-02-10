@@ -1,15 +1,73 @@
+// section {
+//     width: 100%;
+//     background-color:var(--white-background-color);
+//   .heading {
+//     width: 100%;
+//     h3 {    
+//       font-size: 20px;
+//       color: #3246d3;
+//       font-family: "Segoe UI";
+//       padding: 11px 25px 11px 15px;
+//       border-bottom: 1px solid #f3f7fc;
+//       font-weight: 700;
+//     }
+//   }
+// }
+
+
+// @import "../../../../../scss/mixins.scss";
+// @import "../../../../../scss/var";
+
+// @import "../basic-information/basic-information.component.scss";
+
 section {
-    width: 100%;
-    background-color:var(--white-background-color);
-  .heading {
-    width: 100%;
-    h3 {    
-      font-size: 20px;
-      color: #3246d3;
-      font-family: "Segoe UI";
-      padding: 11px 25px 11px 15px;
-      border-bottom: 1px solid #f3f7fc;
-      font-weight: 700;
+  // height: 100%;
+  background-color: #fff;
+  .basic-card {
+    padding: 0px !important;
+
+    .header {
+      .header-text {
+        color: var(--profile-heading-color);
+        font-size: 20px;
+        padding: 11px 25px 11px 15px;
+        font-weight: 500;
+      }
+    }
+    .border {
+      border: 1px solid var(--border-color);
+    }
+    .content {
+      .form {
+        padding: 20px;
+        .label {
+          font-weight: 500;
+        }
+        .formfield {
+          display: flex;
+          flex-direction: column;
+        }
+        .increaseFormfield {
+          width: 369px;
+        }
+
+        ::ng-deep {
+          .mat-form-field-appearance-outline .mat-form-field-flex {
+            box-shadow: 0px 4px 8px rgb(44 39 56 / 4%) !important;
+          }
+          .mat-form-field-appearance-outline .mat-form-field-infix {
+            padding: 12px 0px 12px 0px;
+          }
+          .mat-select-disabled .mat-select-trigger{
+            cursor: not-allowed !important;
+          }
+        }
+        .inputs{
+          display: flex;
+          gap: 30px;
+        }
+      }
     }
   }
 }
+

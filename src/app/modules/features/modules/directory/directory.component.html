@@ -1,1 +1,68 @@
-<p>directory works!</p>
+<!-- <section>
+    <div class="heading">
+        <h3>{{uiText.MODULE_HEADING}}</h3>
+    </div>
+    <div class="filter">
+        <form>
+            <div class="form_field">
+                <label class="label">{{uiText.NAME}}</label>
+                <mat-form-field appearance="outline" class="increaseFormfield">
+                    <input matInput [placeholder]="uiText.SEARCH_PLACEHOLDER">
+
+                </mat-form-field>
+            </div>
+
+            <div class="form_field">
+                <label class="label">{{uiText.DEPARTMENT}}</label>
+                <mat-form-field appearance="outline" class="increaseFormfield">
+                    <mat-select placeholder="ALL">
+                        <mat-option *ngFor="let item of departments" [value]="item">
+                            {{item}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+        </form>
+        <div class="actions">
+
+            <button>{{uiText.RESET}}</button>
+            <button>{{uiText.BUTTON_TEXT}}</button>
+        </div>
+    </div>
+
+</section> -->
+
+
+<section>
+    <div class="basic-card">
+        <div class="header">
+            <h3 class="header-text">{{uiText.MODULE_HEADING}}</h3>
+        </div>
+            <form >
+                <div class="filter">
+                    <div class="formfield 4">
+                        <label class="label">{{uiText.NAME}}</label>
+                        <mat-form-field appearance="outline" >
+                            <input matInput [placeholder]="uiText.SEARCH_PLACEHOLDER">
+                        </mat-form-field>
+                    </div>
+                    <div class="formfield 4">
+                        <label class="label">{{uiText.DEPARTMENT}}</label>
+                        <mat-form-field appearance="outline" >
+                            <mat-select>
+                                <mat-option *ngFor="let item of departments " [value]="item">
+                                    {{item}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="actions">
+
+                    <button mat-raised-button class= "btn_cancel" >{{uiText.RESET}}</button>
+                    <button mat-raised-button class="btn_primary">{{uiText.BUTTON_TEXT}}</button>
+                </div>
+            </form>
+        </div>
+</section>

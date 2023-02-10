@@ -1,5 +1,35 @@
-// .rightRs{
-//     position: absolute;
-//     top: -463px;
-//     left: 36px;
-// }
+  .leftRs {
+    position: absolute;
+    top: -56px;
+    bottom: 0;
+    color:var( --caurosel-button-color);
+
+    background-color: #f1f1f1;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    right: 30px;
+    border: none;
+
+
+  }
+
+  .rightRs {
+    position: absolute;
+    top: -56px;
+    bottom: 0;
+    color:var( --caurosel-button-color);
+    background-color: #f1f1f1;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    right: 0;
+    border: none;
+  }
+
+  :host::ng-deep{
+
+    .ngucarousel{
+      position: initial !important;
+    }
+  }

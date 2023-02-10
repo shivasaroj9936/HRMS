@@ -6,7 +6,7 @@ import { NotFoundComponent } from "./modules/not-found/not-found.component";
 const routes: Routes = [
   {
     path: "",
-    redirectTo: ACCOUNT.path,
+    redirectTo: ADMIN.path,
     pathMatch: "full",
   },
   {

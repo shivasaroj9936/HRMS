@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProfilePhotoRoutingModule } from './profile-photo-routing.module';
 import { ProfilePhotoComponent } from './profile-photo.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ProfilePhotoComponent } from './profile-photo.component';
   ],
   imports: [
     CommonModule,
-    ProfilePhotoRoutingModule
+    ProfilePhotoRoutingModule,
+    MatButtonModule
   ]
 })
 export class ProfilePhotoModule { }

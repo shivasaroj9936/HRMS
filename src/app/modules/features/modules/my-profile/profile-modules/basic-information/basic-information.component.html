@@ -1,1 +1,118 @@
-<p>basic-information works!</p>
+<section @slideInRight>
+    <div class="basic-card">
+        <div class="header">
+            <p class="header-text">{{uiMessage.HEADER}}</p>
+        </div>
+        <div class="border"></div>
+        <div class="content">
+            <form class="form">
+                <div class="inputs">
+                    <div class="formfield 1">
+                        <label class="label">{{labelMessage.FIRST_NAME}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <input [placeholder]="labelMessage.FIRST_NAME" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="formfield 2">
+                        <label class="label">{{labelMessage.LAST_NAME}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <input [placeholder]="labelMessage.LAST_NAME" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="formfield 3">
+                        <label class="label">{{labelMessage.DATE_OF_BIRTH}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <input matInput [matDatepicker]="picker1" readonly>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="formfield 4">
+                        <label class="label">{{labelMessage.GENDER}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <mat-select>
+                                <!-- <input type="text" [matAutocomplete]="auto"> -->
+                                <!-- <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete"> -->
+                                <mat-option *ngFor="let item of genderValue" [value]="item">
+                                    {{item.LABEL}}
+                                </mat-option>
+                                <!-- </mat-autocomplete> -->
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <!-- <app-dropdown-field [gender]="[labelMessage.GENDER]"></app-dropdown-field> -->
+                    <div class="formfield 5">
+                        <label class="label">{{labelMessage.MARITAL_STATUS}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <mat-select>
+                                <!-- <input type="text" [matAutocomplete]="auto"> -->
+                                <!-- <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete"> -->
+                                <mat-option *ngFor="let item of maritalStatusValue" [value]="item">
+                                    {{item.LABEL}}
+                                </mat-option>
+                                <!-- </mat-autocomplete> -->
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="formfield 6">
+                        <label class="label">{{labelMessage.CONTACT}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <input [placeholder]="labelMessage.CONTACT" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="mid-container">
+                    <div class="total-exp">
+                        <p class="label heading-exp">
+                            {{uiMessage.TOTAL_WORK_EXP}}
+                        </p>
+                        <div class="inputs">
+                            <div class="formfield 7">
+                                <label class="label">{{labelMessage.YEAR}}</label>
+                                <mat-form-field appearance="outline" class="yearFormfield">
+                                    <input min="0" type="number" [placeholder]="labelMessage.YEAR" matInput>
+                                </mat-form-field>
+                            </div>
+                            <div class="formfield 8">
+                                <label class="label">{{labelMessage.MONTH}}</label>
+                                <mat-form-field appearance="outline" class="yearFormfield">
+                                    <input min="0" max="11" type="number" [placeholder]="labelMessage.MONTH" matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total-exp">
+                        <p class="label heading-exp">
+                            {{uiMessage.RELEVANT_EXP}}
+                        </p>
+                        <div class="inputs">
+                            <div class="formfield 9">
+                                <label class="label">{{labelMessage.YEAR}}</label>
+                                <mat-form-field appearance="outline" class="yearFormfield">
+                                    <input min="0" type="number" [placeholder]="labelMessage.YEAR" matInput>
+                                </mat-form-field>
+                            </div>
+                            <div class="formfield 10">
+                                <label class="label">{{labelMessage.MONTH}}</label>
+                                <mat-form-field appearance="outline" class="yearFormfield">
+                                    <input min="0" max="11" type="number" [placeholder]="labelMessage.MONTH" matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="address">
+                    <label class="label">{{labelMessage.ADDRESS}}</label>
+                    <mat-form-field appearance="outline" class="addressFormfield">
+                        <textarea type="text" placeholder="Message" class="inputMessage" matInput cdkTextareaAutosize
+                            cdkAutosizeMinRows="4" cdkAutosizeMaxRows="7"
+                            [placeholder]="labelMessage.ADDRESS"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="classyButton">
+                    <button class="btn_primary" mat-raised-button >{{uiMessage.BUTTON}}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

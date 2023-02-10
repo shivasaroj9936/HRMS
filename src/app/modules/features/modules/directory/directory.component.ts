@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BASIC_INFORMATION } from './constants/ui-text';
 
 @Component({
   selector: 'app-directory',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectoryComponent implements OnInit {
 
+  uiText=BASIC_INFORMATION;
+  departments=['dadd','dddddd','reredere','dsfere']
   constructor() { }
 
   ngOnInit(): void {

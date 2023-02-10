@@ -1,6 +1,45 @@
-<section>
+<!-- <section>
     <div class="heading">
         <h3>Appraisal Detail </h3>
     </div>
     
-</section>
+</section> -->
+
+
+
+<section @slideInRight>
+    <div class="basic-card">
+      <div class="header">
+        <p class="header-text">{{uiMessage.APPRAISAL_HEADER}}</p>
+      </div>
+      <div class="border"></div>
+      <div class="content">
+        <form class="form">
+          <div class="inputs">
+            <div class="formfield 4">
+              <label class="label">{{labelMessage.APPRAISAL_CYCLE}}</label>
+              <mat-form-field appearance="outline" class="increaseFormfield" >
+                <mat-select disabled="true">
+                  <!-- <mat-option *ngFor="let item of genderValue" [value]="item">
+                    {{item.LABEL}}
+                  </mat-option> -->
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <!-- <app-dropdown-field [gender]="[labelMessage.GENDER]"></app-dropdown-field> -->
+            <div class="formfield 4">
+              <label class="label">{{labelMessage.APPRAISAL_MONTH}}</label>
+              <mat-form-field appearance="outline" class="increaseFormfield">
+                <mat-select disabled="true">
+                  <!-- <mat-option *ngFor="let item of genderValue" [value]="item">
+                    {{item.LABEL}}
+                  </mat-option> -->
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  

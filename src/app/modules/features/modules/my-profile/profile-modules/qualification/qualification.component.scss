@@ -1,0 +1,25 @@
+@import "../basic-information/basic-information.component.scss";
+
+section {
+    .card2 {
+        margin-top: 20px;
+    }
+
+    .basic-card {
+        .content {
+            .form {
+                .topField {
+                    margin-top: -25px !important;
+                }
+
+                .increaseFormfield {
+                    width: 550px;
+                }
+
+                .inputs {
+                    gap: 40px;
+                }
+            }
+        }
+    }
+}

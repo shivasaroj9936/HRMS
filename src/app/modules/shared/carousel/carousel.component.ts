@@ -9,6 +9,8 @@ import { NguCarousel, NguCarouselConfig } from '@ngu/carousel';
 })
 export class CarouselComponent implements OnInit, AfterViewInit {
   @Input() listToShow: any;
+  @ViewChild('myCarousel') carousel!: NguCarousel<any>;
+
   wait = false;
   ngOnInit() {
     console.log(this.listToShow);
@@ -52,4 +54,9 @@ export class CarouselComponent implements OnInit, AfterViewInit {
     console.log(this.myCarousel);
     
   }
+
+
+
+
+
 }
