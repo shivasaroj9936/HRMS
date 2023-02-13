@@ -3,7 +3,6 @@
         <div class="header">
             <p class="header-text">{{uiMessage.QUALIFICATION_HEADER}}</p>
         </div>
-        <div class="border"></div>
         <div class="content">
             <form class="form">
                 <div class="inputs">
@@ -16,13 +15,31 @@
 
                     <div class="formfield 2">
                         <label class="label">{{labelMessage.EDUCATION}}</label>
-                        <mat-form-field appearance="outline" class="increaseFormfield">
+                        <!-- <mat-form-field appearance="outline" class="increaseFormfield">
                             <mat-select>
                                 <mat-option *ngFor="let item of educationDropdown" [value]="item">
                                     {{item.LABEL}}
                                 </mat-option>
                             </mat-select>
-                        </mat-form-field>
+                        </mat-form-field> -->
+                        <mat-form-field>
+                        <mat-select class="increaseFormfield" appearance="outline">
+                        <mat-form-field  appearance="outline">
+                            <input type="text"
+                                   placeholder="Pick one"
+                                   aria-label="Number"
+                                   matInput
+                                   [formControl]="myControl"
+                                   [matAutocomplete]="auto">
+                            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                              <mat-option *ngFor="let option of filteredOptions | async" [value]="option" [disabled]="option=='not found'">
+                                {{option}}
+                              </mat-option>
+                            </mat-autocomplete>
+                            <mat-icon  matSuffix>expand_more</mat-icon>
+                          </mat-form-field>
+                        </mat-select>
+                    </mat-form-field>
                     </div>
                     <div class="formfield topField 3">
                         <label class="label">{{labelMessage.TIME}}</label>
@@ -45,7 +62,7 @@
                     <div class="formfield topField 5">
                         <label class="label">{{labelMessage.LANGUAGE}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <mat-select>
+                            <mat-select >
                                 <mat-option *ngFor="let item of languageDropdown" [value]="item">
                                     {{item.LABEL}}
                                 </mat-option>

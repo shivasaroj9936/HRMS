@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DIRECTORY_EMPLOYEE_DATA, IDIRECTORY_DATA } from 'src/app/interfaces/common.interface';
 import { BASIC_INFORMATION } from './constants/ui-text';
 
 @Component({
@@ -9,6 +10,7 @@ import { BASIC_INFORMATION } from './constants/ui-text';
 export class DirectoryComponent implements OnInit {
 
   uiText=BASIC_INFORMATION;
+  directoryDataList :IDIRECTORY_DATA[]=DIRECTORY_EMPLOYEE_DATA;
   departments=['dadd','dddddd','reredere','dsfere']
   constructor() { }
 

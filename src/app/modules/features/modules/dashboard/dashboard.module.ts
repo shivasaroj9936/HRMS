@@ -9,6 +9,10 @@ import { NewFamilyMemberComponent } from './components/new-family-member/new-fam
 import { MatButtonModule } from '@angular/material/button';
 import { CarouselModule } from 'src/app/modules/shared/carousel/carousel.module';
 import { NguCarouselModule } from '@ngu/carousel';
+import { AppreciationComponent } from './components/appreciation/appreciation.component';
+import { AwardsComponent } from './components/awards/awards.component';
+import { BirthdayCelebrationComponent } from './components/birthday-celebration/birthday-celebration.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 const MATERIAL = [
   // MatSidenavModule,
@@ -24,6 +28,10 @@ const MATERIAL = [
     ReferralBonousProgramComponent,
     LatestJobOpeningComponent,
     NewFamilyMemberComponent,
+    AppreciationComponent,
+    AwardsComponent,
+    BirthdayCelebrationComponent,
+    GalleryComponent,
     
   ],
   imports: [

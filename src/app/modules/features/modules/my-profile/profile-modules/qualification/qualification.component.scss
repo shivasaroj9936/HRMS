@@ -23,3 +23,12 @@ section {
         }
     }
 }
+
+
+
+  ::ng-deep {
+    .mat-select-panel {
+      min-width: calc(100% + 15px) !important;
+      margin: 2.5rem 0rem 0rem 0.425rem !important;
+    }
+  }

@@ -1,32 +1,10 @@
-// section {
-//     width: 100%;
-//     background-color:var(--white-background-color);
-//   .heading {
-//     width: 100%;
-//     h3 {    
-//       font-size: 20px;
-//       color: #3246d3;
-//       font-family: "Segoe UI";
-//       padding: 11px 25px 11px 15px;
-//       border-bottom: 1px solid #f3f7fc;
-//       font-weight: 700;
-//     }
-//   }
-// }
-
-
-// @import "../../../../../scss/mixins.scss";
-// @import "../../../../../scss/var";
-
-// @import "../basic-information/basic-information.component.scss";
-
 section {
-  // height: 100%;
   background-color: #fff;
   .basic-card {
     padding: 0px !important;
 
     .header {
+      border-bottom: 1px solid var(--border-color);
       .header-text {
         color: var(--profile-heading-color);
         font-size: 20px;
@@ -34,9 +12,7 @@ section {
         font-weight: 500;
       }
     }
-    .border {
-      border: 1px solid var(--border-color);
-    }
+
     .content {
       .form {
         padding: 20px;

@@ -63,7 +63,6 @@ section {
 
       border-top-left-radius: 8px !important;
       border-top-right-radius: 8px !important;
-      cursor: pointer;
 
       .part {
         display: flex;
@@ -77,6 +76,7 @@ section {
         padding: 0.625rem 0.9375rem;
         margin-bottom: -1px;
         background-color: var(--white-background-color);
+      cursor: pointer;
 
         .icon {
           padding: 4px;

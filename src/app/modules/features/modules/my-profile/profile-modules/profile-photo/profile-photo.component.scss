@@ -10,6 +10,7 @@ section {
     padding: 0px !important;
 
     .header {
+      border-bottom: 1px solid var(--border-color);
       .header-text {
         color: var(--profile-heading-color);
         font-size: 20px;
@@ -17,9 +18,7 @@ section {
         font-weight: 500;
       }
     }
-    .border {
-      border: 1px solid var(--border-color);
-    }
+ 
     .formgroup{
       padding: 20px;
       .form{

@@ -27,6 +27,17 @@ export interface ProfilePart {
   title: string,
   route?: string
 }
+
+
+export interface IDIRECTORY_DATA {
+  IMAGE: string,
+  EMP_NAME: string,
+  EMP_DESIGNATION: string,
+  EMP_TECHNOLOGY: string,
+  EMAIL: string,
+  BIRTH_DATE: string,
+  BIRTH_MONTH: string,
+}
 export const JobOpeningList: JobOpening[] = [
   {
     jobLogo: '/assets/ios-developers.svg',
@@ -57,11 +68,119 @@ export const JobOpeningList: JobOpening[] = [
     exp_to: 5,
     location: 'Noida',
     date: '05/01/2023'
-  }
+  },
+  
+];
+export const DIRECTORY_EMPLOYEE_DATA: IDIRECTORY_DATA[] = [
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Aahan Verma',
+    EMP_DESIGNATION: 'Sr. Software Engineer',
+    EMP_TECHNOLOGY: 'Android',
+    EMAIL: 'mailto:aahan.verma@appinventiv.com',
+    BIRTH_DATE: '21st',
+    BIRTH_MONTH: 'Aug',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Deepak Yadav',
+    EMP_DESIGNATION: 'Software Engineer',
+    EMP_TECHNOLOGY: 'Angular',
+    EMAIL: ' mailto:deepak.yadav@appinventiv.com',
+    BIRTH_DATE: ' 08th',
+    BIRTH_MONTH: 'May',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Harshit Kumar Jain',
+    EMP_DESIGNATION: 'Software Engineer',
+    EMP_TECHNOLOGY: 'Angular',
+    EMAIL: 'mailto:harshit.jain@appinventiv.com',
+    BIRTH_DATE: '07th',
+    BIRTH_MONTH: 'Apr',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Harshit Kumar Jain',
+    EMP_DESIGNATION: 'Software Engineer',
+    EMP_TECHNOLOGY: 'Angular',
+    EMAIL: 'mailto:harshit.jain@appinventiv.com',
+    BIRTH_DATE: '07th',
+    BIRTH_MONTH: 'Apr',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Aahan Verma',
+    EMP_DESIGNATION: 'Sr. Software Engineer',
+    EMP_TECHNOLOGY: 'Android',
+    EMAIL: 'mailto:aahan.verma@appinventiv.com',
+    BIRTH_DATE: '21st',
+    BIRTH_MONTH: 'Aug',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Deepak Yadav',
+    EMP_DESIGNATION: 'Software Engineer',
+    EMP_TECHNOLOGY: 'Angular',
+    EMAIL: ' mailto:deepak.yadav@appinventiv.com',
+    BIRTH_DATE: ' 08th',
+    BIRTH_MONTH: 'May',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Harshit Kumar Jain',
+    EMP_DESIGNATION: 'Software Engineer',
+    EMP_TECHNOLOGY: 'Angular',
+    EMAIL: 'mailto:harshit.jain@appinventiv.com',
+    BIRTH_DATE: '07th',
+    BIRTH_MONTH: 'Apr',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Harshit Kumar Jain',
+    EMP_DESIGNATION: 'Software Engineer',
+    EMP_TECHNOLOGY: 'Angular',
+    EMAIL: 'mailto:harshit.jain@appinventiv.com',
+    BIRTH_DATE: '07th',
+    BIRTH_MONTH: 'Apr',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Aahan Verma',
+    EMP_DESIGNATION: 'Sr. Software Engineer',
+    EMP_TECHNOLOGY: 'Android',
+    EMAIL: 'mailto:aahan.verma@appinventiv.com',
+    BIRTH_DATE: '21st',
+    BIRTH_MONTH: 'Aug',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Deepak Yadav',
+    EMP_DESIGNATION: 'Software Engineer',
+    EMP_TECHNOLOGY: 'Angular',
+    EMAIL: ' mailto:deepak.yadav@appinventiv.com',
+    BIRTH_DATE: ' 08th',
+    BIRTH_MONTH: 'May',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Harshit Kumar Jain',
+    EMP_DESIGNATION: 'Software Engineer',
+    EMP_TECHNOLOGY: 'Angular',
+    EMAIL: 'mailto:harshit.jain@appinventiv.com',
+    BIRTH_DATE: '07th',
+    BIRTH_MONTH: 'Apr',
+  },
+  {
+    IMAGE: '/assets/default_male.jpg',
+    EMP_NAME: 'Harshit Kumar Jain',
+    EMP_DESIGNATION: 'Software Engineer',
+    EMP_TECHNOLOGY: 'Angular',
+    EMAIL: 'mailto:harshit.jain@appinventiv.com',
+    BIRTH_DATE: '07th',
+    BIRTH_MONTH: 'Apr',
+  },
 ]
-
-
-
 
 
 export const sideNavList: SideNavItem[] = [
@@ -85,13 +204,13 @@ export const sideNavList: SideNavItem[] = [
   { title: 'Announcements', icon: 'campaign', isActive: false, },
   { title: 'Travels', icon: 'flight', isActive: false, },
   { title: 'iconut', icon: 'iconut', isActive: true, route: 'dashboar' },
-]
+];
 
 export const profileMenuData = [
   { title: 'My Profile', icon: 'person_filled' },
   { title: 'Change Password', icon: 'key' },
   { title: 'Sign Out', icon: 'iconut' },
-]
+];
 
 
 export const PROFILE_PARTS: ProfilePart[] = [
