@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfilePart, PROFILE_PARTS } from 'src/app/interfaces/common.interface';
+import { ProfilePart, PROFILE_PARTS } from '../dashboard/interfaces/interfaces';
 
 @Component({
   selector: 'app-my-profile',
@@ -8,7 +8,7 @@ import { ProfilePart, PROFILE_PARTS } from 'src/app/interfaces/common.interface'
 })
 export class MyProfileComponent implements OnInit {
 
-    profileParts :ProfilePart[]= PROFILE_PARTS
+    profileParts :ProfilePart[]= PROFILE_PARTS;
   constructor() { }
 
   ngOnInit(): void {

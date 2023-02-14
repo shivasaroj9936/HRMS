@@ -5,7 +5,7 @@
         <button mat-raised-button class="view_all btn_primary">View All</button>
     </div>
 
-    <app-carousel [listToShow]="dataSource"></app-carousel>
+    <app-carousel [listToShow]="dataSource"  [carouselConfig]="carouselConfig" ></app-carousel>
 
     <ng-container *ngFor="let job of jobOpenings">
 

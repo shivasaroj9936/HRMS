@@ -1,17 +1,28 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
-import { NguCarouselConfig } from '@ngu/carousel';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  QueryList,
+  TemplateRef,
+  ViewChildren,
+} from "@angular/core";
+import { NguCarouselConfig } from "@ngu/carousel";
+import { Gallery_DATA, GALLER_VALUE } from "../../interfaces/interfaces";
 
 @Component({
-  selector: 'app-gallery',
-  templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.scss']
+  selector: "app-gallery",
+  templateUrl: "./gallery.component.html",
+  styleUrls: ["./gallery.component.scss"],
 })
-export class GalleryComponent implements OnInit,AfterViewInit {
+export class GalleryComponent implements OnInit, AfterViewInit {
+  headerValue=GALLER_VALUE;
+  imageData=Gallery_DATA
 
-  // headerValue=GALLER_VALUE
-  // imageData=Gallery_DATA
   buttonShow: boolean = true;
-  @ViewChildren('listofDivs', { read: TemplateRef }) listToShow!: QueryList<
+
+  @ViewChildren("listofDivs", { read: TemplateRef }) listToShow!: QueryList<
     ElementRef<HTMLDivElement>
   >;
   carouselConfig: NguCarouselConfig = {
@@ -23,9 +34,9 @@ export class GalleryComponent implements OnInit,AfterViewInit {
     velocity: 0.2,
   };
   dataSource: any = [];
-  
+
   constructor() {}
-  
+
   ngOnInit(): void {}
   ngAfterViewInit(): void {
     this.listToShow.forEach((item: any) => {

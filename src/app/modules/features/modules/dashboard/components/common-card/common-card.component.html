@@ -1,0 +1,30 @@
+<section>
+    <div class="award-card">
+      <div class="award-header">
+        <p class="award-title">
+          {{cardLayoutData.HEADING}}
+        </p>
+      </div>
+      <span class="dear">{{cardLayoutData.DEARR}}</span>
+      <app-carousel [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel>
+      <ng-container *ngFor="let item of data">
+        <ng-template #listofDivs>
+          <figure>
+            <img [src]="item.IMAGE" alt="emp-image">
+            <div class="emp-info">
+              <h3>{{item.EMP_NAME}}</h3>
+              <p>{{item.DESIGNATION}}</p>
+              <p> {{item.DATE}}</p>
+            </div>
+          </figure>
+        </ng-template>
+      </ng-container>
+      <p class="message">{{cardLayoutData.MESSAGE}}</p>
+      <footer>
+        <p class="cheers">{{cardLayoutData.CHEER}}</p>
+        <p class="company-name">{{cardLayoutData.APPINVENTIV}}</p>
+      </footer>
+  
+    </div>
+  </section>
+  

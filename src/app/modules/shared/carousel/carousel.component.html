@@ -1,7 +1,7 @@
 
   <ng-container *ngIf="wait">
     
-    <ngu-carousel class="crr" #myCarousel [inputs]="carouselConfig" [dataSource]="listToShow">
+    <ngu-carousel  #myCarousel [inputs]="carouselConfig" [dataSource]="listToShow">
       
       <ngu-item NguCarouselItem *nguCarouselDef="let item; let j = index">
         <ng-container *ngTemplateOutlet="item"></ng-container>
@@ -9,8 +9,8 @@
       
 
 
-        <button NguCarouselPrev class="leftRs"  [style.z-index]="9999" >&lt;</button>
-        <button NguCarouselNext class="rightRs" [style.z-index]="9999" >&gt;</button>
+        <button *ngIf="actionButtons" NguCarouselPrev class="leftRs"  [style.z-index]="9999" >&lt;</button>
+        <button *ngIf="actionButtons" NguCarouselNext class="rightRs" [style.z-index]="9999" >&gt;</button>
         
 
 

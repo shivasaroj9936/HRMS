@@ -3,7 +3,7 @@
 
     <div class="new_member_card">
 
-        <app-carousel [listToShow]="dataSource"></app-carousel>
+        <app-carousel [actionButtons]="true" [listToShow]="dataSource" [carouselConfig]="carouselConfig" ></app-carousel>
 
         <ng-container *ngFor="let member of listOfNewFamilyMembers">
             <ng-template #listofDivs>

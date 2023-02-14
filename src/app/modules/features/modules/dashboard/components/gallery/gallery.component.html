@@ -1,23 +1,23 @@
-<!-- <section>
-    <div class="heading">
-      <h3 class="header">{{headerValue.HEADER}}</h3>
-    </div>
-    <app-carousel [listToShow]="dataSource" [buttonShow]="buttonShow" [carouselConfiguration]="carouselConfig"></app-carousel>
-    <ng-container *ngFor="let item of imageData">
-      <ng-template #listofDivs>
+<section >
+  <div class="heading ">
+    <h3 class="header">{{headerValue.HEADER}}</h3>
+  </div>
+  <app-carousel [actionButtons]="true" [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel>
+  <ng-container *ngFor="let item of imageData">
+    <ng-template #listofDivs>
       <figure>
         <img [src]="item.IMAGE" alt="RepublicDayIamge" class="imageResize">
       </figure>
-      <div class="gallery-info">
-      <span class="img-count">
-       <p class="count"><i class="fa-regular fa-image"></i>{{item.NUM}}</p>
-      </span>
-      <div class="event">
-        <h3 class="event-text">{{item.HEADING}}</h3>
-        <button class="view">{{item.BUTTON}}</button>
+      <div class="gallery-info" >
+        <div class="img-count">
+          <mat-icon>image</mat-icon>
+          <span class="count">{{item.NUM}}</span>
+        </div>
+        <div class="event">
+          <h3 class="event-text">{{item.HEADING}}</h3>
+          <button class="view">{{item.BUTTON}}</button>
+        </div>
       </div>
-    </div>
-      </ng-template>
-    </ng-container>
-  </section>
-   -->
+    </ng-template>
+  </ng-container>
+</section>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DIRECTORY_EMPLOYEE_DATA, IDIRECTORY_DATA } from 'src/app/interfaces/common.interface';
+import { DIRECTORY_EMPLOYEE_DATA, IDIRECTORY_DATA } from '../dashboard/interfaces/interfaces';
 import { BASIC_INFORMATION } from './constants/ui-text';
 
 @Component({

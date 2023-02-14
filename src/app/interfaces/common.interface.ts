@@ -1,20 +1,11 @@
-import { APPRAISAL, BASIC_INFORMATION, CHANGE_PASSWORD, DASHBOARD, DIRECTORY, PROFILE, PROFILE_PICTURE, QULIFICATION, SHIFT } from "../constants/routes";
+import {  DASHBOARD, DIRECTORY, PROFILE } from "../constants/routes";
 
 export interface IRoute {
   path: string;
   fullUrl: string
 }
 
-export interface JobOpening {
-  jobLogo: string
-  jobTite: string,
-  jobDescription: string,
-  no_of_openings: number,
-  exp_from: number,
-  exp_to: number,
-  location: string,
-  date: String
-}
+
 export interface SideNavItem {
   title: string,
   icon: string,
@@ -22,165 +13,11 @@ export interface SideNavItem {
   isActive: boolean,
   options?: Array<any>
 }
-export interface ProfilePart {
-  icon: string,
-  title: string,
-  route?: string
-}
 
 
-export interface IDIRECTORY_DATA {
-  IMAGE: string,
-  EMP_NAME: string,
-  EMP_DESIGNATION: string,
-  EMP_TECHNOLOGY: string,
-  EMAIL: string,
-  BIRTH_DATE: string,
-  BIRTH_MONTH: string,
-}
-export const JobOpeningList: JobOpening[] = [
-  {
-    jobLogo: '/assets/ios-developers.svg',
-    jobTite: 'IOS Developer',
-    jobDescription: 'Responsible for designing, implementing, & supporting a distributed blockchain-based network.',
-    no_of_openings: 2,
-    exp_from: 3,
-    exp_to: 5,
-    location: 'Noida',
-    date: '05/01/2023'
-  },
-  {
-    jobLogo: '/assets/android-developers.svg',
-    jobTite: 'Android Developer',
-    jobDescription: 'Responsible for designing, implementing, & supporting a distributed blockchain-based network.',
-    no_of_openings: 2,
-    exp_from: 3,
-    exp_to: 5,
-    location: 'Noida',
-    date: '05/01/2023'
-  },
-  {
-    jobLogo: '/assets/react-native.svg',
-    jobTite: 'React Native',
-    jobDescription: 'Responsible for designing, implementing, & supporting a distributed blockchain-based network.',
-    no_of_openings: 2,
-    exp_from: 3,
-    exp_to: 5,
-    location: 'Noida',
-    date: '05/01/2023'
-  },
-  
-];
-export const DIRECTORY_EMPLOYEE_DATA: IDIRECTORY_DATA[] = [
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Aahan Verma',
-    EMP_DESIGNATION: 'Sr. Software Engineer',
-    EMP_TECHNOLOGY: 'Android',
-    EMAIL: 'mailto:aahan.verma@appinventiv.com',
-    BIRTH_DATE: '21st',
-    BIRTH_MONTH: 'Aug',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Deepak Yadav',
-    EMP_DESIGNATION: 'Software Engineer',
-    EMP_TECHNOLOGY: 'Angular',
-    EMAIL: ' mailto:deepak.yadav@appinventiv.com',
-    BIRTH_DATE: ' 08th',
-    BIRTH_MONTH: 'May',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Harshit Kumar Jain',
-    EMP_DESIGNATION: 'Software Engineer',
-    EMP_TECHNOLOGY: 'Angular',
-    EMAIL: 'mailto:harshit.jain@appinventiv.com',
-    BIRTH_DATE: '07th',
-    BIRTH_MONTH: 'Apr',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Harshit Kumar Jain',
-    EMP_DESIGNATION: 'Software Engineer',
-    EMP_TECHNOLOGY: 'Angular',
-    EMAIL: 'mailto:harshit.jain@appinventiv.com',
-    BIRTH_DATE: '07th',
-    BIRTH_MONTH: 'Apr',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Aahan Verma',
-    EMP_DESIGNATION: 'Sr. Software Engineer',
-    EMP_TECHNOLOGY: 'Android',
-    EMAIL: 'mailto:aahan.verma@appinventiv.com',
-    BIRTH_DATE: '21st',
-    BIRTH_MONTH: 'Aug',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Deepak Yadav',
-    EMP_DESIGNATION: 'Software Engineer',
-    EMP_TECHNOLOGY: 'Angular',
-    EMAIL: ' mailto:deepak.yadav@appinventiv.com',
-    BIRTH_DATE: ' 08th',
-    BIRTH_MONTH: 'May',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Harshit Kumar Jain',
-    EMP_DESIGNATION: 'Software Engineer',
-    EMP_TECHNOLOGY: 'Angular',
-    EMAIL: 'mailto:harshit.jain@appinventiv.com',
-    BIRTH_DATE: '07th',
-    BIRTH_MONTH: 'Apr',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Harshit Kumar Jain',
-    EMP_DESIGNATION: 'Software Engineer',
-    EMP_TECHNOLOGY: 'Angular',
-    EMAIL: 'mailto:harshit.jain@appinventiv.com',
-    BIRTH_DATE: '07th',
-    BIRTH_MONTH: 'Apr',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Aahan Verma',
-    EMP_DESIGNATION: 'Sr. Software Engineer',
-    EMP_TECHNOLOGY: 'Android',
-    EMAIL: 'mailto:aahan.verma@appinventiv.com',
-    BIRTH_DATE: '21st',
-    BIRTH_MONTH: 'Aug',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Deepak Yadav',
-    EMP_DESIGNATION: 'Software Engineer',
-    EMP_TECHNOLOGY: 'Angular',
-    EMAIL: ' mailto:deepak.yadav@appinventiv.com',
-    BIRTH_DATE: ' 08th',
-    BIRTH_MONTH: 'May',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Harshit Kumar Jain',
-    EMP_DESIGNATION: 'Software Engineer',
-    EMP_TECHNOLOGY: 'Angular',
-    EMAIL: 'mailto:harshit.jain@appinventiv.com',
-    BIRTH_DATE: '07th',
-    BIRTH_MONTH: 'Apr',
-  },
-  {
-    IMAGE: '/assets/default_male.jpg',
-    EMP_NAME: 'Harshit Kumar Jain',
-    EMP_DESIGNATION: 'Software Engineer',
-    EMP_TECHNOLOGY: 'Angular',
-    EMAIL: 'mailto:harshit.jain@appinventiv.com',
-    BIRTH_DATE: '07th',
-    BIRTH_MONTH: 'Apr',
-  },
-]
+
+
+
 
 
 export const sideNavList: SideNavItem[] = [
@@ -213,12 +50,5 @@ export const profileMenuData = [
 ];
 
 
-export const PROFILE_PARTS: ProfilePart[] = [
-  { icon: 'person', title: 'Basic Information', route: BASIC_INFORMATION.fullUrl },
-  { icon: 'photo_camera', title: 'Profile Picture', route: PROFILE_PICTURE.fullUrl },
-  { icon: 'library_books', title: 'Qualification', route: QULIFICATION.fullUrl },
-  { icon: 'schedule', title: 'Shift', route: SHIFT.fullUrl },
-  { icon: 'key', title: 'Change Password ', route: CHANGE_PASSWORD.fullUrl },
-  { icon: 'thumb_up', title: ' Appraisal ', route: APPRAISAL.fullUrl },
-];
+
 

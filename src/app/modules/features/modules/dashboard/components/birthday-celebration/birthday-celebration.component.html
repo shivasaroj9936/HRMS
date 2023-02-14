@@ -1,1 +1,33 @@
-<p>birthday-celebration works!</p>
+<!-- <section>
+    <div class="award-card">
+      <div class="award-header">
+        <p class="award-title">
+          {{birthDay.HEADING}}
+        </p>
+      </div>
+      <span class="dear">{{birthDay.DEARR}}</span>
+      <app-carousel [listToShow]="dataSource" [carouselConfiguration]="carouselConfig"></app-carousel>
+      <ng-container *ngFor="let item of imageData">
+        <ng-template #listofDivs>
+          <figure>
+            <img [src]="imageData[0].IMAGE" alt="emp-image">
+            <div class="emp-info">
+           
+              <h3>{{imageData[0].EMP_NAME}}</h3>
+              <p>{{imageData[0].DESIGNATION}}</p>
+              <p> {{imageData[0].DATE}}</p>
+            </div>
+          </figure>
+        </ng-template>
+      </ng-container>
+      <p class="message">{{birthDay.MESSAGE}}</p>
+      <footer>
+        <p class="cheers">{{birthDay.CHEER}}</p>
+        <p class="company-name">{{birthDay.APPINVENTIV}}</p>
+      </footer>
+  
+    </div>
+  </section>
+   -->
+
+   <app-common-card [cardLayoutData]="birthDay" [data]="imageData"></app-common-card>

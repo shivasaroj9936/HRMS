@@ -13,11 +13,14 @@ import { AppreciationComponent } from './components/appreciation/appreciation.co
 import { AwardsComponent } from './components/awards/awards.component';
 import { BirthdayCelebrationComponent } from './components/birthday-celebration/birthday-celebration.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { MatIconModule } from '@angular/material/icon';
+import { CommonCardComponent } from './components/common-card/common-card.component';
+import { WorkAnniversaryComponent } from './components/work-anniversary/work-anniversary.component';
 
 const MATERIAL = [
   // MatSidenavModule,
   // MatListModule,
-  // MatIconModule,
+  MatIconModule,
   // MatToolbarModule,
   // MatMenuModule,
   MatButtonModule,
@@ -32,6 +35,8 @@ const MATERIAL = [
     AwardsComponent,
     BirthdayCelebrationComponent,
     GalleryComponent,
+    CommonCardComponent,
+    WorkAnniversaryComponent,
     
   ],
   imports: [

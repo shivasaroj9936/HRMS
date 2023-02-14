@@ -1,3 +1,4 @@
+@import "src/scss/colors.scss";
 .heading {
     // font-family: "Lato";
     font-size: 20px;
@@ -6,3 +7,9 @@
     line-height: 1.5;
     margin: 0;
 }
+
+.border_btm{
+    border-bottom: 1px solid var(--border-color);
+
+}
+

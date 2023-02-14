@@ -14,6 +14,7 @@ import {
 export class AppraisalComponent implements OnInit {
   uiMessage = BASIC_INFORMATION;
   labelMessage = FORM_LABEL;
+  
   constructor() {}
 
   ngOnInit(): void {}
