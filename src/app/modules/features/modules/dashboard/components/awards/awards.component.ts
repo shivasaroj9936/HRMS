@@ -3,7 +3,10 @@ import { AWARDS_EMP_IMAGE_DATA, AWARD_LAYOUT, IAWARDDATA } from '../../interface
 
 @Component({
   selector: 'app-awards',
-  templateUrl: './awards.component.html',
+  template: `
+    <app-common-card [data]="data" [cardLayoutData]="layoutData"> </app-common-card>
+  
+  `,
   styleUrls: ['./awards.component.scss']
 })
 export class AwardsComponent implements OnInit {
@@ -14,10 +17,6 @@ export class AwardsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.layoutData);
-    console.log(this.data);
-
-    
   }
 
 }

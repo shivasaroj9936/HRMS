@@ -11,11 +11,12 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   @Input() listToShow: any;
   @Input() carouselConfig!: NguCarouselConfig;
   @Input() actionButtons?:boolean=false;
+  @Input() showPoints?:boolean=false;
+
   @ViewChild('myCarousel') carousel!: NguCarousel<any>;
 
   wait = false;
   ngOnInit() {
-    console.log(this.listToShow);
     setTimeout(() => {
       this.wait = true;
     }, 500);
@@ -32,10 +33,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngAfterViewInit() {
-
     this.cdr.detectChanges();
-    console.log(this.listToShow);
-
   }
 
   reset() {

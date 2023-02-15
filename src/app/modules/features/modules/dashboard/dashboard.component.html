@@ -30,17 +30,33 @@
             </div>
         </div>
 
-        <div class="latest_appinventiv">
-            <div class="appreciation">
-            <!-- <app-appreciation></app-appreciation> -->
-            <app-work-anniversary></app-work-anniversary>
-        </div>
-       <div class="awards">
-            <app-awards></app-awards>
-        </div>
-             <div class="birthday_celebration">
-                <app-birthday-celebration></app-birthday-celebration>
-            </div> 
+        <div class="latest_appinventiv dashboard_card">
+            <app-carousel [showPoints]="true" [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel>
+
+            <ng-template #listofDivs>
+                <!-- <div class="appreciation"> -->
+                    <app-appreciation></app-appreciation>
+                <!-- </div> -->
+            </ng-template>
+
+           <ng-template #listofDivs>
+                <!-- <div class="work_anniversary"> -->
+                    <app-work-anniversary></app-work-anniversary>
+                <!-- </div> -->
+            </ng-template>
+            <ng-template #listofDivs>
+                <!-- <div class="birthday_celebration"> -->
+                    <app-birthday-celebration></app-birthday-celebration>
+                <!-- </div> -->
+            </ng-template>
+
+            <ng-template #listofDivs>
+                <!-- <div class="awards"> -->
+                    <app-awards></app-awards>
+                <!-- </div> -->
+            </ng-template> 
+
+
         </div>
         <div class="gallery">
             <app-gallery></app-gallery>

@@ -13,7 +13,7 @@ export class NewFamilyMemberComponent implements OnInit,AfterViewInit {
   @ViewChildren("listofDivs", { read: TemplateRef }) listToShow!: QueryList<ElementRef<HTMLDivElement>>;
   dataSource:any=[]
   carouselConfig: NguCarouselConfig = {
-    grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
+    grid: { xs: 1, sm: 1, md: 2, lg: 3, all: 0 },
     load: 1,
     interval: { timing: 4000, initialDelay: 1000 },
     loop: true,

@@ -8,7 +8,7 @@ import { LatestJobOpeningComponent } from './components/latest-job-opening/lates
 import { NewFamilyMemberComponent } from './components/new-family-member/new-family-member.component';
 import { MatButtonModule } from '@angular/material/button';
 import { CarouselModule } from 'src/app/modules/shared/carousel/carousel.module';
-import { NguCarouselModule } from '@ngu/carousel';
+// import { NguCarouselModule } from '@ngu/carousel';
 import { AppreciationComponent } from './components/appreciation/appreciation.component';
 import { AwardsComponent } from './components/awards/awards.component';
 import { BirthdayCelebrationComponent } from './components/birthday-celebration/birthday-celebration.component';
@@ -43,7 +43,7 @@ const MATERIAL = [
     CommonModule,
     DashboardRoutingModule,
     CarouselModule,
-    NguCarouselModule,
+    // NguCarouselModule,
 
     ...MATERIAL
 

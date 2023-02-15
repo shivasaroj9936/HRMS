@@ -16,6 +16,7 @@ section {
 
     header {
         margin-bottom: 25px;
+
         .emp_basic_info {
 
             display: flex;
@@ -63,7 +64,15 @@ section {
                     gap: 1rem;
                     display: grid;
                     grid-template-columns: auto auto;
-               
+
+                    @media only screen and (max-width: 1300px) {
+                        grid-template-columns: auto;
+
+                        html {
+                            font-size: 50%;
+                        }
+                    }
+
                 }
 
                 .heading {
@@ -76,15 +85,54 @@ section {
                 }
 
             }
-            .latest_opeanings{
+
+            .latest_opeanings {
                 border-right: 1px dashed #ccc;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
             }
-            
+
+            @media only screen and (max-width: 1200px) {
+                // .main_wraper {
+                
+                //     display: block !important;
+                    
+                    grid-template-columns: auto auto;
+
+                    .new_members {
+                        width: 100%;
+                    }
+                // }
+
+            }
+
+
         }
-        .latest_appinventiv{
-            display: flex;
+
+        .latest_appinventiv {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            // width: fit-content;
+            // display: flex;
+            // width: 800px;
+            // flex-wrap: wrap;
+            // &{
+            //     width: 400px;
+            // }
+            // display: flex;
+            overflow: hidden;
+
+            .work_anniversary,
+            .awards,
+            .birthday_celebration,
+            .appreciation {
+                // background-color: #bac4cc;
+                // width: auto;
+                // display: block;
+                overflow: hidden;
+                margin: 0;
+                width: fit-content;
+            }
         }
     }
 }

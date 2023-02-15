@@ -3,7 +3,7 @@
     
     <ngu-carousel  #myCarousel [inputs]="carouselConfig" [dataSource]="listToShow">
       
-      <ngu-item NguCarouselItem *nguCarouselDef="let item; let j = index">
+      <ngu-item class="item" NguCarouselItem *nguCarouselDef="let item; let j = index">
         <ng-container *ngTemplateOutlet="item"></ng-container>
       </ngu-item>
       
@@ -16,13 +16,8 @@
 
 
 
+        <ul class="myPoint" NguCarouselPoint  *ngIf="showPoints" >
+          <li  *ngFor="let j of myCarousel.pointNumbers; let i=index" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"></li>
+        </ul>
       </ngu-carousel>
     </ng-container>
-    
-    <!-- <ul class="myPoint" NguCarouselPoint>
-    <li
-    *ngFor="let js of myCarousel.pointNumbers; let j = index"
-    [class.active]="js == myCarousel.activePoint"
-    (click)="myCarousel.moveTo(j)"
-    ></li>
-  </ul> -->

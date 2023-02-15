@@ -1,11 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 section {
     height: 100vh;
-
+    position: relative;
     header {
         padding: 8px 16px;
     }
@@ -13,32 +14,39 @@ section {
     .mat-sidenav-container {
         height: calc(100vh - 80px);
     }
+
     .mat-sidenav-content {
         background-color: var(--dashboard-backgroud-color);
         display: flex;
         flex-direction: column;
         height: 100%;
         justify-content: space-between;
-        position: relative;
-        main{
-            padding:1.45rem;
-    //         padding-top: 122px!important; 
-    // padding-top: 102px!important;
+
+        main {
+            padding: 1.45rem;
+            //         padding-top: 122px!important; 
+            // padding-top: 102px!important;
+
         }
-        footer{
+
+        footer {
+
             background-color: #fff;
             padding: 1rem 32px 16px;
-            .footer_text{
+
+            .footer_text {
                 font-size: 12px;
                 color: #4E5155;
                 font-weight: 500;
             }
         }
     }
-    .covid_19{
+
+    .covid_19 {
         position: absolute;
-        bottom: 30px;
-        right: 7px;
+        bottom: 56px;
+        right: 20px;
+        z-index: 10;
         border-top-left-radius: 40px;
         border-bottom-left-radius: 40px;
         min-height: 50px;
@@ -50,14 +58,14 @@ section {
 }
 
 :host::ng-deep {
-  
+
 
     // .mat-drawer-container{
     //     background-color: var(--dashboard-backgroud-color);
     // }
     .mat-drawer-inner-container::-webkit-scrollbar {
         display: none;
-     
+
     }
 
     // .mat-drawer-backdrop.mat-drawer-shown {

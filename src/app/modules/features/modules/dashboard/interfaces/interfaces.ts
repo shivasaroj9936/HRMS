@@ -46,13 +46,13 @@ export interface BITHDAY {
   CHEER: string;
   APPINVENTIV: string;
 }
-export interface IWORKANNIVERSARY{
-  IMAGE: string,
-  EMP_NAME: string,
-  DESIGNATION: string,
-  DATE: string,
+export interface IWORKANNIVERSARY {
+  IMAGE: string;
+  EMP_NAME: string;
+  DESIGNATION: string;
+  DATE: string;
 }
-export interface BIRTHDAY{
+export interface BIRTHDAY {
   HEADING: string;
   DEARR: string;
   MESSAGE: string;
@@ -65,13 +65,20 @@ export interface IBIRTHDAYDATA {
   DESIGNATION: string;
   DATE: string;
 }
-export interface IAWARDDATA{
-  IMAGE: string,
-  EMP_NAME: string,
-  DESIGNATION: string,
-  DATE: string,
+export interface IAWARDDATA {
+  IMAGE: string;
+  EMP_NAME: string;
+  DESIGNATION: string;
+  DATE: string;
 }
-
+export interface IAPPRECIATIONDATA {
+  HEADER: string,
+  DEAR:string,
+  TEXT: string,
+  MESSAGE: string,
+  GREET: string,
+  BUTTON: string,
+}
 
 export const GALLER_VALUE: any = {
   HEADER: "Appinventiv Gallery",
@@ -427,7 +434,7 @@ export const AWARD_LAYOUT = {
   DEAR: "Dear",
   MESSAGE: "Keep spreading your awesomeness. Congratulations!",
   CHEER: "cheers!",
-  APPIVENTIV: "Appinventiv",
+  APPINVENTIV: "Appinventiv",
 };
 export const BIRTHDAY_VALUE = {
   HEADER_VALUE: "Birthday celebration",
@@ -446,37 +453,66 @@ export const WORK_ANNIVERSARY_VALUE = {
   APPIVENTIV_TEXT: "Appinventiv",
 };
 
-// export const APPRECIATION_DATA: IAPPRECIATIONDATA[] =[
-//   { HEADER_VALUE: 'Appreciation for UStandBy',TEXT:'Hello All,',MESSAGE:`With immense pleasure, we would like to take this moment and appreciate Ustandby Team. The team demonstrated outstanding performance and we are happy to announce that the client has appreciated the team's dedication and commitment due to which the project was a great success.`, GREET:'Kudos to the team!',  BUTTON:'View More'},
-//   { HEADER_VALUE: 'Appreciation| ABP NEWS', DEAR_VALUE: 'Dear',TEXT:' Aashima Anand,',MESSAGE:`We would like to congratulate you all on making ABP live. We are aware of the hard work put in by each team member because of which the client is very satisfied, and we are working on future phases of the application and even other projects too. The client is committed to make this application a big success, and it gives me great joy to see that we share the same passion. `, GREET:'Thank you for all the hard work and commitment. Keep up the excellent work.',  BUTTON:'View More'},
-//   { HEADER_VALUE: 'Appreciation for UStandBy',TEXT:'Hello All,',MESSAGE:`With immense pleasure, we would like to take this moment and appreciate Ustandby Team. The team demonstrated outstanding performance and we are happy to announce that the client has appreciated the team's dedication and commitment due to which the project was a great success.`, GREET:'Kudos to the team!',  BUTTON:'View More'},
-//   { HEADER_VALUE: 'Appreciation| ABP NEWS', DEAR_VALUE: 'Dear',TEXT:' Aashima Anand,',MESSAGE:`We would like to congratulate you all on making ABP live. We are aware of the hard work put in by each team member because of which the client is very satisfied, and we are working on future phases of the application and even other projects too. The client is committed to make this application a big success, and it gives me great joy to see that we share the same passion. `, GREET:'Thank you for all the hard work and commitment. Keep up the excellent work.',  BUTTON:'View More'},
-
-// ]
+export const APPRECIATION_DATA: IAPPRECIATIONDATA[] = [
+  {
+    HEADER: "Appreciation for UStandBy",
+    TEXT: "Hello All,",
+    MESSAGE: `With immense pleasure, we would like to take this moment and appreciate Ustandby Team. The team demonstrated outstanding performance and we are happy to announce that the client has appreciated the team's dedication and commitment due to which the project was a great success.`,
+    GREET: "Kudos to the team!",
+    BUTTON: "View More",
+    DEAR: "Dear",
+  },
+  {
+    HEADER: "Appreciation| ABP NEWS",
+    DEAR: "Dear",
+    TEXT: " Aashima Anand,",
+    MESSAGE: `We would like to congratulate you all on making ABP live. We are aware of the hard work put in by each team member because of which the client is very satisfied, and we are working on future phases of the application and even other projects too. The client is committed to make this application a big success, and it gives me great joy to see that we share the same passion. `,
+    GREET:
+      "Thank you for all the hard work and commitment. Keep up the excellent work.",
+    BUTTON: "View More",
+  },
+  {
+    HEADER: "Appreciation for UStandBy",
+    TEXT: "Hello All,",
+    MESSAGE: `With immense pleasure, we would like to take this moment and appreciate Ustandby Team. The team demonstrated outstanding performance and we are happy to announce that the client has appreciated the team's dedication and commitment due to which the project was a great success.`,
+    GREET: "Kudos to the team!",
+    BUTTON: "View More",
+    DEAR: "Dear",
+  },
+  {
+    HEADER: "Appreciation| ABP NEWS",
+    DEAR: "Dear",
+    TEXT: " Aashima Anand,",
+    MESSAGE: `We would like to congratulate you all on making ABP live. We are aware of the hard work put in by each team member because of which the client is very satisfied, and we are working on future phases of the application and even other projects too. The client is committed to make this application a big success, and it gives me great joy to see that we share the same passion. `,
+    GREET:
+      "Thank you for all the hard work and commitment. Keep up the excellent work.",
+    BUTTON: "View More",
+  },
+];
 export const AWARDS_EMP_IMAGE_DATA: IAWARDDATA[] = [
   {
-    IMAGE: '/assets/images/.jpg',
-    EMP_NAME: 'Ashish Pal (AI1802)',
-    DESIGNATION: 'Associate Team Lead, MeanStack',
-    DATE: 'October,2022',
+    IMAGE: "/assets/bday1.jpeg",
+    EMP_NAME: "Ashish Pal (AI1802)",
+    DESIGNATION: "Associate Team Lead, MeanStack",
+    DATE: "October,2022",
   },
   {
-    IMAGE: '/assets/images/default_female.jpg',
-    EMP_NAME: 'Shweta Saxena (AI1320)',
-    DESIGNATION: 'Software Engineer, REACT JS',
-    DATE: 'October,2022',
+    IMAGE: "/assets/bday2.jpg",
+    EMP_NAME: "Shweta Saxena (AI1320)",
+    DESIGNATION: "Software Engineer, REACT JS",
+    DATE: "October,2022",
   },
   {
-    IMAGE: '/assets/images/default_male.jpg',
-    EMP_NAME: 'Ashish Pal (AI1802)',
-    DESIGNATION: 'Associate Team Lead, MeanStack',
-    DATE: 'October,2022',
+    IMAGE: "/assets/bday3.jpg",
+    EMP_NAME: "Ashish Pal (AI1802)",
+    DESIGNATION: "Associate Team Lead, MeanStack",
+    DATE: "October,2022",
   },
   {
-    IMAGE: '/assets/images/default_male.jpg',
-    EMP_NAME: 'Ashish Pal (AI1802)',
-    DESIGNATION: 'Associate Team Lead, MeanStack',
-    DATE: 'October,2022',
+    IMAGE: "/assets/bday4.jpeg",
+    EMP_NAME: "Ashish Pal (AI1802)",
+    DESIGNATION: "Associate Team Lead, MeanStack",
+    DATE: "October,2022",
   },
 ];
 export const BIRTHDAY_EMP_IMAGE_DATA: IBIRTHDAYDATA[] = [
@@ -532,14 +568,14 @@ export const WORKANNIVERSARY_EMP_IMAGE_DATA: IWORKANNIVERSARY[] = [
   },
 ];
 
-export const WORK_LAYOUT={
+export const WORK_LAYOUT = {
   HEADING: "Workanniversary Celebration",
   DEARR: "Dear",
   MESSAGE:
     "Wishing you many more years of success, good luck, and joy! On this blissful and charming day of your Corporate anniversary may you continue the journey of achievements with pride! ",
   CHEER: "cheers!",
   APPINVENTIV: "Appinventiv",
-}
+};
 export const REFERRAL = {
   HEADER: "OUR REFERRAL BONUS PROGRAM",
   AMOUNT: "K",
