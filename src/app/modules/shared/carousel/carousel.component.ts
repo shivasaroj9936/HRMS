@@ -43,13 +43,5 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   moveTo(slide: any) {
     this.myCarousel.moveTo(slide, !this.withAnim);
   }
-  ckk(){
-    console.log(this.myCarousel);
-    
-  }
-
-
-
-
 
 }

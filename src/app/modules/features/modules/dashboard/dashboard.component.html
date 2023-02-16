@@ -12,14 +12,17 @@
     </header>
     <main>
         <div class="main_wraper">
-
+            <!-- <div class="left"></div> -->
             <div class="latest_opeanings dashboard_card">
                 <app-latest-job-opening></app-latest-job-opening>
             </div>
             <div class="referral_bonus dashboard_card">
-                <h3 class="heading">Our Referral Bonus Program</h3>
-                <div class="referral_bonus_cards">
+                
+                <div class="heading_wraper">
+                    <h3 class="heading">Our Referral Bonus Program</h3>
+                </div>
 
+                <div class="referral_bonus_cards">
                     <ng-container *ngFor="let data of referralData">
                         <app-referral-bonous-program [referalData]="data"></app-referral-bonous-program>
                     </ng-container>
@@ -29,32 +32,38 @@
                 <app-new-family-member></app-new-family-member>
             </div>
         </div>
+        <div class="latest dashboard_card">
+            <div class="heading ">
+                <h3>Latest at Appinventiv</h3>
+            </div>
+            <app-carousel [showPoints]="true" [listToShow]="dataSource"
+                [carouselConfig]="carouselConfig"></app-carousel>
+        </div>
 
-        <div class="latest_appinventiv dashboard_card">
-            <app-carousel [showPoints]="true" [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel>
+        <div class="latest_appinventiv">
 
-            <ng-template #listofDivs>
-                <!-- <div class="appreciation"> -->
+            <div class="appreciation">
+                <ng-template #listofDivs>
                     <app-appreciation></app-appreciation>
-                <!-- </div> -->
-            </ng-template>
+                </ng-template>
+            </div>
 
-           <ng-template #listofDivs>
-                <!-- <div class="work_anniversary"> -->
+            <div class="work_anniversary">
+                <ng-template #listofDivs>
                     <app-work-anniversary></app-work-anniversary>
-                <!-- </div> -->
-            </ng-template>
-            <ng-template #listofDivs>
-                <!-- <div class="birthday_celebration"> -->
+                </ng-template>
+            </div>
+            <div class="birthday_celebration">
+                <ng-template #listofDivs>
                     <app-birthday-celebration></app-birthday-celebration>
-                <!-- </div> -->
-            </ng-template>
+                </ng-template>
+            </div>
 
-            <ng-template #listofDivs>
-                <!-- <div class="awards"> -->
+            <div class="awards">
+                <ng-template #listofDivs>
                     <app-awards></app-awards>
-                <!-- </div> -->
-            </ng-template> 
+                </ng-template>
+            </div>
 
 
         </div>

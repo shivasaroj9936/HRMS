@@ -2,22 +2,22 @@
   <div class="heading ">
     <h3 class="header">{{headerValue.HEADER}}</h3>
   </div>
-  <app-carousel [actionButtons]="true" [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel>
+  <app-carousel [showPoints]="true" [actionButtons]="true" [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel>
   <ng-container *ngFor="let item of imageData">
     <ng-template #listofDivs>
       <figure>
         <img [src]="item.IMAGE" alt="RepublicDayIamge" class="imageResize">
+        <div class="gallery-info" >
+          <div class="img-count">
+            <mat-icon>image</mat-icon>
+            <span class="count">{{item.NUM}}</span>
+          </div>
+          <div class="event">
+            <h3 class="event-text">{{item.HEADING}}</h3>
+            <button class="view">{{item.BUTTON}}</button>
+          </div>
+        </div>
       </figure>
-      <div class="gallery-info" >
-        <div class="img-count">
-          <mat-icon>image</mat-icon>
-          <span class="count">{{item.NUM}}</span>
-        </div>
-        <div class="event">
-          <h3 class="event-text">{{item.HEADING}}</h3>
-          <button class="view">{{item.BUTTON}}</button>
-        </div>
-      </div>
     </ng-template>
   </ng-container>
 </section>

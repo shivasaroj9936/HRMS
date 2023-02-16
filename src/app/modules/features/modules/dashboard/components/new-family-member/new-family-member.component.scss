@@ -5,12 +5,14 @@ section {
     //     position: relative;
     // }
     .new_member_card {
+        position: relative;
         padding: 1.5rem;
-        // position: relative;
-
+        // min-width: 300px;
+        // overflow: hidden;
         .item {
             height: 442px;
-            width: 100%;
+            min-width: 280px;
+            width: fit-content;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -33,6 +35,10 @@ section {
                     border-radius: 50%;
                 }
             }
+            
         }
+        // @media only screen and (max-width: 1200px) {
+        //     width: 90%;
+        // }
     }
 }

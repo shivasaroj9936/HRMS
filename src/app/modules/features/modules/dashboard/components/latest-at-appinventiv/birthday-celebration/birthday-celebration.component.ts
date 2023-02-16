@@ -1,11 +1,12 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, TemplateRef, ViewChildren } from "@angular/core";
 import { NguCarouselConfig } from "@ngu/carousel";
-import {
-  BIRTHDAY_EMP_IMAGE_DATA,
-  BIRTH_DAY,
-  BITHDAY,
-  IBIRTHDAYDATA,
-} from "../../interfaces/interfaces";
+import { BIRTHDAY_EMP_IMAGE_DATA, BIRTH_DAY, BITHDAY, IBIRTHDAYDATA } from "../../../interfaces/interfaces";
+// import {
+//   BIRTHDAY_EMP_IMAGE_DATA,
+//   BIRTH_DAY,
+//   BITHDAY,
+//   IBIRTHDAYDATA,
+// } from "../../interfaces/interfaces";
 
 @Component({
   selector: "app-birthday-celebration",

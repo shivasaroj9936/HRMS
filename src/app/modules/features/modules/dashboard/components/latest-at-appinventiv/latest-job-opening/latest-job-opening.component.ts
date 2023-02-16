@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, TemplateRef, ViewChild, ViewChildren } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
-import { JobOpening, JobOpeningList } from '../../interfaces/interfaces';
+import { JobOpening, JobOpeningList } from '../../../interfaces/interfaces';
 
 @Component({
   selector: 'app-latest-job-opening',

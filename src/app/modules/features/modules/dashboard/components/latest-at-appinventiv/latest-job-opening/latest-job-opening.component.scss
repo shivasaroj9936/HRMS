@@ -4,6 +4,7 @@
 
 section {
 // position: relative;
+// max-width: 500px;
     .heading_wraper {
         display: flex;
         justify-content: space-between;
@@ -79,8 +80,24 @@ section {
                 line-height: 1.32;
                 padding: 12px;
             }
+            
+            
+        }
+    }
+    
+}
+@media only screen and (max-width: 1300px) {
+    .heading_wraper {
+        padding:  0;
+
+        .heading{
 
         }
     }
+    .actions{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }   
 
 }

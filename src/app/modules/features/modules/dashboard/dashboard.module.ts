@@ -4,18 +4,17 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { ReferralBonousProgramComponent } from './components/referral-bonous-program/referral-bonous-program.component';
-import { LatestJobOpeningComponent } from './components/latest-job-opening/latest-job-opening.component';
+import { LatestJobOpeningComponent } from './components/latest-at-appinventiv/latest-job-opening/latest-job-opening.component';
 import { NewFamilyMemberComponent } from './components/new-family-member/new-family-member.component';
 import { MatButtonModule } from '@angular/material/button';
 import { CarouselModule } from 'src/app/modules/shared/carousel/carousel.module';
-// import { NguCarouselModule } from '@ngu/carousel';
-import { AppreciationComponent } from './components/appreciation/appreciation.component';
-import { AwardsComponent } from './components/awards/awards.component';
-import { BirthdayCelebrationComponent } from './components/birthday-celebration/birthday-celebration.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
 import { MatIconModule } from '@angular/material/icon';
-import { CommonCardComponent } from './components/common-card/common-card.component';
-import { WorkAnniversaryComponent } from './components/work-anniversary/work-anniversary.component';
+import { WorkAnniversaryComponent } from './components/latest-at-appinventiv/work-anniversary/work-anniversary.component';
+import { CommonCardComponent } from './components/latest-at-appinventiv/common-card/common-card.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { BirthdayCelebrationComponent } from './components/latest-at-appinventiv/birthday-celebration/birthday-celebration.component';
+import { AwardsComponent } from './components/latest-at-appinventiv/awards/awards.component';
+import { AppreciationComponent } from './components/latest-at-appinventiv/appreciation/appreciation.component';
 
 const MATERIAL = [
   // MatSidenavModule,

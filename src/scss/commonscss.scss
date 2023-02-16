@@ -2,8 +2,16 @@
   background-color: #fff;
   box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
   border-radius: 8px;
-  padding: 1rem;
   margin-bottom: 20px;
+  .heading {
+    border-bottom: 1px solid var(--border-color);
+    padding : 1rem 1.5rem;
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
 }
 .latest_appinv_cards_heading{
   font-family: "Lato";

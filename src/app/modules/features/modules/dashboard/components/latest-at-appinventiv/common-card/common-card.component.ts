@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
-import { BIRTHDAY_EMP_IMAGE_DATA, BIRTH_DAY, BITHDAY, IBIRTHDAYDATA } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-common-card',
@@ -13,9 +12,10 @@ export class CommonCardComponent implements OnInit, AfterViewInit {
   @ViewChildren("listofDivs", { read: TemplateRef }) listToShow!: QueryList<ElementRef<HTMLDivElement>>;
   dataSource: any = []
   carouselConfig: NguCarouselConfig = {
-    grid: { xs: 1, sm: 1, md: 2, lg: 2, all: 0 },
+    grid: { xs: 2, sm: 2, md: 2, lg: 2, all: 0 },
+    gridBreakpoints:{sm:1200,md:1200,lg:1200,xl:1200},
     load: 1,
-    interval: { timing: 400000000, initialDelay: 1000000 },
+    interval: { timing: 4000, initialDelay: 1000 },
     loop: true,
     touch: true,
     velocity: 0.2,

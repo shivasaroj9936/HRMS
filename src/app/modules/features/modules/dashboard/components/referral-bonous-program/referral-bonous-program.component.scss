@@ -41,17 +41,41 @@
     }
 
 }
-@media only screen and (max-width: 1300px) {
-    .data{
-        height: 30px;
-    h2{
-        font-size: 2rem;
-        margin: 0;
-    }
-    h3{
-      font-size:  1rem;
-      margin:  0;
 
+@media only screen and (max-width: 1399px) {
+    .data {
+        height: 30px;
+        line-height: 1;
+        h2 {
+            font-size: 2rem;
+            margin: 0;
+
+        }
+
+        h3 {
+            font-size: 1rem;
+            margin: 0;
+
+        }
     }
 }
+@media only screen and (max-width: 480px) {
+    .data {
+        height: 30px;
+        padding:20px 2px;
+
+        h2 {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 12px;
+            margin: 0;
+
+        }
+        p{
+            font-size: 0.5rem;
+        }
+    }
 }

@@ -32,3 +32,55 @@ section {
       margin: 2.5rem 0rem 0rem 0.425rem !important;
     }
   }
+
+  @media (min-width: 1025px) and (max-width: 1320px) {
+    section {
+      .basic-card {
+        .content {
+          .form {
+            .inputs {
+              .formfield {
+                .increaseFormfield {
+                  width: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 660px) {
+    section {
+      .basic-card {
+        .content {
+          .form {
+            .inputs {
+              .formfield {
+                .increaseFormfield {
+                  width: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 150px) and (max-width: 320px) {
+    section {
+      .basic-card {
+        .content {
+          .form {
+            .inputs {
+              .formfield {
+                .increaseFormfield {
+                  width: 100px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

@@ -49,23 +49,27 @@ section {
     }
 
     main {
+        overflow: hidden;
 
         .main_wraper {
             display: grid;
             grid-template-columns: 32% auto 32%;
+
+
             border-radius: 8px;
 
             .referral_bonus {
                 margin-right: 10px;
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
+                padding: 1rem;
 
                 .referral_bonus_cards {
                     gap: 1rem;
                     display: grid;
                     grid-template-columns: auto auto;
 
-                    @media only screen and (max-width: 1300px) {
+                    @media only screen and (max-width: 1399px) {
                         grid-template-columns: auto;
 
                         html {
@@ -74,15 +78,19 @@ section {
                     }
 
                 }
+                .heading_wraper{
 
-                .heading {
-                    font-family: "Lato";
-                    font-size: 16px;
-                    color: #199CFF;
-                    font-weight: 600;
-                    line-height: 1.9;
-                    text-transform: uppercase;
+                    .heading {
+                        font-family: "Lato";
+                        // font-size: 16px;
+                        color: #199CFF;
+                        font-weight: 600;
+                        // line-height: 1.9;
+                        text-transform: uppercase;
+                        border-bottom: none;
+                    }
                 }
+
 
             }
 
@@ -90,21 +98,36 @@ section {
                 border-right: 1px dashed #ccc;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
+                padding: 1rem;
+
+            }
+
+            .new_members {
+                padding: 1rem;
             }
 
             @media only screen and (max-width: 1200px) {
-                // .main_wraper {
-                
-                //     display: block !important;
-                    
-                    grid-template-columns: auto auto;
 
-                    .new_members {
-                        width: 100%;
-                    }
-                // }
+                grid-template-columns: 50% auto;
 
+                .new_members {
+                    width: 80vw;
+                }
             }
+            @media only screen and (max-width: 500px) {
+
+                grid-template-columns:  99%;
+
+                .new_members {
+                    width: 80vw;
+                }
+            }
+            @media only screen and (max-width: 1000px) {
+                .new_members {
+                    width: 91vw;
+                }
+            }
+
 
 
         }
@@ -112,23 +135,12 @@ section {
         .latest_appinventiv {
             display: grid;
             grid-template-columns: auto auto auto;
-            // width: fit-content;
-            // display: flex;
-            // width: 800px;
-            // flex-wrap: wrap;
-            // &{
-            //     width: 400px;
-            // }
-            // display: flex;
-            overflow: hidden;
 
             .work_anniversary,
             .awards,
             .birthday_celebration,
             .appreciation {
-                // background-color: #bac4cc;
-                // width: auto;
-                // display: block;
+                display: block;
                 overflow: hidden;
                 margin: 0;
                 width: fit-content;

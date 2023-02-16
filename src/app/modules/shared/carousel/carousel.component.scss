@@ -1,6 +1,6 @@
   .leftRs {
     position: absolute;
-    top: -56px;
+    top: -64px;
     bottom: 0;
     color:var( --caurosel-button-color);
 
@@ -10,13 +10,14 @@
     border-radius: 50%;
     right: 30px;
     border: none;
+    // z-index: 9999;
 
 
   }
 
   .rightRs {
     position: absolute;
-    top: -56px;
+    top: -64px;
     bottom: 0;
     color:var( --caurosel-button-color);
     background-color: #f1f1f1;
@@ -25,38 +26,40 @@
     border-radius: 50%;
     right: 0;
     border: none;
+    // z-index: 9999;
   }
 
   :host::ng-deep{
 
     .ngucarousel{
       position: initial !important;
-    }
-    .item .ing-star-inserted{
-      margin: 0;
       overflow: hidden;
     }
+    // .item .ing-star-inserted{
+    //   margin: 0;
+    //   overflow: hidden;
+    // }
   }
-  // .item{
-  //    width: 45vw;
-  //    overflow: hidden;
-  //    margin: 0;
-  //    padding: 0;
-  // }
 
   .myPoint {
     list-style-type: none;
     padding: 12px;
     margin: 0;
     white-space: nowrap;
-    overflow: auto;
+    overflow: hidden;
     box-sizing: border-box;
+    overflow: auto;
     text-align: center;
+    // @media only screen and (max-width: 1399px) {
+    //   // width:max-content;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    // }
   }
   .myPoint li {
     display: inline-block;
     border-radius: 50%;
-    // border: 2px solid rgba(0, 0, 0, 0.55);
     background: #D6D6D6;
     padding: 4px;
     margin: 0 3px;

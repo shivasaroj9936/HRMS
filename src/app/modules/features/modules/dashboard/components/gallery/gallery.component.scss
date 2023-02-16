@@ -1,19 +1,19 @@
 @import "src/scss/colors.scss";
 @import "src/scss/commonscss.scss";
 
-// *{
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 section {
   background-color: #fff;
   box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
   border-radius: 8px;
   .heading {
-    // padding: 16px 16px 0px 16px;
     border-bottom: 1px solid var(--border-color);
     padding : 1rem 1.5rem;
+    position: relative;
     .header {
       font-size: 24px;
       font-weight: 500;
@@ -23,7 +23,7 @@ section {
 
   figure {
     position: relative;
-    // gap: 1rem;
+    width: 90%;
     margin: 1rem 1.5rem;
     .imageResize {
       height: 256px;
@@ -36,15 +36,19 @@ section {
   .gallery-info {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.6%, rgba(0, 0, 0, 0.54) 73.45%);
     position: absolute;
-    bottom: 22px;
-    margin-left: 40px;
-    padding: 0px 10px;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 15px;
 
+    flex-direction: column;
+    justify-content: flex-end;
     .img-count {
       width: 50px;
       display: flex;
       align-items: center;
-      gap: 7px;
       color: #fff;
       background-color: rgba(0, 0, 0, 0.3);
       padding: 5px 10px;
@@ -52,20 +56,19 @@ section {
 
     .event {
       display: flex;
-      width: fit-content;
+      justify-content: space-between;
+      align-items: center;
       .event-text {
-        width: 250px;
         color: #fff;
         font-size: 18px;
         font-weight: 550;
+        margin: 0;
       }
 
       .view {
-        //    @include buttonTransparent();
         background: transparent;
         border: none;
         cursor: pointer;
-        margin: 0px 0px 16px 60px;
         padding: 8px 30px;
         font-size: 14px;
         color: #fff;

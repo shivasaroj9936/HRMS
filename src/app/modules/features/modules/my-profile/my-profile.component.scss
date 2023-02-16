@@ -49,18 +49,14 @@ section {
   }
 
   .profile_part_container {
-    // display: flex;
-    // justify-content: space-between;
+ 
     display: grid;
     grid-template-columns: 20% 78%;
     gap: 30px;
     margin: 20px 11px;
 
     .profile_parts {
-      // width: 20%;
-      // min-width: 150px;
-      // background-color: var(--white-background-color);
-
+    
       border-top-left-radius: 8px !important;
       border-top-right-radius: 8px !important;
 
@@ -91,12 +87,6 @@ section {
         border-top-right-radius: 8px !important;
       }
 
-      // .part:last-child {
-      //   margin-bottom: 0;
-      //   border-bottom-right-radius: 0.125rem;
-      //   border-bottom-left-radius: 0.125rem;
-      // }
-
       .is_active {
         color: #fff;
         background-color: var(--profile-active-link-background-color);
@@ -114,5 +104,9 @@ section {
     .profile_info_container {
       width: 100%;
     }
+  @media (min-width: 320px) and (max-width: 550px) {
+    
+  }
+
   }
 }

@@ -1,9 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  IWORKANNIVERSARY,
-  WORKANNIVERSARY_EMP_IMAGE_DATA,
-  WORK_LAYOUT,
-} from "../../interfaces/interfaces";
+import { IWORKANNIVERSARY, WORKANNIVERSARY_EMP_IMAGE_DATA, WORK_LAYOUT } from "../../../interfaces/interfaces";
+
 
 @Component({
   selector: "app-work-anniversary",

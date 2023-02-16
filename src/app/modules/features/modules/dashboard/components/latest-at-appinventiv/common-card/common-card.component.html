@@ -5,11 +5,11 @@
     </div>
     <span class="dear">{{cardLayoutData.DEARR}}</span>
   </header>
+  
   <main>
-
     <app-carousel [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel>
-    <ng-container *ngFor="let item of data">
-      <ng-template #listofDivs>
+  <ng-container *ngFor="let item of data">
+    <ng-template #listofDivs>
         <figure>
           <img [src]="item.IMAGE" alt="emp-image">
           <div class="emp-info">
