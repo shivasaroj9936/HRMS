@@ -11,6 +11,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatNativeDateModule,
     MatButtonModule,
     CommonDropdownModule,
-    FormsModule,ReactiveFormsModule
+    FormsModule,ReactiveFormsModule,
+    ValidationErrorModule
   ]
 })
 export class BasicInformationModule { }

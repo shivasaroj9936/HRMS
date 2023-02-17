@@ -27,8 +27,9 @@ export class AppreciationComponent implements OnInit,AfterViewInit {
   }
   ngAfterViewInit(): void {
     this.listToShow.forEach((item: any) => {
-      this.dataSource.push(item);
+    this.dataSource.push(item);
     })
+
   }
 
 }

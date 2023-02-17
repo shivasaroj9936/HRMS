@@ -1,5 +1,5 @@
 @import "src/scss/colors.scss";
-@import 'src/scss/commonscss.scss';
+@import "src/scss/commonscss.scss";
 
 $font-size: 12px;
 $fontweight: 500;
@@ -10,11 +10,7 @@ $fontweight: 500;
   box-sizing: border-box;
 }
 
-
-
 section {
-  // min-height: 200px;
-  // max-width: 20vw;
   height: 482px;
 
   border: 1px solid var(--border-color);
@@ -24,13 +20,10 @@ section {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
   main {
-    // overflow: hidden;
     width: fit-content;
 
     figure {
-      // overflow: hidden;
       border: 1px solid var(--border-color);
       position: relative;
       border-radius: 5px;
@@ -50,9 +43,11 @@ section {
         bottom: 0;
         left: 0;
         font-size: $font-size;
-        background: linear-gradient(180deg,
-            rgba(22, 22, 22, 0) 0%,
-            #151515 100%);
+        background: linear-gradient(
+          180deg,
+          rgba(22, 22, 22, 0) 0%,
+          #151515 100%
+        );
         padding-left: 10px;
 
         h3 {
@@ -92,16 +87,5 @@ section {
       word-break: break-all;
       overflow: auto;
     }
-
-    // @media only screen and (max-width: 765px) {
-    // }
   }
-
-  // @media only screen and (max-width: 765px) {
-  //   width: 80vw;
-
-  //   .message {
-  //     width: 100%;
-  //   }
-  // }
 }

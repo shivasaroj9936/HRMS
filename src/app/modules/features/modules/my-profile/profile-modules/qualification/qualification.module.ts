@@ -10,9 +10,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
+import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
 
 
 @NgModule({
@@ -29,9 +30,11 @@ import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/com
     MatNativeDateModule,
     MatButtonModule,
     MatAutocompleteModule,
+    CommonDropdownModule,
+    FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    CommonDropdownModule
+    ValidationErrorModule
   ]
 })
 export class QualificationModule { }

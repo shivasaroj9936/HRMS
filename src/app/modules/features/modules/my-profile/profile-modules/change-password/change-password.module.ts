@@ -9,6 +9,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
 
 
 @NgModule({
@@ -23,7 +25,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ValidationErrorModule
   ]
 })
 export class ChangePasswordModule { }

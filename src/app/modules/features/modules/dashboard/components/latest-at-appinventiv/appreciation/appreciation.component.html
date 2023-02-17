@@ -1,22 +1,23 @@
-<!-- <app-carousel [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel> -->
 <section>
-  <!-- <ng-container *ngFor="let data[0] of data"> -->
-  <!-- <ng-template #listofDivs> -->
-  <header>
-    <div class="heading latest_appinv_cards_heading">
-      <h3> {{data[0].HEADER}} </h3>
+  <app-carousel [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel>
+  <ng-container *ngFor="let item of data">
+    <ng-template #listofDivs>
+      <div class="container">
+
+        <header>
+          <div class="heading latest_appinv_cards_heading">
+            <h3> {{item.HEADER}} </h3>
+          </div>
+          <span class="dear">{{item.DEAR}} {{data[0].TEXT}}</span>
+        </header>
+      <main>
+        <p class="message latest_appinv_cards_description">{{data[0].MESSAGE}}</p>
+        <p class="cheers">{{item.GREET}}</p>
+      </main>
+      <footer>
+        <button class="btn_primary" mat-raised-button>{{item.BUTTON}}</button>
+      </footer>
     </div>
-    <span class="dear">{{data[0].DEAR}} {{data[0].TEXT}}</span>
-  </header>
-  <main>
-    <p class="message latest_appinv_cards_description">{{data[0].MESSAGE}}</p>
-    <p class="cheers">{{data[0].GREET}}</p>
-  </main>
-  <footer>
-    <!-- <p class="cheers">{{cardLayoutData.CHEER}}</p>
-            <p class="company-name">{{cardLayoutData.APPINVENTIV}}</p> -->
-    <button class="btn_primary" mat-raised-button>{{data[0].BUTTON}}</button>
-  </footer>
-  <!-- </ng-template> -->
-  <!-- </ng-container> -->
+    </ng-template>
+  </ng-container>
 </section>

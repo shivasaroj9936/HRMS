@@ -8,8 +8,10 @@ import {
   TemplateRef,
   ViewChildren,
 } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
 import { NguCarouselConfig } from "@ngu/carousel";
 import { Gallery_DATA, GALLER_VALUE } from "../../interfaces/interfaces";
+import { GalleryImagesDialogComponent } from "../gallery-images-dialog/gallery-images-dialog.component";
 
 @Component({
   selector: "app-gallery",
@@ -18,7 +20,7 @@ import { Gallery_DATA, GALLER_VALUE } from "../../interfaces/interfaces";
 })
 export class GalleryComponent implements OnInit, AfterViewInit {
   headerValue=GALLER_VALUE;
-  imageData=Gallery_DATA
+  imageData=Gallery_DATA;
 
   buttonShow: boolean = true;
 
@@ -28,19 +30,27 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   carouselConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 3, md: 3, lg: 3, all: 0 },
     load: 1,
-    interval: { timing: 400000, initialDelay: 100000 },
+    interval: { timing: 4000, initialDelay: 1000 },
     loop: true,
     touch: true,
     velocity: 0.2,
   };
   dataSource: any = [];
 
-  constructor() {}
+  constructor( public dialog: MatDialog) {}
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
     this.listToShow.forEach((item: any) => {
       this.dataSource.push(item);
+    });
+  }
+
+  openDImageGallery(data:any): void {
+    
+    this.dialog.open(GalleryImagesDialogComponent, {
+      data:data,
+      
     });
   }
 }

@@ -17,9 +17,11 @@ export class CarouselComponent implements OnInit, AfterViewInit {
 
   wait = false;
   ngOnInit() {
+    // this.wait = true;
+
     setTimeout(() => {
       this.wait = true;
-    }, 500);
+    }, 100);
 
   }
   

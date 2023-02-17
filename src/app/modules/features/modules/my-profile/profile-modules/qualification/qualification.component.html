@@ -2,60 +2,72 @@
         <div class="header">
             <p class="header-text">{{uiMessage.QUALIFICATION_HEADER}}</p>
         </div>
-            <form >
+            <form [formGroup]="qualificationForm" (ngSubmit)="save()">
                 <div class="inputs">
                     <div class="formfield 1">
                         <label class="label">{{labelMessage.SCHOOL}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input [placeholder]="labelMessage.SCHOOL" matInput>
+                            <input [placeholder]="labelMessage.SCHOOL" matInput formControlName="school">
+                            <mat-error>{{ getControl("school") | validate : labelMessage.SCHOOL }}</mat-error>
+
                         </mat-form-field>
                     </div>
 
                     <div class="formfield 2">
-                        <app-common-dropdown [label]="labelMessage.EDUCATION" [data]="educationDropdown" ></app-common-dropdown>
+                        <app-common-dropdown [label]="labelMessage.EDUCATION" [data]="educationDropdown" [formControlName]="getControl('education')" ></app-common-dropdown>
                    
                     </div>
                     <div class="formfield topField 3">
                         <label class="label">{{labelMessage.TIME}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input matInput [matDatepicker]="picker1" readonly [placeholder]="labelMessage.PLACEHOLDER_FROM">
+                            <input matInput [matDatepicker]="picker1" readonly [placeholder]="labelMessage.PLACEHOLDER_FROM" formControlName="time_from">
                             <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
                             <mat-datepicker #picker1></mat-datepicker>
+                            <mat-error>{{ getControl("time_from") | validate : labelMessage.TIME }}</mat-error>
+
                         </mat-form-field>
                     </div>
                     <div class="formfield topField 4">
                         <label> </label>
                         <mat-form-field appearance="outline" class="increaseFormfield" style="margin-top: 15px;">
-                            <input matInput [matDatepicker]="picker2" [placeholder]="labelMessage.PLACEHOLDER_TO"
+                            <input matInput [matDatepicker]="picker2" [placeholder]="labelMessage.PLACEHOLDER_TO" formControlName="time_to"
                                 readonly>
                             <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
                             <mat-datepicker #picker2></mat-datepicker>
+                            <mat-error>{{ getControl("time_to") | validate : labelMessage.TIME }}</mat-error>
+
                         </mat-form-field>
                     </div>
                     <!-- <app-dropdown-field [gender]="[labelMessage.GENDER]"></app-dropdown-field> -->
                     <div class="formfield topField 5">
                         <label class="label">{{labelMessage.LANGUAGE}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <mat-select >
+                            <mat-select  formControlName="language">
                                 <mat-option *ngFor="let item of languageDropdown" [value]="item">
                                     {{item.LABEL}}
                                 </mat-option>
                             </mat-select>
+                            <mat-error>{{ getControl("language") | validate : labelMessage.LANGUAGE }}</mat-error>
+
                         </mat-form-field>
                     </div>
                     <div class="formfield topField 6">
                         <label class="label">{{labelMessage.PROFESSIONAL_COURSE}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input matInput [placeholder]="labelMessage.PROFESSIONAL_COURSE">
+                            <input matInput [placeholder]="labelMessage.PROFESSIONAL_COURSE" formControlName="professional_course">
+                            <mat-error>{{ getControl("professional_course") | validate : labelMessage.PROFESSIONAL_COURSE }}</mat-error>
+
                         </mat-form-field>
                     </div>
                 </div>
                 <div class="address">
                     <label class="label">{{labelMessage.DESCRIPTION}}</label>
                     <mat-form-field appearance="outline" class="addressFormfield">
-                        <textarea type="text" placeholder="Message" class="inputMessage" matInput cdkTextareaAutosize
+                        <textarea type="text" placeholder="Message" class="inputMessage" matInput cdkTextareaAutosize formControlName="description"
                             cdkAutosizeMinRows="4" cdkAutosizeMaxRows="7"
                             [placeholder]="labelMessage.DESCRIPTION"></textarea>
+                            <mat-error>{{ getControl("description") | validate : labelMessage.DESCRIPTION }}</mat-error>
+
                     </mat-form-field>
                 </div>
                 <div class="classyButton">

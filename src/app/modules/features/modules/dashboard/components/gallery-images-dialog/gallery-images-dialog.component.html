@@ -1,0 +1,10 @@
+<section>
+
+    <app-carousel [showPoints]="true" [actionButtons]="true" [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel>
+    <ng-container *ngFor="let item of data">
+  <ng-template #listofDivs>
+        <img [src]="item" alt="RepublicDayIamge" class="imageResize">
+  </ng-template>
+</ng-container>
+<mat-icon class="close" (click)="onNoClick()" >close</mat-icon>
+</section>

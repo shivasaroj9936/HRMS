@@ -15,11 +15,16 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { BirthdayCelebrationComponent } from './components/latest-at-appinventiv/birthday-celebration/birthday-celebration.component';
 import { AwardsComponent } from './components/latest-at-appinventiv/awards/awards.component';
 import { AppreciationComponent } from './components/latest-at-appinventiv/appreciation/appreciation.component';
+import { GalleryImagesDialogComponent } from './components/gallery-images-dialog/gallery-images-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { NguCarouselModule } from '@ngu/carousel';
 
 const MATERIAL = [
   // MatSidenavModule,
   // MatListModule,
   MatIconModule,
+  MatDialogModule,
+
   // MatToolbarModule,
   // MatMenuModule,
   MatButtonModule,
@@ -36,13 +41,14 @@ const MATERIAL = [
     GalleryComponent,
     CommonCardComponent,
     WorkAnniversaryComponent,
+    GalleryImagesDialogComponent,
     
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     CarouselModule,
-    // NguCarouselModule,
+    NguCarouselModule,
 
     ...MATERIAL
 

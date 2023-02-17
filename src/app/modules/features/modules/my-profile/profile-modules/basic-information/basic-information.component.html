@@ -121,12 +121,16 @@
                         <label class="label">{{labelMessage.FIRST_NAME}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
                             <input [placeholder]="labelMessage.FIRST_NAME" matInput formControlName="first_name">
+                            <mat-error>{{ getControl("first_name") | validate : "first name" }}</mat-error>
+
                         </mat-form-field>
                     </div>
                     <div class="formfield 2">
                         <label class="label">{{labelMessage.LAST_NAME}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
                             <input [placeholder]="labelMessage.LAST_NAME" matInput formControlName="last_name">
+                            <mat-error>{{ getControl("last_name") | validate : "last name" }}</mat-error>
+
                         </mat-form-field>
                     </div>
                     <div class="formfield 3">
@@ -135,6 +139,8 @@
                             <input matInput [matDatepicker]="picker1" readonly formControlName="dob">
                             <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
                             <mat-datepicker #picker1></mat-datepicker>
+                            <mat-error>{{ getControl("dob") | validate : "date of birth" }}</mat-error>
+
                         </mat-form-field>
                     </div>
                 </div>
@@ -149,6 +155,8 @@
                                     {{item.LABEL}}
                                 </mat-option>
                             </mat-select>
+                            <mat-error>{{ getControl("gender") | validate : "gender" }}</mat-error>
+
                         </mat-form-field>
                     </div>
                     <div class="formfield 5">
@@ -159,13 +167,17 @@
                                 <mat-option *ngFor="let item of maritalStatusValue" [value]="item">
                                     {{item.LABEL}}
                                 </mat-option>
+                                
                             </mat-select>
+                            <mat-error>{{ getControl("marital_status") | validate :labelMessage.MARITAL_STATUS }}</mat-error>
                         </mat-form-field>
                     </div>
                     <div class="formfield 6">
                         <label class="label">{{labelMessage.CONTACT}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
                             <input [placeholder]="labelMessage.CONTACT" matInput formControlName="contact_number">
+                            <mat-error>{{ getControl("contact_number") | validate : labelMessage.CONTACT }}</mat-error>
+
                         </mat-form-field>
                     </div>
                 </div>
@@ -181,12 +193,16 @@
                                 <label class="label">{{labelMessage.YEAR}}</label>
                                 <mat-form-field appearance="outline" class="yearFormfield">
                                     <input min="0" type="number" [placeholder]="labelMessage.YEAR" matInput formControlName="tot_exp_years">
+                            <mat-error>{{ getControl("tot_exp_years") | validate : labelMessage.YEAR }}</mat-error>
+
                                 </mat-form-field>
                             </div>
                             <div class="formfield 8">
                                 <label class="label">{{labelMessage.MONTH}}</label>
                                 <mat-form-field appearance="outline" class="yearFormfield">
                                     <input min="0" max="11" type="number" [placeholder]="labelMessage.MONTH" matInput formControlName="tot_exp_month">
+                            <mat-error>{{ getControl("tot_exp_month") | validate : labelMessage.MONTH }}</mat-error>
+
                                 </mat-form-field>
                             </div>
                         </div>
@@ -199,13 +215,17 @@
                             <div class="formfield 9">
                                 <label class="label">{{labelMessage.YEAR}}</label>
                                 <mat-form-field appearance="outline" class="yearFormfield">
-                                    <input min="0" type="number" [placeholder]="labelMessage.YEAR" matInput formControlName="rel_exp_years">
+                                    <input min="0" type="number" [placeholder]="labelMessage.YEAR" matInput formControlName="rel_exp_year">
+                            <mat-error>{{ getControl("rel_exp_year") | validate : labelMessage.YEAR }}</mat-error>
+
                                 </mat-form-field>
                             </div>
                             <div class="formfield 10">
                                 <label class="label">{{labelMessage.MONTH}}</label>
                                 <mat-form-field appearance="outline" class="yearFormfield">
                                     <input min="0" max="11" type="number" [placeholder]="labelMessage.MONTH" matInput formControlName="rel_exp_month">
+                            <mat-error>{{ getControl("rel_exp_month") | validate : labelMessage.MONTH }}</mat-error>
+
                                 </mat-form-field>
                             </div>
                         </div>
@@ -217,10 +237,12 @@
                         <textarea type="text" placeholder="Message" class="inputMessage" matInput cdkTextareaAutosize formControlName="address"
                             cdkAutosizeMinRows="4" cdkAutosizeMaxRows="7"
                             [placeholder]="labelMessage.ADDRESS"></textarea>
+                            <mat-error>{{ getControl("address") | validate : labelMessage.ADDRESS }}</mat-error>
+
                     </mat-form-field>
                 </div>
                 <div class="row5  classyButton">
-                    <button class="btn_primary" mat-raised-button >{{uiMessage.BUTTON}}</button>
+                    <button class="btn_primary" mat-raised-button type="submit" >{{uiMessage.BUTTON}}</button>
                 </div>
             </form>
 </section>

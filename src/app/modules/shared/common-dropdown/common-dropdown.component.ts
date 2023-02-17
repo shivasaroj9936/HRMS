@@ -10,7 +10,7 @@ import { VALIDATION_MESSAGES } from 'src/app/constants/messages';
   styleUrls: ['./common-dropdown.component.scss']
 })
 export class CommonDropdownComponent implements OnInit {
-  @Input() myControlName!:FormControl;
+  @Input() formControlName!:FormControl;
   @Input() label!: any;
   @Input() data!:any;
   @Input() errorType:any;

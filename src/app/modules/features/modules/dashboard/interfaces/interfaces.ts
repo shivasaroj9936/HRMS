@@ -38,6 +38,7 @@ export interface IGALLERYDATA {
   HEADING?: string;
   BUTTON?: string;
   NUM?: number;
+  ALBUM?:string[]
 }
 export interface BITHDAY {
   HEADING: string;
@@ -265,24 +266,31 @@ export const Gallery_DATA: IGALLERYDATA[] = [
     HEADING: "Republic Day-2023",
     NUM: 5,
     BUTTON: "View",
+    ALBUM:["/assets/gallery/award_1674822333816.jpg", "/assets/gallery/award_1672378171227.jpg","/assets/gallery/award_1672292016846.jpg", "/assets/gallery/award_166719426194.jpeg",]
   },
   {
     IMAGE: "/assets/gallery/award_1672378171227.jpg",
     HEADING: "Best Place To Work Award",
     NUM: 5,
     BUTTON: "View",
+    ALBUM:["/assets/gallery/award_1674822333816.jpg", "/assets/gallery/award_1672378171227.jpg","/assets/gallery/award_1672292016846.jpg", "/assets/gallery/award_166719426194.jpeg",]
+
   },
   {
     IMAGE: "/assets/gallery/award_1672292016846.jpg",
     HEADING: "Christmas Celebration -2022",
     NUM: 5,
     BUTTON: "View",
+    ALBUM:["/assets/gallery/award_1674822333816.jpg", "/assets/gallery/award_1672378171227.jpg","/assets/gallery/award_1672292016846.jpg", "/assets/gallery/award_166719426194.jpeg",]
+
   },
   {
     IMAGE: "/assets/gallery/award_166719426194.jpeg",
     HEADING: "Diwali Party -2022",
     NUM: 5,
     BUTTON: "View",
+    ALBUM:["/assets/gallery/award_1674822333816.jpg", "/assets/gallery/award_1672378171227.jpg","/assets/gallery/award_1672292016846.jpg", "/assets/gallery/award_166719426194.jpeg",]
+
   },
 ];
 

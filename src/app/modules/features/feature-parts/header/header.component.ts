@@ -1,6 +1,7 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, Input, OnInit, Output,EventEmitter, AfterViewInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,11 +15,15 @@ export class HeaderComponent implements OnInit {
   isExpanded=true;
   profileOpen=false;
   constructor(
-    private observer: BreakpointObserver
+    private observer: BreakpointObserver,
+    private _router:Router
   ) { }
 
   ngOnInit(): void {
 
+  }
+  logOut(){
+    this._router.navigate(['/auth'])
   }
 
   expand(){
