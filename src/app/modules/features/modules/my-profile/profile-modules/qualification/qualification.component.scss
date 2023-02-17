@@ -1,86 +1,89 @@
 @import "../basic-information/basic-information.component.scss";
 
 section {
-    .card2 {
-        margin-top: 20px;
+  .card2 {
+    margin-top: 20px;
+  }
+
+  form {
+    .topField {
+      margin-top: -25px !important;
     }
 
-    .basic-card {
-        .content {
-            .form {
-                .topField {
-                    margin-top: -25px !important;
-                }
-
-                .increaseFormfield {
-                    width: 550px;
-                }
-
-                .inputs {
-                    gap: 40px;
-                }
-            }
-        }
+    .inputs {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
     }
+  }
 }
 
-
-
-  ::ng-deep {
-    .mat-select-panel {
-      min-width: calc(100% + 15px) !important;
-      margin: 2.5rem 0rem 0rem 0.425rem !important;
-    }
+::ng-deep {
+  .mat-select-panel {
+    min-width: calc(100% + 15px) !important;
+    margin: 2.5rem 0rem 0rem 0 !important;
   }
+}
 
-  @media (min-width: 1025px) and (max-width: 1320px) {
-    section {
-      .basic-card {
-        .content {
-          .form {
-            .inputs {
-              .formfield {
-                .increaseFormfield {
-                  width: auto;
-                }
-              }
-            }
-          }
-        }
+section {
+  @media only screen and (max-width: 1500px) {
+    form{
+
+      .inputs {
+        grid-template-columns: auto;
       }
     }
   }
-  @media (min-width: 320px) and (max-width: 660px) {
-    section {
-      .basic-card {
-        .content {
-          .form {
-            .inputs {
-              .formfield {
-                .increaseFormfield {
-                  width: auto;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  @media (min-width: 150px) and (max-width: 320px) {
-    section {
-      .basic-card {
-        .content {
-          .form {
-            .inputs {
-              .formfield {
-                .increaseFormfield {
-                  width: 100px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+}
+
+// @media (min-width: 1025px) and (max-width: 1320px) {
+//   section {
+//     .basic-card {
+//       .content {
+//         .form {
+//           .inputs {
+//             .formfield {
+//               .increaseFormfield {
+//                 width: auto;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media (min-width: 320px) and (max-width: 660px) {
+//   section {
+//     .basic-card {
+//       .content {
+//         .form {
+//           .inputs {
+//             .formfield {
+//               .increaseFormfield {
+//                 width: auto;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @media (min-width: 150px) and (max-width: 320px) {
+//   section {
+//     .basic-card {
+//       .content {
+//         .form {
+//           .inputs {
+//             .formfield {
+//               .increaseFormfield {
+//                 width: 100px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

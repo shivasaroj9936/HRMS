@@ -172,6 +172,9 @@ export const FORM_LABEL = {
   APPRAISAL_CYCLE: "Appraisal Cycle",
   APPRAISAL_MONTH: "Appraisal Month",
   PLACEHOLDER_TO: "to",
+  PLACEHOLDER_FROM: "from",
+
+
 };
 
 export const GENDER_INPUT_DROPDOWN = [{ LABEL: "Male" }, { LABEL: "Female" }];

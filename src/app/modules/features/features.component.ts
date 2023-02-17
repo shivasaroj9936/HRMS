@@ -18,7 +18,7 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void { }
   ngAfterViewInit(): void {
-    this.observer.observe(["(max-width:1000px)"]).pipe(delay(1)).subscribe((res) => {
+    this.observer.observe(["(max-width:1185px)"]).pipe(delay(1)).subscribe((res) => {
       if (res.matches) {
         this.sidenav.mode = "over";
         this.sidenav?.close();

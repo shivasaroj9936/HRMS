@@ -67,9 +67,11 @@ section {
   }
 
   .employees {
-    display: flex;
+    // display: flex;
     display: grid;
     grid-template-columns: auto auto auto;
+    // flex-wrap: wrap;
+    // justify-content: center;
     gap: 2rem;
 
     .emp_details_card {
@@ -79,7 +81,7 @@ section {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-
+      width: 100%;
       figure {
         margin-bottom: 20px;
 

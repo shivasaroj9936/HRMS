@@ -1,10 +1,8 @@
 <section @slideInRight>
-    <div class="basic-card">
         <div class="header">
             <p class="header-text">{{uiMessage.QUALIFICATION_HEADER}}</p>
         </div>
-        <div class="content">
-            <form class="form">
+            <form >
                 <div class="inputs">
                     <div class="formfield 1">
                         <label class="label">{{labelMessage.SCHOOL}}</label>
@@ -14,37 +12,13 @@
                     </div>
 
                     <div class="formfield 2">
-                        <label class="label">{{labelMessage.EDUCATION}}</label>
-                        <!-- <mat-form-field appearance="outline" class="increaseFormfield">
-                            <mat-select>
-                                <mat-option *ngFor="let item of educationDropdown" [value]="item">
-                                    {{item.LABEL}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field> -->
-                        <mat-form-field>
-                        <mat-select class="increaseFormfield" appearance="outline">
-                        <mat-form-field  appearance="outline">
-                            <input type="text"
-                                   placeholder="Pick one"
-                                   aria-label="Number"
-                                   matInput
-                                   [formControl]="myControl"
-                                   [matAutocomplete]="auto">
-                            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                              <mat-option *ngFor="let option of filteredOptions | async" [value]="option" [disabled]="option=='not found'">
-                                {{option}}
-                              </mat-option>
-                            </mat-autocomplete>
-                            <mat-icon  matSuffix>expand_more</mat-icon>
-                          </mat-form-field>
-                        </mat-select>
-                    </mat-form-field>
+                        <app-common-dropdown [label]="labelMessage.EDUCATION" [data]="educationDropdown" ></app-common-dropdown>
+                   
                     </div>
                     <div class="formfield topField 3">
                         <label class="label">{{labelMessage.TIME}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input matInput [matDatepicker]="picker1" readonly>
+                            <input matInput [matDatepicker]="picker1" readonly [placeholder]="labelMessage.PLACEHOLDER_FROM">
                             <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
                             <mat-datepicker #picker1></mat-datepicker>
                         </mat-form-field>
@@ -88,8 +62,7 @@
                     <button class="btn_primary" mat-raised-button>{{uiMessage.BUTTON}}</button>
                 </div>
             </form>
-        </div>
-    </div>
+
     <div class="card2">
         <div class="basic-card">
             <div class="header">

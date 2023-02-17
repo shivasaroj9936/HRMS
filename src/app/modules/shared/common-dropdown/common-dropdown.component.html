@@ -1,0 +1,18 @@
+<div class="formfield 2">
+    <label class="label" [ngClass]="labelStyle">{{label}}</label>
+    <mat-form-field appearance="outline" [ngClass]="formfieldCSS">
+      <mat-select [formControl]="myControlName">
+        <input [formControl]="myControl"  class="filter">
+        <mat-option *ngFor="let item of filteredOptions | async" [value]="item" [disabled]="item=='no results Found'">
+          {{item}}
+        </mat-option>
+      </mat-select>
+      <mat-error>{{   myControlName | validate : label   }}</mat-error>
+
+      <!-- <mat-error *ngIf="this.errorType?.hasError('required')" class="alertMessage">
+        <span class="errorMessage"> {{errorMessage.required}}</span>
+      </mat-error> -->
+    </mat-form-field>
+  </div>
+  
+  

@@ -1,0 +1,84 @@
+// .formfield {
+//   @include flexbox();
+//   flex-direction: column;
+//   .label {
+//     font-weight: 500;
+//   }
+//   .labelStyle {
+//     font-size: 14px;
+//     color: $directory-font-color;
+//     font-weight: 500;
+//     line-height: 1.4;
+//     margin-bottom: 4px;
+//   }
+//   .increaseFormfield {
+//     width: 369px;
+//   }
+//   .qualificationDropdown {
+//     width: 550px;
+//   }
+//   ::ng-deep {
+//     //mat-input focused color
+//     .mat-form-field-appearance-outline.mat-focused
+//       .mat-form-field-outline-thick {
+//       color: $button-color !important;
+//     }
+//   }
+// }
+.filter {
+  width: 98% !important;
+  padding: 10px 0px !important;
+  overflow: hidden;
+}
+::ng-deep {
+  .mat-option[aria-disabled="true"] {
+    font-weight: 500;
+    color: black;
+    text-transform: capitalize;
+    user-select: none;
+    cursor: default;
+    overflow: hidden;
+  }
+
+  .mat-primary .mat-option:hover {
+    background:var( --button-background-color);
+    color: #fff;
+    &:focus {
+    background:var( --button-background-color);
+
+    }
+  }
+  .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+
+    color: #fff;
+  }
+}
+
+// @media (max-width: 1798px) {
+//   .formfield {
+//     .increaseFormfield {
+//       width: auto;
+//     }
+//     .qualificationDropdown {
+//       width: auto;
+//     }
+//   }
+// }
+// @media (min-width: 150px) and (max-width: 319px) {
+//   .formfield {
+//     .increaseFormfield {
+//       width: 100px;
+//     }
+//     .qualificationDropdown {
+//       width: 100px;
+//     }
+//   }
+// }
+.label {
+    font-weight: 500;
+}
+
+.formfield {
+    display: flex;
+    flex-direction: column;
+}

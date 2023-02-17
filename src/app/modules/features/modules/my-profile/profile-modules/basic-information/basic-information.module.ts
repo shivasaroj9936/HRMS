@@ -9,6 +9,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    CommonDropdownModule,
+    FormsModule,ReactiveFormsModule
   ]
 })
 export class BasicInformationModule { }

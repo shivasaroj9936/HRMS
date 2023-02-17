@@ -1,7 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 section {
   background-color: #fff;
-  .basic-card {
-    padding: 0px !important;
 
     .header {
       border-bottom: 1px solid var(--border-color);
@@ -13,19 +16,19 @@ section {
       }
     }
 
-    .content {
-      .form {
+    form {
         padding: 20px;
+          display: grid;
+          grid-template-columns: auto auto;
         .label {
           font-weight: 500;
         }
         .formfield {
           display: flex;
           flex-direction: column;
+          padding: 0 10px;
         }
-        .increaseFormfield {
-          width: 369px;
-        }
+      
 
         ::ng-deep {
           .mat-form-field-appearance-outline .mat-form-field-flex {
@@ -43,7 +46,5 @@ section {
           gap: 30px;
         }
       }
-    }
-  }
 }
 

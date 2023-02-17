@@ -1,4 +1,4 @@
-<section @slideInRight>
+<!-- <section @slideInRight>
     <div class="basic-card">
         <div class="header">
             <p class="header-text">{{uiMessage.HEADER}}</p>
@@ -30,26 +30,21 @@
                         <label class="label">{{labelMessage.GENDER}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
                             <mat-select>
-                                <!-- <input type="text" [matAutocomplete]="auto"> -->
-                                <!-- <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete"> -->
+                               
                                 <mat-option *ngFor="let item of genderValue" [value]="item">
                                     {{item.LABEL}}
                                 </mat-option>
-                                <!-- </mat-autocomplete> -->
                             </mat-select>
                         </mat-form-field>
                     </div>
-                    <!-- <app-dropdown-field [gender]="[labelMessage.GENDER]"></app-dropdown-field> -->
                     <div class="formfield 5">
                         <label class="label">{{labelMessage.MARITAL_STATUS}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
                             <mat-select>
-                                <!-- <input type="text" [matAutocomplete]="auto"> -->
-                                <!-- <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete"> -->
+                               
                                 <mat-option *ngFor="let item of maritalStatusValue" [value]="item">
                                     {{item.LABEL}}
                                 </mat-option>
-                                <!-- </mat-autocomplete> -->
                             </mat-select>
                         </mat-form-field>
                     </div>
@@ -114,4 +109,118 @@
             </form>
         </div>
     </div>
+</section> -->
+
+<section @slideInRight>
+        <div class="header">
+            <p class="header-text">{{uiMessage.HEADER}}</p>
+        </div>
+            <form [formGroup]="basicInformationForm" (ngSubmit)="save()">
+                <div class="row 1">
+                    <div class="formfield 1">
+                        <label class="label">{{labelMessage.FIRST_NAME}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <input [placeholder]="labelMessage.FIRST_NAME" matInput formControlName="first_name">
+                        </mat-form-field>
+                    </div>
+                    <div class="formfield 2">
+                        <label class="label">{{labelMessage.LAST_NAME}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <input [placeholder]="labelMessage.LAST_NAME" matInput formControlName="last_name">
+                        </mat-form-field>
+                    </div>
+                    <div class="formfield 3">
+                        <label class="label">{{labelMessage.DATE_OF_BIRTH}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <input matInput [matDatepicker]="picker1" readonly formControlName="dob">
+                            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row 2">
+
+                    <div class="formfield 4">
+                        <label class="label">{{labelMessage.GENDER}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <mat-select formControlName="gender">
+                               
+                                <mat-option *ngFor="let item of genderValue" [value]="item">
+                                    {{item.LABEL}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="formfield 5">
+                        <label class="label">{{labelMessage.MARITAL_STATUS}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <mat-select  formControlName="marital_status">
+                               
+                                <mat-option *ngFor="let item of maritalStatusValue" [value]="item">
+                                    {{item.LABEL}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="formfield 6">
+                        <label class="label">{{labelMessage.CONTACT}}</label>
+                        <mat-form-field appearance="outline" class="increaseFormfield">
+                            <input [placeholder]="labelMessage.CONTACT" matInput formControlName="contact_number">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+                <div class="row row3">
+                    <div class="total-exp">
+                        <p class="label heading-exp">
+                            {{uiMessage.TOTAL_WORK_EXP}}
+                        </p>
+                        <div class="inputs">
+                            <div class="formfield 7">
+                                <label class="label">{{labelMessage.YEAR}}</label>
+                                <mat-form-field appearance="outline" class="yearFormfield">
+                                    <input min="0" type="number" [placeholder]="labelMessage.YEAR" matInput formControlName="tot_exp_years">
+                                </mat-form-field>
+                            </div>
+                            <div class="formfield 8">
+                                <label class="label">{{labelMessage.MONTH}}</label>
+                                <mat-form-field appearance="outline" class="yearFormfield">
+                                    <input min="0" max="11" type="number" [placeholder]="labelMessage.MONTH" matInput formControlName="tot_exp_month">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total-exp">
+                        <p class="label heading-exp">
+                            {{uiMessage.RELEVANT_EXP}}
+                        </p>
+                        <div class="inputs">
+                            <div class="formfield 9">
+                                <label class="label">{{labelMessage.YEAR}}</label>
+                                <mat-form-field appearance="outline" class="yearFormfield">
+                                    <input min="0" type="number" [placeholder]="labelMessage.YEAR" matInput formControlName="rel_exp_years">
+                                </mat-form-field>
+                            </div>
+                            <div class="formfield 10">
+                                <label class="label">{{labelMessage.MONTH}}</label>
+                                <mat-form-field appearance="outline" class="yearFormfield">
+                                    <input min="0" max="11" type="number" [placeholder]="labelMessage.MONTH" matInput formControlName="rel_exp_month">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row4 address">
+                    <label class="label">{{labelMessage.ADDRESS}}</label>
+                    <mat-form-field appearance="outline" class="addressFormfield">
+                        <textarea type="text" placeholder="Message" class="inputMessage" matInput cdkTextareaAutosize formControlName="address"
+                            cdkAutosizeMinRows="4" cdkAutosizeMaxRows="7"
+                            [placeholder]="labelMessage.ADDRESS"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="row5  classyButton">
+                    <button class="btn_primary" mat-raised-button >{{uiMessage.BUTTON}}</button>
+                </div>
+            </form>
 </section>

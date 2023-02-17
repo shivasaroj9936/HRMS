@@ -1,194 +1,324 @@
 @import 'src/scss/buttons.scss';
 
-section {
-    .basic-card {
-        padding: 0px !important;
-        background-color: #fff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .header {
-            border-bottom: 1px solid gainsboro;
-            .header-text {
-                color: #3246d3;
-                font-size: 24px;
-                word-spacing: 1px;
-                padding: 11px 25px 11px 15px;
-                font-weight: 500;
+// section {
+//     .basic-card {
+//         padding: 0px !important;
+//         background-color: #fff;
+
+//         .header {
+//             border-bottom: 1px solid gainsboro;
+//             .header-text {
+//                 color: #3246d3;
+//                 font-size: 24px;
+//                 word-spacing: 1px;
+//                 padding: 11px 25px 11px 15px;
+//                 font-weight: 500;
+//             }
+
+//         }
+
+//         .content {
+//             .form {
+//                 padding: 20px;
+
+//                 .label {
+//                     font-weight: 500;
+//                 }
+
+//                 .formfield {
+//                     display: flex;
+//                     flex-direction: column;
+//                 }
+
+//                 .increaseFormfield {
+//                     width: 369px;
+//                 }
+
+//                 ::ng-deep {
+//                     .mat-form-field-appearance-outline .mat-form-field-flex {
+//                         box-shadow: 0px 4px 8px rgb(44 39 56 / 4%) !important;
+//                     }
+
+//                     .mat-form-field-appearance-outline .mat-form-field-infix {
+//                         padding: 12px 0px 15px 0px;
+//                     }
+
+//                     .mat-datepicker-toggle {
+//                         color: gainsboro;
+//                         position: absolute;
+//                         right: -12px;
+//                         top: -5px;
+//                     }
+
+//                     .mat-select-arrow {
+//                         width: 0;
+//                         height: 0;
+//                         border-left: 10px solid transparent;
+//                         border-right: 10px solid transparent;
+//                         border-top: 11px solid;
+//                         margin: 0 4px;
+//                     }
+//                 }
+
+//                 .inputs {
+//                     display: flex;
+//                     flex-wrap: wrap;
+//                     gap: 20px;
+//                 }
+
+//                 .mid-container {
+//                     display: flex;
+//                     gap: 20px;
+
+//                     .total-exp {
+//                         .inputs {
+//                             display: flex;
+//                             flex-wrap: wrap;
+//                             gap: 20px;
+
+//                             .yearFormfield {
+//                                 width: 272px;
+//                             }
+//                         }
+//                     }
+//                 }
+
+//                 .address {
+//                     display: flex;
+//                     flex-direction: column;
+//                     margin-top: 10px;
+
+//                     // .inputMessage {}
+//                 }
+
+//                 .saveButton {
+//                     // background: transparent;
+//                     border: none;
+//                     cursor: pointer;
+//                     color: white;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// ::ng-deep {
+//     .mat-select-panel {
+//         min-width: calc(100% + 15px) !important;
+//         margin: 2.5rem 0rem 0rem 0.425rem !important;
+//     }
+// }
+// // @media (min-width: 550px) and (max-width: 680px) {
+// //     section {
+// //       .basic-card {
+// //         .content {
+// //           .form {
+// //             .mat-form-field {
+// //               width: 369px;
+// //             }
+// //             .increaseFormfield {
+// //               width: 369px;
+// //             }
+// //             .mid-container {
+// //               flex-direction: column;
+// //               .total-exp {
+// //                 .inputs {
+// //                   .yearFormfield {
+// //                     width: 369px;
+// //                   }
+// //                 }
+// //               }
+// //             }
+// //           }
+// //         }
+// //       }
+// //     }
+// //   }
+// //   @media (min-width: 320px) and (max-width: 550px) {
+// //     section {
+// //       .basic-card {
+// //         .content {
+// //           .form {
+// //             .mat-form-field {
+// //               width: auto;
+// //             }
+// //             .increaseFormfield {
+// //               width: auto;
+// //             }
+// //             .mid-container {
+// //               flex-direction: column;
+// //               .total-exp {
+// //                 .inputs {
+// //                   .yearFormfield {
+// //                     width: auto;
+// //                   }
+// //                 }
+// //               }
+// //             }
+// //           }
+// //         }
+// //       }
+// //     }
+// //   }
+// //   @media (min-width: 150px) and (max-width: 320px) {
+// //     section {
+// //       .basic-card {
+// //         .content {
+// //           .form {
+// //             .mat-form-field {
+// //               width: 100px;
+// //             }
+// //             .increaseFormfield {
+// //               width: 100px;
+// //             }
+// //             .mid-container {
+// //               flex-direction: column;
+// //               .total-exp {
+// //                 .inputs {
+// //                   .yearFormfield {
+// //                     width: 100px;
+// //                   }
+// //                 }
+// //               }
+// //             }
+// //           }
+// //         }
+// //       }
+// //     }
+// //     ::ng-deep {
+// //       .mat-select-panel {
+// //         width: 200px !important;
+// //         margin: 0rem !important;
+// //       }
+// //     }
+// //   }
+
+
+
+section {
+    padding: 0px !important;
+    background-color: #fff;
+
+    .header {
+        border-bottom: 1px solid gainsboro;
+
+        .header-text {
+            color: #3246d3;
+            font-size: 24px;
+            word-spacing: 1px;
+            padding: 11px 25px 11px 15px;
+            font-weight: 500;
+        }
+
+    }
+
+    form {
+        padding: 20px;
+
+        .row {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 20px;
+        }
+
+        .label {
+            font-weight: 500;
+        }
+
+        .formfield {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row3 {
+            display: grid;
+            grid-template-columns: auto auto;
+
+            .inputs {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 20px;
             }
 
         }
 
-        .content {
-            .form {
-                padding: 20px;
+        .address {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
 
-                .label {
-                    font-weight: 500;
-                }
 
-                .formfield {
-                    display: flex;
-                    flex-direction: column;
-                }
+        }
 
-                .increaseFormfield {
-                    width: 369px;
-                }
-
-                ::ng-deep {
-                    .mat-form-field-appearance-outline .mat-form-field-flex {
-                        box-shadow: 0px 4px 8px rgb(44 39 56 / 4%) !important;
-                    }
-
-                    .mat-form-field-appearance-outline .mat-form-field-infix {
-                        padding: 12px 0px 15px 0px;
-                    }
-
-                    .mat-datepicker-toggle {
-                        color: gainsboro;
-                        position: absolute;
-                        right: -12px;
-                        top: -5px;
-                    }
-
-                    .mat-select-arrow {
-                        width: 0;
-                        height: 0;
-                        border-left: 10px solid transparent;
-                        border-right: 10px solid transparent;
-                        border-top: 11px solid;
-                        margin: 0 4px;
-                    }
-                }
-
-                .inputs {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                }
-
-                .mid-container {
-                    display: flex;
-                    gap: 20px;
-
-                    .total-exp {
-                        .inputs {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 20px;
-
-                            .yearFormfield {
-                                width: 272px;
-                            }
-                        }
-                    }
-                }
-
-                .address {
-                    display: flex;
-                    flex-direction: column;
-                    margin-top: 10px;
-
-                    // .inputMessage {}
-                }
-
-                .saveButton {
-                    // background: transparent;
-                    border: none;
-                    cursor: pointer;
-                    color: white;
-                }
-            }
+        .saveButton {
+            border: none;
+            cursor: pointer;
+            color: white;
         }
     }
+
 }
 
 ::ng-deep {
     .mat-select-panel {
         min-width: calc(100% + 15px) !important;
-        margin: 2.5rem 0rem 0rem 0.425rem !important;
+        margin: 2.5rem 0rem 0rem 0rem !important;
+    }
+
+    // .mat-form-field-outline {
+    //  min-width: 150px;
+    //  max-width: 100%;
+    // }
+    .mat-form-field-appearance-outline .mat-form-field-flex {
+        box-shadow: 0px 4px 8px rgb(44 39 56 / 4%) !important;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+        padding: 12px 0px 15px 0px;
+    }
+
+    .mat-datepicker-toggle {
+        color: gainsboro;
+        position: absolute;
+        right: -12px;
+        top: -5px;
+    }
+
+    .mat-select-arrow {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 11px solid;
+        margin: 0 4px;
     }
 }
-@media (min-width: 550px) and (max-width: 680px) {
-    section {
-      .basic-card {
-        .content {
-          .form {
-            .mat-form-field {
-              width: 369px;
+
+section {
+    @media only screen and (max-width: 1500px) {
+        form{
+            .row3 {
+                grid-template-columns: auto;
             }
-            .increaseFormfield {
-              width: 369px;
-            }
-            .mid-container {
-              flex-direction: column;
-              .total-exp {
-                .inputs {
-                  .yearFormfield {
-                    width: 369px;
-                  }
-                }
-              }
-            }
-          }
         }
-      }
     }
-  }
-  @media (min-width: 320px) and (max-width: 550px) {
-    section {
-      .basic-card {
-        .content {
-          .form {
-            .mat-form-field {
-              width: auto;
+    @media only screen and (max-width: 750px) {
+        form{
+            .row{
+                grid-template-columns: auto;
             }
-            .increaseFormfield {
-              width: auto;
-            }
-            .mid-container {
-              flex-direction: column;
-              .total-exp {
-                .inputs {
-                  .yearFormfield {
-                    width: auto;
-                  }
+            .row3{
+                .inputs{
+                    grid-template-columns: auto;
+
                 }
-              }
             }
-          }
         }
-      }
     }
-  }
-  @media (min-width: 150px) and (max-width: 320px) {
-    section {
-      .basic-card {
-        .content {
-          .form {
-            .mat-form-field {
-              width: 100px;
-            }
-            .increaseFormfield {
-              width: 100px;
-            }
-            .mid-container {
-              flex-direction: column;
-              .total-exp {
-                .inputs {
-                  .yearFormfield {
-                    width: 100px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    ::ng-deep {
-      .mat-select-panel {
-        width: 200px !important;
-        margin: 0rem !important;
-      }
-    }
-  }
+}

@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    CommonDropdownModule
   ]
 })
 export class QualificationModule { }
