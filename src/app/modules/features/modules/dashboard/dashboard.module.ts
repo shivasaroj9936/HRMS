@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { ReferralBonousProgramComponent } from './components/referral-bonous-program/referral-bonous-program.component';
-import { LatestJobOpeningComponent } from './components/latest-at-appinventiv/latest-job-opening/latest-job-opening.component';
+import { LatestJobOpeningComponent } from './components/latest-job-opening/latest-job-opening.component';
 import { NewFamilyMemberComponent } from './components/new-family-member/new-family-member.component';
 import { MatButtonModule } from '@angular/material/button';
 import { CarouselModule } from 'src/app/modules/shared/carousel/carousel.module';

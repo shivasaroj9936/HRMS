@@ -1,8 +1,6 @@
-<!-- <div class="wraper"> -->
     <ng-container *ngTemplateOutlet=" data; context: { referalData: referalData  } ">
     </ng-container>
-<!-- </div> -->
-<!-- {{referalData|json}} -->
+
 <ng-template #data let-referalData="referalData">
     <div class="data">
         <h2>{{referalData?.referralPrice}}K</h2>

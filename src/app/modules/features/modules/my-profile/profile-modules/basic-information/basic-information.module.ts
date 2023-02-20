@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
+import { DigitOnlyModule } from 'src/app/directives/digit-only/digit-only.module';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,10 @@ import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation
     MatNativeDateModule,
     MatButtonModule,
     CommonDropdownModule,
+    
     FormsModule,ReactiveFormsModule,
-    ValidationErrorModule
+    ValidationErrorModule,
+    DigitOnlyModule
   ]
 })
 export class BasicInformationModule { }

@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, TemplateRef, ViewChild, ViewChildren } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { NguCarouselConfig } from '@ngu/carousel';
-import { JobOpening, JobOpeningList } from '../../../interfaces/interfaces';
+import { ReferalFormComponent } from '../../../refer-a-friend/referal-form/referal-form.component';
+import { JobOpening, JobOpeningList } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-latest-job-opening',
@@ -20,17 +22,21 @@ export class LatestJobOpeningComponent implements OnInit,AfterViewInit {
     touch: true,
     velocity: 0.2,
   };
-  constructor() { }
+  constructor( public dialog: MatDialog) { }
 
   ngOnInit(): void {
   
   }
   ngAfterViewInit(){
-    
     this.listToShow.forEach(item=>{
       this.dataSource.push(item);
     })
-    
+  }
+  openJobReferalForm(data:any){
+    this.dialog.open(ReferalFormComponent, {
+      data:data,
+      
+    });
   }
 
 }

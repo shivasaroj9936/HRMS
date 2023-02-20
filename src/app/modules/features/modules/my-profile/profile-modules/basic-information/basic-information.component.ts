@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormControlName, FormGroup } from '@angular/forms';
 import { slideInRight } from 'src/animations/slide-in-right';
 import { BASIC_INFORMATION, FORM_LABEL, GENDER_INPUT_DROPDOWN, MARITAL_DROPDOWN } from 'src/app/constants/ui-texts/dashboard-card';
 import { FormService } from 'src/app/services/form-service/form.service';
@@ -17,7 +17,9 @@ export class BasicInformationComponent implements OnInit {
   maritalStatusValue = MARITAL_DROPDOWN
   basicInformationForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private _formService: FormService) { }
+  constructor(private formBuilder: FormBuilder, private _formService: FormService) {
+    
+   }
 
   ngOnInit(): void {
     this.createForm();
@@ -40,9 +42,12 @@ export class BasicInformationComponent implements OnInit {
   }
 
 
-  getControl(control: any) {
-    return this.basicInformationForm.controls[control];
+  getControl(control: string) :any{
+    return this.basicInformationForm?.controls[control];
   }
+  // get getControl():any {
+  //   return this.basicInformationForm?.controls;
+  // }
 
   save() {
     // this.basicInformationForm.controls['name'].patchValue(this.basicInformationForm.controls['name'].value?.trim());

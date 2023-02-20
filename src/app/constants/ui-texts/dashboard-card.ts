@@ -177,13 +177,13 @@ export const FORM_LABEL = {
 
 };
 
-export const GENDER_INPUT_DROPDOWN = [{ LABEL: "Male" }, { LABEL: "Female" }];
+export const GENDER_INPUT_DROPDOWN = ["Male",  "Female"];
 
 export const MARITAL_DROPDOWN = [
-  { LABEL: "Single" },
-  { LABEL: "Married" },
-  { LABEL: "Widowed" },
-  { LABEL: "Divorced or Separated" },
+  "Single" ,
+  "Married" ,
+  "Widowed" ,
+  "Divorced or Separated" ,
 ];
 export const EDUCATION_DROPDOWN = [
 
@@ -203,7 +203,7 @@ export const EDUCATION_DROPDOWN = [
   { LABEL: "Diloma" },
   { LABEL: "B.Sc Animation & Film Making" },
 ];
-export const LANGUAGE_DROPDOWN = [{ LABEL: "English" }, { LABEL: "Hindi" }];
+export const LANGUAGE_DROPDOWN = ["English" ,"Hindi"];
 
 export const SHIFT_VALUE = {
   DATE_OF_JOIN_VALUE: "Date of Joining",

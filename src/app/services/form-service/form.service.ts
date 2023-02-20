@@ -35,25 +35,39 @@ export class FormService {
       Validators.maxLength(VALIDATION_CRITERIA.passwordMaxLength),
     ],
 
-    first_name:[    ],
-    last_name:[    ],
-    dob:[    ],
-    gender:[    ],
-    contact_number:[    ],
-    marital_status:[    ],
-    tot_exp_month:[    ],
-    tot_exp_years:[    ],
-    rel_exp_year:[    ],
-    rel_exp_month:[    ],
-    address:[    ],
+    first_name: [
+      Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
+      Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),
+    ],
+    last_name: [
+      Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
+      Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),
+    ],
+    dob: [],
+    gender: [],
+    contact_number: [
+      Validators.minLength(VALIDATION_CRITERIA.phoneMinLength),
+      Validators.maxLength(VALIDATION_CRITERIA.phoneMaxLength),
+    ],
+    marital_status: [],
+    tot_exp_month: [],
+    tot_exp_years: [],
+    rel_exp_year: [],
+    rel_exp_month: [],
+    address: [
+      Validators.minLength(VALIDATION_CRITERIA.addressMinLength),
+      Validators.maxLength(VALIDATION_CRITERIA.addressMaxLength),
+    ],
     school: [],
     education: [],
     time_from: [],
     time_to: [],
     language: [],
     professional_course: [],
-    description: [],
-
+    description: [
+      Validators.minLength(VALIDATION_CRITERIA.descMinLength),
+      Validators.maxLength(VALIDATION_CRITERIA.descMaxLength),
+    ],
   };
   getControl(name: string, requierd = true) {
     // @ts-ignore: unreachable code error

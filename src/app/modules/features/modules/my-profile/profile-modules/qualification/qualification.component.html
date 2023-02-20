@@ -14,7 +14,7 @@
                     </div>
 
                     <div class="formfield 2">
-                        <app-common-dropdown [label]="labelMessage.EDUCATION" [data]="educationDropdown" [formControlName]="getControl('education')" ></app-common-dropdown>
+                        <app-common-dropdown [label]="labelMessage.EDUCATION" [data]="educationDropdown" [dropdownDownControlName]="getControl('education')" ></app-common-dropdown>
                    
                     </div>
                     <div class="formfield topField 3">
@@ -38,18 +38,9 @@
 
                         </mat-form-field>
                     </div>
-                    <!-- <app-dropdown-field [gender]="[labelMessage.GENDER]"></app-dropdown-field> -->
                     <div class="formfield topField 5">
-                        <label class="label">{{labelMessage.LANGUAGE}}</label>
-                        <mat-form-field appearance="outline" class="increaseFormfield">
-                            <mat-select  formControlName="language">
-                                <mat-option *ngFor="let item of languageDropdown" [value]="item">
-                                    {{item.LABEL}}
-                                </mat-option>
-                            </mat-select>
-                            <mat-error>{{ getControl("language") | validate : labelMessage.LANGUAGE }}</mat-error>
+                        <app-common-dropdown [label]="labelMessage.LANGUAGE" [data]="languageDropdown" [dropdownDownControlName]="getControl('language')" ></app-common-dropdown>
 
-                        </mat-form-field>
                     </div>
                     <div class="formfield topField 6">
                         <label class="label">{{labelMessage.PROFESSIONAL_COURSE}}</label>

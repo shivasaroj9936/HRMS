@@ -12,11 +12,11 @@
         color: #FFFFFF;
         transition-delay: 1ms;
         padding: 0px 1rem;
-    }
-
-    .btn_primary:hover {
-        background: #31b8ff;
-        color: #fff
+        
+        &:hover {
+            background: #31b8ff;
+            color: #fff
+        }
     }
 
     .btn_cancel {

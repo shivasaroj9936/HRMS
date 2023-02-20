@@ -1,0 +1,102 @@
+<section>
+    <div class="header">
+      <h3 class="heading">{{constantLabels.HEADER_VALUE}}</h3>
+      <div class="cancel-icon" (click)="onClose()">
+        <i class="fa-solid fa-xmark" ></i>
+      </div>
+    </div>
+    <div class="form">
+      <div class="hash-heading">
+        <h3 class="mydetails">{{constantLabels.JOB_DETAIL_VALUE}}</h3>
+      </div>
+      <form [formGroup]="referCandidateForm">
+        <div class="inputs">
+          <div class="formfield 1">
+            <label class="label">{{constantLabels.LABEL_DEPARTMENT}}</label>
+            <mat-form-field appearance="outline" class="disabledField">
+              <input formControlName="department_name" readonly  matInput >
+            </mat-form-field>
+          </div>
+  
+          <div class="formfield 2">
+            <label class="label">{{constantLabels.LABEL_JOBCODE}}</label>
+            <mat-form-field appearance="outline" class="disabledField">
+              <input formControlName="job_code" readonly matInput >
+            </mat-form-field>
+          </div>
+          <div class="formfield 3">
+            <label class="label">{{constantLabels.LABEL_LOCATION}}</label>
+            <mat-form-field appearance="outline" class="disabledField">
+              <input formControlName="location" readonly matInput >
+            </mat-form-field>
+          </div>
+          <div class="formfield 4">
+            <label class="label">{{constantLabels.LABEL_EXPERIENCE}}</label>
+            <mat-form-field appearance="outline" class="disabledField">
+              <input formControlName="experience" readonly matInput >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="hash-heading">
+          <h3 class="mydetails">{{constantLabels.CANDIDATE_VALUE}}</h3>
+        </div>
+        <div class="inputs">
+          <div class="formfield 11">
+            <label class="label">{{constantLabels.LABEL_JOBLOC}}</label>
+            <mat-form-field appearance="outline">
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="formfield 5">
+            <label class="label">{{constantLabels.LABEL_CANDIDATE_NAME}}</label>
+            <mat-form-field appearance="outline">
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="formfield 6">
+            <label class="label">{{constantLabels.LABEL_POSITION}}</label>
+            <mat-form-field appearance="outline">
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="formfield 7">
+            <label class="label">{{constantLabels.LABEL_EXPERIENCE}}</label>
+            <mat-form-field appearance="outline">
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="formfield 8">
+            <label class="label">{{constantLabels.LABEL_EMAIL}}</label>
+            <mat-form-field appearance="outline">
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="formfield 9">
+            <label class="label">{{constantLabels.LABEL_PHONE}}</label>
+            <mat-form-field appearance="outline">
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="formfield 10">
+            <label class="label">{{constantLabels.LABEL_UPLOAD}}</label>
+            <mat-form-field appearance="outline">
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="formfield 12">
+            <label class="label">{{constantLabels.LABEL_SKILL}}</label>
+            <mat-form-field appearance="outline">
+              <textarea [maxLength]="200" #textarea matInput></textarea>
+            </mat-form-field>
+            <!-- <p class="maxlength">
+            {{textarea.value.length}}/{{maxLength}}</p> -->
+          </div>
+        </div>
+          <div class="buttonGroup">
+            <button class="cancelButton" (click)="onClose()">{{constantLabels.BUTTON_CANCEL}}</button>
+            <button class="classyButton">{{constantLabels.BUTTON_SUBMIT}}</button>
+          </div>
+      </form>
+    </div>
+  </section>
+  

@@ -666,6 +666,32 @@ export const FORM_LABEL = {
   PLACEHOLDER_TO: "to",
 };
 
+
+export const REFER_A_CANDIDATE_DIALOG ={
+  HEADER_VALUE:'Refer a Candidate',
+  JOB_DETAIL_VALUE:'Job Details',
+  LABEL_DEPARTMENT:'Department Name',
+  LABEL_JOBCODE:'Job Code',
+  LABEL_LOCATION:'Location',
+  LABEL_EXPERIENCE:'Experience',
+  CANDIDATE_VALUE:'Candidate Details',
+  LABEL_JOBLOC:'Job Location',
+  LABEL_CANDIDATE_NAME:'Candidate Name',
+  PLACEHOLDER_CANDIDATE_NAME:'Candidate Name',
+  LABEL_POSITION:'Position Title',
+  PLACEHOLDER_EXPERIENCE:'Enter Years of experience',
+  LABEL_EMAIL:'Email ID',
+  PLACEHOLDER_EMAIL:'Enter Email ID',
+  LABEL_PHONE:'Phone Number',
+  PLACEHOLDER_PHONE:'Enter Phone Number',
+  LABEL_UPLOAD:'Upload CV (pdf,doc)',
+  LABEL_SKILL:'Skill Set',
+  PLACEHOLDER_SKILL:'Enter Skills',
+  BUTTON_CANCEL:'Cancel',
+  BUTTON_SUBMIT:'Submit'
+}
+
+
 export const GENDER_INPUT_DROPDOWN = ["Male", "Female"];
 
 export const MARITAL_DROPDOWN = [
