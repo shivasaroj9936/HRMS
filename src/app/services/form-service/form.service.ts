@@ -43,6 +43,8 @@ export class FormService {
       Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),
     ],
+    candidate_name:[ Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
+      Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),],
     dob: [],
     gender: [],
     contact_number: [
@@ -68,6 +70,16 @@ export class FormService {
       Validators.minLength(VALIDATION_CRITERIA.descMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.descMaxLength),
     ],
+    department_name:[],
+    job_code:[],
+    location:[],
+    experience:[],
+    position_title: [],
+    candidate_experience: [],
+    cv: [],
+    skill: [],
+    job_location: [],
+
   };
   getControl(name: string, requierd = true) {
     // @ts-ignore: unreachable code error

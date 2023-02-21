@@ -70,6 +70,7 @@ export const CHANGE_PASSWORD: IRoute = {
     return `/${PROFILE.fullUrl}/${this.path}`;
   },
 };
+
 export const APPRAISAL: IRoute = {
   path: "appraisal",
   get fullUrl(): string {
@@ -80,5 +81,55 @@ export const DIRECTORY: IRoute = {
   path: "staff-directory",
   get fullUrl(): string {
     return `/${ADMIN.fullUrl}/${this.path}`;
+  },
+};
+
+export const MY_LINKS: IRoute = {
+  path: "my-links",
+  get fullUrl(): string {
+    return `/${ADMIN.fullUrl}/${this.path}`;
+  },
+};
+export const POLICY_DOCUMENTS: IRoute = {
+  path: "policy-documents",
+  get fullUrl(): string {
+    return `/${MY_LINKS.fullUrl}/${this.path}`;
+  },
+};
+export const HOLIDAY_CALENDAR: IRoute = {
+  path: "holiday-calendar",
+  get fullUrl(): string {
+    return `/${MY_LINKS.fullUrl}/${this.path}`;
+  },
+};
+export const INSURANCE_VERIFICATION: IRoute = {
+  path: "insurance-verification",
+  get fullUrl(): string {
+    return `/${MY_LINKS.fullUrl}/${this.path}`;
+  },
+};
+
+export const FINANCE: IRoute = {
+  path: "finance",
+  get fullUrl(): string {
+    return `/${ADMIN.fullUrl}/${this.path}`;
+  },
+};
+export const SALARY_SLIP: IRoute = {
+  path: "salary-slip",
+  get fullUrl(): string {
+    return `/${MY_LINKS.fullUrl}/${this.path}`;
+  },
+};
+export const FORM_16: IRoute = {
+  path: "form-16",
+  get fullUrl(): string {
+    return `/${MY_LINKS.fullUrl}/${this.path}`;
+  },
+};
+export const INVESTMENT_DECLARATION: IRoute = {
+  path: "investment-declaration",
+  get fullUrl(): string {
+    return `/${MY_LINKS.fullUrl}/${this.path}`;
   },
 };

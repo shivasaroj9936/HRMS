@@ -35,7 +35,6 @@ export class LatestJobOpeningComponent implements OnInit,AfterViewInit {
   openJobReferalForm(data:any){
     this.dialog.open(ReferalFormComponent, {
       data:data,
-      
     });
   }
 

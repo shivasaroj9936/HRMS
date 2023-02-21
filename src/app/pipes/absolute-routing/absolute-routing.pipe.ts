@@ -11,9 +11,12 @@ export class AbsoluteRoutingPipe implements PipeTransform {
         //@ts-ignore: unreachable code error
         return routes[route].fullUrl + "/" + id;
       }
-      //@ts-ignore: unreachable code error
-
-      return routes[route].fullUrl;
+      if(route){
+        //@ts-ignore: unreachable code error
+        return routes[route].fullUrl;
+      }else{
+        return [];
+      }
     } catch (error) {
       return "";
     }

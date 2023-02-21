@@ -59,18 +59,10 @@ section {
 
 :host::ng-deep {
 
-
-    // .mat-drawer-container{
-    //     background-color: var(--dashboard-backgroud-color);
-    // }
     .mat-drawer-inner-container::-webkit-scrollbar {
         display: none;
 
     }
-
-    // .mat-drawer-backdrop.mat-drawer-shown {
-    //     background-color: rgb(219 209 209 / 60%);
-    // }
 
     @media only screen and (max-width: 999px) {
         .mat-drawer {

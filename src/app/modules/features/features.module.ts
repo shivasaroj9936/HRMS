@@ -12,6 +12,7 @@ import { HeaderComponent } from "./feature-parts/header/header.component";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatButtonModule } from "@angular/material/button";
 import { ListItemComponent } from './feature-parts/side-bar/list-item/list-item.component';
+import { AbsoluteRoutingModule } from "src/app/pipes/absolute-routing/absolute-routing.module";
 
 const MATERIAL = [
   MatSidenavModule,
@@ -24,6 +25,6 @@ const MATERIAL = [
 
 @NgModule({
   declarations: [FeaturesComponent, SideBarComponent, HeaderComponent, ListItemComponent],
-  imports: [CommonModule, FeaturesRoutingModule, ...MATERIAL],
+  imports: [CommonModule, AbsoluteRoutingModule,FeaturesRoutingModule, ...MATERIAL],
 })
 export class FeaturesModule {}

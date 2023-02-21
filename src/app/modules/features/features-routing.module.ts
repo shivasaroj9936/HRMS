@@ -1,6 +1,6 @@
 import { Component, NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { DASHBOARD, DIRECTORY, PROFILE } from "src/app/constants/routes";
+import { DASHBOARD, DIRECTORY, MY_LINKS, PROFILE } from "src/app/constants/routes";
 import { FeaturesComponent } from "./features.component";
 
 const routes: Routes = [
@@ -31,6 +31,10 @@ const routes: Routes = [
             (m) => m.DirectoryModule
           ),
       },
+      {
+        path:MY_LINKS.path,
+        loadChildren:()=>import('./modules/my-links/my-links.module').then((m)=>m.MyLinksModule)
+      }
     ],
   },
 ];
