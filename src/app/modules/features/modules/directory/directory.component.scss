@@ -154,6 +154,8 @@ section {
             transform: scale(1);
             transition: all 0.5s ease 0s;
           }
+
+          
         }
         ::after {
           content: "";
@@ -169,10 +171,26 @@ section {
           transform: scale(1);
           transition: all 0.5s ease 0s;
         }
+    
       }
 
     
     }
+    // ::before{
+    //   content: "";
+    //   width: 100%;
+    //   height: 0;
+    //   border-radius: 50%;
+    //   background-color: #1369ce;
+    //   position: absolute;
+    //   bottom: 135%;
+    //   right: 0;
+    //   left: 0;
+    //   opacity: 0.9;
+    //   transform: scale(3);
+    //   transition: all 0.3s linear 0s;
+    //   z-index: 11;
+    // }
   }
 }
 

@@ -25,7 +25,13 @@ export const sideNavList: SideNavItem[] = [
   {
     title: "Enterpreneurship Program",
     icon: "person",
-    options: [{ subTitle: "Explore", subicon: "horizontal_rule" }],
+    options: [
+      {
+        subTitle: "Explore",
+        subicon: "horizontal_rule",
+        route: "ENTREPRENEURSHIP_PROGRAM",
+      },
+    ],
     isActive: true,
   },
   {
@@ -50,28 +56,31 @@ export const sideNavList: SideNavItem[] = [
     ],
     isActive: true,
   },
-  { title: "Finance", icon: "payments",
-   options: [
-    {
-      subTitle: "Salary Slip",
-      subicon: "horizontal_rule",
-      // route: "SALARY_SLIP",
-      link:'https://hrms.easysourceindia.com/Payroll/'
-    },  {
-      subTitle: "Form 16",
-      subicon: "horizontal_rule",
-      // route: "FORM_16",
-      link:'https://hrms.easysourceindia.com/Payroll/'
-
-    },  {
-      subTitle: "Investment Declaration",
-      subicon: "horizontal_rule",
-      // route: "INVESTMENT_DECLARATION",
-      link:'https://hrms.easysourceindia.com/Payroll/'
-
-    },
-
-  ], isActive: true },
+  {
+    title: "Finance",
+    icon: "payments",
+    options: [
+      {
+        subTitle: "Salary Slip",
+        subicon: "horizontal_rule",
+        // route: "SALARY_SLIP",
+        link: "https://hrms.easysourceindia.com/Payroll/",
+      },
+      {
+        subTitle: "Form 16",
+        subicon: "horizontal_rule",
+        // route: "FORM_16",
+        link: "https://hrms.easysourceindia.com/Payroll/",
+      },
+      {
+        subTitle: "Investment Declaration",
+        subicon: "horizontal_rule",
+        // route: "INVESTMENT_DECLARATION",
+        link: "https://hrms.easysourceindia.com/Payroll/",
+      },
+    ],
+    isActive: true,
+  },
   { title: "Reviews", icon: "grid_view", options: [], isActive: true },
   { title: "Refer a Friend", icon: "groups", options: [], isActive: true },
   { title: "Freshers Training", icon: "school", options: [], isActive: true },

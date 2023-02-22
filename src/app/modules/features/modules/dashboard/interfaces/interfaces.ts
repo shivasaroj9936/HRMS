@@ -38,7 +38,7 @@ export interface IGALLERYDATA {
   HEADING?: string;
   BUTTON?: string;
   NUM?: number;
-  ALBUM?:string[]
+  ALBUM?: string[];
 }
 export interface BITHDAY {
   HEADING: string;
@@ -73,12 +73,12 @@ export interface IAWARDDATA {
   DATE: string;
 }
 export interface IAPPRECIATIONDATA {
-  HEADER: string,
-  DEAR:string,
-  TEXT: string,
-  MESSAGE: string,
-  GREET: string,
-  BUTTON: string,
+  HEADER: string;
+  DEAR: string;
+  TEXT: string;
+  MESSAGE: string;
+  GREET: string;
+  BUTTON: string;
 }
 
 export const GALLER_VALUE: any = {
@@ -266,31 +266,48 @@ export const Gallery_DATA: IGALLERYDATA[] = [
     HEADING: "Republic Day-2023",
     NUM: 5,
     BUTTON: "View",
-    ALBUM:["/assets/gallery/award_1674822333816.jpg", "/assets/gallery/award_1672378171227.jpg","/assets/gallery/award_1672292016846.jpg", "/assets/gallery/award_166719426194.jpeg",]
+    ALBUM: [
+      "/assets/gallery/award_1674822333816.jpg",
+      "/assets/gallery/award_1672378171227.jpg",
+      "/assets/gallery/award_1672292016846.jpg",
+      "/assets/gallery/award_166719426194.jpeg",
+    ],
   },
   {
     IMAGE: "/assets/gallery/award_1672378171227.jpg",
     HEADING: "Best Place To Work Award",
     NUM: 5,
     BUTTON: "View",
-    ALBUM:["/assets/gallery/award_1674822333816.jpg", "/assets/gallery/award_1672378171227.jpg","/assets/gallery/award_1672292016846.jpg", "/assets/gallery/award_166719426194.jpeg",]
-
+    ALBUM: [
+      "/assets/gallery/award_1674822333816.jpg",
+      "/assets/gallery/award_1672378171227.jpg",
+      "/assets/gallery/award_1672292016846.jpg",
+      "/assets/gallery/award_166719426194.jpeg",
+    ],
   },
   {
     IMAGE: "/assets/gallery/award_1672292016846.jpg",
     HEADING: "Christmas Celebration -2022",
     NUM: 5,
     BUTTON: "View",
-    ALBUM:["/assets/gallery/award_1674822333816.jpg", "/assets/gallery/award_1672378171227.jpg","/assets/gallery/award_1672292016846.jpg", "/assets/gallery/award_166719426194.jpeg",]
-
+    ALBUM: [
+      "/assets/gallery/award_1674822333816.jpg",
+      "/assets/gallery/award_1672378171227.jpg",
+      "/assets/gallery/award_1672292016846.jpg",
+      "/assets/gallery/award_166719426194.jpeg",
+    ],
   },
   {
     IMAGE: "/assets/gallery/award_166719426194.jpeg",
     HEADING: "Diwali Party -2022",
     NUM: 5,
     BUTTON: "View",
-    ALBUM:["/assets/gallery/award_1674822333816.jpg", "/assets/gallery/award_1672378171227.jpg","/assets/gallery/award_1672292016846.jpg", "/assets/gallery/award_166719426194.jpeg",]
-
+    ALBUM: [
+      "/assets/gallery/award_1674822333816.jpg",
+      "/assets/gallery/award_1672378171227.jpg",
+      "/assets/gallery/award_1672292016846.jpg",
+      "/assets/gallery/award_166719426194.jpeg",
+    ],
   },
 ];
 
@@ -666,31 +683,29 @@ export const FORM_LABEL = {
   PLACEHOLDER_TO: "to",
 };
 
-
-export const REFER_A_CANDIDATE_DIALOG ={
-  HEADER_VALUE:'Refer a Candidate',
-  JOB_DETAIL_VALUE:'Job Details',
-  LABEL_DEPARTMENT:'Department Name',
-  LABEL_JOBCODE:'Job Code',
-  LABEL_LOCATION:'Location',
-  LABEL_EXPERIENCE:'Experience',
-  CANDIDATE_VALUE:'Candidate Details',
-  LABEL_JOBLOC:'Job Location',
-  LABEL_CANDIDATE_NAME:'Candidate Name',
-  PLACEHOLDER_CANDIDATE_NAME:'Candidate Name',
-  LABEL_POSITION:'Position Title',
-  PLACEHOLDER_EXPERIENCE:'Enter Years of experience',
-  LABEL_EMAIL:'Email ID',
-  PLACEHOLDER_EMAIL:'Enter Email ID',
-  LABEL_PHONE:'Phone Number',
-  PLACEHOLDER_PHONE:'Enter Phone Number',
-  LABEL_UPLOAD:'Upload CV (pdf,doc)',
-  LABEL_SKILL:'Skill Set',
-  PLACEHOLDER_SKILL:'Enter Skills',
-  BUTTON_CANCEL:'Cancel',
-  BUTTON_SUBMIT:'Submit'
-}
-
+export const REFER_A_CANDIDATE_DIALOG = {
+  HEADER_VALUE: "Refer a Candidate",
+  JOB_DETAIL_VALUE: "Job Details",
+  LABEL_DEPARTMENT: "Department Name",
+  LABEL_JOBCODE: "Job Code",
+  LABEL_LOCATION: "Location",
+  LABEL_EXPERIENCE: "Experience",
+  CANDIDATE_VALUE: "Candidate Details",
+  LABEL_JOBLOC: "Job Location",
+  LABEL_CANDIDATE_NAME: "Candidate Name",
+  PLACEHOLDER_CANDIDATE_NAME: "Candidate Name",
+  LABEL_POSITION: "Position Title",
+  PLACEHOLDER_EXPERIENCE: "Enter Years of experience",
+  LABEL_EMAIL: "Email ID",
+  PLACEHOLDER_EMAIL: "Enter Email ID",
+  LABEL_PHONE: "Phone Number",
+  PLACEHOLDER_PHONE: "Enter Phone Number",
+  LABEL_UPLOAD: "Upload CV (pdf,doc)",
+  LABEL_SKILL: "Skill Set",
+  PLACEHOLDER_SKILL: "Enter Skills",
+  BUTTON_CANCEL: "Cancel",
+  BUTTON_SUBMIT: "Submit",
+};
 
 export const GENDER_INPUT_DROPDOWN = ["Male", "Female"];
 
@@ -835,3 +850,16 @@ export const DIRECTORY_VALUE = {
 //     BIRTH_MONTH: 'Jul',
 //   },
 // ];
+
+export const ADD_PITCH = {
+  NAME: "Name",
+  EMP_ID: "Employee Id",
+  DOB: "Date Of Birth",
+  PITCH_TITLE:'Pitch Title',
+  INDUSTRY:'Industry',
+  TYPE :'Type',
+  IDEA:'Idea - (Share Your Idea In brief).',
+  PRESENTATION:'Presentation - (Share your detailed presentation on the Idea) -(ppt,pdf).',
+  PITCH_DETAILS:'Pitch Details',
+  MY_DETAILS:'My Details'
+};

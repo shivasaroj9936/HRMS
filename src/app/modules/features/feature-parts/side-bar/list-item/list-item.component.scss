@@ -18,15 +18,20 @@ section {
     transform-origin: top;
   }
   .submenu_active {
+      .sub{
+        .sidenav_text ,.item_icon{
+          color: var(--side-nav-active-color);
+        }
 
+      }
       .item_text::before {
         position: absolute;
         content: "";
         background: var(--side-nav-active-color);
         width: 3px;
-        height: 100%;
+        height: 80%;
         left: 30px;
-        top: 0;
+        top: 6px;
         bottom: 0;
       }
   }
@@ -78,6 +83,8 @@ section {
 
   .submenu.expanded {
     transform: scaleY(1);
+    transition: transform 300ms ease !important;
+
   }
 
   .mat-list-item {

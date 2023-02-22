@@ -1,0 +1,96 @@
+<section>
+    <form [formGroup]="addPitchForm" (ngSubmit)="onSubmit()">
+        <div class="header">
+            <h3 class="heading">Add Pitch</h3>
+            <div class="actions">
+                <button type="reset" class="btn_cancel" mat-raised-button>Cancel</button>
+                <button type="submit" class="btn_primary" mat-raised-button>Submit</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="hash_heading">
+                <h3 class="heading_text">{{ labelMessage.MY_DETAILS }}</h3>
+            </div>
+            <div class=" first">
+                <div class="formfield 1">
+                    <label class="label">{{ labelMessage.NAME }}</label>
+                    <mat-form-field appearance="outline" class="disabledField">
+                        <input formControlName="name" readonly matInput />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="inputs">
+
+                <div class="formfield 2">
+                    <label class="label">{{ labelMessage.EMP_ID }}</label>
+                    <mat-form-field appearance="outline" class="disabledField">
+                        <input formControlName="employee_id" readonly matInput />
+                    </mat-form-field>
+                </div>
+                <div class="formfield 3">
+                    <label class="label">{{ labelMessage.DOB }}</label>
+                    <mat-form-field appearance="outline" class="disabledField">
+                        <input formControlName="dob" readonly matInput />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="hash_heading">
+                <h3 class="heading_text">{{ labelMessage.PITCH_DETAILS }}</h3>
+            </div>
+            <div class="formfield 1">
+                <label class="label">{{ labelMessage.PITCH_TITLE }}</label>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="pitch_title" />
+                    <mat-error>{{ getControl("pitch_title") | validate : labelMessage.PITCH_TITLE }}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="formfield 1">
+                <label class="label">{{ labelMessage.INDUSTRY }}</label>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="industry" />
+                    <mat-error>{{ getControl("industry") | validate : labelMessage.INDUSTRY }}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="formfield 5">
+                <label class="label">{{ labelMessage.TYPE }}</label>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="type" />
+                    <mat-error>{{ getControl("type") | validate : labelMessage.TYPE }}</mat-error>
+
+                </mat-form-field>
+            </div>
+            <div class="formfield 6">
+                <label class="label">{{ labelMessage.IDEA }}</label>
+                <mat-form-field appearance="outline">
+                    <!-- <input matInput formControlName="idea" />
+                    <mat-error>{{ getControl("idea") | validate : labelMessage.IDEA  }}</mat-error> -->
+                </mat-form-field>
+                <!-- <editor [init]="{          height: 300,
+                  plugins: [
+                     'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+                    'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+                    'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount'
+                  ],
+                  toolbar:
+                   'undo redo | casechange blocks | bold italic backcolor | \
+                   alignleft aligncenter alignright alignjustify | \
+                   bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+                }" formControlName="editor"></editor> -->
+
+
+            </div>
+            <div class="formfield 7">
+                <label class="label">{{ labelMessage.PRESENTATION }}</label>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="presentation" />
+                    <input type="file">
+                    <mat-error>{{ getControl("presentation") | validate : labelMessage.PRESENTATION }}</mat-error>
+
+                </mat-form-field>
+
+            </div>
+
+        </div>
+    </form>
+</section>

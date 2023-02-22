@@ -39,6 +39,12 @@ export class FormService {
       Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),
     ],
+    name: [
+      Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
+      Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),
+    ]
+    ,
+
     last_name: [
       Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),

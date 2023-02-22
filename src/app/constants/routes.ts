@@ -108,7 +108,25 @@ export const INSURANCE_VERIFICATION: IRoute = {
     return `/${MY_LINKS.fullUrl}/${this.path}`;
   },
 };
+export const ENTREPRENEURSHIP_PROGRAM: IRoute = {
+  path: "entrepreneurship-program",
+  get fullUrl(): string {
+    return `/${ADMIN.fullUrl}/${this.path}`;
+  },
+};
 
+export const STARTUP: IRoute = {
+  path: "startup",
+  get fullUrl(): string {
+    return `/${ADMIN.fullUrl}/${this.path}`;
+  },
+};
+export const ADD_PITCH: IRoute = {
+  path: "add-pitch",
+  get fullUrl(): string {
+    return `/${STARTUP.fullUrl}/${this.path}`;
+  },
+};
 export const FINANCE: IRoute = {
   path: "finance",
   get fullUrl(): string {
