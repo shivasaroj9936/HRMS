@@ -67,12 +67,12 @@
             </form>
 
     <div class="card2">
-        <div class="basic-card">
             <div class="header">
                 <p class="header-text">{{uiMessage.LIST_ALL_QUALIFICATION}}</p>
             </div>
-            <div class="border"></div>
-            <!-- <app-common-table [columns]="heading" [dataSource]="dataSource"></app-common-table> -->
-        </div>
+            <div class="table">
+                <app-common-table [columns]="columns" [dataSourceForTable]="dataSource"></app-common-table>
+            </div>
+
     </div>
 </section>

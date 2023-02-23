@@ -1,0 +1,14 @@
+@import "src/scss/dashbord-card-heading.scss";
+
+section{
+    .header {
+        display: flex;
+        align-items: center;
+  
+        .heading {
+          color: var(--primary-color);
+          font-size: 1.6rem;
+          margin: 0;
+        }
+      }
+}

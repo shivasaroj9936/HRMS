@@ -1,0 +1,162 @@
+@import "src/scss/dashbord-card-heading.scss";
+@import "src/scss/commonscss.scss";
+
+section {
+  .header {
+    display: flex;
+    align-items: center;
+
+    .heading {
+      color: var(--header-text-color);
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  .dashboard_card {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 1.5rem;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1.5rem 0 0;
+
+      .profile_wraper {
+        display: flex;
+        align-items: center;
+
+        figure {
+          img {
+            width: 77px !important;
+            height: 77px !important;
+            padding: 4px;
+            border-radius: 50%;
+            border: 2px solid #bfff77;
+          }
+        }
+
+        .profile_info {
+          .name {
+            h3 {
+              font-family: "Segoe UI";
+              font-size: 1rem;
+              font-weight: 600 !important;
+              margin: 0;
+            }
+          }
+
+          .basic_info {
+            .login_details {
+              strong {
+                font-family: "Segoe UI";
+              }
+
+              .tech {
+                margin: 5px 0;
+                display: block;
+                color: #727476;
+                font-size: 14px;
+              }
+
+              .exp {
+                background: #f7ffb3;
+                padding: 5px 0;
+                border-radius: 3px;
+                color: #000;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 500;
+                width: 69px;
+                display: inline-block;
+                text-align: center;
+                line-height: 1.7;
+              }
+            }
+          }
+        }
+      }
+
+      .award_honors {
+        display: grid;
+        grid-template-columns: 65% 35%;
+
+        .hounour_wrap {
+          background-color: #cbe7ff;
+          border-radius: 10px;
+          padding: 20px;
+          margin-right: 10px;
+        }
+
+        .awards_list_panel.hounour_wrap {
+          background: #fff3cb;
+        }
+      }
+    }
+
+    .right {
+      background: #dfffb0;
+      padding: 30px 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .flex_panel {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        padding: 2rem 0;
+        .rating_count {
+          .number {
+            font-size: 3rem;
+            font-weight: 500;
+          }
+        }
+
+        .cal_nav_wrapper {
+          background-color: #fff;
+          padding: 5px 50px;
+          border-radius: 10px;
+
+          .cal_date {
+            font-size:0.9rem;
+            font-weight: 500;
+            color: #000;
+          }
+        }
+      }
+
+      .flex_row {
+        display: flex;
+        justify-content: space-between;
+
+        .rating_sum_head {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          background: #edffd2;
+          margin: 0 5px;
+          padding: 20px 5px;
+          border-radius: 10px;
+          width: 25%;
+
+          .tech {
+            font-size: 1rem;
+            font-weight: 400;
+            min-height: 34px;
+          }
+
+          .number {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

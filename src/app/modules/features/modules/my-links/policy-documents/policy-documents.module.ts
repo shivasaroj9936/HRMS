@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PolicyDocumentsRoutingModule } from './policy-documents-routing.module';
-import { PolicyDocumentsComponent } from './policy-documents/policy-documents.component';
+import { PolicyDocumentsComponent } from './policy-documents.component';
+import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -11,7 +13,8 @@ import { PolicyDocumentsComponent } from './policy-documents/policy-documents.co
   ],
   imports: [
     CommonModule,
-    PolicyDocumentsRoutingModule
+    PolicyDocumentsRoutingModule,
+    CommonTableModule,
   ]
 })
 export class PolicyDocumentsModule { }

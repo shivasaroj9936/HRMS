@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
+import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    ValidationErrorModule
+    ValidationErrorModule,
+    CommonTableModule
   ]
 })
 export class QualificationModule { }

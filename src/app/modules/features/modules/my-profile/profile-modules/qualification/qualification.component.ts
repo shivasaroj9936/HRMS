@@ -1,11 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
+import { MatTableDataSource } from "@angular/material/table";
 import { Observable } from "rxjs";
 import { map, startWith } from "rxjs/operators";
 import { slideInRight } from "src/animations/slide-in-right";
 import {
   BASIC_INFORMATION,
-  EDUCATION_DROPDOWN,
   FORM_LABEL,
   LANGUAGE_DROPDOWN,
 } from "src/app/constants/ui-texts/dashboard-card";
@@ -34,11 +34,21 @@ export class QualificationComponent implements OnInit {
   
   options: string[] = [ "B.Tech",  "M.Tech", "BCA", "BBA", "M.Sc.", "Diloma",];
   filteredOptions!: Observable<string[]>;
-
   qualificationForm!:FormGroup;
+  dataSource!: MatTableDataSource<any>;
+  columns = [
+    { heading: 'Action', key: 'action', isSortable: 'isSortable', type: 'text', },
+    { heading: 'School/University', key: 'school', isSortable: 'isSortable', type: 'text', },
+    { heading: 'Time Period', key: 'time', isSortable: 'isSortable', type: 'text', },
+    { heading: 'Education Level', key: 'education', isSortable: 'isSortable', type: 'text', },
+  ]
+  Table_DATA: any[] = [
+    // { 's_no': '1', 'transaction_id': 5, 'amount_paid': '54', "date_time": 'APR 21,2020 00:39:14' },
+  ]
 
-
-  constructor(private formBuilder:FormBuilder,private _formService:FormService) {}
+  constructor(private formBuilder:FormBuilder,private _formService:FormService) {
+    this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+  }
 
   ngOnInit(): void {
     this.createForm();
@@ -63,8 +73,6 @@ export class QualificationComponent implements OnInit {
     return this.options.filter((option) => 
     {
       const res= option.toLowerCase().includes(filterValue);
-      // console.log(res,'dsds');
-      
       return res;
     }
     );

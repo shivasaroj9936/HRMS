@@ -1,0 +1,37 @@
+$primary: #000;
+$backGroundColor: #fff;
+
+section {
+  table {
+    width: 100%;
+    // border: 5px solid var(--border-color);
+    border-bottom: 1px solid gainsboro;
+
+
+    th {
+      color: $primary;
+      background-color: #fff;
+      font-size: 0.8rem;
+    //   font-weight: 500;
+      text-align: center;
+    }
+
+    tr {
+      text-align: center;
+    }
+
+    td {
+      color: $primary;
+      .action{
+        mat-icon{
+          cursor: pointer;
+        }
+      }
+    }
+
+    mat-icon {
+      color: $primary;
+      margin-right: 4px;
+    }
+  }
+}

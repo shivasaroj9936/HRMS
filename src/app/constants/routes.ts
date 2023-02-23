@@ -114,6 +114,18 @@ export const ENTREPRENEURSHIP_PROGRAM: IRoute = {
     return `/${ADMIN.fullUrl}/${this.path}`;
   },
 };
+export const REVIEWS:IRoute={
+  path:'reviews',
+  get fullUrl():string{
+    return `/${ADMIN.fullUrl}/${this.path}`
+  }
+}
+export const MY_PERFORMANCE:IRoute={
+  path:'my-performance',
+  get fullUrl():string{
+    return `/${REVIEWS.fullUrl}/${this.path}`
+  }
+}
 
 export const STARTUP: IRoute = {
   path: "startup",

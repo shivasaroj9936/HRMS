@@ -81,7 +81,15 @@ export const sideNavList: SideNavItem[] = [
     ],
     isActive: true,
   },
-  { title: "Reviews", icon: "grid_view", options: [], isActive: true },
+  { title: "Reviews", icon: "grid_view", options: [
+
+    {
+      subTitle: "My Performance",
+      subicon: "horizontal_rule",
+      route: "REVIEWS",
+      // link: "https://hrms.easysourceindia.com/Payroll/",
+    },
+  ], isActive: true },
   { title: "Refer a Friend", icon: "groups", options: [], isActive: true },
   { title: "Freshers Training", icon: "school", options: [], isActive: true },
   { title: "Training", icon: "school", options: [], isActive: true },
