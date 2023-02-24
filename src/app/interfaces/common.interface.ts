@@ -110,3 +110,106 @@ export const profileMenuData = [
   { title: "Change Password", icon: "key" },
   { title: "Sign Out", icon: "logout" },
 ];
+
+
+export const MYPERFORMACE_VALUE = {
+  BREADCRUMB_VALUE1: 'Home',
+  BREADCRUMB_VALUE2: 'Reviews',
+  BREADCRUMB_VALUE3: 'Performance',
+  AWARDS_VALUE: 'AWARDS',
+  HONOURS_VALUE: 'HONOURS',
+  NULL_VALUE: 'N/A',
+  TILL_NOW_VALUE: 'Till Now',
+  JANUARY_LABEL: 'Jan',
+  EMPLOYEE_NAME: 'Harshit Kumar Jain',
+  EMPLOYEE_DESIGNATION: 'Software Engineer (Angular)',
+  TECHNICAL_LABEL: 'Technical Skills',
+  OWNERSHIP_LABEL: 'Ownership of Delivery',
+  TEAMWORK_LABEL: 'Teamwork',
+  PROCESS_LABEL: 'Process Adherence',
+  YEAR_SHORTFORM: 'YRS',
+  button: 'Monthly Rating',
+  calendar: 'Monthly Performance Calendar',
+  select_year: 'Select Year  : ',
+  year: ['2022', '2023'],
+
+  calendar_data: [
+
+    { year: '2022', month_name: 'January', Data: [] },
+    { year: '2022', month_name: 'February', Data: [] },
+    { year: '2022', month_name: 'March', Data: [] },
+    {
+      year: '2022',
+      month_name: 'April',
+      Data: [
+        {
+          overall_rating: '5',
+          award_title: 'AWARDS:',
+          award_value: '0',
+          honour_title: 'HONOURS:',
+          honour_value: '0',
+          icon: 'keyboard_arrow_right',
+        },
+      ],
+    },
+    { year: '2022', month_name: 'May', Data: [] },
+    { year: '2022', month_name: 'June', Data: [] },
+    { year: '2022', month_name: 'July', Data: [] },
+    { year: '2022', month_name: 'August', Data: [] },
+    { year: '2022', month_name: 'September', Data: [] },
+    { year: '2022', month_name: 'October', Data: [] },
+    {
+      year: '2022',
+      month_name: 'November',
+      Data: [
+        {
+          overall_rating: '5',
+          award_title: 'AWARDS:',
+          award_value: '0',
+          honour_title: 'HONOURS',
+          honour_value: '0',
+          icon: 'keyboard_arrow_right',
+        },
+      ],
+    },
+    { year: '2023', month_name: 'December', Data: [] },
+    { year: '2023', month_name: 'January', Data: [] },
+    { year: '2023', month_name: 'February', Data: [] },
+    { year: '2023', month_name: 'March', Data: [] },
+    {
+      year: '2023',
+      month_name: 'April',
+      Data: [
+        {
+          overall_rating: '5',
+          award_title: 'AWARDS:',
+          award_value: '0',
+          honour_title: 'HONOURS:',
+          honour_value: '0',
+          icon: 'keyboard_arrow_right',
+        },
+      ],
+    },
+    { year: '2023', month_name: 'May', Data: [] },
+    { year: '2023', month_name: 'June', Data: [] },
+    { year: '2023', month_name: 'July', Data: [] },
+    { year: '2023', month_name: 'August', Data: [] },
+    { year: '2023', month_name: 'September', Data: [] },
+    { year: '2023', month_name: 'October', Data: [] },
+    {
+      year: '2023',
+      month_name: 'November',
+      Data: [
+        {
+          overall_rating: '5',
+          award_title: 'AWARDS:',
+          award_value: '0',
+          honour_title: 'HONOURS',
+          honour_value: '0',
+          icon: 'keyboard_arrow_right',
+        },
+      ],
+    },
+    { year: '2023', month_name: 'December', Data: [] },
+  ],
+};

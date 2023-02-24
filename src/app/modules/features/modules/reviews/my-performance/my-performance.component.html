@@ -1,4 +1,7 @@
 <section>
+    <div class="breadcrumb">
+        <p>home > reviews > performance</p>
+    </div>
     <div class="header">
         <h3 class="heading">Performance</h3>
     </div>
@@ -25,12 +28,12 @@
             <div class="award_honors">
                 <div class="awards_list_panel hounour_wrap">
                     <h4>AWARDS</h4>
-                    <ul></ul>
+                    <!-- <ul></ul> -->
                     <span>N/A</span>
                 </div>
                 <div class="hounour_wrap">
                     <h4>HONORS</h4>
-                    <ul></ul>
+                    <!-- <ul></ul> -->
                     <span>N/A</span>
                 </div>
             </div>
@@ -38,10 +41,10 @@
         <div class="right">
             <div class="flex_panel">
                 <div class="rating_count">
-                    <span class="number">4.2</span>
+                    <span class="number">5.0</span>
                 </div>
                 <div class="cal_nav_wrapper">
-                        <span class="cal_date"> {{'Jan 2021 - TILL NOW'}}</span>
+                    <span class="cal_date"> {{'Jan 2021 - TILL NOW'}}</span>
                 </div>
             </div>
             <div class="flex_row">
@@ -62,6 +65,58 @@
                     <b class="number">5.0</b>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="main_wraper dashboard_card">
+        <div class="header">
+            <h3 class="text">Monthly Rating</h3>
+        </div>
+        <div class="search_panel_right">
+            <div class="head_panel">
+                <h2>Monthly Performance Calendar</h2>
+            </div>
+            <div class="head_panel_search">
+                <app-common-dropdown [label]="'Select Year :'" [dropdownDownControlName]="yearFormControl" [data]="years"></app-common-dropdown>
+            </div>
+        </div>
+        <div class="content_body">
+            <ng-container *ngFor="let item of items">
+                <div class="cal_grid_panel">
+                    <ng-container *ngIf="0">
+
+                        <div class="no_data">
+                            <span class="month_name">June</span>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="10">
+
+                        <div class="data">
+                            <div class="flex_panel">
+                                <span class="month_name">June</span>
+                                <span class="month_rate">4.2</span>
+
+                            </div>
+                            <div class="cal_awards_wrap">
+                                <div class="count award">
+                                    <span>
+                                        AWARDS :
+                                    </span>
+                                    <span class="num"> 0 </span>
+                                </div>
+                                <div class="count honour">
+                                    <span>
+                                        HONOURS :
+                                    </span>
+                                    <span class="num"> 0 </span>
+                                </div>
+                                <span class="cal_arrow">
+                                    &gt;
+                                </span>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </ng-container>
         </div>
     </div>
 </section>

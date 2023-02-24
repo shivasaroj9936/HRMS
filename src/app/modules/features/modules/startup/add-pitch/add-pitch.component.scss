@@ -30,7 +30,8 @@ section {
       border-radius: 7px;
 
       .hash_heading {
-          position: relative;
+        position: relative;
+        background-color: #fff;
         .heading_text {
           font-size: 24px;
           color: #606167;
@@ -42,9 +43,9 @@ section {
           width: fit-content;
         }
     }
-    .hash_heading:after {
+    .heading_text::after {
         content: "";
-        width: 100%;
+        width:-webkit-fill-available;
         height: 1px;
         border-top: 1px dashed #96A5B8;
         position: absolute;
@@ -52,6 +53,17 @@ section {
         bottom: 18px;
 
     }
+    .heading_text::before {
+      content: "";
+      width:20px;
+      height: 1px;
+      border-top: 1px dashed #96A5B8;
+      position: absolute;
+      transform: translateY(-50%);
+      bottom: 18px;
+      left: -4px;
+
+  }
 
 
 
