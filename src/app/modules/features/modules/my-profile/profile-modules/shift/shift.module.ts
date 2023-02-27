@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ShiftRoutingModule } from './shift-routing.module';
 import { ShiftComponent } from './shift.component';
+import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { ShiftComponent } from './shift.component';
   ],
   imports: [
     CommonModule,
-    ShiftRoutingModule
+    ShiftRoutingModule,
+    // CommonTableModule
+    
   ]
 })
 export class ShiftModule { }

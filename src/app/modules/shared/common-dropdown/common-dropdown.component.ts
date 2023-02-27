@@ -13,8 +13,8 @@ export class CommonDropdownComponent implements OnInit,AfterViewInit {
   @Input() set dropdownDownControlName(data:FormControl | AbstractControl){
     this.inputFormControl = data;    
   }
-  inputFormControl!:FormControl | AbstractControl
-  @Input() label: any;
+   inputFormControl!:FormControl | AbstractControl
+  @Input() label!: string;
   @Input() data:any;
   @Input() errorType:any;
   @Input() formfieldCSS:any;

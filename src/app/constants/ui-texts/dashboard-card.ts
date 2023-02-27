@@ -154,7 +154,7 @@ export const FORM_LABEL = {
   FIRST_NAME: "First Name",
   LAST_NAME: "Last Name",
   DATE_OF_BIRTH: "Date of Birth",
-  GENDER: "Gender",
+  GENDER: 'Gender',
   MARITAL_STATUS: "Marital Status",
   CONTACT: "Contact Number",
   YEAR: "Years",

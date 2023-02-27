@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 import { Router } from "@angular/router";
 import { ADMIN } from "src/app/constants/routes";
+import { NotificationService } from "src/app/services/notification-service/notification.service";
 
 @Component({
   selector: "app-login-with-credential",
@@ -11,7 +12,10 @@ import { ADMIN } from "src/app/constants/routes";
 export class LoginWithCredentialComponent implements OnInit {
   @Input() loginForm!: FormGroup;
   hide = false;
-  constructor(private _router:Router) {}
+  constructor(private _router:Router,
+    private notificationService: NotificationService
+    
+    ) {}
 
   ngOnInit(): void {}
   getControl(control: any) {
@@ -27,9 +31,8 @@ export class LoginWithCredentialComponent implements OnInit {
         email: this.loginForm.controls['email'].value,
         password: this.loginForm.controls['password'].value,
       }
-      console.log(data, 'data user ');
+      this.notificationService.showSuccess('Successfull','Login')
       this._router.navigate([ADMIN.fullUrl])
-
     }
   }
 }

@@ -10,7 +10,7 @@ const routes: Routes = [
     
     children: [
       { path: '', redirectTo: POLICY_DOCUMENTS.path, pathMatch: 'full' },
-      { path: POLICY_DOCUMENTS.path, loadChildren: () => import('./policy-documents/policy-documents-routing.module').then((m) => m.PolicyDocumentsRoutingModule) },
+      { path: POLICY_DOCUMENTS.path, loadChildren: () => import('././policy-documents/policy-documents.module').then((m)=>m.PolicyDocumentsModule) },
       { path: INSURANCE_VERIFICATION.path, loadChildren: () => import('./insurance-verification/insurance-verification.module').then((m) => m.InsuranceVerificationModule) },
       { path: HOLIDAY_CALENDAR.path, loadChildren: () => import('./holiday-calendar/holiday-calendar-routing.module').then((m) => m.HolidayCalendarRoutingModule) }
     ]

@@ -42,13 +42,13 @@ export class CommonTableComponent implements OnInit {
 
 
   ngOnInit(): void {
-
     this.columns.map((tableColumn: any) => this.headerRow.push(tableColumn.heading));
   }
   ngAfterViewInit() {
     this.dataSourceForTable.sort = this.matSort;
-
     this.dataSourceForTable.paginator = this.matPaginator;
+    console.log(this.dataSourceForTable);
+    
   }
   openDialog(){}
   // openDialog(dialogType: string): void {

@@ -3,11 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PolicyDocumentsComponent } from './policy-documents.component';
 
 const routes: Routes = [
-  {
-    path:'',
-    component:PolicyDocumentsComponent,
-    pathMatch:'full'
-  }
+  {path:'',component:PolicyDocumentsComponent}
 ];
 
 @NgModule({

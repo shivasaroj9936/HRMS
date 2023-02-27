@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { NullRoutePipe } from './pipes/handel-null-route/null-route.pipe';
+import { ToastrModule } from 'ngx-toastr';
+// import { ToastrModule } from 'ngx-toastr/toastr/toastr.module' 
 
 @NgModule({
   declarations: [
@@ -14,7 +15,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      closeButton:true,
+      timeOut:1500,
+      progressBar:true,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

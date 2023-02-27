@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { NotificationService } from "src/app/services/notification-service/notification.service";
 import { FormService } from "../../../services/form-service/form.service";
 
 @Component({
@@ -12,7 +13,8 @@ export class ForgotPasswordComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private _formService: FormService
+    private _formService: FormService,
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit(): void {
@@ -26,5 +28,9 @@ export class ForgotPasswordComponent implements OnInit {
   getControl(name: string) {
     return this.resetForm.controls[name];
   }
-  sendEmail() {}
+  sendEmail() {
+    if(this.resetForm.valid){
+      this.notificationService.showSuccess('Sent to your mail', 'New Password');
+    }
+  }
 }

@@ -1,14 +1,64 @@
-@import "src/scss/dashbord-card-heading.scss";
+// @import 'src/scss/dashbord-card-heading.scss';
+section {
+  .header {
+    margin-bottom: 2rem;
 
-section{
-    .header {
-        display: flex;
-        align-items: center;
-  
-        .heading {
-          color: var(--primary-color);
-          font-size: 1.6rem;
-          margin: 0;
+    .heading {
+      font-family: "Lato";
+      font-size: 24px;
+      color: #199cff;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+  }
+
+  ::ng-deep {
+    .table {
+      padding: 0 1rem;
+
+      table {
+        th {
+          // font-size: 14px;
+          color: #96A5B8;
+          // font-weight: 500;
+          line-height: 1.5;
+          padding: 0px 10px 18px 10px;
+          border-bottom: 1px solid #EDF2F6;
+        }
+
+        td {
+          // font-size: 14px;
+          color: #606167;
+          // font-weight: 500;
+          line-height: 1.5;
+          padding: 20px 10px;
+          border-bottom: 1px solid #EDF2F6;
+
+          .action {
+            .action_button {
+              color: #199CFF;
+              font-family: "Lato";
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 1.4;
+              background-color: #F8F8F8;
+
+              mat-icon {
+                cursor: pointer;
+                color: #199CFF;
+
+              }
+
+            }
+          }
         }
       }
+
+    }
+
+
+
+
+  }
 }

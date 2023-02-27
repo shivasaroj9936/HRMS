@@ -50,7 +50,10 @@ export class GalleryComponent implements OnInit, AfterViewInit {
     
     this.dialog.open(GalleryImagesDialogComponent, {
       data:data,
-      
+      maxWidth: '60vw',
+      maxHeight: '63vh',
+      height: '100%',
+      width: '100%',
     });
   }
 }

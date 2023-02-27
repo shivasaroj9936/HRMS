@@ -8,10 +8,10 @@
         <div class="profile">
             <span>Shiva Saroj</span>
             <img class="user_image" src="/assets/default_male.jpg" alt="user_logo">
-            <mat-icon [matMenuTriggerFor]="belowMenu" class="menu_button" (click)="profileOpen=!profileOpen" [ngClass]="{'rotated' : profileOpen}"  >expand_more</mat-icon>
-            <mat-menu #belowMenu="matMenu" yPosition="below" (click)="profileOpen=!profileOpen" >
-                <button mat-menu-item>  <mat-icon>person</mat-icon> My Profile </button>
-                <button mat-menu-item><mat-icon>key</mat-icon>Change Password </button>
+            <mat-icon [matMenuTriggerFor]="belowMenu" class="menu_button" > expand_more</mat-icon>
+            <mat-menu #belowMenu="matMenu" yPosition="below"  >
+                <button mat-menu-item [routerLink]="'PROFILE'|absolutePath">  <mat-icon>person</mat-icon> My Profile </button>
+                <button mat-menu-item [routerLink]="'CHANGE_PASSWORD'|absolutePath" ><mat-icon>key</mat-icon>Change Password </button>
                 <button mat-menu-item  (click)="logOut()" ><mat-icon>logout</mat-icon> Sign out</button>
             </mat-menu>
         </div>

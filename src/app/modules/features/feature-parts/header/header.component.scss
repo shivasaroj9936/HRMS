@@ -53,6 +53,7 @@
             .menu_button {
                 transition: 300ms ease-in-out;
                 transform: rotate(0deg);
+                cursor: pointer;
             }
 
             .menu_button.rotated {

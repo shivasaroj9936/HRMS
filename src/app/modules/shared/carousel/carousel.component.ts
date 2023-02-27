@@ -12,6 +12,9 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   @Input() carouselConfig!: NguCarouselConfig;
   @Input() actionButtons?:boolean=false;
   @Input() showPoints?:boolean=false;
+  @Input() left_buttonPosition?:string;
+  @Input() right_buttonPosition?:string;
+
 
   @ViewChild('myCarousel') carousel!: NguCarousel<any>;
 

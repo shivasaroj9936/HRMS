@@ -2,7 +2,7 @@
   <div class="heading ">
     <h3 class="header">{{headerValue.HEADER}}</h3>
   </div>
-  <app-carousel [showPoints]="true" [actionButtons]="true" [listToShow]="dataSource" [carouselConfig]="carouselConfig"></app-carousel>
+  <app-carousel [showPoints]="true" [actionButtons]="true" [listToShow]="dataSource" [carouselConfig]="carouselConfig" [left_buttonPosition]="'gallery_leftRs'" [right_buttonPosition]="'gallery_rightRs'"  ></app-carousel>
   <ng-container *ngFor="let item of imageData">
     <ng-template #listofDivs>
       <figure>

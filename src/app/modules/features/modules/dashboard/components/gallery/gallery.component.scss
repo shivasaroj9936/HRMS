@@ -31,6 +31,21 @@ section {
       -o-object-fit: cover;
       object-fit: cover;
     }
+    ::after{
+      content: '';
+    width: 100px;
+    height: 100px;
+    background-image: url('/assets/loading.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    }
   }
 
   .gallery-info {
@@ -66,7 +81,7 @@ section {
       }
 
       .view {
-        background: transparent;
+        // background: transparent;
         border: none;
         cursor: pointer;
         padding: 8px 30px;
@@ -83,7 +98,7 @@ section {
 
         &:hover {
           background: rgb(245, 242, 242);
-          opacity: 0.45;
+          // opacity: 0.45;
           color: black;
           font-weight: 500;
         }

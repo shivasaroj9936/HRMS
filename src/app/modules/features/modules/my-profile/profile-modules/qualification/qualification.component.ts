@@ -33,8 +33,8 @@ export class QualificationComponent implements OnInit {
   
   
   options: string[] = [ "B.Tech",  "M.Tech", "BCA", "BBA", "M.Sc.", "Diloma",];
-  filteredOptions!: Observable<string[]>;
   qualificationForm!:FormGroup;
+  
   dataSource!: MatTableDataSource<any>;
   columns = [
     { heading: 'Action', key: 'action', isSortable: 'isSortable', type: 'text', },
@@ -52,32 +52,7 @@ export class QualificationComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
-
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => {
-        
-      let res  =      this._filter(value ||'')
-      if(!res.length){
-        res=['not found']
-      }
-      console.log(res);
-      return res;
-      
-      }),
-    );
   }
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.options.filter((option) => 
-    {
-      const res= option.toLowerCase().includes(filterValue);
-      return res;
-    }
-    );
-  }
-
 
 
   createForm() {
