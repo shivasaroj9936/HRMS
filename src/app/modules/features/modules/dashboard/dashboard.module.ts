@@ -24,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
 import { ValidationErrorModule } from "src/app/pipes/validation-error/validation-error.module";
 import { DigitOnlyModule } from "src/app/directives/digit-only/digit-only.module";
+import { AppreciationDialogComponent } from './components/latest-at-appinventiv/appreciation-dialog/appreciation-dialog.component';
 
 const MATERIAL = [
   MatIconModule,
@@ -48,6 +49,7 @@ const MATERIAL = [
     WorkAnniversaryComponent,
     GalleryImagesDialogComponent,
     ReferalFormComponent,
+    AppreciationDialogComponent,
   ],
   imports: [
     CommonModule,

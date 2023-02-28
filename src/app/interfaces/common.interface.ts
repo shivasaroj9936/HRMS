@@ -90,7 +90,17 @@ export const sideNavList: SideNavItem[] = [
       // link: "https://hrms.easysourceindia.com/Payroll/",
     },
   ], isActive: true },
-  { title: "Refer a Friend", icon: "groups", options: [], isActive: true },
+  { title: "Refer a Friend", icon: "groups", options: [
+    {
+      subTitle: "Job Openinings",
+      subicon: "work",
+      route: "JOB_OPENINGS",
+    },   {
+      subTitle: "Referral List",
+      subicon: "list_alt",
+      route: "REFERRAL_LIST",
+    }
+  ], isActive: true },
   { title: "Freshers Training", icon: "school", options: [], isActive: true },
   { title: "Training", icon: "school", options: [], isActive: true },
   { title: "Assests Inventory", icon: "science", options: [], isActive: true },

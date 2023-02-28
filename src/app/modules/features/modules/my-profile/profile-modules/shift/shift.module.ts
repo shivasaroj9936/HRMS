@@ -13,7 +13,7 @@ import { CommonTableModule } from 'src/app/modules/shared/common-table/common-ta
   imports: [
     CommonModule,
     ShiftRoutingModule,
-    // CommonTableModule
+    CommonTableModule
     
   ]
 })

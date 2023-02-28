@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { NguCarouselConfig } from '@ngu/carousel';
 import { APPRECIATION_DATA, IAPPRECIATIONDATA } from '../../../interfaces/interfaces';
+import { AppreciationDialogComponent } from '../appreciation-dialog/appreciation-dialog.component';
 
 @Component({
   selector: 'app-appreciation',
@@ -21,7 +23,7 @@ export class AppreciationComponent implements OnInit,AfterViewInit {
     touch: true,
     velocity: 0.2,
   };
-  constructor() { }
+  constructor( public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -29,7 +31,15 @@ export class AppreciationComponent implements OnInit,AfterViewInit {
     this.listToShow.forEach((item: any) => {
     this.dataSource.push(item);
     })
-
+  }
+  openDialog(data:any){
+    this.dialog.open(AppreciationDialogComponent, {
+      data:data,
+      // maxWidth: '30%',
+      // maxHeight: '55vh',
+      // height: '100%',
+      // width: '100%',
+    });
   }
 
 }

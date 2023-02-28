@@ -15,26 +15,32 @@ section {
 
   ::ng-deep {
     .table {
-      padding: 0 1rem;
-
+      border-radius: 10px;
+      border: 1px solid rgba(150, 165, 184, 0.3);
       table {
+        padding: 0 1rem;
         th {
-          // font-size: 14px;
-          color: #96A5B8;
-          // font-weight: 500;
+          font-size: 1rem !important;
+          color: #96A5B8 !important;
+          font-weight: 500;
           line-height: 1.5;
-          padding: 0px 10px 18px 10px;
+          // padding: 0px 10px 18px 10px;
+      padding:1.5rem 10px 1.5rem 3rem !important;
+
           border-bottom: 1px solid #EDF2F6;
         }
+     
 
         td {
+      padding:1.5rem 10px 1.5rem 3rem !important;
+
           // font-size: 14px;
-          color: #606167;
+          color: #606167 !important;
           // font-weight: 500;
           line-height: 1.5;
           padding: 20px 10px;
           border-bottom: 1px solid #EDF2F6;
-
+          text-align:initial;
           .action {
             .action_button {
               color: #199CFF;
@@ -43,7 +49,7 @@ section {
               font-weight: 400;
               line-height: 1.4;
               background-color: #F8F8F8;
-
+              padding: 0.3rem 1.5rem;
               mat-icon {
                 cursor: pointer;
                 color: #199CFF;
@@ -56,9 +62,5 @@ section {
       }
 
     }
-
-
-
-
   }
 }

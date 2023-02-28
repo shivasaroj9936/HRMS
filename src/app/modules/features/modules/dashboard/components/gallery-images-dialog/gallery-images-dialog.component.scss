@@ -1,6 +1,5 @@
 section {
   text-align: center;
-  // max-width: 500px;
   background-color: #fff;
   position: relative;   
   figure{
@@ -38,8 +37,4 @@ section {
     cursor: pointer;
     border: none;
   }
-}
-::ng-deep.mat-dialog-container {
-  // padding: 2rem;
-  // background: transparent;
 }

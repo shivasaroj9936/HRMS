@@ -163,3 +163,21 @@ export const INVESTMENT_DECLARATION: IRoute = {
     return `/${MY_LINKS.fullUrl}/${this.path}`;
   },
 };
+export const REFER_CANDIDATE :IRoute={
+  path:'refer-candidate',
+  get fullUrl():string{
+    return `/${ADMIN.fullUrl}/${this.path}`
+  }
+}
+export const JOB_OPENINGS :IRoute={
+  path:'job-openings',
+  get fullUrl():string{
+    return `/${REFER_CANDIDATE.fullUrl}/${this.path}`
+  }
+}
+export const REFERRAL_LIST :IRoute={
+  path:'referral-list',
+  get fullUrl():string{
+    return `/${REFER_CANDIDATE.fullUrl}/${this.path}`
+  }
+}

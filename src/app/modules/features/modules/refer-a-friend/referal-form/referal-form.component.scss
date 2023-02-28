@@ -86,10 +86,10 @@ section {
 ::ng-deep {
   .mat-dialog-container {
     border-radius: 20px;
-    padding: 0px !important;
+    padding: 0px ;
   }
   .mat-form-field-appearance-outline .mat-form-field-flex {
-    box-shadow: 0px 4px 8px rgb(44 39 56 / 4%) !important;
+    box-shadow: 0px 4px 8px rgb(44 39 56 / 4%) ;
 }
   .cdk-overlay-dark-backdrop {
     background: rgba(0, 0, 0, 0.80);
@@ -117,7 +117,7 @@ section {
     .form {
       .inputs {
         grid-template-columns: auto;
-        gap: 0px !important;
+        gap: 0px ;
 
         .formfield {
           .mat-form-field {

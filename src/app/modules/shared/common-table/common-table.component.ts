@@ -24,6 +24,7 @@ export class CommonTableComponent implements OnInit {
     pageSize: 10,
     pageIndex: 1
   };
+  @Input() pagination=false;
   @Input() columns!: any;
   @Input() dataSourceForTable!: any;
   @Input() paginationSizes: number[] = [5, 10, 15, 23];

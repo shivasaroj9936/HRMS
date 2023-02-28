@@ -1,48 +1,40 @@
-$primary: #000;
-$backGroundColor: #fff;
-
 section {
   table {
     width: 100%;
-    border-bottom: 1px solid gainsboro;
-
+    border-radius: 10px;
 
     th {
-      color: $primary;
-      background-color: #fff;
-      font-size: 0.8rem;
-      text-align: center;
+      // text-align: left;
       width: fit-content;
     }
 
-    tr {
-      text-align: center;
-    }
-
     td {
-      color: $primary;
-      .action{
-        mat-icon{
+      .name {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          color: red;
+          margin-right: 10px;
+        }
+      }
+
+      .action {
+        mat-icon {
           cursor: pointer;
         }
       }
     }
 
     mat-icon {
-      color: $primary;
       margin-right: 4px;
     }
   }
 }
+
 :host::ng-deep {
-  
-  //   th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type{
-  //     padding-left: 0px;
-  // }
-  // th.mat-header-cell:first{
-  //   padding: 0;
-  // }
-  .mat-sort-header-container{
+
+  .mat-sort-header-container {
     text-align: center;
     width: fit-content;
   }

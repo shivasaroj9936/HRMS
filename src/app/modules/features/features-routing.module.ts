@@ -1,6 +1,6 @@
 import { Component, NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { DASHBOARD, DIRECTORY, ENTREPRENEURSHIP_PROGRAM, MY_LINKS, PROFILE, REVIEWS, STARTUP } from "src/app/constants/routes";
+import { DASHBOARD, DIRECTORY, ENTREPRENEURSHIP_PROGRAM, MY_LINKS, PROFILE, REFER_CANDIDATE, REVIEWS, STARTUP } from "src/app/constants/routes";
 import { FeaturesComponent } from "./features.component";
 
 const routes: Routes = [
@@ -46,6 +46,10 @@ const routes: Routes = [
       {
         path:REVIEWS.path,
         loadChildren:()=>import('./modules/reviews/reviews.module').then((m)=>m.ReviewsModule)
+      },
+      {
+        path:REFER_CANDIDATE.path,
+        loadChildren:()=>import('./modules/refer-a-friend/refer-a-friend.module').then((m)=>m.ReferAFriendModule)
       }
     ],
   },
