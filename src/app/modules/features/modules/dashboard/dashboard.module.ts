@@ -25,6 +25,7 @@ import { MatInputModule } from "@angular/material/input";
 import { ValidationErrorModule } from "src/app/pipes/validation-error/validation-error.module";
 import { DigitOnlyModule } from "src/app/directives/digit-only/digit-only.module";
 import { AppreciationDialogComponent } from './components/latest-at-appinventiv/appreciation-dialog/appreciation-dialog.component';
+import { JobOpeiningCardModule } from "../refer-a-friend/job-opeining-card/job-opeining-card.module";
 
 const MATERIAL = [
   MatIconModule,
@@ -61,6 +62,8 @@ const MATERIAL = [
     DigitOnlyModule,
     ReactiveFormsModule,
     ValidationErrorModule,
+    JobOpeiningCardModule,
+
 
     ...MATERIAL,
   ],

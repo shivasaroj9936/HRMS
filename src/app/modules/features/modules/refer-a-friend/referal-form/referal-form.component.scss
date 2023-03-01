@@ -1,5 +1,4 @@
 @import 'src/scss/buttons.scss';
-@import "src/scss/buttons.scss";
 
 * {
   margin: 0;
@@ -8,7 +7,7 @@
 }
 
 section {
-  height: 97vh;
+  height: 97vh !important;
 
   .header {
     background: gainsboro;
@@ -102,7 +101,7 @@ section {
       .inputs {
         .formfield {
           .mat-form-field {
-            width: 250px;
+            width: 250px !important;
           }
         }
       }
@@ -112,7 +111,7 @@ section {
 
 @media (max-width:675px) {
   section {
-    max-height: 600px;
+    max-height: 600px !important;
 
     .form {
       .inputs {
@@ -121,7 +120,7 @@ section {
 
         .formfield {
           .mat-form-field {
-            width: auto;
+            width: auto !important;
           }
         }
       }
