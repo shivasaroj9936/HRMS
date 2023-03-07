@@ -69,13 +69,14 @@
                 border: none;
                 padding: 3px 10px;
                 border-radius: 1px;
+                cursor: pointer;
             }
         }
 
         .notification {
             color: var(--shadow-color);
             display: contents;
-
+            cursor: pointer;
             mat-icon {
                 font-size: 28px;
 

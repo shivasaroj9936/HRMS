@@ -172,12 +172,18 @@ export const REFER_CANDIDATE :IRoute={
 export const JOB_OPENINGS :IRoute={
   path:'job-openings',
   get fullUrl():string{
-    return `/${REFER_CANDIDATE.fullUrl}/${this.path}`
+    return `/${REFER_CANDIDATE.fullUrl}/${this.path}`;
   }
 }
 export const REFERRAL_LIST :IRoute={
   path:'referral-list',
   get fullUrl():string{
-    return `/${REFER_CANDIDATE.fullUrl}/${this.path}`
+    return `/${REFER_CANDIDATE.fullUrl}/${this.path}`;
+  }
+}
+export const JOB_DETAILS:IRoute={
+  path:'job-details',
+  get fullUrl():string{
+    return `/${REFER_CANDIDATE.fullUrl}/${this.path}`;
   }
 }

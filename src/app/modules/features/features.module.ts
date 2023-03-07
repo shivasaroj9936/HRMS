@@ -13,6 +13,7 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatButtonModule } from "@angular/material/button";
 import { ListItemComponent } from './feature-parts/side-bar/list-item/list-item.component';
 import { AbsoluteRoutingModule } from "src/app/pipes/absolute-routing/absolute-routing.module";
+import { MatDialogModule } from "@angular/material/dialog";
 
 const MATERIAL = [
   MatSidenavModule,
@@ -21,6 +22,7 @@ const MATERIAL = [
   MatToolbarModule,
   MatMenuModule,
   MatButtonModule,
+  MatDialogModule,
 ];
 
 @NgModule({

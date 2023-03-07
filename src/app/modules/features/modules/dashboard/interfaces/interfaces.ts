@@ -16,6 +16,10 @@ export interface JobOpening {
   exp_to: number;
   location: string;
   date: String;
+  jobId?:number,
+  desc?:string[],
+  job_qualification?:string[],
+  skills?:string[]
 }
 export interface IDIRECTORY_DATA {
   IMAGE: string;
@@ -104,6 +108,29 @@ export const JobOpeningList: JobOpening[] = [
     exp_to: 5,
     location: "Noida",
     date: "05/01/2023",
+    jobId:101,
+    desc:[
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+    ],
+    job_qualification:[
+      'Education: Graduate/Post Graduate',
+    'Skills : Blockchain, ethereium, javaScript',
+    'Abilities: To Write Clean &amp; reusable code'
+    ],
+    skills:[
+      'blockchain',
+      'cryptography',
+      'Ethereum'
+    ]
   },
   {
     jobLogo: "/assets/android-developers.svg",
@@ -115,6 +142,29 @@ export const JobOpeningList: JobOpening[] = [
     exp_to: 5,
     location: "Noida",
     date: "05/01/2023",
+    jobId:102,
+    desc:[
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+    ],
+    job_qualification:[
+      'Education: Graduate/Post Graduate',
+    'Skills : Blockchain, ethereium, javaScript',
+    'Abilities: To Write Clean &amp; reusable code'
+    ],
+    skills:[
+      'blockchain',
+      'cryptography',
+      'Ethereum'
+    ]
   },
   {
     jobLogo: "/assets/react-native.svg",
@@ -126,6 +176,29 @@ export const JobOpeningList: JobOpening[] = [
     exp_to: 5,
     location: "Noida",
     date: "05/01/2023",
+    jobId:103,
+    desc:[
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+      'Experience contributing to the architecture, design, and development of Blockchain systems with  key focus in the areas such as consensus, distributed ledger, and smart contracts',
+    ],
+    job_qualification:[
+      'Education: Graduate/Post Graduate',
+    'Skills : Blockchain, ethereium, javaScript',
+    'Abilities: To Write Clean &amp; reusable code'
+    ],
+    skills:[
+      'blockchain',
+      'cryptography',
+      'Ethereum'
+    ]
   },
 ];
 

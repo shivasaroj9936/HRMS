@@ -27,6 +27,7 @@ section {
             font-weight: 500;
           }
         }
+        position: relative;
         .profilePreviewImg {
           width: 100px;
           height: 70px;
@@ -35,6 +36,13 @@ section {
           margin-top: 20px;
           border-radius: 5px;
         }
+        .remove{
+          position: absolute;
+          top: 91px;
+          font-size: 15px;
+          left: 95px;
+          cursor: pointer;
+        } 
         .remove-pic{
           display: flex;
           align-items: baseline;

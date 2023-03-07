@@ -11,6 +11,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
+import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoid-first-space.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    ValidationErrorModule
+    ValidationErrorModule,
+    AvoidFirstSpaceModule
   ]
 })
 export class ChangePasswordModule { }

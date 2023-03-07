@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="actions">
-        <button mat-button class="view_details btn_cancel">View Details</button>
+        <button mat-button class="view_details btn_cancel"  [routerLink]="['JOB_DETAILS'|absolutePath,job?.jobId]"  >View Details</button>
         <button mat-raised-button class="refer btn_primary" (click)="openJobReferalForm(job)">Refer a Condidate</button>
 
     </div>

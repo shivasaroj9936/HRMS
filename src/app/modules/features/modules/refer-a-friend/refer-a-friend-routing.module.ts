@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { JOB_OPENINGS, REFERRAL_LIST } from "src/app/constants/routes";
+import { JOB_DETAILS, JOB_OPENINGS, REFERRAL_LIST } from "src/app/constants/routes";
 import { JOB_OPENING } from "src/app/constants/ui-texts/dashboard-card";
 import { ReferAFriendComponent } from "./refer-a-friend.component";
 
@@ -24,6 +24,10 @@ const routes: Routes = [
             (m) => m.ReferralListModule
           ),
       },
+      {
+        path:`${JOB_DETAILS.path}/:jobId`,
+        loadChildren:()=>import("./job-details/job-details.module").then((m)=>m.JobDetailsModule)
+      }
     ],
   },
 ];

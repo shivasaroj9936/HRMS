@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
 import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
+import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoid-first-space.module';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CommonTableModule } from 'src/app/modules/shared/common-table/common-ta
     ReactiveFormsModule,
     MatIconModule,
     ValidationErrorModule,
-    CommonTableModule
+    CommonTableModule,
+    AvoidFirstSpaceModule
   ]
 })
 export class QualificationModule { }

@@ -7,7 +7,7 @@
                     <div class="formfield 1">
                         <label class="label">{{labelMessage.FIRST_NAME}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input [placeholder]="labelMessage.FIRST_NAME" matInput formControlName="first_name">
+                            <input appAvoidFirstSpace [placeholder]="labelMessage.FIRST_NAME" matInput formControlName="first_name">
                             <mat-error>{{ getControl("first_name") | validate : "first name" }}</mat-error>
 
                         </mat-form-field>
@@ -15,7 +15,7 @@
                     <div class="formfield 2">
                         <label class="label">{{labelMessage.LAST_NAME}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input [placeholder]="labelMessage.LAST_NAME" matInput formControlName="last_name">
+                            <input appAvoidFirstSpace [placeholder]="labelMessage.LAST_NAME" matInput formControlName="last_name">
                             <mat-error>{{ getControl("last_name") | validate : "last name" }}</mat-error>
 
                         </mat-form-field>
@@ -23,7 +23,7 @@
                     <div class="formfield 3">
                         <label class="label">{{labelMessage.DATE_OF_BIRTH}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input matInput [matDatepicker]="picker1" readonly formControlName="dob">
+                            <input  matInput [matDatepicker]="picker1" readonly formControlName="dob">
                             <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
                             <mat-datepicker #picker1></mat-datepicker>
                             <mat-error>{{ getControl("dob") | validate : "date of birth" }}</mat-error>

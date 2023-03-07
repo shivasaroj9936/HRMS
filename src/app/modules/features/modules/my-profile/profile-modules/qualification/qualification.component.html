@@ -7,7 +7,7 @@
                     <div class="formfield 1">
                         <label class="label">{{labelMessage.SCHOOL}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input [placeholder]="labelMessage.SCHOOL" matInput formControlName="school">
+                            <input appAvoidFirstSpace [placeholder]="labelMessage.SCHOOL" matInput formControlName="school">
                             <mat-error>{{ getControl("school") | validate : labelMessage.SCHOOL }}</mat-error>
 
                         </mat-form-field>
@@ -45,7 +45,7 @@
                     <div class="formfield topField 6">
                         <label class="label">{{labelMessage.PROFESSIONAL_COURSE}}</label>
                         <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input matInput [placeholder]="labelMessage.PROFESSIONAL_COURSE" formControlName="professional_course">
+                            <input appAvoidFirstSpace matInput [placeholder]="labelMessage.PROFESSIONAL_COURSE" formControlName="professional_course">
                             <mat-error>{{ getControl("professional_course") | validate : labelMessage.PROFESSIONAL_COURSE }}</mat-error>
 
                         </mat-form-field>

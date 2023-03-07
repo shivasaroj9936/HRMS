@@ -13,6 +13,7 @@ import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
 import { DigitOnlyModule } from 'src/app/directives/digit-only/digit-only.module';
+import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoid-first-space.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DigitOnlyModule } from 'src/app/directives/digit-only/digit-only.module
     
     FormsModule,ReactiveFormsModule,
     ValidationErrorModule,
-    DigitOnlyModule
+    DigitOnlyModule,
+    AvoidFirstSpaceModule
   ]
 })
 export class BasicInformationModule { }
