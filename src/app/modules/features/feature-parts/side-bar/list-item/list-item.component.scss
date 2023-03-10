@@ -12,28 +12,33 @@ section {
     font-weight: 500;
     margin: 0;
   }
+
   .sub {
     padding-left: 20px;
     transition: transform 300ms ease !important;
     transform-origin: top;
   }
-  .submenu_active {
-      .sub{
-        .sidenav_text ,.item_icon{
-          color: var(--side-nav-active-color);
-        }
 
+  .submenu_active {
+    .sub {
+
+      .sidenav_text,
+      .item_icon {
+        color: var(--side-nav-active-color);
       }
-      .item_text::before {
-        position: absolute;
-        content: "";
-        background: var(--side-nav-active-color);
-        width: 3px;
-        height: 80%;
-        left: 30px;
-        top: 6px;
-        bottom: 0;
-      }
+
+    }
+
+    .item_text::before {
+      position: absolute;
+      content: "";
+      background: var(--side-nav-active-color);
+      width: 3px;
+      height: 80%;
+      left: 30px;
+      top: 6px;
+      bottom: 0;
+    }
   }
 
   .is_active {
@@ -59,6 +64,7 @@ section {
     display: flex;
     gap: 10px;
     align-items: inherit;
+
     .item_icon {
       vertical-align: super;
     }
@@ -90,8 +96,14 @@ section {
   .mat-list-item {
     color: var(--side-nav-text-color);
     font-family: "sf_ui_displaysemibold";
+
     &:disabled {
       background-color: var(--disabled-color);
     }
+  }
+  :hover{
+  .item_text,.sidenav_text {
+    color: var(--side-nav-active-color);
+  }
   }
 }

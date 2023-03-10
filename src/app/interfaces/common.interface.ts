@@ -112,7 +112,10 @@ export const sideNavList: SideNavItem[] = [
   { title: "Expense", icon: "monetization_on", isActive: false },
   { title: "Announcements", icon: "campaign", isActive: false },
   { title: "Travels", icon: "flight", isActive: false },
-  { title: "Logout", icon: "logout", isActive: true },
+  { title: "Logout", icon: "logout", isActive: true ,
+  route: "ACCOUNT",
+
+},
 ];
 
 export const profileMenuData = [

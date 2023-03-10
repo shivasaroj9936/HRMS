@@ -11,9 +11,10 @@ import { SideBarComponent } from "./feature-parts/side-bar/side-bar.component";
 import { HeaderComponent } from "./feature-parts/header/header.component";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatButtonModule } from "@angular/material/button";
-import { ListItemComponent } from './feature-parts/side-bar/list-item/list-item.component';
+import { ListItemComponent } from "./feature-parts/side-bar/list-item/list-item.component";
 import { AbsoluteRoutingModule } from "src/app/pipes/absolute-routing/absolute-routing.module";
 import { MatDialogModule } from "@angular/material/dialog";
+import { NotificationsComponent } from "./feature-parts/notifications/notifications.component";
 
 const MATERIAL = [
   MatSidenavModule,
@@ -26,7 +27,18 @@ const MATERIAL = [
 ];
 
 @NgModule({
-  declarations: [FeaturesComponent, SideBarComponent, HeaderComponent, ListItemComponent],
-  imports: [CommonModule, AbsoluteRoutingModule,FeaturesRoutingModule, ...MATERIAL],
+  declarations: [
+    FeaturesComponent,
+    SideBarComponent,
+    HeaderComponent,
+    ListItemComponent,
+    NotificationsComponent,
+  ],
+  imports: [
+    CommonModule,
+    AbsoluteRoutingModule,
+    FeaturesRoutingModule,
+    ...MATERIAL,
+  ],
 })
 export class FeaturesModule {}

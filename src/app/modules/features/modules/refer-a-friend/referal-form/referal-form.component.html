@@ -1,12 +1,12 @@
 <section>
-  <div class="header">
-    <h3 class="heading">{{ labelMessage.HEADER_VALUE }}</h3>
+  <div class="header" >
+    <h3  class="heading">{{ labelMessage.HEADER_VALUE }}</h3>
     <div class="cancel_icon" (click)="onNoClick()">
-      <mat-icon>close</mat-icon>
+      <mat-icon class="icon">close</mat-icon>
     </div>
   </div>
   <div class="form">
-    <div class="hash-heading">
+    <div class="hash_heading">
       <h3 class="mydetails">{{ labelMessage.JOB_DETAIL_VALUE }}</h3>
     </div>
     <form [formGroup]="referCandidateForm" (ngSubmit)="onSubmit()">
@@ -37,7 +37,7 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="hash-heading">
+      <div class="hash_heading">
         <h3 class="mydetails">{{ labelMessage.CANDIDATE_VALUE }}</h3>
       </div>
       <div class="inputs">

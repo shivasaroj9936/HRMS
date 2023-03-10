@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ReferralListRoutingModule } from './referral-list-routing.module';
 import { ReferralListComponent } from './referral-list.component';
+import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ReferralListComponent } from './referral-list.component';
   ],
   imports: [
     CommonModule,
-    ReferralListRoutingModule
+    ReferralListRoutingModule,
+    CommonTableModule
   ]
 })
 export class ReferralListModule { }

@@ -38,6 +38,16 @@
                 <mat-icon class="icon">description</mat-icon>
               </ng-container>
             </ng-container>
+            <ng-container *ngIf="row.key=='candidate_status'" [ngSwitch]="element.candidate_status">
+              <ng-container *ngSwitchCase="'closed'">
+                <mat-icon class="icon red" >brightness_1</mat-icon>
+              </ng-container>
+
+              <ng-container *ngSwitchCase="'open'">
+                <mat-icon class="icon green">brightness_1</mat-icon>
+              </ng-container>
+            </ng-container>
+            
             {{ element[row.key] }}
           </ng-container>
             </div>

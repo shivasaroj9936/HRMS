@@ -20,6 +20,12 @@ export const LOGIN: IRoute = {
     return `/${ACCOUNT.fullUrl}/${this.path}`;
   },
 };
+// export const LOGOUT: IRoute = {
+//   path: "logout",
+//   get fullUrl(): string {
+//     return `/${ACCOUNT.fullUrl}/${this.path}`;
+//   },
+// };
 
 export const FORGOT_PASSWORD: IRoute = {
   path: "forgot-password",

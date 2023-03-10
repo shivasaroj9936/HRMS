@@ -14,8 +14,20 @@ section {
         align-items: center;
 
         .icon {
-          color: red;
+          color: #F40D36;
           margin-right: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .green{
+          color: green;
+          font-size: 20px;
+        }
+        .red{
+          color: #F40D36;
+          font-size: 20px;
+
         }
       }
 
@@ -33,7 +45,11 @@ section {
 }
 
 :host::ng-deep {
+  .mat-paginator {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 
+  }
   .mat-sort-header-container {
     text-align: center;
     width: fit-content;
