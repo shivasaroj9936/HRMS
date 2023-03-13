@@ -1,4 +1,4 @@
-import { DASHBOARD, DIRECTORY, PROFILE } from "../constants/routes";
+
 
 export interface IRoute {
   path: string;
@@ -81,28 +81,68 @@ export const sideNavList: SideNavItem[] = [
     ],
     isActive: true,
   },
-  { title: "Reviews", icon: "grid_view", options: [
+  {
+    title: "Reviews", icon: "grid_view", options: [
 
-    {
-      subTitle: "My Performance",
-      subicon: "horizontal_rule",
-      route: "REVIEWS",
-      // link: "https://hrms.easysourceindia.com/Payroll/",
-    },
-  ], isActive: true },
-  { title: "Refer a Friend", icon: "groups", options: [
-    {
-      subTitle: "Job Openinings",
-      subicon: "work",
-      route: "JOB_OPENINGS",
-    },   {
-      subTitle: "Referral List",
-      subicon: "list_alt",
-      route: "REFERRAL_LIST",
-    }
-  ], isActive: true },
-  { title: "Freshers Training", icon: "school", options: [], isActive: true },
-  { title: "Training", icon: "school", options: [], isActive: true },
+      {
+        subTitle: "My Performance",
+        subicon: "horizontal_rule",
+        route: "REVIEWS",
+        // link: "https://hrms.easysourceindia.com/Payroll/",
+      },
+    ], isActive: true
+  },
+  {
+    title: "Refer a Friend", icon: "groups", options: [
+      {
+        subTitle: "Job Openinings",
+        subicon: "work",
+        route: "JOB_OPENINGS",
+      }, {
+        subTitle: "Referral List",
+        subicon: "list_alt",
+        route: "REFERRAL_LIST",
+      }
+    ], isActive: true
+  },
+  {
+    title: "Freshers Training", icon: "school", options: [
+      {
+        subTitle: "My Training",
+        subicon: "horizontal_rule",
+        route: "MY_TRAININGS",
+      },
+
+    ], isActive: true
+  },
+  {
+    title: "Training", icon: "school", options: [
+      {
+        subTitle: "Upcoming Training",
+        subicon: "horizontal_rule",
+        route: "UPCOMING_TRAINING",
+
+      },
+      {
+        subTitle: "Ongoing Training",
+        subicon: "horizontal_rule",
+        route: "ONGOING_TRAININGS",
+
+      },
+      {
+        subTitle: "My Training",
+        subicon: "horizontal_rule",
+        route: "TRAININGS",
+
+      },
+      {
+        subTitle: "Requested Training",
+        subicon: "horizontal_rule",
+        route: "REQUESTED_TRAININGS",
+
+      },
+    ], isActive: true
+  },
   { title: "Assests Inventory", icon: "science", options: [], isActive: true },
   { title: "Attendance", icon: "schedule", options: [], isActive: true },
   { title: "Leave", icon: "calendar_today", options: [], isActive: true },
@@ -112,10 +152,11 @@ export const sideNavList: SideNavItem[] = [
   { title: "Expense", icon: "monetization_on", isActive: false },
   { title: "Announcements", icon: "campaign", isActive: false },
   { title: "Travels", icon: "flight", isActive: false },
-  { title: "Logout", icon: "logout", isActive: true ,
-  route: "ACCOUNT",
+  {
+    title: "Logout", icon: "logout", isActive: true,
+    route: "ACCOUNT",
 
-},
+  },
 ];
 
 export const profileMenuData = [
@@ -226,3 +267,62 @@ export const MYPERFORMACE_VALUE = {
     { year: '2023', month_name: 'December', Data: [] },
   ],
 };
+
+
+
+export interface FRESHER_TRAINING_ITEM{
+  technology:string,
+  status:string,
+  start_date:string,
+  end_date:string,
+  mode:string,
+  attendees?:string
+  success_btn_label:string,
+  detail_btn_label:string
+
+}
+
+export const  FRESHERS_TRAININGS:FRESHER_TRAINING_ITEM[]=[
+  {
+    technology:'Angular Training Feb- 2022',
+    status:'completed',
+    start_date:'Feb-28-2022',
+    end_date:'Apr-02-2022',
+    mode:'Online',
+    success_btn_label:'Feedback',
+    detail_btn_label:'View Details'
+  },
+  {
+    technology:'HTML/CSS/UI',
+    status:'completed',
+    start_date:'Feb-14-2022',
+    end_date:'Feb-25-2022',
+    mode:'Offline',
+
+    success_btn_label:'Feedback',
+    detail_btn_label:'View Details'
+  }
+]
+export const  TRAININGS:FRESHER_TRAINING_ITEM[]=[
+  {
+    technology:'Angular Training Feb- 2022',
+    status:'enrolled',
+    start_date:'Feb-28-2022',
+    end_date:'Apr-02-2022',
+    mode:'Online',
+    attendees:'Angular',
+    success_btn_label:'Cancel Enrollment',
+    detail_btn_label:'View Details'
+  },
+  {
+    technology:'HTML/CSS/UI',
+    status:'enrolled',
+    start_date:'Feb-14-2022',
+    end_date:'Feb-25-2022',
+    mode:'Offline',
+    attendees:'Angular',
+    success_btn_label:'Cancel Enrollment',
+    detail_btn_label:'View Details'
+
+  }
+]

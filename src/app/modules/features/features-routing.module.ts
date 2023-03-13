@@ -1,6 +1,6 @@
 import { Component, NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { DASHBOARD, DIRECTORY, ENTREPRENEURSHIP_PROGRAM, MY_LINKS, PROFILE, REFER_CANDIDATE, REVIEWS, STARTUP } from "src/app/constants/routes";
+import { DASHBOARD, DIRECTORY, ENTREPRENEURSHIP_PROGRAM, FRESHERS, MY_LINKS, PROFILE, REFER_CANDIDATE, REVIEWS, STARTUP, TRAININGS } from "src/app/constants/routes";
 import { FeaturesComponent } from "./features.component";
 
 const routes: Routes = [
@@ -50,6 +50,14 @@ const routes: Routes = [
       {
         path:REFER_CANDIDATE.path,
         loadChildren:()=>import('./modules/refer-a-friend/refer-a-friend.module').then((m)=>m.ReferAFriendModule)
+      },
+      {
+        path:FRESHERS.path,
+        loadChildren:()=>import('./modules/freshers/freshers.module').then((m)=>m.FreshersModule)
+      },
+      {
+        path:TRAININGS.path,
+        loadChildren:()=>import('./modules/trainings/trainings.module').then((m)=>m.TrainingsModule)
       }
     ],
   },

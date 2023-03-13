@@ -120,15 +120,15 @@ export const ENTREPRENEURSHIP_PROGRAM: IRoute = {
     return `/${ADMIN.fullUrl}/${this.path}`;
   },
 };
-export const REVIEWS:IRoute={
-  path:'reviews',
-  get fullUrl():string{
+export const REVIEWS: IRoute = {
+  path: 'reviews',
+  get fullUrl(): string {
     return `/${ADMIN.fullUrl}/${this.path}`
   }
 }
-export const MY_PERFORMANCE:IRoute={
-  path:'my-performance',
-  get fullUrl():string{
+export const MY_PERFORMANCE: IRoute = {
+  path: 'my-performance',
+  get fullUrl(): string {
     return `/${REVIEWS.fullUrl}/${this.path}`
   }
 }
@@ -169,27 +169,71 @@ export const INVESTMENT_DECLARATION: IRoute = {
     return `/${MY_LINKS.fullUrl}/${this.path}`;
   },
 };
-export const REFER_CANDIDATE :IRoute={
-  path:'refer-candidate',
-  get fullUrl():string{
+export const REFER_CANDIDATE: IRoute = {
+  path: 'refer-candidate',
+  get fullUrl(): string {
     return `/${ADMIN.fullUrl}/${this.path}`
   }
 }
-export const JOB_OPENINGS :IRoute={
-  path:'job-openings',
-  get fullUrl():string{
+export const JOB_OPENINGS: IRoute = {
+  path: 'job-openings',
+  get fullUrl(): string {
     return `/${REFER_CANDIDATE.fullUrl}/${this.path}`;
   }
 }
-export const REFERRAL_LIST :IRoute={
-  path:'referral-list',
-  get fullUrl():string{
+export const REFERRAL_LIST: IRoute = {
+  path: 'referral-list',
+  get fullUrl(): string {
     return `/${REFER_CANDIDATE.fullUrl}/${this.path}`;
   }
 }
-export const JOB_DETAILS:IRoute={
-  path:'job-details',
-  get fullUrl():string{
+export const JOB_DETAILS: IRoute = {
+  path: 'job-details',
+  get fullUrl(): string {
     return `/${REFER_CANDIDATE.fullUrl}/${this.path}`;
+  }
+}
+export const FRESHERS: IRoute = {
+  path: 'freshers',
+  get fullUrl(): string {
+    return `/${ADMIN.fullUrl}/${this.path}`;
+  }
+}
+
+
+export const MY_TRAININGS: IRoute = {
+  path: 'my-trainings',
+  get fullUrl(): string {
+    return `/${FRESHERS.fullUrl}/${this.path}`;
+  }
+}
+export const TRAININGS: IRoute = {
+  path: 'trainings',
+  get fullUrl(): string {
+    return `/${ADMIN.fullUrl}/${this.path}`
+  }
+}
+export const MY_TRAINING:IRoute={
+  path: 'my-training',
+  get fullUrl(): string {
+    return `/${TRAININGS.fullUrl}/${this.path}`;
+  }
+}
+export const ONGOING_TRAININGS:IRoute={
+  path: 'ongoing-training',
+  get fullUrl(): string {
+    return `/${TRAININGS.fullUrl}/${this.path}`;
+  }
+}
+export const REQUESTED_TRAININGS:IRoute={
+  path: 'requested-training',
+  get fullUrl(): string {
+    return `/${TRAININGS.fullUrl}/${this.path}`;
+  }
+}
+export const UPCOMING_TRAINING:IRoute={
+  path: 'upcoming-training',
+  get fullUrl(): string {
+    return `/${TRAININGS.fullUrl}/${this.path}`;
   }
 }
