@@ -15,6 +15,7 @@ import { ListItemComponent } from "./feature-parts/side-bar/list-item/list-item.
 import { AbsoluteRoutingModule } from "src/app/pipes/absolute-routing/absolute-routing.module";
 import { MatDialogModule } from "@angular/material/dialog";
 import { NotificationsComponent } from "./feature-parts/notifications/notifications.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
 const MATERIAL = [
   MatSidenavModule,
@@ -38,6 +39,8 @@ const MATERIAL = [
     CommonModule,
     AbsoluteRoutingModule,
     FeaturesRoutingModule,
+    ReactiveFormsModule,
+    AbsoluteRoutingModule,
     ...MATERIAL,
   ],
 })

@@ -1,0 +1,48 @@
+@import '/home/appinventiv/Desktop/newHRMS/src/scss/buttons.scss';
+@import 'src/scss/dashbord-card-heading.scss';
+section{
+    .main{
+        background-color: #fff;
+        .main_header{
+            padding: 1rem;
+            .tabs{
+                position: relative;
+                .action{
+                    position: absolute;
+                    right: 0;
+                    top: 11px;
+                }
+            }
+        }
+
+    }
+}
+::ng-deep {
+    .mat-tab-group {
+      
+        // max-width: fit-content !important;
+    }
+
+    .mat-tab-header {
+        align-self: start;
+        border: none;
+    }
+
+    .mat-tab-list .mat-tab-labels {
+        background-color: rgba(227, 236, 243, 0.46);
+        padding: 6px;
+        border-radius: 7px;
+        color: #8c8e90;
+        }
+
+    .mat-tab-list  .mat-tab-labels .mat-tab-label-active {
+        color: #fff;
+        background-color: var(--button-background-color);
+        padding: 0.675rem 2.0625rem;
+    border-radius: 5px;
+    }
+    .mat-tab-group.mat-primary .mat-ink-bar{
+        background-color: transparent;
+        border: none;
+    }
+}

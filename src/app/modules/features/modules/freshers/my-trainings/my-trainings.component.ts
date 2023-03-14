@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { FRESHERS_TRAININGS } from 'src/app/interfaces/common.interface';
 
 @Component({
@@ -9,7 +10,10 @@ import { FRESHERS_TRAININGS } from 'src/app/interfaces/common.interface';
 export class MyTrainingsComponent implements OnInit {
   trainingData=FRESHERS_TRAININGS;
 
-  constructor() { }
+  constructor(
+    public dialog: MatDialog,
+  // private _router:Router
+  ) { }
 
   ngOnInit(): void {
   }

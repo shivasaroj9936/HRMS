@@ -1038,3 +1038,27 @@ export const ADD_PITCH = {
   PITCH_DETAILS:'Pitch Details',
   MY_DETAILS:'My Details'
 };
+
+export const FEEDBACK_DATA={
+  HEADING:'Training feedback form',
+  TITLE:'Angular Training Feb- 2022',
+  DEPARTMENT:'Angular',
+  START_DATE:'Feb-28-2022 ',
+  END_DATE:'Apr-02-2022 ',
+}
+
+export const FEEDBACK_LABELS={
+  HEADING:'Training feedback form',
+  TITLE:'Title',
+  DEPARTMENT:'Department',
+  START_DATE:'Start Date',
+  END_DATE:'End Date',
+  OBJECTIV:'Do you feel that the objective/goal of the training has been fulfilled? *',
+  MISSING:'What is missing? *',
+  RELEVENT:'How relevant and helpful do you think it was for your job? *',
+  OVERALL_TRAINING:'How would you rate the overall training? *',
+  SATISFACTION:'How satisfied were you with the session content? *',
+  OVERALL:'Any overall feedback for the training? *',
+  CANCEL_BUTTON:'Cancel',
+  SUBMIT_BUTTON:'Submit'
+}

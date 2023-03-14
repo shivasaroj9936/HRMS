@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { FRESHER_TRAINING_ITEM } from 'src/app/interfaces/common.interface';
+import { TrainingDialogComponent } from '../training-dialog/training-dialog.component';
 
 @Component({
   selector: 'app-training-card',
@@ -8,9 +10,16 @@ import { FRESHER_TRAINING_ITEM } from 'src/app/interfaces/common.interface';
 })
 export class TrainingCardComponent implements OnInit {
   @Input() data!:FRESHER_TRAINING_ITEM;
-  constructor() { }
+  constructor(
+public dialog: MatDialog,
+
+  ) { }
 
   ngOnInit(): void {
   }
-  feedback(){}
+  submitHandeler(data:any){
+    this.dialog.open(TrainingDialogComponent,{
+      
+    })
+  }
 }

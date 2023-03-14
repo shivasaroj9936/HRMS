@@ -200,6 +200,12 @@ export const FRESHERS: IRoute = {
   }
 }
 
+export const TRAINING_DETAILS:IRoute={
+  path:'training-details',
+  get fullUrl():string{
+    return `/${FRESHERS.fullUrl}/${this.path}`;
+  }
+}
 
 export const MY_TRAININGS: IRoute = {
   path: 'my-trainings',

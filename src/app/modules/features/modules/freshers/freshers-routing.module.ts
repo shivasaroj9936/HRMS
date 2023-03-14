@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { FRESHERS, MY_TRAININGS } from "src/app/constants/routes";
+import { FRESHERS, MY_TRAININGS, TRAINING_DETAILS } from "src/app/constants/routes";
 import { FreshersComponent } from "./freshers.component";
 
 const routes: Routes = [
@@ -13,6 +13,10 @@ const routes: Routes = [
       {
         path:MY_TRAININGS.path,
          loadChildren:()=>import('./my-trainings/my-trainings.module').then((m)=>m.MyTrainingsModule)
+      },
+      {
+        path:`${TRAINING_DETAILS.path}/:trainingId`,
+        loadChildren:()=>import('./training-details/training-details.module').then((m)=>m.TrainingDetailsModule)
       }
     ],
   },

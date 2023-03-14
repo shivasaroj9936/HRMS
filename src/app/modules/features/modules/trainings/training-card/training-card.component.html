@@ -13,7 +13,6 @@
             <p>Who Can Attend</p>
             <h4>{{data.attendees}}</h4>
         </div>
-
             <div class="timing">
                 <div class="no_opening">
                     <p>Start Date</p>
@@ -30,8 +29,7 @@
             </div>
         </div>
         <div class="actions">
-            <button mat-button class="view_details btn_cancel">{{data.detail_btn_label}}</button>
-            <button mat-raised-button class="refer btn_primary" (click)="feedback()">{{data.success_btn_label}}</button>
-    
+            <button mat-button class="view_details btn_cancel" [routerLink]="['TRAINING_DETAILS'|absolutePath,123]"  >{{data.detail_btn_label}}</button>
+            <button mat-raised-button class="refer btn_primary" (click)="submitHandeler(data)">{{data.success_btn_label}}</button>
         </div>
     </div>
