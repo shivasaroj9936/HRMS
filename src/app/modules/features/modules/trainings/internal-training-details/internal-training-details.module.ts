@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { InternalTrainingDetailsRoutingModule } from './internal-training-details-routing.module';
 import { InternalTrainingDetailsComponent } from './internal-training-details.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { InternalTrainingDetailsComponent } from './internal-training-details.co
   ],
   imports: [
     CommonModule,
-    InternalTrainingDetailsRoutingModule
+    InternalTrainingDetailsRoutingModule,
+    MatButtonModule
   ]
 })
 export class InternalTrainingDetailsModule { }

@@ -11,12 +11,16 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
+import { CancelEnrollmentDialogComponent } from './cancel-enrollment-dialog/cancel-enrollment-dialog.component';
+import { RequestTrainingDialogComponent } from './request-training-dialog/request-training-dialog.component';
 
 
 @NgModule({
   declarations: [
     TrainingsComponent,
-    TrainingDialogComponent
+    TrainingDialogComponent,
+    CancelEnrollmentDialogComponent,
+    RequestTrainingDialogComponent
   ],
   imports: [
     CommonModule,

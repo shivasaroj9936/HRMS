@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TRAININGS } from 'src/app/interfaces/common.interface';
 
 @Component({
   selector: 'app-my-internal-trainings',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-internal-trainings.component.scss']
 })
 export class MyInternalTrainingsComponent implements OnInit {
+  trainingData=TRAININGS;
 
   constructor() { }
 

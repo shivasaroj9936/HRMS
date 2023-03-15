@@ -37,9 +37,9 @@
         </div>
         <div class="description col5" *ngIf="getControl('goal').value=='no'">
             <label class="label_text">{{ LABELS.MISSING }}</label>
-            <mat-form-field appearance="outline" >
+            <mat-form-field appearance="outline">
                 <textarea [maxLength]="200" #textarea matInput formControlName="what_is_missing"></textarea>
-                <mat-error>{{ getControl("goal") | validate : LABELS.MISSING  }}</mat-error>
+                <mat-error>{{ getControl("goal") | validate : LABELS.MISSING }}</mat-error>
 
             </mat-form-field>
             <p class="maxlength">
@@ -90,16 +90,16 @@
         </div>
         <div class="description col5">
             <label class="label_text">{{ LABELS.OVERALL }}</label>
-            <mat-form-field appearance="outline" >
+            <mat-form-field appearance="outline">
                 <textarea [maxLength]="200" #textarea matInput formControlName="overall_feedback"></textarea>
-                <mat-error>{{ getControl("overall_feedback") | validate : LABELS.OVERALL  }}</mat-error>
+                <mat-error>{{ getControl("overall_feedback") | validate : LABELS.OVERALL }}</mat-error>
 
             </mat-form-field>
             <p class="maxlength">
                 {{textarea.value.length}}/{{200}}</p>
         </div>
         <div class="buttonGroup">
-            <button class="btn_cancel" (click)="onNoClick()" mat-raised-button type="reset"> 
+            <button class="btn_cancel" (click)="onNoClick()" mat-raised-button type="reset">
                 {{LABELS.CANCEL_BUTTON }}
             </button>
             <button class="btn_primary" type="submit" mat-raised-button>{{ LABELS.SUBMIT_BUTTON }}</button>
