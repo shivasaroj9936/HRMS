@@ -132,7 +132,7 @@ export const sideNavList: SideNavItem[] = [
       {
         subTitle: "My Training",
         subicon: "horizontal_rule",
-        route: "TRAININGS",
+        route: "MY_INTERNAL_TRAINING",
 
       },
       {
@@ -279,7 +279,7 @@ export interface FRESHER_TRAINING_ITEM{
   attendees?:string
   success_btn_label:string,
   detail_btn_label:string
-
+  route:string,
 }
 
 export const  FRESHERS_TRAININGS:FRESHER_TRAINING_ITEM[]=[
@@ -290,7 +290,8 @@ export const  FRESHERS_TRAININGS:FRESHER_TRAINING_ITEM[]=[
     end_date:'Apr-02-2022',
     mode:'Online',
     success_btn_label:'Feedback',
-    detail_btn_label:'View Details'
+    detail_btn_label:'View Details',
+    route:'TRAINING_DETAILS'
   },
   {
     technology:'HTML/CSS/UI',
@@ -298,9 +299,10 @@ export const  FRESHERS_TRAININGS:FRESHER_TRAINING_ITEM[]=[
     start_date:'Feb-14-2022',
     end_date:'Feb-25-2022',
     mode:'Offline',
-
     success_btn_label:'Feedback',
-    detail_btn_label:'View Details'
+    detail_btn_label:'View Details',
+    route:'TRAINING_DETAILS'
+
   }
 ]
 export const  TRAININGS:FRESHER_TRAINING_ITEM[]=[
@@ -312,7 +314,10 @@ export const  TRAININGS:FRESHER_TRAINING_ITEM[]=[
     mode:'Online',
     attendees:'Angular',
     success_btn_label:'Cancel Enrollment',
-    detail_btn_label:'View Details'
+    detail_btn_label:'View Details',
+    route:'INTERNAL_TRAINING_DETAILS'
+
+
   },
   {
     technology:'HTML/CSS/UI',
@@ -322,7 +327,9 @@ export const  TRAININGS:FRESHER_TRAINING_ITEM[]=[
     mode:'Offline',
     attendees:'Angular',
     success_btn_label:'Cancel Enrollment',
-    detail_btn_label:'View Details'
+    detail_btn_label:'View Details',
+    route:'INTERNAL_TRAINING_DETAILS'
+
 
   }
 ]

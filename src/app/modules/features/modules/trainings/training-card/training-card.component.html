@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="actions">
-            <button mat-button class="view_details btn_cancel" [routerLink]="['TRAINING_DETAILS'|absolutePath,123]"  >{{data.detail_btn_label}}</button>
+            <button mat-button class="view_details btn_cancel" [routerLink]="[data.route|absolutePath,123]"  >{{data.detail_btn_label}}</button>
             <button mat-raised-button class="refer btn_primary" (click)="submitHandeler(data)">{{data.success_btn_label}}</button>
         </div>
     </div>

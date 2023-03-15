@@ -219,8 +219,8 @@ export const TRAININGS: IRoute = {
     return `/${ADMIN.fullUrl}/${this.path}`
   }
 }
-export const MY_TRAINING:IRoute={
-  path: 'my-training',
+export const MY_INTERNAL_TRAINING:IRoute={
+  path: 'my-internal-training',
   get fullUrl(): string {
     return `/${TRAININGS.fullUrl}/${this.path}`;
   }
@@ -241,5 +241,11 @@ export const UPCOMING_TRAINING:IRoute={
   path: 'upcoming-training',
   get fullUrl(): string {
     return `/${TRAININGS.fullUrl}/${this.path}`;
+  }
+}
+export const INTERNAL_TRAINING_DETAILS:IRoute={
+  path:'internal-training-details',
+  get fullUrl():string{
+    return `/${TRAININGS.fullUrl}/${this.path}`
   }
 }

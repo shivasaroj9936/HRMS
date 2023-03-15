@@ -1053,6 +1053,7 @@ export const FEEDBACK_LABELS={
   DEPARTMENT:'Department',
   START_DATE:'Start Date',
   END_DATE:'End Date',
+  MODE:'Training Mode',
   OBJECTIV:'Do you feel that the objective/goal of the training has been fulfilled? *',
   MISSING:'What is missing? *',
   RELEVENT:'How relevant and helpful do you think it was for your job? *',

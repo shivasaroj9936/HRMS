@@ -1,10 +1,10 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import {
-  MY_TRAINING,
+  INTERNAL_TRAINING_DETAILS,
+  MY_INTERNAL_TRAINING,
   ONGOING_TRAININGS,
   REQUESTED_TRAININGS,
-  TRAININGS,
   UPCOMING_TRAINING,
 } from "src/app/constants/routes";
 import { TrainingsComponent } from "./trainings.component";
@@ -30,11 +30,8 @@ const routes: Routes = [
           ),
       },
       {
-        path: MY_TRAINING.path,
-        loadChildren: () =>
-          import("./my-trainings/my-trainings.module").then(
-            (m) => m.MyTrainingsModule
-          ),
+        path: MY_INTERNAL_TRAINING.path,
+        loadChildren: () =>import('./my-internal-trainings/my-internal-trainings.module').then((m)=>m.MyInternalTrainingsModule),
       },
       {
         path: REQUESTED_TRAININGS.path,
@@ -43,6 +40,10 @@ const routes: Routes = [
             (m) => m.RequestedTrainingsModule
           ),
       },
+      {
+        path:`${INTERNAL_TRAINING_DETAILS.path}/:id`,
+        loadChildren:()=>import('./internal-training-details/internal-training-details.module').then((m)=>m.InternalTrainingDetailsModule)
+      }
     ],
   },
 ];

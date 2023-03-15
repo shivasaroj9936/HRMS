@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AttendanceComponent } from './components/attendance/attendance.component';
 import { SubTopicsComponent } from './components/sub-topics/sub-topics.component';
 import { DetailsComponent } from './components/details/details.component';
+import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DetailsComponent } from './components/details/details.component';
     CommonModule,
     TrainingDetailsRoutingModule,
     MatTabsModule,
-    MatButtonModule
+    MatButtonModule,
+    CommonTableModule
   ]
 })
 export class TrainingDetailsModule { }
