@@ -1075,3 +1075,15 @@ export const TRAINING_REQUEST={
   cancel:'cancel',
   submit:'submit',
 }
+export const TECHNOLOGY=[
+  'Android',
+  'ANgular',
+  '.Net',
+  'Blockchain'
+]
+export const STATUS=[
+  'Accepted',
+  'Rejected',
+  'Missed',
+  'In Progress'
+]

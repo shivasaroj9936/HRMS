@@ -175,6 +175,36 @@ export const REFER_CANDIDATE: IRoute = {
     return `/${ADMIN.fullUrl}/${this.path}`
   }
 }
+export const MY_INTERVIEWS :IRoute={
+  path:'my-interviews',
+  get fullUrl ():string{
+    return `/${ADMIN.fullUrl}/${this.path}`
+  }
+}
+export const USERS :IRoute={
+  path:'users',
+  get fullUrl():string{
+    return `/${ADMIN.fullUrl}/${this.path}`
+  }
+}
+export const MY_ASSET_INVENTORY:IRoute={
+  path:'my-asset-inventory',
+  get fullUrl():string{
+    return `/${USERS.fullUrl}/${this.path}`
+  }
+}
+export const REQUEST_ASSETS:IRoute={
+  path:'request-asset',
+  get fullUrl():string{
+    return `/${USERS.fullUrl}/${this.path}`
+  }
+}
+export const ASSETS_DECLARATION:IRoute={
+  path:'asset-declaration',
+  get fullUrl():string{
+    return `/${USERS.fullUrl}/${this.path}`
+  }
+}
 export const JOB_OPENINGS: IRoute = {
   path: 'job-openings',
   get fullUrl(): string {
