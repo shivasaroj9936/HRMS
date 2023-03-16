@@ -303,6 +303,17 @@ export const  FRESHERS_TRAININGS:FRESHER_TRAINING_ITEM[]=[
     detail_btn_label:'View Details',
     route:'TRAINING_DETAILS'
 
+  },
+  {
+    technology:'HTML/CSS/UI',
+    status:'completed',
+    start_date:'Feb-14-2022',
+    end_date:'Feb-25-2022',
+    mode:'Offline',
+    success_btn_label:'Feedback',
+    detail_btn_label:'View Details',
+    route:'TRAINING_DETAILS'
+
   }
 ]
 export const  TRAININGS:FRESHER_TRAINING_ITEM[]=[

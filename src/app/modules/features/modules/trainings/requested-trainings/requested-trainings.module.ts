@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RequestedTrainingsRoutingModule } from './requested-trainings-routing.module';
 import { RequestedTrainingsComponent } from './requested-trainings.component';
+import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { RequestedTrainingsComponent } from './requested-trainings.component';
   ],
   imports: [
     CommonModule,
-    RequestedTrainingsRoutingModule
+    RequestedTrainingsRoutingModule,
+    CommonTableModule
   ]
 })
 export class RequestedTrainingsModule { }

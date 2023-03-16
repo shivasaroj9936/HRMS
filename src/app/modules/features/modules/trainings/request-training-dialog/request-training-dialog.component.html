@@ -1,1 +1,66 @@
-<p>request-training-dialog works!</p>
+<section>
+    <div class="header">
+        <h3 class="heading">{{requestTraining.heading |titlecase}} </h3>
+        <div class="cancel_icon" (click)="onNoClick()">
+            <mat-icon class="icon">close</mat-icon>
+        </div>
+    </div>
+    <div class="main">
+        <form [formGroup]="trainingRequestForm" (ngSubmit)="onSubmit()">
+            <div class="form_data">
+                <app-common-dropdown [label]="requestTraining.team_name" [data]="trainingNames" [dropdownDownControlName]="getControl('team_name')" ></app-common-dropdown>
+            </div>
+        <div class="form_data">
+            <app-common-dropdown [label]="requestTraining.training_name" [data]="trainingNames" [dropdownDownControlName]="getControl('training_name')" ></app-common-dropdown>
+        </div>
+        <div class="description col5">
+            <label class="label_text">{{ requestTraining.textarea1|titlecase}}</label>
+            <mat-form-field appearance="outline">
+                <textarea  [rows]="5" [maxLength]="500" #textarea matInput  formControlName="learning_are" placeholder="Enter Detail Reason" ></textarea>
+                <mat-error>{{ getControl('learning_are')| validate : 'this field' }}</mat-error>
+
+            </mat-form-field>
+            <p class="maxlength">
+                {{textarea.value.length}}/{{500}}</p>
+        </div>
+        <div class="description col5">
+            <label class="label_text">{{ requestTraining.text_area2|titlecase}}</label>
+            <mat-form-field appearance="outline">
+                <textarea  [rows]="5" [maxLength]="500" #textarea matInput formControlName="organinization_need"  placeholder="Enter Detail Reason" ></textarea>
+                <mat-error>{{ getControl('organinization_need')| validate : 'this field' }}</mat-error>
+
+            </mat-form-field>
+            <p class="maxlength">
+                {{textarea.value.length}}/{{500}}</p>
+        </div>
+        <div class="description col_2">
+            <p class="label_text">{{requestTraining.interest|titlecase}}</p>
+
+            <div class="radio_buttons">
+                <mat-radio-group formControlName="interest_to_give_training">
+                    <mat-radio-button value="yes">Yes</mat-radio-button>
+                    <mat-radio-button value="no">No</mat-radio-button>
+                   
+                </mat-radio-group>
+            </div>
+        </div>
+        <div class="description col_2">
+            <p class="label_text">{{requestTraining.time|titlecase}}</p>
+
+            <div class="radio_buttons">
+                <mat-radio-group formControlName="timing" class="vertically">
+                    <mat-radio-button value="immediate">Immediate</mat-radio-button>
+                    <mat-radio-button value="3-6">3 - 6 Months</mat-radio-button>
+                    <mat-radio-button value="6 +">More then 6 Months</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <div class="buttonGroup">
+            <button class="btn_cancel" (click)="onNoClick()" mat-raised-button type="reset">
+                {{requestTraining.cancel |titlecase}}
+            </button>
+            <button class="btn_primary" type="submit" mat-raised-button  >{{ requestTraining.submit|titlecase}}</button>
+        </div>
+    </form>
+    </div>
+</section>

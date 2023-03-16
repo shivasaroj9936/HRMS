@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { TRAININGS } from 'src/app/interfaces/common.interface';
+import { RequestTrainingDialogComponent } from '../request-training-dialog/request-training-dialog.component';
 
 @Component({
   selector: 'app-my-internal-trainings',
@@ -9,9 +11,16 @@ import { TRAININGS } from 'src/app/interfaces/common.interface';
 export class MyInternalTrainingsComponent implements OnInit {
   trainingData=TRAININGS;
 
-  constructor() { }
+  constructor(
+public dialog: MatDialog,
+
+  ) { }
 
   ngOnInit(): void {
   }
-
+  requestTraining(){
+    this.dialog.open(RequestTrainingDialogComponent,{
+      
+    })
+  }
 }

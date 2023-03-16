@@ -1063,3 +1063,15 @@ export const FEEDBACK_LABELS={
   CANCEL_BUTTON:'Cancel',
   SUBMIT_BUTTON:'Submit'
 }
+
+export const TRAINING_REQUEST={
+  heading:'Request for training',
+  training_name:'Training name ? ',
+  team_name:'team name',
+  textarea1:'Please mention the training/learning area’s you feel can be beneficial for your skill enhancement and job performance *',
+  text_area2:'Why do you feel these skills are needed and how they will benefit your personal and organizational needs *',
+  interest:'Are you interested to give the Trainings? *',
+  time:'What should be the timeline to conduct this training? * ',
+  cancel:'cancel',
+  submit:'submit',
+}

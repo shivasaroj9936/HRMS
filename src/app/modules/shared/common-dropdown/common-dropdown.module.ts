@@ -18,7 +18,7 @@ import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    FormsModule,
+    // FormsModule,
     ReactiveFormsModule,
     ValidationErrorModule
 

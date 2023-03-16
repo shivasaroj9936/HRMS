@@ -13,6 +13,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
 import { CancelEnrollmentDialogComponent } from './cancel-enrollment-dialog/cancel-enrollment-dialog.component';
 import { RequestTrainingDialogComponent } from './request-training-dialog/request-training-dialog.component';
+import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { RequestTrainingDialogComponent } from './request-training-dialog/reques
     MatIconModule,
     MatRadioModule,
     MatButtonModule,
-    ValidationErrorModule
+    ValidationErrorModule,
+    CommonDropdownModule,
+    MatDialogModule
   ]
 })
 export class TrainingsModule { }

@@ -1,7 +1,7 @@
 <section>
     <div class="header">
         <h3 class="heading" >My Trainings</h3>
-        <button mat-raised-button class="btn_primary">+ Request for training</button>
+        <button mat-raised-button class="btn_primary" (click)="requestTraining()">+ Request for training</button>
     </div>
     <div class="main">
         <ng-container *ngFor=" let item of trainingData">
