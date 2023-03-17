@@ -1,0 +1,15 @@
+<div class="formfield">
+    <label class="label">{{ label|titlecase }}</label>
+    <mat-form-field appearance="outline">
+      <input matInput readonly/>
+      <input   type="file" accept=".pdf,.jpeg,.jpg"/>
+      <mat-error>{{ inputFormControl| validate : label }}</mat-error>
+    </mat-form-field>
+  </div>
+
+
+
+  <!-- <div class="form-group">
+    <label for="short_description">Asset Image(Allowed Format: jpg,jpeg,JPEG,JPG,png,PNG,GIF) <span class="red-color">Upload front and backside image*</span></label>
+    <input type="file" class="form-control" name="p_file[]" id="p_file" placeholder="" accept="image/png, image/jpeg, image/jpg, image/gif" multiple="">
+  </div> -->

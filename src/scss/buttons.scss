@@ -11,7 +11,7 @@
         padding: 0px 1rem;
         font-size: 0.9rem;
         cursor: pointer;
-        
+
         &:hover {
             background: #31b8ff;
             color: #fff
@@ -30,12 +30,14 @@
         font-weight: 500;
         transition-delay: 2ms;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             color: #199CFF;
 
         }
     }
-    .btn_danger{
+
+    .btn_danger {
         background: #d9534f;
         -webkit-box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 7%), 0px 4px 5px 0px rgb(0 0 0 / 5%), 0px 1px 10px 0px rgb(0 0 0 / 3%);
         box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 7%), 0px 4px 5px 0px rgb(0 0 0 / 5%), 0px 1px 10px 0px rgb(0 0 0 / 3%);
@@ -46,4 +48,16 @@
         padding: 0px 1rem;
         font-size: 0.9rem;
         cursor: pointer;
-    }       
+    }
+
+    .btn_flat {
+        background: #3246d3;
+        color: #fff;
+        border-radius: 4px;
+        padding: 2px 18px;
+        cursor: pointer;
+        outline: none;
+        box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+        font-size: 15px;
+        font-weight: 500;
+    }
