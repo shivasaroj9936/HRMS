@@ -1,6 +1,6 @@
 import { Component, NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { DASHBOARD, DIRECTORY, ENTREPRENEURSHIP_PROGRAM, FRESHERS, MY_INTERVIEWS, MY_LINKS, PROFILE, REFER_CANDIDATE, REVIEWS, STARTUP, TRAININGS, USERS } from "src/app/constants/routes";
+import { ATTENDANCE, DASHBOARD, DIRECTORY, ENTREPRENEURSHIP_PROGRAM, FRESHERS, MY_INTERVIEWS, MY_LINKS, PROFILE, REFER_CANDIDATE, REVIEWS, STARTUP, TRAININGS, USERS } from "src/app/constants/routes";
 import { FeaturesComponent } from "./features.component";
 
 const routes: Routes = [
@@ -65,7 +65,8 @@ const routes: Routes = [
       {
         path:USERS.path,
         loadChildren:()=>import('./modules/users/users.module').then((m)=>m.UsersModule)
-      }
+      },
+ 
       
     ],
   },

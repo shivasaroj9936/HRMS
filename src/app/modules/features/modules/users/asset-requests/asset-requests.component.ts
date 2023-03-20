@@ -1,12 +1,15 @@
+import { DatePipe } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { MatTableDataSource } from "@angular/material/table";
 import { FormService } from "src/app/services/form-service/form.service";
+import { NotificationService } from "src/app/services/notification-service/notification.service";
 
 @Component({
   selector: "app-asset-requests",
   templateUrl: "./asset-requests.component.html",
   styleUrls: ["./asset-requests.component.scss"],
+  providers: [DatePipe]
 })
 export class AssetRequestsComponent implements OnInit {
   assetCategory = ["Laptop", "Mobile", "Desktop"];
@@ -26,6 +29,7 @@ export class AssetRequestsComponent implements OnInit {
     { heading: "Priority", key: 'priority', isSortable: '', type: 'text', link: 'client-details' },
     { heading: "Request At", key: 'request_at', isSortable: '', type: 'text', link: 'client-details' },
     { heading: "Asset Category", key: 'asset_category', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Allocation Type", key: 'allocation_type', isSortable: '', type: 'text', link: 'client-details' },
     { heading: 'Company', key: 'company', isSortable: '', type: 'text', },
   ]
   Table_DATA: any[] = [
@@ -33,7 +37,9 @@ export class AssetRequestsComponent implements OnInit {
   ]
   constructor(
     private formBuilder: FormBuilder,
-    private _formService: FormService
+    private _formService: FormService,
+    private notificationService:NotificationService,
+    private datePipe: DatePipe
   ) {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
 
@@ -57,5 +63,18 @@ export class AssetRequestsComponent implements OnInit {
   getControl(control: string): any {
     return this.assetRequestForm?.controls[control];
   }
-  onSubmit() {}
+  onSubmit() {
+
+    if(this.assetRequestForm.valid){
+      this.assetRequestForm.value['s_no']=this.Table_DATA.length;
+      this.assetRequestForm.value['status']='pending';
+      this.assetRequestForm.value['request_at']=this.datePipe.transform(new Date(), 'yyyy-MM-dd');
+      this.assetRequestForm.value['company']='Apple';
+      this.Table_DATA.push(this.assetRequestForm.value);
+      this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+      this.assetRequestForm.reset();
+      this.formToggle=false;
+      this.notificationService.showSuccess('Asset Request','Saved')
+    }
+  }
 }

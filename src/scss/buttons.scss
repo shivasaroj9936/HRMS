@@ -61,3 +61,21 @@
         font-size: 15px;
         font-weight: 500;
     }
+
+    .btn_add_new {
+        background: transparent;
+        -webkit-box-shadow: 0 0 0 1px #26b4ff inset;
+        box-shadow: 0 0 0 1px #26b4ff inset;
+        color: #26B4FF;
+        padding: 0.0625rem 0.5rem;
+        font-size: .6875rem;
+        line-height: 1.55;
+        border-radius: 0.125rem;
+        border: #26b4ff;
+        cursor: pointer;
+        &:hover {
+            background-color: #26B4FF;
+            color: #fff;
+
+        }
+    }

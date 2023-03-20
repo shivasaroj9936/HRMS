@@ -19,7 +19,8 @@ import { ToastrModule } from 'ngx-toastr';
       closeButton:true,
       timeOut:1500,
       progressBar:true,
-    })
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

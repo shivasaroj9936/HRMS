@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormService } from 'src/app/services/form-service/form.service';
+import { NotificationService } from 'src/app/services/notification-service/notification.service';
 
 @Component({
   selector: 'app-asset-declaration',
@@ -22,19 +23,25 @@ export class AssetDeclarationComponent implements OnInit {
   
   columns = [
     { heading: 'S.No', key: 's_no', isSortable: '', type: 'text', },
-    { heading: "Status", key: 'status', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Request Reason", key: 'request_reason', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Priority", key: 'priority', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Request At", key: 'request_at', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Asset Category", key: 'asset_category', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: 'Company', key: 'company', isSortable: '', type: 'text', },
+    { heading: "Employee Id", key: 'emp_id', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Unique Asset Code", key: 'unique_asset_code', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Serial Number", key: 'serial_no', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Model Number", key: 'model_no', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "OS", key: 'os', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "OS Version", key: 'os_version', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Brand", key: 'brand', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Colour", key: 'colour', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Images", key: 'asset_image', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Is Working ?", key: 'device_working_condition', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: 'Added', key: 'added', isSortable: '', type: 'text', },
   ]
   Table_DATA: any[] = [
-    {s_no:1,status:'under process',request_reason:'work need',priority:'high',request_at:'01/01/2022',asset_category:'Laptop',company:'Appinventiv Technology'}
+    // {s_no:1,status:'under process',request_reason:'work need',priority:'high',request_at:'01/01/2022',asset_category:'Laptop',company:'Appinventiv Technology'}
   ]
   constructor(
     private formBuilder: FormBuilder,
-    private _formService: FormService
+    private _formService: FormService,
+    private notificationService:NotificationService
   ) {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
 
@@ -64,7 +71,15 @@ export class AssetDeclarationComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.assetDeclarationForm.value);
-    
+    if(this.assetDeclarationForm.valid){
+      this.assetDeclarationForm.value['s_no']=this.Table_DATA.length;
+      this.assetDeclarationForm.value['added']='yes';
+      this.Table_DATA.push(this.assetDeclarationForm.value);
+      this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+      this.assetDeclarationForm.reset();
+      this.formToggle=false;
+      this.notificationService.showSuccess('Asset Declaration','Saved')
+    }
   }
 
 }

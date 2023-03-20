@@ -11,7 +11,8 @@ export class CommonFileInputComponent implements OnInit {
   @Input() label!: string;
   @Input() data:any;
   @Input() errorType:any;
-  @Input() formfieldCSS:any;
+  @Input() fileType:any;
+  @Input() labelSuggestation!:string;
   constructor() { }
 
   ngOnInit(): void {

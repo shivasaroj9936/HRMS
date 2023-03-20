@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { ASSETS_DECLARATION, MY_ASSET_INVENTORY, REQUEST_ASSETS } from "src/app/constants/routes";
+import { ASSETS_DECLARATION, ATTENDANCE, MY_ASSET_INVENTORY, REQUEST_ASSETS } from "src/app/constants/routes";
 import { UsersComponent } from "./users.component";
 
 const routes: Routes = [
@@ -19,6 +19,10 @@ const routes: Routes = [
       },
       {
         path:ASSETS_DECLARATION.path,loadChildren:()=>import('./asset-declaration/asset-declaration.module').then((m)=>m.AssetDeclarationModule)
+      },
+      {
+        path:ATTENDANCE.path,
+        loadChildren:()=>import('./attendance/attendance.module').then((m)=>m.AttendanceModule)
       }
     ],
   },

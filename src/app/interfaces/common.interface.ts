@@ -178,7 +178,27 @@ export const sideNavList: SideNavItem[] = [
 
     ], isActive: true
   },
-  { title: "Attendance", icon: "schedule", options: [], isActive: true },
+  { title: "Attendance", icon: "schedule", options: [
+
+    {
+      subTitle: "Attendance Calendar",
+      subicon: "horizontal_rule",
+      route: "ATTENDANCE_CALENDAR",
+
+    },
+    {
+      subTitle: "Manual Punch",
+      subicon: "horizontal_rule",
+      route: "MANUAL_PUNCH",
+
+    },      {
+      subTitle: "Punch Log",
+      subicon: "horizontal_rule",
+      route: "PUNCH_LOG",
+
+    },
+
+  ], isActive: true },
   { title: "Leave", icon: "calendar_today", options: [], isActive: true },
   { title: "Tickets", icon: "view_day", options: [], isActive: true },
   { title: "DSR", icon: "calendar_today", options: [], isActive: true },

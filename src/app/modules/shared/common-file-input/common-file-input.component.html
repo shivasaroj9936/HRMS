@@ -1,9 +1,9 @@
 <div class="formfield">
-    <label class="label">{{ label|titlecase }}</label>
-    <mat-form-field appearance="outline">
-      <input matInput readonly/>
-      <input   type="file" accept=".pdf,.jpeg,.jpg"/>
-      <mat-error>{{ inputFormControl| validate : label }}</mat-error>
+    <label class="label">{{ label|titlecase }} <span class="warn">{{labelSuggestation|titlecase}}</span>  </label>
+    <mat-form-field appearance="outline" class="field">
+      <input matInput readonly [formControl]="inputFormControl" />
+      <input class="inner"  type="file" [accept]="fileType" [formControl]="inputFormControl" />
+      <mat-error  >{{ inputFormControl| validate : label }}</mat-error>
     </mat-form-field>
   </div>
 

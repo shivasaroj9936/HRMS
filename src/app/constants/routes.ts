@@ -175,33 +175,33 @@ export const REFER_CANDIDATE: IRoute = {
     return `/${ADMIN.fullUrl}/${this.path}`
   }
 }
-export const MY_INTERVIEWS :IRoute={
-  path:'my-interviews',
-  get fullUrl ():string{
+export const MY_INTERVIEWS: IRoute = {
+  path: 'my-interviews',
+  get fullUrl(): string {
     return `/${ADMIN.fullUrl}/${this.path}`
   }
 }
-export const USERS :IRoute={
-  path:'users',
-  get fullUrl():string{
+export const USERS: IRoute = {
+  path: 'users',
+  get fullUrl(): string {
     return `/${ADMIN.fullUrl}/${this.path}`
   }
 }
-export const MY_ASSET_INVENTORY:IRoute={
-  path:'my-asset-inventory',
-  get fullUrl():string{
+export const MY_ASSET_INVENTORY: IRoute = {
+  path: 'my-asset-inventory',
+  get fullUrl(): string {
     return `/${USERS.fullUrl}/${this.path}`
   }
 }
-export const REQUEST_ASSETS:IRoute={
-  path:'request-asset',
-  get fullUrl():string{
+export const REQUEST_ASSETS: IRoute = {
+  path: 'request-asset',
+  get fullUrl(): string {
     return `/${USERS.fullUrl}/${this.path}`
   }
 }
-export const ASSETS_DECLARATION:IRoute={
-  path:'asset-declaration',
-  get fullUrl():string{
+export const ASSETS_DECLARATION: IRoute = {
+  path: 'asset-declaration',
+  get fullUrl(): string {
     return `/${USERS.fullUrl}/${this.path}`
   }
 }
@@ -230,9 +230,9 @@ export const FRESHERS: IRoute = {
   }
 }
 
-export const TRAINING_DETAILS:IRoute={
-  path:'training-details',
-  get fullUrl():string{
+export const TRAINING_DETAILS: IRoute = {
+  path: 'training-details',
+  get fullUrl(): string {
     return `/${FRESHERS.fullUrl}/${this.path}`;
   }
 }
@@ -249,33 +249,58 @@ export const TRAININGS: IRoute = {
     return `/${ADMIN.fullUrl}/${this.path}`
   }
 }
-export const MY_INTERNAL_TRAINING:IRoute={
+export const MY_INTERNAL_TRAINING: IRoute = {
   path: 'my-internal-training',
   get fullUrl(): string {
     return `/${TRAININGS.fullUrl}/${this.path}`;
   }
 }
-export const ONGOING_TRAININGS:IRoute={
+export const ONGOING_TRAININGS: IRoute = {
   path: 'ongoing-training',
   get fullUrl(): string {
     return `/${TRAININGS.fullUrl}/${this.path}`;
   }
 }
-export const REQUESTED_TRAININGS:IRoute={
+export const REQUESTED_TRAININGS: IRoute = {
   path: 'requested-training',
   get fullUrl(): string {
     return `/${TRAININGS.fullUrl}/${this.path}`;
   }
 }
-export const UPCOMING_TRAINING:IRoute={
+export const UPCOMING_TRAINING: IRoute = {
   path: 'upcoming-training',
   get fullUrl(): string {
     return `/${TRAININGS.fullUrl}/${this.path}`;
   }
 }
-export const INTERNAL_TRAINING_DETAILS:IRoute={
-  path:'internal-training-details',
-  get fullUrl():string{
+export const INTERNAL_TRAINING_DETAILS: IRoute = {
+  path: 'internal-training-details',
+  get fullUrl(): string {
     return `/${TRAININGS.fullUrl}/${this.path}`
+  }
+}
+
+export const ATTENDANCE: IRoute = {
+  path: 'attendance',
+  get fullUrl(): string {
+    return `/${USERS.fullUrl}/${this.path}`
+  }
+}
+export const ATTENDANCE_CALENDAR:IRoute={
+  path:'attendance-calendar',
+  get fullUrl():string{
+    return `/${ATTENDANCE.fullUrl}/${this.path}`
+  }
+}
+export const MANUAL_PUNCH:IRoute={
+  path:'manual-punch',
+  get fullUrl():string{
+    return `/${ATTENDANCE.fullUrl}/${this.path}`
+  }
+}
+export const PUNCH_LOG:IRoute={
+  path:'punch-log',
+  get fullUrl():string{
+    return `/${ATTENDANCE.fullUrl}/${this.path}`
   }
 }

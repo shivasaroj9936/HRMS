@@ -21,6 +21,7 @@ export class CommonDropdownComponent implements OnInit,AfterViewInit {
   @Input() labelStyle:any;
   myControl = new FormControl(null);
   filteredOptions!: Observable<string[]>;
+  
   constructor() {  
   }
 
