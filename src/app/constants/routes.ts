@@ -304,3 +304,27 @@ export const PUNCH_LOG:IRoute={
     return `/${ATTENDANCE.fullUrl}/${this.path}`
   }
 }
+export const LEAVE:IRoute={
+  path:'leave',
+  get fullUrl():string{
+    return `/${USERS.fullUrl}/${this.path}`
+  }
+}
+export const MY_LEAVE:IRoute={
+  path:'my-leave',
+  get fullUrl():string{
+    return `/${LEAVE.fullUrl}/${this.path}`
+  }
+}
+export const FLOATING_LEAVE:IRoute={
+  path:'floating-leave',
+  get fullUrl():string{
+    return `/${LEAVE.fullUrl}/${this.path}`
+  }
+}
+export const LEAVE_DETAILS:IRoute={
+  path:'leave-details',
+  get fullUrl():string{
+    return `/${LEAVE.fullUrl}/${this.path}`
+  }
+}

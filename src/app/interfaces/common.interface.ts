@@ -199,7 +199,23 @@ export const sideNavList: SideNavItem[] = [
     },
 
   ], isActive: true },
-  { title: "Leave", icon: "calendar_today", options: [], isActive: true },
+  { title: "Leave", icon: "calendar_today", options: [
+
+    {
+      subTitle: "My Leave",
+      subicon: "horizontal_rule",
+      route: "MY_LEAVE",
+
+    },
+    {
+      subTitle: "Floating Leave",
+      subicon: "horizontal_rule",
+      route: "FLOATING_LEAVE",
+
+    },
+
+
+  ], isActive: true },
   { title: "Tickets", icon: "view_day", options: [], isActive: true },
   { title: "DSR", icon: "calendar_today", options: [], isActive: true },
   { title: "Projects", icon: "view_day", isActive: true },

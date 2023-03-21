@@ -17,11 +17,11 @@ export class PolicyDocumentsComponent implements OnInit {
     { heading: 'Action', key: 'action', type: 'action', action: [{}] },
   ]
   Table_DATA: any[] = [
-    { s_no: 1, name: ' Appinventiv_Policy_Manual', doc_type: 'pdf', doc_size: '22kb', last_modification: '22/01/2023',  "action": [ {icon:'download',link:'https://dashboard.appinventiv.com/admin/repository/file-download?file=uploads/hr/policy/Appinventiv_Policy_Manual.pdf'}] },
-    { s_no: 2, name: ' Contact_List_Updated_Appinventiv', doc_type: 'jpeg', doc_size: '31kb', last_modification: '22/01/2023',  "action": [ {icon:'download',link:'/assets/applogo.png'}] },
-    { s_no: 3, name: 'Employee Referral Policy', doc_type: 'pdf', doc_size: '20kb', last_modification: '22/01/2023',  "action": [ {icon:'download',link:'/assets/bday1.jpeg'}] },
-    { s_no: 4, name: 'Holiday-Calendar-2023', doc_type: 'png', doc_size: '20kb', last_modification: '22/01/2023',  "action": [ {icon:'download',link:'/assets/bday4.jpeg'}] },
-    { s_no: 5, name: 'LeavePolicy', doc_type: 'pdf', doc_size: '31kb', last_modification: '22/01/2023',  "action": [ {icon:'download',link:'/assets/user1.jpeg'}] },
+    { s_no: 1, name: ' Appinventiv_Policy_Manual', doc_type: 'pdf', doc_size: '22kb', last_modification: '22/01/2023',  "action": [ {icon:'download',text:'download',link:'https://dashboard.appinventiv.com/admin/repository/file-download?file=uploads/hr/policy/Appinventiv_Policy_Manual.pdf'}] },
+    { s_no: 2, name: ' Contact_List_Updated_Appinventiv', doc_type: 'jpeg', doc_size: '31kb', last_modification: '22/01/2023',  "action": [ {icon:'download',text:'download',link:'/assets/applogo.png'}] },
+    { s_no: 3, name: 'Employee Referral Policy', doc_type: 'pdf', doc_size: '20kb', last_modification: '22/01/2023',  "action": [ {icon:'download',text:'download',link:'/assets/bday1.jpeg'}] },
+    { s_no: 4, name: 'Holiday-Calendar-2023', doc_type: 'png', doc_size: '20kb', last_modification: '22/01/2023',  "action": [ {icon:'download',text:'download',link:'/assets/bday4.jpeg'}] },
+    { s_no: 5, name: 'LeavePolicy', doc_type: 'pdf', doc_size: '31kb', last_modification: '22/01/2023',  "action": [ {icon:'download',text:'download',link:'/assets/user1.jpeg'}] },
   ]
 
   constructor() { 

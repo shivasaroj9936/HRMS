@@ -8,6 +8,7 @@ import { AbstractControl, FormControl } from '@angular/forms';
 })
 export class CommonDatePickerComponent implements OnInit {
   @Input() inputFormControl!:FormControl 
+  @Input() label!:string 
 
   minDate: Date;
   maxDate: Date;

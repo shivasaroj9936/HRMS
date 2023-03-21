@@ -62,12 +62,25 @@
           <ng-container *ngSwitchCase="'action'">
             <div class="action">
               <ng-container *ngFor="let item of element['action']">
+                <ng-container *ngIf="item.type=='route'">
+                  <a [routerLink]="[item?.route|absolutePath,item.routeID]">
+                    
+                    <button mat-button class="action_button" >
+                      {{item?.text|titlecase}}
+                      <mat-icon class="mat-18">{{ item.icon }} </mat-icon>
+                    </button>
+                  </a>
+                </ng-container>
+                <ng-template #othr >
+
                 <a [href]="item.link" download>
                   <button mat-button class="action_button">
-                    {{item.icon|titlecase}}
+                    {{item?.text|titlecase}}
                     <mat-icon class="mat-18">{{ item.icon }} </mat-icon>
                   </button>
                 </a>
+              </ng-template>
+
               </ng-container>
             </div>
           </ng-container>

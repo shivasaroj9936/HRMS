@@ -6,6 +6,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
+import { AbsoluteRoutingModule } from 'src/app/pipes/absolute-routing/absolute-routing.module';
 
 
 
@@ -19,7 +21,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatPaginatorModule,
     MatIconModule,
     MatSortModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule,
+    AbsoluteRoutingModule
   ],
   exports:[CommonTableComponent]
 })
