@@ -12,29 +12,23 @@
     <form [formGroup]="referCandidateForm" (ngSubmit)="onSubmit()">
       <div class="inputs">
         <div class="formfield 1">
-          <label class="label">{{ labelMessage.LABEL_DEPARTMENT }}</label>
-          <mat-form-field appearance="outline" class="disabledField">
-            <input formControlName="department_name" readonly matInput />
-          </mat-form-field>
+                <app-common-input [labelStyle]="'light'" [label]="labelMessage.JOB_DETAIL_VALUE" [inputFormControl]="getControl('department_name')"></app-common-input>
         </div>
 
         <div class="formfield 2">
-          <label class="label">{{ labelMessage.LABEL_JOBCODE }}</label>
-          <mat-form-field appearance="outline" class="disabledField">
-            <input formControlName="job_code" readonly matInput />
-          </mat-form-field>
+      
+          <app-common-input [labelStyle]="'light'" [label]="labelMessage.LABEL_JOBCODE" [inputFormControl]="getControl('job_code')"></app-common-input>
+
         </div>
         <div class="formfield 3">
-          <label class="label">{{ labelMessage.LABEL_LOCATION }}</label>
-          <mat-form-field appearance="outline" class="disabledField">
-            <input formControlName="location" readonly matInput />
-          </mat-form-field>
+
+          <app-common-input [labelStyle]="'light'" [label]="labelMessage.LABEL_LOCATION" [inputFormControl]="getControl('location')"></app-common-input>
+
         </div>
         <div class="formfield 4">
-          <label class="label">{{ labelMessage.LABEL_EXPERIENCE }}</label>
-          <mat-form-field appearance="outline" class="disabledField">
-            <input formControlName="experience" readonly matInput  />
-          </mat-form-field>
+    
+          <app-common-input [labelStyle]="'light'" [label]="labelMessage.LABEL_EXPERIENCE" [inputFormControl]="getControl('experience')"></app-common-input>
+
         </div>
       </div>
       <div class="hash_heading">
@@ -42,72 +36,50 @@
       </div>
       <div class="inputs">
         <div class="formfield 11">
-          <label class="label">{{ labelMessage.LABEL_JOBLOC }}</label>
-          <mat-form-field appearance="outline">
-            <input matInput formControlName="job_location" />
-            <mat-error>{{ getControl("job_location") | validate : labelMessage.LABEL_JOBLOC }}</mat-error>
+  
+          <app-common-input [labelStyle]="'light'" [label]="labelMessage.LABEL_JOBLOC" [inputFormControl]="getControl('job_location')"></app-common-input>
 
-          </mat-form-field>
         </div>
         <div class="formfield 5">
-          <label class="label">{{ labelMessage.LABEL_CANDIDATE_NAME }}</label>
-          <mat-form-field appearance="outline">
-            <input matInput formControlName="candidate_name" />
-            <mat-error>{{ getControl("candidate_name") | validate : labelMessage.LABEL_CANDIDATE_NAME }}</mat-error>
+ 
+          <app-common-input [labelStyle]="'light'" [label]="labelMessage.LABEL_CANDIDATE_NAME" [inputFormControl]="getControl('candidate_name')"></app-common-input>
 
-          </mat-form-field>
         </div>
         <div class="formfield 6">
-          <label class="label">{{ labelMessage.LABEL_POSITION }}</label>
-          <mat-form-field appearance="outline">
-            <input matInput formControlName="position_title" />
-            <mat-error>{{ getControl("position_title") | validate : labelMessage.LABEL_POSITION }}</mat-error>
+              <app-common-input [labelStyle]="'light'" [label]="labelMessage.LABEL_POSITION" [inputFormControl]="getControl('position_title')"></app-common-input>
 
-          </mat-form-field>
         </div>
         <div class="formfield 7">
-          <label class="label">{{ labelMessage.LABEL_EXPERIENCE }}</label>
-          <mat-form-field appearance="outline">
-            <input matInput formControlName="candidate_experience" />
-            <mat-error>{{ getControl("address") | validate : labelMessage.LABEL_EXPERIENCE }}</mat-error>
 
-          </mat-form-field>
+          <app-common-input [labelStyle]="'light'" [label]="labelMessage.LABEL_EXPERIENCE" [inputFormControl]="getControl('candidate_experience')"></app-common-input>
+
         </div>
         <div class="formfield 8">
-          <label class="label">{{ labelMessage.LABEL_EMAIL }}</label>
-          <mat-form-field appearance="outline">
-            <input matInput formControlName="email" />
-            <mat-error>{{ getControl("candidate_experience") | validate : labelMessage.LABEL_EMAIL }}</mat-error>
+ 
+          <app-common-input [labelStyle]="'light'" [label]="labelMessage.LABEL_EMAIL" [inputFormControl]="getControl('email')"></app-common-input>
 
-          </mat-form-field>
         </div>
         <div class="formfield 9">
-          <label class="label">{{ labelMessage.LABEL_PHONE }}</label>
-          <mat-form-field appearance="outline">
-            <input appDigitOnly matInput formControlName="contact_number" />
-            <mat-error>{{ getControl("contact_number") | validate : labelMessage.LABEL_PHONE }}</mat-error>
+        
+          <app-common-input [labelStyle]="'light'" [label]="labelMessage.LABEL_PHONE" [inputFormControl]="getControl('contact_number')"></app-common-input>
 
-          </mat-form-field>
         </div>
         <div class="formfield">
-          <label class="label">{{ labelMessage.LABEL_UPLOAD }}</label>
-          <mat-form-field appearance="outline">
-            <input matInput readonly/>
+     
+          <app-common-file-input [fileType]="'.pdf,.jpeg,.jpg'"  [labelStyle]="'light'" [label]=" labelMessage.LABEL_UPLOAD" [inputFormControl]="getControl('cv')"></app-common-file-input>
 
-            <input   type="file" accept=".pdf,.jpeg,.jpg" formControlName="cv"/>
-            <mat-error>{{ getControl("cv") | validate : labelMessage.LABEL_UPLOAD }}</mat-error>
-
-          </mat-form-field>
         </div>
         <div class="formfield 12">
-          <label class="label">{{ labelMessage.LABEL_SKILL }}</label>
+          <!-- <label class="label">{{ labelMessage.LABEL_SKILL }}</label>
           <mat-form-field appearance="outline">
             <textarea [maxLength]="200" #textarea matInput formControlName="skill"></textarea>
             <mat-error>{{ getControl("skill") | validate : labelMessage.LABEL_SKILL }}</mat-error>
 
           </mat-form-field>
           <p class="maxlength">
-            {{textarea.value.length}}/{{200}}</p>
+            {{textarea.value.length}}/{{200}}</p> -->
+
+            <app-common-text-area [row]="1" [column]="10" [label]="labelMessage.LABEL_SKILL" [labelStyle]="'light'" [inputFormControl]="getControl('skill')" ></app-common-text-area>
         </div>
       </div>
       <div class="buttonGroup">

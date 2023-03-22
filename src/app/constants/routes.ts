@@ -328,3 +328,22 @@ export const LEAVE_DETAILS:IRoute={
     return `/${LEAVE.fullUrl}/${this.path}`
   }
 }
+export const TICKETS:IRoute={
+  path:'tickets',
+  get fullUrl():string{
+    return `/${USERS.fullUrl}/${this.path}`
+  }
+}
+
+export const DSR:IRoute={
+  path:'dsr',
+  get fullUrl():string{
+    return `/${ADMIN.fullUrl}/${this.path}`
+  }
+}
+export const MY_DSR:IRoute={
+  path:'my-dsr',
+  get fullUrl():string{
+    return `/${DSR.fullUrl}/${this.path}`
+  }
+}

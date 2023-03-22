@@ -9,6 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { CommonTextEditorModule } from 'src/app/modules/shared/common-text-editor/common-text-editor.module';
+import { CommonFileInputModule } from 'src/app/modules/shared/common-file-input/common-file-input.module';
+import { CommonInputModule } from 'src/app/modules/shared/common-input/common-input.module';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     ReactiveFormsModule,
     MatInputModule,
     ValidationErrorModule,
-    EditorModule
+    EditorModule,
+    CommonTextEditorModule,
+    CommonFileInputModule,
+    CommonInputModule
   ]
 })
 export class AddPitchModule { }

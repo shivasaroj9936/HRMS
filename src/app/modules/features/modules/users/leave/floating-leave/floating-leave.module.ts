@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FloatingLeaveRoutingModule } from './floating-leave-routing.module';
 import { FloatingLeaveComponent } from './floating-leave.component';
+import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { FloatingLeaveComponent } from './floating-leave.component';
   ],
   imports: [
     CommonModule,
-    FloatingLeaveRoutingModule
+    FloatingLeaveRoutingModule,
+    CommonTableModule
   ]
 })
 export class FloatingLeaveModule { }

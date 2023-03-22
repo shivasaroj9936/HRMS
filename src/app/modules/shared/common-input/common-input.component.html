@@ -1,5 +1,5 @@
 <div class="formfield 1">
-    <label class="label">{{label|titlecase}}</label>
+    <label class="label" [ngClass]="labelStyle"  >{{label|titlecase}}</label>
     <mat-form-field appearance="outline" class="increaseFormfield">
         <input appAvoidFirstSpace [placeholder]="label" matInput  [formControl]="inputFormControl">
         <mat-error>{{ inputFormControl | validate : label }}</mat-error>

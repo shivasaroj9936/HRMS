@@ -1,5 +1,5 @@
 <div class="formfield 6">
-    <label class="label">{{ label|titlecase }}</label>
+    <label class="label" [ngClass]="labelStyle" >{{ label|titlecase }}</label>
     <editor [init]="{          height: 300,
       plugins: [
       'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',

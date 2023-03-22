@@ -1,9 +1,11 @@
 @import '/home/appinventiv/Desktop/newHRMS/src/scss/buttons.scss';
+
 // @import 'src/scss/dashbord-card-heading.scss';
-section{
-    .header{
+section {
+    .header {
         margin-bottom: 1rem;
-        .heading{
+
+        .heading {
             font-size: 24px;
             color: #606167;
             font-weight: 500;
@@ -11,20 +13,24 @@ section{
             margin-bottom: 0;
         }
     }
-    .main{
-        background-color: #fff;
-        .main_header{
-            padding: 1rem;
-            .tabs{
-                position: relative;
-            //    border-bottom: 1px solid rgba(24,28,33,0.06);
 
-                .action{
+    .main {
+        background-color: #fff;
+
+        .main_header {
+            padding: 1rem;
+
+            .tabs {
+                position: relative;
+                //    border-bottom: 1px solid rgba(24,28,33,0.06);
+
+                .action {
                     position: absolute;
                     right: 0;
                     top: 11px;
-                        ::before{
-                            content: '';
+
+                    ::before {
+                        content: '';
                         margin: 6px 4px 9px 0;
                         border-radius: 100%;
                         display: inline-block;
@@ -40,14 +46,9 @@ section{
 
     }
 }
+
 ::ng-deep {
-    // .mat-tab-group {
-      
-    // }
-    // .mat-tab-body-wrapper {
-    //         padding-top: 1px;
-    //        border-top: 1px solid rgba(24,28,33,0.06);
-    // }
+
     .mat-tab-header {
         align-self: start;
         border: none;
@@ -59,16 +60,25 @@ section{
         padding: 6px;
         border-radius: 7px;
         color: #8c8e90;
-        }
+    }
 
-    .mat-tab-list  .mat-tab-labels .mat-tab-label-active {
+    .mat-tab-list .mat-tab-labels .mat-tab-label-active {
         color: #fff;
         background-color: var(--button-background-color);
         padding: 0.675rem 2.0625rem;
-    border-radius: 5px;
+        border-radius: 5px;
     }
-    .mat-tab-group.mat-primary .mat-ink-bar{
+
+    .mat-tab-group.mat-primary .mat-ink-bar {
         background-color: transparent;
         border: none;
+    }
+}
+
+::ng-deep {
+    @media only screen and (max-width: 700px) {
+        .mat-tab-list .mat-tab-labels {
+            display: grid;
+        }
     }
 }

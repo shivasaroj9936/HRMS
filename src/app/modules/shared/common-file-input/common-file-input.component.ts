@@ -9,6 +9,8 @@ import { FormControl } from '@angular/forms';
 export class CommonFileInputComponent implements OnInit {
   @Input() inputFormControl!:FormControl ;
   @Input() label!: string;
+  @Input() labelStyle!: string;
+
   @Input() data:any;
   @Input() errorType:any;
   @Input() fileType:any;

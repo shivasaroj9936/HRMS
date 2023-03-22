@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { ASSETS_DECLARATION, ATTENDANCE, LEAVE, MY_ASSET_INVENTORY, REQUEST_ASSETS } from "src/app/constants/routes";
+import { ASSETS_DECLARATION, ATTENDANCE, LEAVE, MY_ASSET_INVENTORY, REQUEST_ASSETS, TICKETS } from "src/app/constants/routes";
 import { UsersComponent } from "./users.component";
 
 const routes: Routes = [
@@ -27,6 +27,9 @@ const routes: Routes = [
       {
         path: LEAVE.path,
         loadChildren: () => import('./leave/leave.module').then((m) => m.LeaveModule)
+      },{
+        path:TICKETS.path,
+        loadChildren:()=>import('./tickets/tickets.module').then((m)=>m.TicketsModule)
       }
     ],
   },

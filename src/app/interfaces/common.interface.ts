@@ -211,13 +211,25 @@ export const sideNavList: SideNavItem[] = [
       subTitle: "Floating Leave",
       subicon: "horizontal_rule",
       route: "FLOATING_LEAVE",
-
     },
 
 
   ], isActive: true },
-  { title: "Tickets", icon: "view_day", options: [], isActive: true },
-  { title: "DSR", icon: "calendar_today", options: [], isActive: true },
+  { title: "Tickets", icon: "view_day", options: [
+    {
+      subTitle: "Tickets",
+      subicon: "horizontal_rule",
+      route: "TICKETS",
+    },
+
+  ], isActive: true },
+  { title: "DSR", icon: "calendar_today", options: [
+    {
+      subTitle: "MY DSR",
+      subicon: "checklist",
+      route: "MY_DSR",
+    },
+  ], isActive: true },
   { title: "Projects", icon: "view_day", isActive: true },
   { title: "Expense", icon: "monetization_on", isActive: false },
   { title: "Announcements", icon: "campaign", isActive: false },

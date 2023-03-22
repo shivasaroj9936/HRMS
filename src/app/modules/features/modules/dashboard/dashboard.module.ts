@@ -26,6 +26,9 @@ import { ValidationErrorModule } from "src/app/pipes/validation-error/validation
 import { DigitOnlyModule } from "src/app/directives/digit-only/digit-only.module";
 import { AppreciationDialogComponent } from './components/latest-at-appinventiv/appreciation-dialog/appreciation-dialog.component';
 import { JobOpeiningCardModule } from "../refer-a-friend/job-opeining-card/job-opeining-card.module";
+import { CommonInputModule } from "src/app/modules/shared/common-input/common-input.module";
+import { CommonTextAreaModule } from "src/app/modules/shared/common-text-area/common-text-area.module";
+import { CommonFileInputModule } from "src/app/modules/shared/common-file-input/common-file-input.module";
 
 const MATERIAL = [
   MatIconModule,
@@ -56,14 +59,15 @@ const MATERIAL = [
     CommonModule,
     DashboardRoutingModule,
     CarouselModule,
-
     NguCarouselModule,
     FormsModule,
     DigitOnlyModule,
     ReactiveFormsModule,
     ValidationErrorModule,
     JobOpeiningCardModule,
-
+    CommonInputModule,
+    CommonTextAreaModule,
+    CommonFileInputModule,
 
     ...MATERIAL,
   ],

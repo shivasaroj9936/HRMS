@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 section {
-
+  width: 600px;
   .header {
     background: gainsboro;
     display: flex;
@@ -76,7 +76,7 @@ section {
 
     .inputs {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: 50% 50%;
       gap: 15px;
 
       .formfield {

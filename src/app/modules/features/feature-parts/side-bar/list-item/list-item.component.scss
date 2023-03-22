@@ -101,9 +101,12 @@ section {
       background-color: var(--disabled-color);
     }
   }
-  :hover{
-  .item_text,.sidenav_text {
-    color: var(--side-nav-active-color);
-  }
+
+  :hover {
+
+    .item_text,
+    .sidenav_text {
+      color: var(--side-nav-active-color);
+    }
   }
 }

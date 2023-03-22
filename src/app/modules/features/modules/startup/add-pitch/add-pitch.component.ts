@@ -9,11 +9,11 @@ import { ADD_PITCH } from '../../dashboard/interfaces/interfaces';
   styleUrls: ['./add-pitch.component.scss']
 })
 export class AddPitchComponent implements OnInit {
-  labelMessage=ADD_PITCH;
+  labelMessage = ADD_PITCH;
   addPitchForm!: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private _formService: FormService,){}
+    private _formService: FormService,) { }
 
   ngOnInit(): void {
     this.createForm();
@@ -44,5 +44,5 @@ export class AddPitchComponent implements OnInit {
     console.log(this.addPitchForm);
 
   }
-  onCancel(){}
+  onCancel() { }
 }

@@ -9,6 +9,8 @@ import { FormControl } from '@angular/forms';
 export class CommonTextEditorComponent implements OnInit {
   @Input() inputFormControl!:FormControl ;
   @Input() label!: string;
+  @Input() labelStyle!: string;
+
   constructor() { }
 
   ngOnInit(): void {
