@@ -1,0 +1,44 @@
+@import 'src/app/modules/features/modules/users/leave/my-leave/my-leave.component.scss';
+
+section {
+    .filter {
+        form{
+
+            background-color: #fff;
+            padding: 1.5rem;
+        border-radius: 5px;
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 2rem;
+
+        .actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            
+            .save {
+                margin-right: 2rem;
+            }
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    section {
+
+        .filter {
+            grid-template-columns: auto auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    section {
+        .filter {
+            grid-template-columns: auto;
+        }
+    }
+}

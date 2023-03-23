@@ -88,6 +88,8 @@ export class FormService {
 
   };
   getControl(name: string, requierd = true) {
+    console.log(name,requierd);
+    
     // @ts-ignore: unreachable code error
 
     let compose = [...this.VALIDATION[name]];

@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 section {
-  width: 600px;
+  // width: 90%;
   .header {
     background: gainsboro;
     display: flex;
@@ -162,5 +162,11 @@ section {
         }
       }
     }
+  }
+}
+@media (min-width:1011px) {
+  section{
+    width: 700px;
+
   }
 }

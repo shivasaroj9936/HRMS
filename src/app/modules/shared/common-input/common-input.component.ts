@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { AbstractControl, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-common-input',
@@ -7,7 +7,15 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./common-input.component.scss']
 })
 export class CommonInputComponent implements OnInit {
-  @Input() inputFormControl!:FormControl ;
+
+  @Input() set inputFormControl(data:FormControl | AbstractControl){
+    this.inputControl = data;    
+    console.log(data);
+    
+  } 
+   inputControl!:FormControl | AbstractControl
+
+  // @Input() inputFormControl!:FormControl ;
   @Input() label!: string;
   @Input() data:any;
   @Input() errorType:any;

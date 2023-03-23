@@ -1,14 +1,21 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { AbstractControl, FormControl } from '@angular/forms';
+import { Component, Input, OnInit } from "@angular/core";
+import { AbstractControl, FormControl } from "@angular/forms";
 
 @Component({
-  selector: 'app-common-date-picker',
-  templateUrl: './common-date-picker.component.html',
-  styleUrls: ['./common-date-picker.component.scss']
+  selector: "app-common-date-picker",
+  templateUrl: "./common-date-picker.component.html",
+  styleUrls: ["./common-date-picker.component.scss"],
 })
 export class CommonDatePickerComponent implements OnInit {
-  @Input() inputFormControl!:FormControl 
-  @Input() label!:string 
+  // @Input() inputFormControl!:FormControl
+
+  @Input() set inputFormControl(data: FormControl | AbstractControl) {
+    this.inputControl = data;
+    console.log(data);
+    
+  }
+  inputControl!: FormControl | AbstractControl;
+  @Input() label!: string;
 
   minDate: Date;
   maxDate: Date;
@@ -20,7 +27,5 @@ export class CommonDatePickerComponent implements OnInit {
     this.maxDate = new Date(currentYear + 1, 11, 31);
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
