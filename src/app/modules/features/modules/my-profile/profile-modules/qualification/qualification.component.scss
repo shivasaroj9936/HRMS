@@ -9,24 +9,24 @@ section {
   }
 
   form {
-    .topField {
-      margin-top: -25px !important;
-    }
+    // .topField {
+    //   margin-top: -25px !important;
+    // }
 
     .inputs {
       display: grid;
       grid-template-columns: auto auto;
-      gap: 20px;
+      gap: 1.2rem;
     }
   }
 }
 
-::ng-deep {
-  .mat-select-panel {
-    min-width: calc(100% + 15px) !important;
-    margin: 2.5rem auto auto auto !important;
-  }
-}
+// ::ng-deep {
+//   .mat-select-panel {
+//     min-width: calc(100% + 15px) !important;
+//     margin: 2.5rem auto auto auto !important;
+//   }
+// }
 
 section {
   @media only screen and (max-width: 1500px) {

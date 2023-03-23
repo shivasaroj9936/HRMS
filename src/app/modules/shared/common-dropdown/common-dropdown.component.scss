@@ -41,6 +41,20 @@
     overflow: hidden;
   }
 
+  .mat-select-panel {
+    min-width: calc(100% + 5px) !important;
+    margin: 2.5rem auto auto auto !important;
+  }
+
+  .mat-select-arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent !important;
+    border-right: 10px solid transparent !important;
+    border-top: 11px solid !important;
+    margin: 0 4px;
+  }
+
   .mat-primary .mat-option:hover {
     background: var(--button-background-color);
     color: #fff;
@@ -56,6 +70,8 @@
     color: #fff;
   }
 }
+
+
 
 // @media (max-width: 1798px) {
 //   .formfield {
@@ -82,6 +98,7 @@
 .formfield {
   display: flex;
   flex-direction: column;
+
   .label {
     font-weight: 500;
     //     font-size: 14px;

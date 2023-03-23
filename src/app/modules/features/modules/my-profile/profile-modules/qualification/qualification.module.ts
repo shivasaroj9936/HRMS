@@ -16,6 +16,9 @@ import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/com
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
 import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
 import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoid-first-space.module';
+import { CommonInputModule } from 'src/app/modules/shared/common-input/common-input.module';
+import { CommonDatePickerModule } from 'src/app/modules/shared/common-date-picker/common-date-picker.module';
+import { CommonTextAreaModule } from 'src/app/modules/shared/common-text-area/common-text-area.module';
 
 
 @NgModule({
@@ -38,7 +41,10 @@ import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoi
     MatIconModule,
     ValidationErrorModule,
     CommonTableModule,
-    AvoidFirstSpaceModule
+    AvoidFirstSpaceModule,
+    CommonInputModule,
+    CommonDatePickerModule,
+    CommonTextAreaModule
   ]
 })
 export class QualificationModule { }

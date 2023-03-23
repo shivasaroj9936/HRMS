@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
 import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoid-first-space.module';
+import { CommonInputModule } from 'src/app/modules/shared/common-input/common-input.module';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoi
     FormsModule,
     ReactiveFormsModule,
     ValidationErrorModule,
-    AvoidFirstSpaceModule
+    AvoidFirstSpaceModule,
+    CommonInputModule
   ]
 })
 export class ChangePasswordModule { }

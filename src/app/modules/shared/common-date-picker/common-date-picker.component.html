@@ -1,7 +1,7 @@
 <div class="formfield" *ngIf="inputControl">
-    <mat-label class="label">{{label || 'Choose a date'}}</mat-label>
+    <mat-label class="label">{{label }}</mat-label>
      <mat-form-field appearance="outline"  >
-    <input readonly matInput [matDatepicker]="picker" [formControl]="$any(inputControl)"/>
+    <input readonly matInput [matDatepicker]="picker" [formControl]="$any(inputControl)" [placeholder]="placeHolder" />
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
     <!-- <mat-error  >{{ inputControl| validate : label }}</mat-error> -->

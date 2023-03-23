@@ -15,7 +15,8 @@ export class CommonDatePickerComponent implements OnInit {
     
   }
   inputControl!: FormControl | AbstractControl;
-  @Input() label!: string;
+  @Input() label: string = ' ';
+  @Input() placeHolder: string =' ';
 
   minDate: Date;
   maxDate: Date;

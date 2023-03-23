@@ -2,15 +2,12 @@
         <div class="header">
             <p class="header-text">{{uiMessage.QUALIFICATION_HEADER}}</p>
         </div>
-            <form [formGroup]="qualificationForm" (ngSubmit)="save()">
+            <form [formGroup]="qualificationForm" (ngSubmit)="onSubmit()">
                 <div class="inputs">
                     <div class="formfield 1">
-                        <label class="label">{{labelMessage.SCHOOL}}</label>
-                        <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input appAvoidFirstSpace [placeholder]="labelMessage.SCHOOL" matInput formControlName="school">
-                            <mat-error>{{ getControl("school") | validate : labelMessage.SCHOOL }}</mat-error>
+                      
+                        <app-common-input [labelStyle]="'dark'" [label]="labelMessage.SCHOOL" [inputFormControl]="getControl('school')"></app-common-input>
 
-                        </mat-form-field>
                     </div>
 
                     <div class="formfield 2">
@@ -19,47 +16,29 @@
                     </div>
                     <div class="formfield topField 3">
                         <label class="label">{{labelMessage.TIME}}</label>
-                        <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input matInput [matDatepicker]="picker1" readonly [placeholder]="labelMessage.PLACEHOLDER_FROM" formControlName="time_from">
-                            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
-                            <mat-datepicker #picker1></mat-datepicker>
-                            <mat-error>{{ getControl("time_from") | validate : labelMessage.TIME }}</mat-error>
-
-                        </mat-form-field>
+                       
+                        <app-common-date-picker  [placeHolder]="'From'"  [inputFormControl]="getControl('time_from')" ></app-common-date-picker>
                     </div>
                     <div class="formfield topField 4">
-                        <label> </label>
-                        <mat-form-field appearance="outline" class="increaseFormfield" style="margin-top: 15px;">
-                            <input matInput [matDatepicker]="picker2" [placeholder]="labelMessage.PLACEHOLDER_TO" formControlName="time_to"
-                                readonly>
-                            <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
-                            <mat-datepicker #picker2></mat-datepicker>
-                            <mat-error>{{ getControl("time_to") | validate : labelMessage.TIME }}</mat-error>
+                       
+                        <label> 	&nbsp;  </label>
+                        <app-common-date-picker  [placeHolder]="'To'"  [inputFormControl]="getControl('time_to')" ></app-common-date-picker>
 
-                        </mat-form-field>
                     </div>
                     <div class="formfield topField 5">
                         <app-common-dropdown [label]="labelMessage.LANGUAGE" [data]="languageDropdown" [dropdownDownControlName]="getControl('language')" ></app-common-dropdown>
 
                     </div>
                     <div class="formfield topField 6">
-                        <label class="label">{{labelMessage.PROFESSIONAL_COURSE}}</label>
-                        <mat-form-field appearance="outline" class="increaseFormfield">
-                            <input appAvoidFirstSpace matInput [placeholder]="labelMessage.PROFESSIONAL_COURSE" formControlName="professional_course">
-                            <mat-error>{{ getControl("professional_course") | validate : labelMessage.PROFESSIONAL_COURSE }}</mat-error>
+                       
+                        <app-common-input [labelStyle]="'dark'" [label]="labelMessage.PROFESSIONAL_COURSE" [inputFormControl]="getControl('professional_course')"></app-common-input>
 
-                        </mat-form-field>
                     </div>
                 </div>
                 <div class="address">
-                    <label class="label">{{labelMessage.DESCRIPTION}}</label>
-                    <mat-form-field appearance="outline" class="addressFormfield">
-                        <textarea type="text" placeholder="Message" class="inputMessage" matInput cdkTextareaAutosize formControlName="description"
-                            cdkAutosizeMinRows="4" cdkAutosizeMaxRows="7"
-                            [placeholder]="labelMessage.DESCRIPTION"></textarea>
-                            <mat-error>{{ getControl("description") | validate : labelMessage.DESCRIPTION }}</mat-error>
+                  
+                <app-common-text-area [row]="4" [column]="10" [label]="labelMessage.DESCRIPTION" [labelStyle]="'light'" [inputFormControl]="getControl('description')" ></app-common-text-area>
 
-                    </mat-form-field>
                 </div>
                 <div class="classyButton">
                     <button class="btn_primary" mat-raised-button>{{uiMessage.BUTTON}}</button>

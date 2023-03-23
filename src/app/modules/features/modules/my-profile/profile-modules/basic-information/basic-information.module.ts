@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
 import { DigitOnlyModule } from 'src/app/directives/digit-only/digit-only.module';
 import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoid-first-space.module';
+import { CommonInputModule } from 'src/app/modules/shared/common-input/common-input.module';
+import { CommonTextAreaModule } from 'src/app/modules/shared/common-text-area/common-text-area.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoi
     FormsModule,ReactiveFormsModule,
     ValidationErrorModule,
     DigitOnlyModule,
-    AvoidFirstSpaceModule
+    AvoidFirstSpaceModule,
+    CommonInputModule,
+    CommonTextAreaModule
   ]
 })
 export class BasicInformationModule { }

@@ -72,7 +72,7 @@ export class QualificationComponent implements OnInit {
     return this.qualificationForm.controls[control];
   }
 
-  save() {
+  onSubmit() {
     console.log(this.qualificationForm.value);
     
   }
