@@ -85,10 +85,10 @@ export class FormService {
     cv: [],
     skill: [],
     job_location: [],
-
+    chkbox:[],
+    dsr:[]
   };
   getControl(name: string, requierd = true) {
-    console.log(name,requierd);
     
     // @ts-ignore: unreachable code error
 
@@ -99,6 +99,9 @@ export class FormService {
       } else {
         compose.splice(0, 0, Validators.required);
       }
+    }
+    if(name==='chkbox'){
+      return [false,compose]
     }
     return [null, compose];
   }

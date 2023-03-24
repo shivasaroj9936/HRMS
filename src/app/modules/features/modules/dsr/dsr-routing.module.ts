@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { MY_DSR } from "src/app/constants/routes";
+import { DSR_DETAILS, DSR_EDIT, MY_DSR } from "src/app/constants/routes";
 import { DrsComponent } from "./drs.component";
 
 const routes: Routes = [
@@ -13,6 +13,16 @@ const routes: Routes = [
         path: MY_DSR.path,
         loadChildren: () =>
           import("./my-dsr/my-dsr.module").then((m) => m.MyDsrModule),
+      },
+      {
+        path: `${DSR_DETAILS.path}/:id`,
+        loadChildren: () =>
+          import("./dsr-details/dsr-details.module").then((m) => m.DsrDetailsModule),
+      },
+      {
+        path: `${DSR_EDIT.path}/:id`,
+        loadChildren: () =>
+          import("./dsr-edit/dsr-edit.module").then((m) => m.DsrEditModule),
       },
     ],
   },

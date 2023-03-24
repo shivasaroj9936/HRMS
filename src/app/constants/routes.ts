@@ -347,3 +347,15 @@ export const MY_DSR:IRoute={
     return `/${DSR.fullUrl}/${this.path}`
   }
 }
+export const DSR_DETAILS:IRoute={
+  path:'dsr-details',
+  get fullUrl():string{
+    return `/${DSR.fullUrl}/${this.path}`
+  }
+}
+export const DSR_EDIT:IRoute={
+  path:'dsr-edit',
+  get fullUrl():string{
+    return `/${DSR.fullUrl}/${this.path}`
+  }
+}

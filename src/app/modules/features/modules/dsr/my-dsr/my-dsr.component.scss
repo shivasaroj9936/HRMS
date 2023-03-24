@@ -1,4 +1,5 @@
 @import 'src/app/modules/features/modules/users/leave/my-leave/my-leave.component.scss';
+// @import 'src/scss/dashbord-card-heading.scss';
 
 section {
     .filter {
@@ -24,21 +25,37 @@ section {
         }
 
     }
+    .table{
+        .header{
+            .heading{
+                border-bottom: 1px solid #f3f7fc;
+                color: var(--header-text-color);
+            }
+
+        }
+        border-radius: 5px;
+    }
+    
 }
 
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 1260px) {
     section {
-
+        
         .filter {
-            grid-template-columns: auto auto;
+                form{
+                grid-template-columns: auto auto;
+            }
         }
     }
 }
 
 @media only screen and (max-width: 580px) {
     section {
+        
         .filter {
-            grid-template-columns: auto;
+                form{
+                grid-template-columns: auto;
+            }
         }
     }
 }

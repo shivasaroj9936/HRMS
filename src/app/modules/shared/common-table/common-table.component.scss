@@ -1,3 +1,4 @@
+@import 'src/scss/buttons.scss';
 section {
   table {
     width: 100%;
@@ -32,8 +33,21 @@ section {
       }
 
       .action {
+        
         mat-icon {
           cursor: pointer;
+        }
+        .action_button{
+          background:none;
+          border: none;
+        }
+        .btn_add_new{
+          background-color: #fff;
+          color: orange;
+          // :hover{
+          //   background-color: #20c997;
+          //   color: #fff;
+          // }
         }
       }
     }

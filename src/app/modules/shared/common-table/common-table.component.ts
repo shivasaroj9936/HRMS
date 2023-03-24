@@ -2,6 +2,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-common-table',
@@ -39,7 +40,7 @@ export class CommonTableComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(public sanitizer:DomSanitizer) { }
 
 
   ngOnInit(): void {
@@ -48,7 +49,7 @@ export class CommonTableComponent implements OnInit {
   ngAfterViewInit() {
     this.dataSourceForTable.sort = this.matSort;
     this.dataSourceForTable.paginator = this.matPaginator;
-    console.log(this.dataSourceForTable);
+    // console.log(this.dataSourceForTable);
     
   }
   openDialog(){}
