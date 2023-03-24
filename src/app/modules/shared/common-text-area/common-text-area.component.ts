@@ -15,6 +15,7 @@ export class CommonTextAreaComponent implements OnInit {
   @Input() labelStyle:any;
   @Input() column:number=7;
   @Input() row:number=4;
+  @Input() maxLength:number=200;
 
   constructor() { }
 

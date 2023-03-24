@@ -8,30 +8,16 @@
     <div class="main">
         <form [formGroup]="trainingRequestForm" (ngSubmit)="onSubmit()">
             <div class="form_data">
-                <app-common-dropdown [label]="requestTraining.team_name" [data]="trainingNames" [dropdownDownControlName]="getControl('team_name')" ></app-common-dropdown>
+                <app-common-dropdown [labelStyle]="'light'" [label]="requestTraining.team_name" [data]="trainingNames" [dropdownDownControlName]="getControl('team_name')" ></app-common-dropdown>
             </div>
         <div class="form_data">
-            <app-common-dropdown [label]="requestTraining.training_name" [data]="trainingNames" [dropdownDownControlName]="getControl('training_name')" ></app-common-dropdown>
+            <app-common-dropdown [labelStyle]="'light'" [label]="requestTraining.training_name" [data]="trainingNames" [dropdownDownControlName]="getControl('training_name')" ></app-common-dropdown>
         </div>
         <div class="description col5">
-            <label class="label_text">{{ requestTraining.textarea1|titlecase}}</label>
-            <mat-form-field appearance="outline">
-                <textarea  [rows]="5" [maxLength]="500" #textarea matInput  formControlName="learning_are" placeholder="Enter Detail Reason" ></textarea>
-                <mat-error>{{ getControl('learning_are')| validate : 'this field' }}</mat-error>
-
-            </mat-form-field>
-            <p class="maxlength">
-                {{textarea.value.length}}/{{500}}</p>
+                <app-common-text-area  [row]="5"  [label]="requestTraining.textarea1" [labelStyle]="'light'" [inputFormControl]="getControl('learning_are')" ></app-common-text-area>
         </div>
         <div class="description col5">
-            <label class="label_text">{{ requestTraining.text_area2|titlecase}}</label>
-            <mat-form-field appearance="outline">
-                <textarea  [rows]="5" [maxLength]="500" #textarea matInput formControlName="organinization_need"  placeholder="Enter Detail Reason" ></textarea>
-                <mat-error>{{ getControl('organinization_need')| validate : 'this field' }}</mat-error>
-
-            </mat-form-field>
-            <p class="maxlength">
-                {{textarea.value.length}}/{{500}}</p>
+                <app-common-text-area [row]="5"  [label]="requestTraining.text_area2" [labelStyle]="'light'" [inputFormControl]="getControl('organinization_need')" ></app-common-text-area>
         </div>
         <div class="description col_2">
             <p class="label_text">{{requestTraining.interest|titlecase}}</p>

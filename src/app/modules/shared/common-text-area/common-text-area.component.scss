@@ -1,12 +1,27 @@
 .address{
     display: flex;
     flex-direction: column;
-    min-width: max-content;
+    // min-width: max-content;
     .label {
         font-weight: 500;
         color: #2f3031;
         // margin-bottom: 5px;
       }
+      .light{
+            font-size: 14px;
+            color: #96A5B8;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 4px;
+      }
+      .maxlength {
+        color: var(--danger-color);
+        margin-top: -22px;
+        font-weight: 600;
+        display: flex;
+        justify-content: flex-end;
+    
+    }
 }
 ::ng-deep {
     .mat-select-panel {

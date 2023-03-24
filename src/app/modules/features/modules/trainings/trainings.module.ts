@@ -16,6 +16,8 @@ import { RequestTrainingDialogComponent } from './request-training-dialog/reques
 import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CommonTextAreaModule } from 'src/app/modules/shared/common-text-area/common-text-area.module';
+import { CommonInputModule } from 'src/app/modules/shared/common-input/common-input.module';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     ValidationErrorModule,
     CommonDropdownModule,
-    MatDialogModule
+    MatDialogModule,
+    CommonTextAreaModule,
+    CommonInputModule
   ]
 })
 export class TrainingsModule { }

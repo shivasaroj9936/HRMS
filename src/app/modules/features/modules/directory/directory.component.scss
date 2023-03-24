@@ -192,9 +192,8 @@ section {
     //   z-index: 11;
     // }
   }
-}
-
-::ng-deep {
+  
+  ::ng-deep {
   .mat-form-field-appearance-outline .mat-form-field-flex {
     box-shadow: 0px 4px 8px rgb(44 39 56 / 4%) !important;
   }
@@ -202,13 +201,15 @@ section {
   .mat-form-field-appearance-outline .mat-form-field-infix {
     padding: 12px 0px 12px 0px;
   }
-
+  
   .mat-form-field-outline {
     background-color: white;
     border-radius: 5px;
   }
-
+  
   .mat-select-disabled .mat-select-trigger {
     cursor: not-allowed !important;
   }
+}
+
 }

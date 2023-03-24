@@ -2,13 +2,12 @@ section {
 
     position: relative;
     max-width: 250px;
-}
+    
+    :host::ng-deep {
 
-:host::ng-deep {
-
-    .mat-drawer .mat-sidenav {
-
-        position: fixed !important;
+        .mat-drawer .mat-sidenav {
+            
+            position: fixed !important;
         top: 0;
         bottom: 0;
         z-index: 3;
@@ -23,5 +22,6 @@ section {
         align-items: center;
         padding: 0.75rem 1.5rem;
 
-      }
+    }
+}
 }

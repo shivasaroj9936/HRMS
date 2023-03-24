@@ -2,7 +2,7 @@
 @import 'src/scss/radio-button.scss';
 
 section {
-    max-width: 30rem;
+    // max-width: 30rem;
     // height: unset;
     .header {
         background: gainsboro;
@@ -41,18 +41,6 @@ section {
     .main{
     padding: 0.5rem;
         .description {
-            display: flex;
-            flex-direction: column;
-            margin: 1rem auto;
-            padding: 0.2rem auto;
-
-            .label_text {
-                font-size: 14px;
-                color: #96A5B8;
-                font-weight: 500;
-                line-height: 1.4;
-                margin-bottom: 4px;
-            }
 
             .radio_buttons {
                 .vertically{
@@ -60,15 +48,6 @@ section {
                     flex-direction: column;
                     gap: 6px;
                 }
-            }
-
-            .maxlength {
-                color: var(--danger-color);
-                margin-top: -22px;
-                font-weight: 600;
-                display: flex;
-                justify-content: flex-end;
-            
             }
         }
 
@@ -95,3 +74,9 @@ section {
     //     overflow: auto;
     // }
 }
+@media (min-width:1011px) {
+    section{
+      width: 700px;
+  
+    }
+  }

@@ -45,16 +45,15 @@ section {
         }
 
     }
-}
+    
+    ::ng-deep {
 
-::ng-deep {
-
-    .mat-tab-header {
+        .mat-tab-header {
         align-self: start;
         border: none;
-
+        
     }
-
+    
     .mat-tab-list .mat-tab-labels {
         background-color: rgba(227, 236, 243, 0.46);
         padding: 6px;
@@ -73,6 +72,7 @@ section {
         background-color: transparent;
         border: none;
     }
+}
 }
 
 ::ng-deep {
