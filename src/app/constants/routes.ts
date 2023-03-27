@@ -359,3 +359,23 @@ export const DSR_EDIT:IRoute={
     return `/${DSR.fullUrl}/${this.path}`
   }
 }
+
+export const PROJECT:IRoute={
+  path:'project',
+  get fullUrl():string{
+    return `/${ADMIN.fullUrl}/${this.path}`
+  }
+}
+export const ALL_PROJECT:IRoute={
+  path:'all-projects',
+  get fullUrl():string{
+    return `/${PROJECT.fullUrl}/${this.path}`
+  }
+}
+
+export const PROJECT_DETAILS:IRoute={
+  path:'projects-details',
+  get fullUrl():string{
+    return `/${PROJECT.fullUrl}/${this.path}`
+  }
+}

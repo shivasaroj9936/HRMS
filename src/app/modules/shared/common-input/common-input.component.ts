@@ -10,12 +10,8 @@ export class CommonInputComponent implements OnInit {
 
   @Input() set inputFormControl(data:FormControl | AbstractControl){
     this.inputControl = data;    
-    // console.log(data);
-    
   } 
    inputControl!:FormControl | AbstractControl
-
-  // @Input() inputFormControl!:FormControl ;
   @Input() label!: string;
   @Input() data:any;
   @Input() errorType:any;

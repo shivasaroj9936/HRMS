@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
 
 @Component({
@@ -6,7 +6,7 @@ import { NguCarouselConfig } from '@ngu/carousel';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit,AfterViewInit {
+export class DashboardComponent implements OnInit,AfterViewInit,AfterContentChecked {
 
 
   referralData=[
@@ -44,7 +44,7 @@ export class DashboardComponent implements OnInit,AfterViewInit {
     velocity: 0.2,
   };
 
-  constructor() { }
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
   }
@@ -55,5 +55,7 @@ export class DashboardComponent implements OnInit,AfterViewInit {
     // console.log(this.dataSource,'dddddddddd');
     
   }
-
+  ngAfterContentChecked() {
+    this.cdr.detectChanges();
+}
 }

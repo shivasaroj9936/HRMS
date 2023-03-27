@@ -8,6 +8,8 @@ export class AbsoluteRoutingPipe implements PipeTransform {
 
     try {
       if (id) {
+        // console.log(id,'ssssss');
+        
         //@ts-ignore: unreachable code error
         return routes[route].fullUrl + "/" + id;
       }

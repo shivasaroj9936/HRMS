@@ -33,13 +33,17 @@ section {
       }
 
       .action {
-     
+        a{
+          text-decoration: none;
+        }
         mat-icon {
           cursor: pointer;
         }
         .action_button{
           background:none;
           border: none;
+          display: flex;
+          align-items: center;
      
         }
         .btn_add_new{

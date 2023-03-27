@@ -51,6 +51,11 @@ export class ReferalFormComponent implements OnInit {
     this.getControl("job_code").patchValue(12345);
     this.getControl("location").patchValue(this.data.location);
     this.getControl("experience").patchValue(`${this.data.exp_from + ' to ' + this.data.exp_to + ' years'}`);
+    this.getControl("department_name").disable();
+    this.getControl("location").disable();
+    this.getControl("experience").disable();
+    this.getControl("job_code").disable();
+
   }
 
   getControl(control: string) {

@@ -178,59 +178,68 @@ export const sideNavList: SideNavItem[] = [
 
     ], isActive: true
   },
-  { title: "Attendance", icon: "schedule", options: [
+  {
+    title: "Attendance", icon: "schedule", options: [
 
-    {
-      subTitle: "Attendance Calendar",
-      subicon: "horizontal_rule",
-      route: "ATTENDANCE_CALENDAR",
+      {
+        subTitle: "Attendance Calendar",
+        subicon: "horizontal_rule",
+        route: "ATTENDANCE_CALENDAR",
 
-    },
-    {
-      subTitle: "Manual Punch",
-      subicon: "horizontal_rule",
-      route: "MANUAL_PUNCH",
+      },
+      {
+        subTitle: "Manual Punch",
+        subicon: "horizontal_rule",
+        route: "MANUAL_PUNCH",
 
-    },      {
-      subTitle: "Punch Log",
-      subicon: "horizontal_rule",
-      route: "PUNCH_LOG",
+      }, {
+        subTitle: "Punch Log",
+        subicon: "horizontal_rule",
+        route: "PUNCH_LOG",
 
-    },
+      },
 
-  ], isActive: true },
-  { title: "Leave", icon: "calendar_today", options: [
+    ], isActive: true
+  },
+  {
+    title: "Leave", icon: "calendar_today", options: [
 
-    {
-      subTitle: "My Leave",
-      subicon: "horizontal_rule",
-      route: "MY_LEAVE",
+      {
+        subTitle: "My Leave",
+        subicon: "horizontal_rule",
+        route: "MY_LEAVE",
 
-    },
-    {
-      subTitle: "Floating Leave",
-      subicon: "horizontal_rule",
-      route: "FLOATING_LEAVE",
-    },
+      },
+      {
+        subTitle: "Floating Leave",
+        subicon: "horizontal_rule",
+        route: "FLOATING_LEAVE",
+      },
 
 
-  ], isActive: true },
-  { title: "Tickets", icon: "view_day", options: [
-    {
-      subTitle: "Tickets",
-      subicon: "horizontal_rule",
-      route: "TICKETS",
-    },
+    ], isActive: true
+  },
+  {
+    title: "Tickets", icon: "view_day", options: [
+      {
+        subTitle: "Tickets",
+        subicon: "horizontal_rule",
+        route: "TICKETS",
+      },
 
-  ], isActive: true },
-  { title: "DSR", icon: "calendar_today", options: [
-    {
-      subTitle: "MY DSR",
-      subicon: "checklist",
-      route: "MY_DSR",
-    },
-  ], isActive: true },
-  { title: "Projects", icon: "view_day", isActive: true },
+    ], isActive: true
+  },
+  {
+    title: "DSR", icon: "calendar_today", options: [
+      {
+        subTitle: "MY DSR",
+        subicon: "checklist",
+        route: "MY_DSR",
+      },
+    ], isActive: true
+  },
+  {
+    title: "Projects", icon: "view_day", isActive: true, route:'PROJECT'  },
   { title: "Expense", icon: "monetization_on", isActive: false },
   { title: "Announcements", icon: "campaign", isActive: false },
   { title: "Travels", icon: "flight", isActive: false },

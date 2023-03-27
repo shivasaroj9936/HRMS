@@ -3,46 +3,48 @@
 
 section {
     .filter {
-        form{
+        form {
 
             background-color: #fff;
             padding: 1.5rem;
-        border-radius: 5px;
-        margin-top: 1rem;
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        gap: 2rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 2rem;
 
-        .actions {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            
-            .save {
-                margin-right: 2rem;
-            }
+            .actions {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                .save {
+                    margin-right: 2rem;
+                }
             }
         }
 
     }
-    .table{
-        .header{
-            .heading{
+
+    .table {
+        .header {
+            .heading {
                 border-bottom: 1px solid #f3f7fc;
                 color: var(--header-text-color);
             }
 
         }
+
         border-radius: 5px;
     }
-    
+
 }
 
 @media only screen and (max-width: 1260px) {
     section {
-        
+
         .filter {
-                form{
+            form {
                 grid-template-columns: auto auto;
             }
         }
@@ -51,9 +53,9 @@ section {
 
 @media only screen and (max-width: 580px) {
     section {
-        
+
         .filter {
-                form{
+            form {
                 grid-template-columns: auto;
             }
         }

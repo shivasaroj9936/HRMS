@@ -68,7 +68,7 @@
             <div class="action">
               <ng-container *ngFor="let item of element['action']">
                 <ng-container *ngIf="item.type=='route'; else othr">
-                  <a [routerLink]="[item?.route|absolutePath,item.routeID]">
+                  <a [routerLink]="[item?.route|absolutePath,item?.routeID]">
 
                     <button class="action_button" [ngClass]="item.btnStyle">
                       {{item?.text|titlecase}}
