@@ -1,4 +1,8 @@
 <section>
+<div class="header" *ngIf="heading">
+  <h3 class="heading">{{heading}}</h3>
+</div>
+
   <table mat-table [dataSource]="dataSourceForTable" matSort>
 
     <ng-container *ngFor="let row of columns" [matColumnDef]="row.heading">

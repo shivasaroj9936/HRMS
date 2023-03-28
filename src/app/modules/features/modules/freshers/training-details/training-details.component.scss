@@ -45,34 +45,34 @@ section {
         }
 
     }
-    
+
     ::ng-deep {
 
         .mat-tab-header {
-        align-self: start;
-        border: none;
-        
-    }
-    
-    .mat-tab-list .mat-tab-labels {
-        background-color: rgba(227, 236, 243, 0.46);
-        padding: 6px;
-        border-radius: 7px;
-        color: #8c8e90;
-    }
+            align-self: start;
+            border: none;
 
-    .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-        color: #fff;
-        background-color: var(--button-background-color);
-        padding: 0.675rem 2.0625rem;
-        border-radius: 5px;
-    }
+        }
 
-    .mat-tab-group.mat-primary .mat-ink-bar {
-        background-color: transparent;
-        border: none;
+        .mat-tab-list .mat-tab-labels {
+            background-color: rgba(227, 236, 243, 0.46);
+            padding: 6px;
+            border-radius: 7px;
+            color: #8c8e90;
+        }
+
+        .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+            color: #fff;
+            background-color: var(--button-background-color);
+            padding: 0.675rem 2.0625rem;
+            border-radius: 5px;
+        }
+
+        .mat-tab-group.mat-primary .mat-ink-bar {
+            background-color: transparent;
+            border: none;
+        }
     }
-}
 }
 
 ::ng-deep {

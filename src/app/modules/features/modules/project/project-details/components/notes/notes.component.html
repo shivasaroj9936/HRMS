@@ -1,0 +1,69 @@
+<section>
+    <div class="row">
+        <div class="header">
+                <div class="tagHeader">
+                    <h3 class="heading">Project Note</h3>
+                    <button type="button" class="btn project_add_btn" data-toggle="modal" data-target="#projectTags">+</button>
+                </div>
+        </div>
+        <div class="row">
+            <div id="home" class="tab-pane show">
+              <h3> 
+                <a data-id="1" class="note-link" style="text-decoration: underline !important;" href="javascript:void( 0 )">Project Plan</a> 
+              </h3>
+              <p> Download: 
+                <a download="" href="https://dashboard.appinventiv.com/uploads/project/documents/Notes_1607830810.xlsx" target="_blank">
+                  <img src="https://dashboard.appinventiv.com/skin/hrsale_assets/img/download.svg">
+                </a>
+              </p>
+                 
+              <h6>Time: <b>13, Dec 2020 09:10 AM</b></h6>
+            
+            </div>
+          </div>
+    </div>
+    <div class="exp_panel_wraper">
+
+        <div class="exp_panel">
+            <ng-container *ngFor="let item of tags1">
+
+                <div class="panel">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <div class="text">
+                                <h1 class="letter">{{item.charAt(0)}}</h1>
+                                <div class="inner">
+                                    <h2 class="heading">{{item}}</h2>
+                                    <span class="no_doc">No Document</span>
+                                </div>
+                            </div>
+                        </mat-expansion-panel-header>
+
+                    </mat-expansion-panel>
+                </div>
+            </ng-container>
+
+        </div>
+        <div class="exp_panel">
+            <ng-container *ngFor="let item of tags2">
+
+                <div class="panel">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <div class="text">
+                                <h1 class="letter">{{item.charAt(0)}}</h1>
+                                <div class="inner">
+                                    <h2 class="heading">{{item}}</h2>
+                                    <span class="no_doc">No Document</span>
+                                </div>
+                            </div>
+                        </mat-expansion-panel-header>
+
+                    </mat-expansion-panel>
+                </div>
+            </ng-container>
+
+        </div>
+
+    </div>
+</section>

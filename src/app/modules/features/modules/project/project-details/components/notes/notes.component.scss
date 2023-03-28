@@ -1,0 +1,24 @@
+@import 'src/app/modules/features/modules/project/project-details/components/overview/overview.component.scss';
+// @import 'src/scss/project-card-header.scss';
+@import 'src/scss/buttons.scss';
+
+
+section {
+    margin-top: 1rem;
+
+    .row {
+        .tagHeader{
+            border-bottom: 1px solid #f3f7fc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 11px 25px 11px 15px;
+            .heading{
+                font-size: 20px;
+                color: #3246d3;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+    }
+}
