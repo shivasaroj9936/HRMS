@@ -10,6 +10,7 @@ import { DsrReportsComponent } from './components/dsr-reports/dsr-reports.compon
 import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatListModule } from '@angular/material/list';
     MatTabsModule,
     CommonTableModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+  MatIconModule
   ]
 })
 export class ProjectDetailsModule { }
