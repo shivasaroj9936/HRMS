@@ -1,3 +1,4 @@
+import { DatePipe } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
 import { MatTableDataSource } from "@angular/material/table";
@@ -10,25 +11,21 @@ import {
   LANGUAGE_DROPDOWN,
 } from "src/app/constants/ui-texts/dashboard-card";
 import { FormService } from "src/app/services/form-service/form.service";
+import { NotificationService } from "src/app/services/notification-service/notification.service";
 
 @Component({
   selector: "app-qualification",
   templateUrl: "./qualification.component.html",
   styleUrls: ["./qualification.component.scss"],
+  providers: [DatePipe],
   animations: [slideInRight],
+
 })
 export class QualificationComponent implements OnInit {
   myControl = new FormControl("");
   uiMessage = BASIC_INFORMATION;
   labelMessage = FORM_LABEL;
-  educationDropdown: string[] = [
-    "B.Tech",
-    "M.Tech",
-    "BCA",
-    "BBA",
-    "M.Sc.",
-    "Diloma",
-  ];
+  educationDropdown: string[] = [  "B.Tech",  "M.Tech", "BCA",  "BBA", "M.Sc.", "Diloma", ];
   languageDropdown = LANGUAGE_DROPDOWN;
   
   
@@ -37,16 +34,14 @@ export class QualificationComponent implements OnInit {
   
   dataSource!: MatTableDataSource<any>;
   columns = [
-    { heading: 'Action', key: 'action', isSortable: 'isSortable', type: 'text', },
+    { heading: 'Action', key: 'action', isSortable: 'isSortable', type: 'action', },
     { heading: 'School/University', key: 'school', isSortable: 'isSortable', type: 'text', },
     { heading: 'Time Period', key: 'time', isSortable: 'isSortable', type: 'text', },
     { heading: 'Education Level', key: 'education', isSortable: 'isSortable', type: 'text', },
   ]
-  Table_DATA: any[] = [
-    // { 's_no': '1', 'transaction_id': 5, 'amount_paid': '54', "date_time": 'APR 21,2020 00:39:14' },
-  ]
+  Table_DATA: any[] = [ ]
 
-  constructor(private formBuilder:FormBuilder,private _formService:FormService) {
+  constructor(private formBuilder:FormBuilder,private _formService:FormService,private datePipe:DatePipe,private notficationService:NotificationService) {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
   }
 
@@ -73,7 +68,20 @@ export class QualificationComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.qualificationForm.value);
+    if(this.qualificationForm.valid){
+      // this.qualificationForm.value['action']=[{ icon: '', btnStyle:'btn_add_new', btnText:'pending',route: 'DSR_DETAILS', type: 'route', routeID: 121 }];
+      this.qualificationForm.value['time'] = this.datePipe.transform(this.getControl('time_from').value - this.getControl('time_to').value , 'yyyy-MM-dd');
+      this.qualificationForm.value['emp_name'] = 'Shiva Saroj(AI 1580)';
+      this.qualificationForm.value['email'] = 'shiva.saroj@appinventiv.com';
+      this.qualificationForm.value['action'] = [{ icon: 'delete', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 },{ icon: 'edit', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 }];
+      this.Table_DATA.push(this.qualificationForm.value);
+      this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+      console.log(this.dataSource);
+
+      console.log(this.qualificationForm.value);
+      this.notficationService.showSuccess('Added','Qualification');
+      this.qualificationForm.reset();
+    }
     
   }
 }

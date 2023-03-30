@@ -19,7 +19,7 @@ export class AllProjectsListComponent implements OnInit {
     { heading: "% Complete", key: 'compete_status', isSortable: '', type: 'text', link: 'client-details' },
   ]
   Table_DATA: any[] = [{
-     action: [{ icon: '', btnStyle:'btn_add_new', btnText:'Trainee Project Angular',route: 'PROJECT_DETAILS', type: 'route', routeID: 121 }],
+     action: [{ icon: '', btnStyle:'link', btnText:'Trainee Project Angular',route: 'PROJECT_DETAILS', type: 'route', routeID: 121 }],
      billing_type_resource: '3', hrs: '34232', total_milestone: '01',
      delivered: '1', pending: '01', compete_status: '	66 %',
   }

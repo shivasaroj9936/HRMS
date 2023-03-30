@@ -1,6 +1,7 @@
 @import 'src/scss/buttons.scss';
+
 section {
-  .heading{
+  .heading {
     background-color: #fff;
     font-size: 20px;
     color: #3246d3;
@@ -12,6 +13,7 @@ section {
     //   margin-bottom: 0;
     // }
   }
+
   table {
     width: 100%;
     border-radius: 10px;
@@ -33,11 +35,13 @@ section {
           align-items: center;
           justify-content: center;
         }
-        .green{
+
+        .green {
           color: green;
           font-size: 20px;
         }
-        .red{
+
+        .red {
           color: #F40D36;
           font-size: 20px;
 
@@ -45,20 +49,31 @@ section {
       }
 
       .action {
-        a{
+        a {
           text-decoration: none;
         }
+
         mat-icon {
           cursor: pointer;
         }
-        .action_button{
-          background:none;
+
+        .action_button {
+          background: none;
           border: none;
           display: flex;
           align-items: center;
-     
+
         }
-        .btn_add_new{
+
+        .link {
+          text-decoration: underline !important;
+          font-weight: 400;
+          color: #1e70cd;
+          background-color: transparent;
+          cursor: pointer;
+        }
+
+        .btn_add_new {
           background-color: #fff;
           color: orange;
         }
@@ -77,6 +92,7 @@ section {
     border-bottom-left-radius: 10px;
 
   }
+
   .mat-sort-header-container {
     text-align: center;
     width: fit-content;

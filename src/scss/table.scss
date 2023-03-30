@@ -1,4 +1,6 @@
-::ng-deep {
+section{
+
+  ::ng-deep {
     .table {
       border-radius: 10px;
       border: 1px solid rgba(150, 165, 184, 0.3);
@@ -14,10 +16,10 @@
 
           border-bottom: 1px solid #EDF2F6;
         }
-     
-
+        
+        
         td {
-      padding:1.5rem 10px 1.5rem 3rem !important;
+          padding:1.5rem 10px 1.5rem 3rem !important;
 
           color: #606167 !important;
           line-height: 1.5;
@@ -36,9 +38,9 @@
               mat-icon {
                 cursor: pointer;
                 color: #199CFF;
-
+                
               }
-
+              
             }
           }
         }
@@ -46,3 +48,4 @@
 
     }
   }
+}

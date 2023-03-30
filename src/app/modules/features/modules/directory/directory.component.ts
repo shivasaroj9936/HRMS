@@ -14,7 +14,7 @@ export class DirectoryComponent implements OnInit {
   uiText=BASIC_INFORMATION;
   data:IDIRECTORY_DATA[]=DIRECTORY_EMPLOYEE_DATA;
   directoryDataList :IDIRECTORY_DATA[]=DIRECTORY_EMPLOYEE_DATA;
-  departments=['All','Angular','Node js','React Js','Android']
+  departments=['All','Angular','Node js','React Js','Android']  
   filterForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private _formService: FormService) {
