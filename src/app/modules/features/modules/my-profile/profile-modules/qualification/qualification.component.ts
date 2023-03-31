@@ -34,12 +34,23 @@ export class QualificationComponent implements OnInit {
   
   dataSource!: MatTableDataSource<any>;
   columns = [
-    { heading: 'Action', key: 'action', isSortable: 'isSortable', type: 'action', },
+    { heading: 'Action', key: 'action', isSortable: '', type: 'action', },
     { heading: 'School/University', key: 'school', isSortable: 'isSortable', type: 'text', },
     { heading: 'Time Period', key: 'time', isSortable: 'isSortable', type: 'text', },
     { heading: 'Education Level', key: 'education', isSortable: 'isSortable', type: 'text', },
   ]
-  Table_DATA: any[] = [ ]
+  Table_DATA: any[] = [ 
+    {action:[{ btnStyle: 'delete',icon: 'delete', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 },{ icon: 'edit', route: 'LEAVE_DETAILS', type: 'route', routeID: 121,btnStyle: 'edit' }],
+    emp_name:'Shiva saroj',
+    email:'shivavasaroj@appinventiv.com',
+    education:'B.tech',
+    time:'01/01/2022',
+    school:'Appinventiv '
+  }
+
+
+
+  ]
 
   constructor(private formBuilder:FormBuilder,private _formService:FormService,private datePipe:DatePipe,private notficationService:NotificationService) {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
@@ -73,7 +84,7 @@ export class QualificationComponent implements OnInit {
       this.qualificationForm.value['time'] = this.datePipe.transform(this.getControl('time_from').value - this.getControl('time_to').value , 'yyyy-MM-dd');
       this.qualificationForm.value['emp_name'] = 'Shiva Saroj(AI 1580)';
       this.qualificationForm.value['email'] = 'shiva.saroj@appinventiv.com';
-      this.qualificationForm.value['action'] = [{ icon: 'delete', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 },{ icon: 'edit', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 }];
+      // this.qualificationForm.value['action'] = [{ icon: 'delete', route: 'LEAVE_DETAILS', type: 'route', routeID: 121,btnStyle: 'delete'},{ icon: 'edit', route: 'LEAVE_DETAILS', type: 'route', routeID: 121,btnStyle:'edit' }];
       this.Table_DATA.push(this.qualificationForm.value);
       this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
       console.log(this.dataSource);

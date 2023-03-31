@@ -49,6 +49,8 @@ section {
       }
 
       .action {
+        display: flex;
+        flex-wrap: wrap;
         a {
           text-decoration: none;
         }
@@ -76,6 +78,12 @@ section {
         .btn_add_new {
           background-color: #fff;
           color: orange;
+        }
+        .delete{
+          color: red;
+        }
+        .edit{
+          color:var(--primary-color);
         }
       }
     }

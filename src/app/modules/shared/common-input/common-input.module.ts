@@ -5,6 +5,8 @@ import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NoSpecialCharectorModule } from 'src/app/directives/no-special-charector/no-special-charector.module';
+import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoid-first-space.module';
 
 
 
@@ -18,6 +20,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     ReactiveFormsModule,
     ValidationErrorModule,
+    NoSpecialCharectorModule,
+    AvoidFirstSpaceModule
   ],
   exports:[CommonInputComponent]
 })

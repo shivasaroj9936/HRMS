@@ -1,22 +1,17 @@
-import { AfterContentChecked, ChangeDetectorRef, Component, ElementRef, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, OnInit, ViewChild,} from "@angular/core";
 
 @Component({
-  selector: 'app-all-projects',
-  templateUrl: './all-projects.component.html',
-  styleUrls: ['./all-projects.component.scss']
+  selector: "app-all-projects",
+  templateUrl: "./all-projects.component.html",
+  styleUrls: ["./all-projects.component.scss"],
 })
-export class AllProjectsComponent implements OnInit, AfterContentChecked{
-[x: string]: any;
-
-// @ViewChild('subNav') subNav: any;
-
-@ViewChild('subNav', {static: false}) subNav!: any;
+export class AllProjectsComponent implements OnInit, AfterContentChecked {
+  @ViewChild("subNav", { static: false }) subNav!: any;
 
   constructor(private cdr: ChangeDetectorRef) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
   ngAfterContentChecked() {
     this.cdr.detectChanges();
-}
+  }
 }

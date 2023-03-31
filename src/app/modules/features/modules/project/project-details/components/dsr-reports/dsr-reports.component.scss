@@ -22,7 +22,7 @@ section {
             }
         }
 
-        form{
+        form {
             padding: 1rem;
             display: grid;
             grid-template-columns: auto auto auto auto;
@@ -33,12 +33,13 @@ section {
                 align-items: center;
                 justify-content: flex-start;
 
-                .save ,.cancel {
+                .save,
+                .cancel {
                     margin-right: 2rem;
                     background-color: #3246d3;
                     color: #fff;
                 }
-               
+
             }
         }
 
@@ -78,5 +79,41 @@ section {
             }
         }
 
+    }
+}
+
+
+@media only screen and (max-width: 1240px) {
+    section {
+
+        .row {
+            form {
+                grid-template-columns: auto auto auto ;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    section {
+
+        .row {
+
+            form {
+                grid-template-columns: auto  auto ;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    section {
+
+        .row {
+
+            form {
+                grid-template-columns:   auto ;
+            }
+        }
     }
 }

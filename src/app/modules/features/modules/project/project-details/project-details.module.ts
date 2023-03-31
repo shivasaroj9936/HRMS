@@ -11,10 +11,17 @@ import { CommonTableModule } from "src/app/modules/shared/common-table/common-ta
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatListModule } from "@angular/material/list";
 import { MatIconModule } from "@angular/material/icon";
+// import {MatChipsModule} from '@angular/material/chips';
+import {MatDialogModule} from '@angular/material/dialog';
+
 import { CommonInputModule } from "src/app/modules/shared/common-input/common-input.module";
 import { CommonDropdownModule } from "src/app/modules/shared/common-dropdown/common-dropdown.module";
+
 import { MatButtonModule } from "@angular/material/button";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AddTagDialogComponent } from './components/add-tag-dialog/add-tag-dialog.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -22,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     OverviewComponent,
     NotesComponent,
     DsrReportsComponent,
+    AddTagDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -35,8 +43,11 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     CommonDropdownModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    // MatChipsModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
 })
 export class ProjectDetailsModule {}
