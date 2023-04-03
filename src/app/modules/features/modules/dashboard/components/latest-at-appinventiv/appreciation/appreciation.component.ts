@@ -18,7 +18,7 @@ export class AppreciationComponent implements OnInit,AfterViewInit {
   carouselConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
     load: 1,
-    interval: { timing: 4000, initialDelay: 1000 },
+    interval: { timing: 400000, initialDelay: 100000 },
     loop: true,
     touch: true,
     velocity: 0.2,

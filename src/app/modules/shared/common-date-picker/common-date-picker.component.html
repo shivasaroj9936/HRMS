@@ -4,7 +4,7 @@
     <input readonly matInput [matDatepicker]="picker" [formControl]="$any(inputControl)" [placeholder]="placeHolder" />
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
-    <!-- <mat-error  >{{ inputControl| validate : label }}</mat-error> -->
-
+    <mat-error  >{{ inputControl| validate : (label==' '?'Date':label) }}</mat-error>
   </mat-form-field>
+  
 </div>

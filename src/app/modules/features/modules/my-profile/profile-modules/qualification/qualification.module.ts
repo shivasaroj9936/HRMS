@@ -19,11 +19,14 @@ import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoi
 import { CommonInputModule } from 'src/app/modules/shared/common-input/common-input.module';
 import { CommonDatePickerModule } from 'src/app/modules/shared/common-date-picker/common-date-picker.module';
 import { CommonTextAreaModule } from 'src/app/modules/shared/common-text-area/common-text-area.module';
+import { QualificationEditDailogComponent } from './components/qualification-edit-dailog/qualification-edit-dailog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
   declarations: [
-    QualificationComponent
+    QualificationComponent,
+    QualificationEditDailogComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +47,8 @@ import { CommonTextAreaModule } from 'src/app/modules/shared/common-text-area/co
     AvoidFirstSpaceModule,
     CommonInputModule,
     CommonDatePickerModule,
-    CommonTextAreaModule
+    CommonTextAreaModule,
+    MatDialogModule
   ]
 })
 export class QualificationModule { }

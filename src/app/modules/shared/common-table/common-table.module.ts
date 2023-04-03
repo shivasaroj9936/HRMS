@@ -8,14 +8,12 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { AbsoluteRoutingModule } from 'src/app/pipes/absolute-routing/absolute-routing.module';
-import { QialificationEditComponent } from './components/qialification-edit/qialification-edit.component';
 
 
 
 @NgModule({
   declarations: [
     CommonTableComponent,
-    QialificationEditComponent
   ],
   imports: [
     CommonModule,

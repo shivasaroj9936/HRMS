@@ -1,7 +1,7 @@
 <div class="address">
     <label class="label" [ngClass]="labelStyle" >{{label}}</label>
     <mat-form-field appearance="outline" class="addressFormfield">
-        <textarea  #textarea type="text" placeholder="Message" class="inputMessage" matInput cdkTextareaAutosize [formControl]="inputFormControl"
+        <textarea [maxlength]="maxLength"  #textarea type="text" placeholder="Message" class="inputMessage" matInput cdkTextareaAutosize [formControl]="inputFormControl"
             [cdkAutosizeMinRows]="row" [cdkAutosizeMaxRows]="column"
             [placeholder]="label + 'Enter'"></textarea>
             <mat-error>{{inputFormControl | validate : label }}</mat-error>

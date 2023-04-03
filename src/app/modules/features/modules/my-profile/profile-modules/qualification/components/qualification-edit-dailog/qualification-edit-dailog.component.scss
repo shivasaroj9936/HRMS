@@ -1,0 +1,29 @@
+@import 'src/app/modules/features/modules/my-profile/profile-modules/qualification/qualification.component.scss';
+section {
+  .header{
+    .heading{
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+  }
+    .btn_primary{
+        margin-right: 2rem;
+    }
+    @media only screen and (max-width: 1500px) {
+      form{
+  
+        .inputs {
+          grid-template-columns: auto auto;
+        }
+      }
+    }
+    @media only screen and (max-width: 650px) {
+        form{
+    
+          .inputs {
+            grid-template-columns:  auto;
+          }
+        }
+      }
+  }

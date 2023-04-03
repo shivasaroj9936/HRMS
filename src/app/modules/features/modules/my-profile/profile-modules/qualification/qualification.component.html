@@ -50,8 +50,9 @@
                 <p class="header-text">{{uiMessage.LIST_ALL_QUALIFICATION}}</p>
             </div>
             <div class="table">
-                <app-common-table [columns]="columns" [dataSourceForTable]="dataSource"></app-common-table>
+                <app-common-table  (newItemEvent)="eventFromTable($event)" [columns]="columns" [dataSourceForTable]="dataSource"></app-common-table>
             </div>
 
     </div>
 </section>
+

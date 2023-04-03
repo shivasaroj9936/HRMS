@@ -1,0 +1,14 @@
+<section>
+    <div class="header">
+        <h3 class="heading">{{ data.heading }}</h3>
+    </div>
+    <div class="main">
+        <div class="icon_box">
+            <h1 class="icon">?</h1>
+        </div>
+    </div>
+    <div class="action">
+        <button mat-button class="btn_cancel" [mat-dialog-close]="false">Cancel</button>
+        <button mat-button [mat-dialog-close]="true" class="btn_primary">Confirm</button>
+    </div>
+</section>

@@ -6,6 +6,7 @@ import {
 } from "@angular/forms";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 import { FormService } from "src/app/services/form-service/form.service";
+import { NotificationService } from "src/app/services/notification-service/notification.service";
 import { REFER_A_CANDIDATE_DIALOG } from "../../dashboard/interfaces/interfaces";
 
 @Component({
@@ -20,7 +21,8 @@ export class ReferalFormComponent implements OnInit {
     private formBuilder: FormBuilder,
     private _formService: FormService,
     public dialogRef: MatDialogRef<ReferalFormComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private notificationService:NotificationService
   ) {
     this.createForm();
   }
@@ -63,6 +65,9 @@ export class ReferalFormComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.referCandidateForm);
+    this.notificationService.showSuccess('Saved','Refferal');
+    this.dialogRef.close();
+
 
   }
   onNoClick(): void {

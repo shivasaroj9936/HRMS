@@ -1,0 +1,68 @@
+@import 'src/scss/buttons.scss';
+
+section {
+  text-align: center;
+  width: 20rem;
+  height: 15rem;
+  .header {
+    background: gainsboro;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: -24px;
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-bottom: 2rem;
+
+    .heading {
+      padding: 16px 16px 5px 30px;
+      font-size: 1.3rem;
+      color: var(--directory-header-color);
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    // .cancel_icon {
+    //   margin-right: 10px;
+    //   background-color: #fff;
+    //   border-radius: 50%;
+    //   padding: 5px;
+    //   cursor: pointer;
+    //   .icon{
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     font-size: 20px;
+    //   }
+    // }
+  }
+
+  .main {
+    .icon_box {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      border-radius: 50%;
+      z-index: 9;
+      text-align: center;
+      border: 3px solid #f15e5e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .icon{
+        color: #f15e5e;
+        font-size: 35px;
+        display: inline-block;
+        margin: 0;
+      }
+    }
+  }
+
+  .action {
+    margin-top: 3rem;
+    .btn_cancel {
+      margin-right: 3rem;
+    }
+  }
+}

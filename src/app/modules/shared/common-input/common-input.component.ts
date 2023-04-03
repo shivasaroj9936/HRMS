@@ -17,6 +17,9 @@ export class CommonInputComponent implements OnInit {
   @Input() errorType:any;
   @Input() formfieldCSS:any;
   @Input() labelStyle:any;
+  @Input() maxLength:number=200;
+
+
   constructor() { }
 
   ngOnInit(): void {

@@ -3,6 +3,7 @@ import { Component, Input, OnInit, Output,EventEmitter, AfterViewInit } from '@a
 import { MatDialog } from '@angular/material/dialog';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
+import { ConfirmationDialogComponent } from 'src/app/dialogs/confirmation-dialog/confirmation-dialog.component';
 import { HelpComponent } from 'src/app/dialogs/help/help.component';
 
 @Component({
@@ -25,8 +26,25 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+  logoutConfirmation() {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      data: {
+        heading: 'Are You Sure To Logout ?'
+      },
+      disableClose: true,
+    });
+
+    dialogRef.afterClosed().subscribe((result: string) => {
+      console.log("The dialog was closed", result);
+      if (result) {
+        this._router.navigate(['/auth'])
+      }
+    });
+  }
+
   logOut(){
-    this._router.navigate(['/auth'])
+    this.logoutConfirmation();
   }
 
   expand(){

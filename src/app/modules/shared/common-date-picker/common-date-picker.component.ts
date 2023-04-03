@@ -7,12 +7,9 @@ import { AbstractControl, FormControl } from "@angular/forms";
   styleUrls: ["./common-date-picker.component.scss"],
 })
 export class CommonDatePickerComponent implements OnInit {
-  // @Input() inputFormControl!:FormControl
 
   @Input() set inputFormControl(data: FormControl | AbstractControl) {
     this.inputControl = data;
-    // console.log(data);
-    
   }
   inputControl!: FormControl | AbstractControl;
   @Input() label: string = ' ';
