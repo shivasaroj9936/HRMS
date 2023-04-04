@@ -26,9 +26,9 @@ export class QualificationEditDailogComponent implements OnInit , AfterContentCh
   ) {}
 
   onNoClick(): void {
-    this.data=this.qualificationForm.value;
+    // this.data=this.qualificationForm.value;
     
-    this.dialogRef.close(this.qualificationForm.value);
+    this.dialogRef.close(false);
   }
 
   ngOnInit(): void {
@@ -50,10 +50,12 @@ export class QualificationEditDailogComponent implements OnInit , AfterContentCh
     });
   }
   setValue(){
-    this.qualificationForm.patchValue(this.data);
+    this.qualificationForm.patchValue({...this.data});
     // this.getControl('school').patchValue(this.data.school);
     this.getControl('time_from').patchValue('01/01/2022');
     // this.getControl('school').patchValue(this.data.school);
+    console.log(this.qualificationForm.value);
+    
 
   }
   getControl(control: any) {

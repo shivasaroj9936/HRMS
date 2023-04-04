@@ -9,17 +9,22 @@ section {
     padding: 11px 25px 11px 15px;
     border-bottom: 1px solid #f3f7fc;
     font-weight: 700;
-    // h3{
-    //   margin-bottom: 0;
-    // }
+
   }
 
+  .filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  position: relative !important;
   table {
+
     width: 100%;
     border-radius: 10px;
 
     th {
-      // text-align: left;
       width: fit-content;
     }
 
@@ -51,6 +56,7 @@ section {
       .action {
         display: flex;
         flex-wrap: wrap;
+
         a {
           text-decoration: none;
         }
@@ -79,11 +85,13 @@ section {
           background-color: #fff;
           color: orange;
         }
-        .delete{
+
+        .delete {
           color: red;
         }
-        .edit{
-          color:var(--primary-color);
+
+        .edit {
+          color: var(--primary-color);
         }
       }
     }
@@ -92,17 +100,34 @@ section {
       margin-right: 4px;
     }
   }
-}
 
-:host::ng-deep {
-  .mat-paginator {
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+  :host::ng-deep {
+    //   .mat-icon-button {
+    //     position: inherit;
+    //     padding: 0;
+    //     min-width: 0;
+    //     width: 40px !important;
+    //     height: 40px !important;
+    //     flex-shrink: 0 ;
+    //     line-height: 40px !important;
+    //     border-radius: 50% !important;
+    //   }
+    //   .mat-paginator {
+    //     border-bottom-right-radius: 10px;
+    //     border-bottom-left-radius: 10px;
 
-  }
+    //   }
 
-  .mat-sort-header-container {
-    text-align: center;
-    width: fit-content;
+    //   .mat-sort-header-container {
+    //     text-align: center;
+    //     width: fit-content;
+    //   }
+
+    .mat-paginator-page-size {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
   }
 }

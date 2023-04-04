@@ -8,6 +8,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { AbsoluteRoutingModule } from 'src/app/pipes/absolute-routing/absolute-routing.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -23,7 +25,8 @@ import { AbsoluteRoutingModule } from 'src/app/pipes/absolute-routing/absolute-r
     MatSortModule,
     MatButtonModule,
     RouterModule,
-    AbsoluteRoutingModule
+    AbsoluteRoutingModule,
+    MatFormFieldModule,MatInputModule
   ],
   exports:[CommonTableComponent]
 })

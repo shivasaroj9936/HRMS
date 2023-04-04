@@ -26,11 +26,13 @@ export class CommonTableComponent implements OnInit {
     pageIndex: 1
   };
   @Input() pagination=false;
+  @Input() searchFilter=false;
+
   @Input() heading:string='';
 
   @Input() columns!: any;
   @Input() dataSourceForTable!: any;
-  @Input() paginationSizes: number[] = [5, 10, 15, 23];
+  @Input() paginationSizes: number[] = [2,5, 10];
   @Input() defaultPageSize = this.paginationSizes[1];
 
   @ViewChild(MatPaginator, { static: false }) matPaginator!: MatPaginator;
@@ -38,7 +40,7 @@ export class CommonTableComponent implements OnInit {
 
   @Input() set pageSize(size: any) {
     if (size) {
-      this.matPaginator._changePageSize(size);
+      this.matPaginator?._changePageSize(size);
     }
   }
 
@@ -50,6 +52,15 @@ export class CommonTableComponent implements OnInit {
   ngOnInit(): void {
     this.columns.map((tableColumn: any) => this.headerRow.push(tableColumn.heading));
   }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSourceForTable.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSourceForTable.paginator) {
+      this.dataSourceForTable.paginator.firstPage();
+    }
+  }
+
   ngAfterViewInit() {
     this.dataSourceForTable.sort = this.matSort;
     this.dataSourceForTable.paginator = this.matPaginator;

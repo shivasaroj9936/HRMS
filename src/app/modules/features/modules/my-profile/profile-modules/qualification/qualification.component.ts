@@ -84,21 +84,178 @@ export class QualificationComponent implements OnInit {
       professional_course:'Python , HTML ,CSS',
       description:'  Lorem, ipsum dolor sit amettio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
     },
-    {
-      action: [
-        {
-          btnStyle: "delete",
-          icon: "delete",
-          type: "dialogOpen",
-          routeID: 121,
-        },
-        { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },
-      ],
+    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
       emp_name: "Shiva saroj",
       email: "shivavasaroj@appinventiv.com",
       education: "B.Tech",
       time: "01/01/2022",
       school: "Appinventiv 2 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },
+    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+    emp_name: "Shiva saroj",
+    email: "shivavasaroj@appinventiv.com",
+    education: "B.Tech",
+    time: "01/01/2022",
+    school: "Appinventiv 2 ",
+    language:'Hindi',
+    time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+    time_to:'01/05/2022',
+    professional_course:'JAVA , HTML ,CSS',
+    description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+  },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+  emp_name: "Shiva saroj",
+  email: "shivavasaroj@appinventiv.com",
+  education: "B.Tech",
+  time: "01/01/2022",
+  school: "Appinventiv 2 ",
+  language:'Hindi',
+  time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+  time_to:'01/05/2022',
+  professional_course:'JAVA , HTML ,CSS',
+  description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+},    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Appinventiv 2 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Appinventiv 2 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Appinventiv 4 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Appinventiv 12 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Appinventiv 6 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Appinventiv 7 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Appinventiv 9 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Appinventiv 11 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Appinventiv 3 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Nikhil 2 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Harshit 21 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Shivam 23 ",
+      language:'Hindi',
+      time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
+      time_to:'01/05/2022',
+      professional_course:'JAVA , HTML ,CSS',
+      description:'  Lorem, ipsum dolor sit amet sint quisquam iste distinctio asperiores ipsam ipsa odit! Placeat totam ipsam voluptatum? Sint repellat accusamus officia assumenda.'
+    },    { action: [ { btnStyle: "delete", icon: "delete",  type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },   ],
+      emp_name: "Shiva saroj",
+      email: "shivavasaroj@appinventiv.com",
+      education: "B.Tech",
+      time: "01/01/2022",
+      school: "Appinventiv 24 ",
       language:'Hindi',
       time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
       time_to:'01/05/2022',
@@ -128,10 +285,7 @@ export class QualificationComponent implements OnInit {
       time_from: this._formService.getControl("time_from"),
       time_to: this._formService.getControl("time_to"),
       language: this._formService.getControl("language"),
-      professional_course: this._formService.getControl(
-        "professional_course",
-        false
-      ),
+      professional_course: this._formService.getControl("professional_course", false ),
       description: this._formService.getControl("description"),
     });
   }
@@ -140,21 +294,24 @@ export class QualificationComponent implements OnInit {
     return this.qualificationForm.controls[control];
   }
 
-  onSubmit() {
+  async onSubmit() {
     if (this.qualificationForm.valid) {
       this.qualificationForm.value["time"] = this.datePipe.transform(
         this.getControl("time_from").value - this.getControl("time_to").value,
         "yyyy-MM-dd"
-      );
-      this.qualificationForm.value["emp_name"] = "Shiva Saroj(AI 1580)";
-      this.qualificationForm.value["email"] = "shiva.saroj@appinventiv.com";
-      this.Table_DATA.push(this.qualificationForm.value);
+        );
+        this.qualificationForm.value["emp_name"] = "Shiva Saroj(AI 1580)";
+        this.qualificationForm.value["email"] = "shiva.saroj@appinventiv.com";
+        this.qualificationForm.value['action']=[  {    btnStyle: "delete", icon: "delete", type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },  ];
+        this.Table_DATA.push(this.qualificationForm.value);
+      this.qualificationForm.reset();
       this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
       console.log(this.dataSource);
 
       console.log(this.qualificationForm.value);
       this.notficationService.showSuccess("Added", "Qualification");
-      this.qualificationForm.reset();
+      // this.qualificationForm.;
+      // this.createForm();
     }
   }
 
@@ -164,8 +321,13 @@ export class QualificationComponent implements OnInit {
       disableClose: true,
     });
 
-    dialogRef.afterClosed().subscribe((result: string) => {
-      console.log("The dialog was closed", result);
+    dialogRef.afterClosed().subscribe((result: any) => {
+      if(result){
+        this.Table_DATA[index]={...this.Table_DATA[index],...result}
+        this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+ 
+        
+      }
     });
   }
   deleteConfirmation(index: number) {

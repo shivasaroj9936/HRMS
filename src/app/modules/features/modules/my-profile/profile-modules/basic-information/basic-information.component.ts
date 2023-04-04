@@ -3,6 +3,7 @@ import { AbstractControl, FormBuilder, FormControl, FormControlName, FormGroup }
 import { slideInRight } from 'src/animations/slide-in-right';
 import { BASIC_INFORMATION, FORM_LABEL, GENDER_INPUT_DROPDOWN, MARITAL_DROPDOWN } from 'src/app/constants/ui-texts/dashboard-card';
 import { FormService } from 'src/app/services/form-service/form.service';
+import { NotificationService } from 'src/app/services/notification-service/notification.service';
 
 @Component({
   selector: 'app-basic-information',
@@ -17,7 +18,7 @@ export class BasicInformationComponent implements OnInit {
   maritalStatusValue = MARITAL_DROPDOWN
   basicInformationForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private _formService: FormService) {
+  constructor(private formBuilder: FormBuilder, private _formService: FormService,private notificationService:NotificationService) {
     
    }
 
@@ -45,9 +46,7 @@ export class BasicInformationComponent implements OnInit {
   getControl(control: string) :any{
     return this.basicInformationForm?.controls[control];
   }
-  // get getControl():any {
-  //   return this.basicInformationForm?.controls;
-  // }
+
 
   save() {
     // this.basicInformationForm.controls['name'].patchValue(this.basicInformationForm.controls['name'].value?.trim());
@@ -65,6 +64,10 @@ export class BasicInformationComponent implements OnInit {
 
 
     // }
+
+    if(this.basicInformationForm.valid){
+      this.notificationService.showSuccess('Saved','Basic Information');
+    }
   }
   // trimValue(form:FormGroup){
   //   form.controls.forEach(element => {

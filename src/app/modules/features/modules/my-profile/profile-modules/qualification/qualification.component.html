@@ -41,7 +41,7 @@
 
                 </div>
                 <div class="classyButton">
-                    <button class="btn_primary" mat-raised-button>{{uiMessage.BUTTON}}</button>
+                    <button class="btn_primary" type="submit" mat-raised-button>{{uiMessage.BUTTON}}</button>
                 </div>
             </form>
 
@@ -50,7 +50,7 @@
                 <p class="header-text">{{uiMessage.LIST_ALL_QUALIFICATION}}</p>
             </div>
             <div class="table">
-                <app-common-table  (newItemEvent)="eventFromTable($event)" [columns]="columns" [dataSourceForTable]="dataSource"></app-common-table>
+                <app-common-table [searchFilter]="true" [pagination]="true"  [pageSize]="10" (newItemEvent)="eventFromTable($event)" [columns]="columns" [dataSourceForTable]="dataSource"></app-common-table>
             </div>
 
     </div>

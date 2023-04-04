@@ -2,6 +2,13 @@
 <div class="header" *ngIf="heading">
   <h3 class="heading">{{heading}}</h3>
 </div>
+<div *ngIf="searchFilter" class="filter">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Search</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Search" #input>
+  </mat-form-field>
+</div>
 
   <table mat-table [dataSource]="dataSourceForTable" matSort>
 
@@ -158,7 +165,9 @@
       </td>
     </tr>
   </table>
-  <mat-paginator *ngIf="pagination" appPagination [pageSizeOptions]="paginationSizes" [pageSize]="defaultPageSize"
-    [hidePageSize]='true'></mat-paginator>
+
+  
+
+    <mat-paginator *ngIf="pagination" [pageSizeOptions]="paginationSizes" [pageSize]="defaultPageSize"  showFirstLastButtons ></mat-paginator>
 
 </section>

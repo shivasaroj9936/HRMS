@@ -5,21 +5,20 @@
       font-weight: 500;
       color: #2f3031;
     }
-}
-// ::ng-deep{
-//     .mat-form-field-appearance-fill .mat-form-field-flex {
+    // ::ng-deep{
+      //     .mat-form-field-appearance-fill .mat-form-field-flex {
 //         background: none;
 //         padding: 0;
 //     }
 //     .mat-form-field-appearance-fill .mat-form-field-flex{
-//         padding: 0 !important;
-
-//     }
-// }
-
-::ng-deep{
-
-
+  //         padding: 0 !important;
+  
+  //     }
+  // }
+  
+  ::ng-deep{
+    
+    
     .mat-icon-button{
       position: absolute;
       top: -5px;
@@ -27,3 +26,4 @@
       background-color: transparent;
     }
   }
+    }
