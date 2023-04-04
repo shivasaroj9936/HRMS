@@ -15,6 +15,9 @@ import { CommonTextAreaModule } from 'src/app/modules/shared/common-text-area/co
 import { CommonTextEditorModule } from 'src/app/modules/shared/common-text-editor/common-text-editor.module';
 import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
 import { MatButtonModule } from '@angular/material/button';
+// import {NgxMatTimepickerModule} from 'ngx-mat-timepicker';  
+import {NgxMatTimepickerModule} from 'ngx-mat-timepicker';
+import { CommonTimePickerModule } from 'src/app/modules/shared/common-time-picker/common-time-picker.module';
 
 
 @NgModule({
@@ -37,6 +40,8 @@ import { MatButtonModule } from '@angular/material/button';
     CommonTextEditorModule,
     CommonTableModule,
     MatButtonModule,
+    CommonTimePickerModule
   ]
+
 })
 export class MyDsrModule { }

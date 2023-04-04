@@ -168,7 +168,7 @@ export const FORM_LABEL = {
   DESCRIPTION: "Description",
   OLD_PASSSW0RD: "Old Password",
   NEW_PASSWORD: "New Password",
-  CONFIRM_PASSWORD: "Confirm Password",
+  CONFIRM_PASSWORD: "confirm password",
   APPRAISAL_CYCLE: "Appraisal Cycle",
   APPRAISAL_MONTH: "Appraisal Month",
   PLACEHOLDER_TO: "to",

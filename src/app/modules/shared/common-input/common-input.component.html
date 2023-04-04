@@ -3,6 +3,7 @@
     <mat-form-field appearance="outline" class="increaseFormfield">
         <input  [maxlength]="maxLength"  appAvoidFirstSpace [placeholder]="label" matInput  [formControl]="$any(inputControl)"  >
         <mat-error>{{ inputControl | validate : label }}</mat-error>
+        {{inputControl.hasError('matchPassword')}}
     </mat-form-field>
 </div>
 <!-- appNoSpecialChar="noSpecialChars" -->

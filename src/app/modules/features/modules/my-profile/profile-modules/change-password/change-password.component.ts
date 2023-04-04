@@ -9,12 +9,12 @@ import { FormService } from 'src/app/services/form-service/form.service';
   selector: 'app-change-password',
   templateUrl: './change-password.component.html',
   styleUrls: ['./change-password.component.scss'],
-  animations:[slideInRight]
+  animations: [slideInRight]
 })
 export class ChangePasswordComponent implements OnInit {
-  uiMessage=BASIC_INFORMATION;
+  uiMessage = BASIC_INFORMATION;
   labelMessage = FORM_LABEL;
-  passwordResetForm!:FormGroup;
+  passwordResetForm!: FormGroup;
   constructor(private formBuilder: FormBuilder, private _formService: FormService) { }
 
   ngOnInit(): void {
@@ -22,10 +22,15 @@ export class ChangePasswordComponent implements OnInit {
   }
   createForm() {
     this.passwordResetForm = this.formBuilder.group({
-      old_password: this._formService.getControl('old_password'),
-      new_password: this._formService.getControl('new_password'),
-      confirm_password: this._formService.getControl('confirm_password'),
-    });
+      old_password: this._formService.getControl('password'),
+      new_password: this._formService.getControl('password'),
+      confirm_password: this._formService.getControl('password'),
+    },
+      {
+        validator: this.ConfirmedValidator('new_password', 'confirm_password'),
+      }
+
+    );
   }
 
 
@@ -33,5 +38,20 @@ export class ChangePasswordComponent implements OnInit {
     return this.passwordResetForm.controls[control];
   }
 
-  save() {}
+  save() { }
+
+  ConfirmedValidator(controlName: string, matchingControlName: string) {
+    return (formGroup: FormGroup) => {
+      const control = formGroup.controls[controlName];
+      const matchingControl = formGroup.controls[matchingControlName];
+      if ( matchingControl.errors &&  !matchingControl.errors.confirmedValidator ) {
+        return;
+      }
+      if (control.value !== matchingControl.value) {
+        matchingControl.setErrors({ confirmedValidator: true });
+      } else {
+        matchingControl.setErrors(null);
+      }
+    };
+  }
 }

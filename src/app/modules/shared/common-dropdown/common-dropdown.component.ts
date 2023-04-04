@@ -38,8 +38,9 @@ export class CommonDropdownComponent implements OnInit,AfterViewInit {
     );
   }
   ngAfterViewInit(): void {
-    
-    
+    if(this.data.length){
+      this.inputFormControl.patchValue(this.data[0])
+    }
   }
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();

@@ -19,16 +19,16 @@ export class FormService {
       Validators.minLength(VALIDATION_CRITERIA.passwordMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.passwordMaxLength),
     ],
-    new_password: [
-      Validators.pattern(PATTERN.password),
-      Validators.minLength(VALIDATION_CRITERIA.passwordMinLength),
-      Validators.maxLength(VALIDATION_CRITERIA.passwordMaxLength),
-    ],
-    old_password: [
-      Validators.pattern(PATTERN.password),
-      Validators.minLength(VALIDATION_CRITERIA.passwordMinLength),
-      Validators.maxLength(VALIDATION_CRITERIA.passwordMaxLength),
-    ],
+    // new_password: [
+    //   Validators.pattern(PATTERN.password),
+    //   Validators.minLength(VALIDATION_CRITERIA.passwordMinLength),
+    //   Validators.maxLength(VALIDATION_CRITERIA.passwordMaxLength),
+    // ],
+    // old_password: [
+    //   Validators.pattern(PATTERN.password),
+    //   Validators.minLength(VALIDATION_CRITERIA.passwordMinLength),
+    //   Validators.maxLength(VALIDATION_CRITERIA.passwordMaxLength),
+    // ],
     confirm_password: [
       Validators.pattern(PATTERN.password),
       Validators.minLength(VALIDATION_CRITERIA.passwordMinLength),

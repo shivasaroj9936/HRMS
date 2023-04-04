@@ -72,7 +72,7 @@ export class MyDsrComponent implements OnInit {
   onSelect() {
     this.noWork = !this.noWork;
     if (this.noWork) {
-      this.getControl('logged_hr').setValue(0);
+      this.getControl('logged_hr').setValue("0:00");
       this.getControl('description').setValue(' No Work Done Today');
       this.getControl('logged_hr').disabled;
     } else {
@@ -94,7 +94,6 @@ export class MyDsrComponent implements OnInit {
 
   }
   onSubmit() {
-    console.log(this.dsrForm);
 
     if (this.dsrForm.valid) {
       this.dsrForm.value['s_no'] = this.Table_DATA.length + 1;
@@ -105,7 +104,7 @@ export class MyDsrComponent implements OnInit {
       this.dsrForm.value['action'] = [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 }];
       this.Table_DATA.push(this.dsrForm.value);
       this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
-      console.log(this.dataSource);
+      console.log(this.dsrForm.value);
 
       this.notificationService.showSuccess('DSR', 'Added');
       this.toggle = false;
