@@ -21,18 +21,25 @@ export class MyDsrComponent implements OnInit {
   noWork = false;
   dataSource!: MatTableDataSource<any>;
   columns = [
-    { heading: "Sr.No.", key: 's_no', isSortable: '', type: 'text', },
-    { heading: "Emp Name", key: 'emp_name', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Sr.No.", key: 's_no', isSortable: 'yes', type: 'text', },
+    { heading: "Emp Name", key: 'emp_name', isSortable: 'yes', type: 'text', link: 'client-details' },
     { heading: "Email", key: 'email', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Employment Type", key: 'employment_type', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Date", key: 'date', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Total(Logged Hr)", key: 'logged_hr', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Employment Type", key: 'employment_type', isSortable: 'yes', type: 'text', link: 'client-details' },
+    { heading: "Date", key: 'date', isSortable: 'yes', type: 'text', link: 'client-details' },
+    { heading: "Total(Logged Hr)", key: 'logged_hr', isSortable: 'yes', type: 'text', link: 'client-details' },
     { heading: 'Final Approval', key: 'action', type: 'action', action: [{}] },
   ]
   Table_DATA: any[] = [{
-    s_no: 1, type: 'text', isSortable: 'sortable', action: [{ icon: '', btnStyle:'btn_add_new', btnText:'pending',route: 'DSR_DETAILS', type: 'route', routeID: 121 }], emp_name: 'Short Leave', email: '01/01/2022', employment_type: '01/01/2022',
-    date: '01/01/2022', logged_hr: 'pending', level_1: '	Suyash Saxena(AI057)',
-    level_2: 'HR (Human Resourse)'
+    s_no: 1, type: 'text', isSortable: 'sortable', action: [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'DSR_DETAILS', type: 'route', routeID: 121 }], emp_name: 'Nikhil Dubey', email: 'abc@yopmail.com', employment_type: 'Permanent',
+    date: '31/02/2022', logged_hr: 'pending', level_1: '	Suyash Saxena(AI057)', level_2: 'HR (Human Resourse)'
+  },
+  {
+    s_no: 2, type: 'text', isSortable: 'sortable', action: [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'DSR_DETAILS', type: 'route', routeID: 121 }], emp_name: 'Shiva Saroj', email: 'nikhil@g.com', employment_type: 'Permanenet',
+    date: '21/03/2022', logged_hr: 'pending', level_1: '	Suyash Saxena(AI057)', level_2: 'HR (Human Resourse)'
+  },
+  {
+    s_no: 3, type: 'text', isSortable: 'sortable', action: [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'DSR_DETAILS', type: 'route', routeID: 121 }], emp_name: 'Shivam Shukla', email: 'Raj@yopmail.com', employment_type: 'Permanent',
+    date: '10/04/2022', logged_hr: 'pending', level_1: '	Suyash Saxena(AI057)', level_2: 'HR (Human Resourse)'
   }
   ]
   constructor(private formBuilder: FormBuilder, private _formService: FormService, private notificationService: NotificationService, private datePipe: DatePipe) {
@@ -88,22 +95,22 @@ export class MyDsrComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.dsrForm);
-    
+
     if (this.dsrForm.valid) {
       this.dsrForm.value['s_no'] = this.Table_DATA.length + 1;
       this.dsrForm.value['date'] = this.datePipe.transform(this.getControl('date').value, 'yyyy-MM-dd');
       this.dsrForm.value['employment_type'] = 'permanent';
       this.dsrForm.value['emp_name'] = 'Shiva Saroj(AI 1580)';
       this.dsrForm.value['email'] = 'shiva.saroj@appinventiv.com';
-      this.dsrForm.value['action'] = [{ icon: 'arrow_forward', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 }];
+      this.dsrForm.value['action'] = [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 }];
       this.Table_DATA.push(this.dsrForm.value);
       this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
       console.log(this.dataSource);
-      
+
       this.notificationService.showSuccess('DSR', 'Added');
       this.toggle = false;
       this.dsrForm.reset();
-      this.noWork=false
+      this.noWork = false
     }
   }
 

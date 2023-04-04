@@ -55,12 +55,15 @@
             </div>
         </form>
     </div>
+
+
+    
     
     <div class="table">
         <div class="header">
             <h3 class="heading">List All Worksheets</h3>
         </div>
-        <app-common-table [columns]="columns" [dataSourceForTable]="dataSource"></app-common-table>
+        <app-common-table [pagination]="true" [searchFilter]="true" [columns]="columns" [dataSourceForTable]="dataSource"></app-common-table>
 
     </div>
 
