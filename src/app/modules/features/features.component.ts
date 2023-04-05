@@ -2,6 +2,8 @@ import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatSidenav } from "@angular/material/sidenav";
 import { BreakpointObserver } from "@angular/cdk/layout";
 import { delay } from 'rxjs/operators'
+import { MatDialog } from "@angular/material/dialog";
+import { CovidHelpDeskComponent } from "./feature-parts/covid-help-desk/covid-help-desk.component";
 
 @Component({
   selector: "app-features",
@@ -14,7 +16,7 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
   showSubmenu: boolean = false;
   isExpanded = true;
   smallWindow = false;
-  constructor(private observer: BreakpointObserver) { }
+  constructor(private observer: BreakpointObserver,private dialog:MatDialog) { }
 
   ngOnInit(): void { }
   ngAfterViewInit(): void {
@@ -55,4 +57,10 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
     }
   }
   stateChange(value: any) { }
+  covidHelp(){
+    this.dialog.open(CovidHelpDeskComponent,{
+
+    })
+
+  }
 }

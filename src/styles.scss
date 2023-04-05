@@ -39,6 +39,7 @@ $hrms-theme: mat.define-light-theme((color: (primary: $hrms-primary,
 html,
 body {
   height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif!important;
 }
 
 body {

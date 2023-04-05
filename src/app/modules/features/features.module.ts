@@ -16,6 +16,7 @@ import { AbsoluteRoutingModule } from "src/app/pipes/absolute-routing/absolute-r
 import { MatDialogModule } from "@angular/material/dialog";
 import { NotificationsComponent } from "./feature-parts/notifications/notifications.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { CovidHelpDeskComponent } from './feature-parts/covid-help-desk/covid-help-desk.component';
 
 const MATERIAL = [
   MatSidenavModule,
@@ -34,6 +35,7 @@ const MATERIAL = [
     HeaderComponent,
     ListItemComponent,
     NotificationsComponent,
+    CovidHelpDeskComponent,
   ],
   imports: [
     CommonModule,

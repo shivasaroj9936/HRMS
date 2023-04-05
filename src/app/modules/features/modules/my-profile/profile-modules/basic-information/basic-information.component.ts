@@ -68,7 +68,9 @@ export class BasicInformationComponent implements OnInit {
     if (this.basicInformationForm.valid) {
       this.notificationService.showSuccess('Saved', 'Basic Information');
       this.basicInformationForm.reset();
-      this.basicInformationForm.untouched;
+      this.basicInformationForm.clearValidators();
+      // this.basicInformationForm.();
+
     } else {
       // this.basicInformationForm.markAllAsTouched();
 

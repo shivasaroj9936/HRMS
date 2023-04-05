@@ -442,9 +442,9 @@ export const Gallery_DATA: IGALLERYDATA[] = [
     NUM: 5,
     BUTTON: "View",
     ALBUM: [
-      "/assets/gallery/award_1674822333816.jpg",
       "/assets/gallery/award_1672378171227.jpg",
       "/assets/gallery/award_1672292016846.jpg",
+      "/assets/gallery/award_1674822333816.jpg",
       "/assets/gallery/award_166719426194.jpeg",
     ],
   },
@@ -454,8 +454,8 @@ export const Gallery_DATA: IGALLERYDATA[] = [
     NUM: 5,
     BUTTON: "View",
     ALBUM: [
-      "/assets/gallery/award_1674822333816.jpg",
       "/assets/gallery/award_1672378171227.jpg",
+      "/assets/gallery/award_1674822333816.jpg",
       "/assets/gallery/award_1672292016846.jpg",
       "/assets/gallery/award_166719426194.jpeg",
     ],
@@ -466,10 +466,10 @@ export const Gallery_DATA: IGALLERYDATA[] = [
     NUM: 5,
     BUTTON: "View",
     ALBUM: [
-      "/assets/gallery/award_1674822333816.jpg",
       "/assets/gallery/award_1672378171227.jpg",
       "/assets/gallery/award_1672292016846.jpg",
       "/assets/gallery/award_166719426194.jpeg",
+      "/assets/gallery/award_1674822333816.jpg",
     ],
   },
   {

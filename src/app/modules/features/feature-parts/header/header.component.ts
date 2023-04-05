@@ -4,14 +4,17 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { ConfirmationDialogComponent } from 'src/app/dialogs/confirmation-dialog/confirmation-dialog.component';
-import { HelpComponent } from 'src/app/dialogs/help/help.component';
+import { HelpComponent } from 'src/app/modules/features/feature-parts/help/help.component';
 import { delay } from 'rxjs/operators'
+import { slideInRight } from 'src/animations/slide-in-right';
 
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations:[slideInRight]
+
 })
 export class HeaderComponent implements OnInit,AfterViewInit {
   @Output() stateChange:EventEmitter<boolean> =new EventEmitter<boolean>();
@@ -21,7 +24,7 @@ export class HeaderComponent implements OnInit,AfterViewInit {
   showSubmenu=true;
   showSubSubMenu=false;
   isShowing=true;
-  isNotificationExpanded=true;
+  isNotificationExpanded=false;
 
 
 
@@ -37,20 +40,7 @@ export class HeaderComponent implements OnInit,AfterViewInit {
 
   }
   ngAfterViewInit(): void {
-    this.sidenav.mode = "over";
-    this.sidenav.position='end'
-    this.observer.observe(["(max-width:1185px)"]).pipe(delay(1)).subscribe((res) => {
-      if (res.matches) {
-        this.sidenav?.close();
-        // this.isShowing = true;
-        this.smallWindow = true;
-      } else {
-        // this.sidenav.mode = "side";
-        this.smallWindow = false;
-        this.isExpanded = true;
-        this.sidenav.open();
-      }
-    });
+   
   }
 
   logoutConfirmation() {
@@ -85,14 +75,5 @@ export class HeaderComponent implements OnInit,AfterViewInit {
   }
   notificationToggle(){
     this.isNotificationExpanded=!this.isNotificationExpanded;
-    if(this.isNotificationExpanded){
-      this.sidenav.mode='over';
-      this.sidenav.opened=true;
-
-    }else{
-      this.sidenav.mode="side";
-
-    }
-
   }
 }

@@ -1,6 +1,7 @@
 section {
 
     ::ng-deep {
+   
 
         .mat-button-toggle-group-appearance-standard {
             gap: 2rem;
@@ -59,6 +60,10 @@ section {
         }   
         .mat-button-toggle-group{
             flex-wrap: wrap;
+            // .link{
+            //     color: rgba(0, 0, 0, 0.87);
+
+            // }
         }
 
         .mat-button-toggle-appearance-standard {
@@ -66,6 +71,9 @@ section {
             background: none;
             display: flex;
             flex-wrap: wrap;
+             .link{
+                color: #fff;
+            }
         }
 
     }

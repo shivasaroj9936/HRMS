@@ -8,6 +8,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ConfirmationDialogComponent } from './dialogs/confirmation-dialog/confirmation-dialog.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressBarModule } from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatProgressBarModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       closeButton:true,
