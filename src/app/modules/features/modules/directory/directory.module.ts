@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
+import { CommonInputModule } from 'src/app/modules/shared/common-input/common-input.module';
+import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation
     MatIconModule,
     ReactiveFormsModule, 
     FormsModule,
-    ValidationErrorModule
+    ValidationErrorModule,
+    CommonInputModule,
+    CommonDropdownModule
   ]
 })
 export class DirectoryModule { }

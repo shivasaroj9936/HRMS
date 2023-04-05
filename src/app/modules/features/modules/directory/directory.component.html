@@ -6,24 +6,14 @@
         <form [formGroup]="filterForm" (ngSubmit)="filter()">
             <div class="filter">
                 <div class="formfield 4">
-                    <label class="label">{{uiText.NAME}}</label>
-                    <mat-form-field appearance="outline">
-                        <input matInput [placeholder]="uiText.SEARCH_PLACEHOLDER" formControlName="name">
-                        <mat-error>{{ getControl("name") | validate : uiText.NAME}}</mat-error>
 
-                    </mat-form-field>
+                <app-common-input directiveName="noSpecialChar" [labelStyle]="'light'" [label]="uiText.NAME"  [inputFormControl]="getControl('name')"></app-common-input>
+
                 </div>
                 <div class="formfield 4">
-                    <label class="label">{{uiText.DEPARTMENT}}</label>
-                    <mat-form-field appearance="outline">
-                        <mat-select formControlName="technology">
-                            <mat-option *ngFor="let item of departments " [value]="item">
-                                {{item}}
-                            </mat-option>
-                        </mat-select>
-                        <mat-error>{{ getControl("technology") | validate : uiText.DEPARTMENT }}</mat-error>
-
-                    </mat-form-field>
+       
+                    <app-common-dropdown [label]="uiText.DEPARTMENT" [labelStyle]="'light'" [data]="departments" [dropdownDownControlName]="getControl('technology')" ></app-common-dropdown>
+                    
                 </div>
             </div>
             <div class="actions">

@@ -39,7 +39,7 @@ export class ReferalFormComponent implements OnInit {
       location: this._formService.getControl("location"),
       experience: this._formService.getControl("experience"),
       job_location: this._formService.getControl("job_location"),
-      candidate_name: this._formService.getControl("candidate_name"),
+      candidate_name: this._formService.getControl("name"),
       position_title: this._formService.getControl("position_title"),
       candidate_experience: this._formService.getControl("candidate_experience"),
       email: this._formService.getControl("email"),

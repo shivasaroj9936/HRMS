@@ -27,7 +27,7 @@ export class ChangePasswordComponent implements OnInit {
       confirm_password: this._formService.getControl('password'),
     },
       {
-        validator: this.ConfirmedValidator('new_password', 'confirm_password'),
+        validator: this.matchPassword('new_password', 'confirm_password'),
       }
 
     );
@@ -40,18 +40,19 @@ export class ChangePasswordComponent implements OnInit {
 
   save() { }
 
-  ConfirmedValidator(controlName: string, matchingControlName: string) {
+  matchPassword(controlName: string, matchingControlName: string) {
     return (formGroup: FormGroup) => {
       const control = formGroup.controls[controlName];
       const matchingControl = formGroup.controls[matchingControlName];
-      if ( matchingControl.errors &&  !matchingControl.errors.confirmedValidator ) {
+      if ( matchingControl.errors &&  !matchingControl.errors.matchPassword ) {
         return;
       }
       if (control.value !== matchingControl.value) {
-        matchingControl.setErrors({ confirmedValidator: true });
+        matchingControl.setErrors({ matchPassword: true });
       } else {
         matchingControl.setErrors(null);
       }
     };
   }
+  
 }

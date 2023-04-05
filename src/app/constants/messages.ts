@@ -1,6 +1,6 @@
 export const VALIDATION_MESSAGES = {
     'confirm password': {
-      matchPassword: 'Confirm password does not matches with password',
+      matchPassword: 'Confirm password does not matches with new password',
     },
   };
 export const toTitleCase = (str:string) => {

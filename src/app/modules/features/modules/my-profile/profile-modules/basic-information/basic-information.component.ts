@@ -18,9 +18,9 @@ export class BasicInformationComponent implements OnInit {
   maritalStatusValue = MARITAL_DROPDOWN
   basicInformationForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private _formService: FormService,private notificationService:NotificationService) {
-    
-   }
+  constructor(private formBuilder: FormBuilder, private _formService: FormService, private notificationService: NotificationService) {
+
+  }
 
   ngOnInit(): void {
     this.createForm();
@@ -28,8 +28,8 @@ export class BasicInformationComponent implements OnInit {
 
   createForm() {
     this.basicInformationForm = this.formBuilder.group({
-      first_name: this._formService.getControl('first_name'),
-      last_name: this._formService.getControl('last_name'),
+      first_name: this._formService.getControl('name'),
+      last_name: this._formService.getControl('name'),
       dob: this._formService.getControl('dob'),
       gender: this._formService.getControl('gender'),
       marital_status: this._formService.getControl('marital_status'),
@@ -43,7 +43,7 @@ export class BasicInformationComponent implements OnInit {
   }
 
 
-  getControl(control: string) :any{
+  getControl(control: string): any {
     return this.basicInformationForm?.controls[control];
   }
 
@@ -65,8 +65,13 @@ export class BasicInformationComponent implements OnInit {
 
     // }
 
-    if(this.basicInformationForm.valid){
-      this.notificationService.showSuccess('Saved','Basic Information');
+    if (this.basicInformationForm.valid) {
+      this.notificationService.showSuccess('Saved', 'Basic Information');
+      this.basicInformationForm.reset();
+      this.basicInformationForm.untouched;
+    } else {
+      // this.basicInformationForm.markAllAsTouched();
+
     }
   }
   // trimValue(form:FormGroup){

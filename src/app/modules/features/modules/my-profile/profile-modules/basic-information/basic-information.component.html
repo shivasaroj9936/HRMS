@@ -11,7 +11,7 @@
                             <mat-error>{{ getControl("first_name") | validate : "first name" }}</mat-error>
 
                         </mat-form-field> -->
-                <app-common-input [labelStyle]="'dark'" [label]="labelMessage.FIRST_NAME" [inputFormControl]="getControl('first_name')"></app-common-input>
+                <app-common-input directiveName="noSpecialChar" [labelStyle]="'dark'" [label]="labelMessage.FIRST_NAME" [inputFormControl]="getControl('first_name')"></app-common-input>
 
                     </div>
                     <div class="formfield 2">

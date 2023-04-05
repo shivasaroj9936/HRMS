@@ -70,20 +70,11 @@
 
         </div>
         <div class="formfield 12">
-          <!-- <label class="label">{{ labelMessage.LABEL_SKILL }}</label>
-          <mat-form-field appearance="outline">
-            <textarea [maxLength]="200" #textarea matInput formControlName="skill"></textarea>
-            <mat-error>{{ getControl("skill") | validate : labelMessage.LABEL_SKILL }}</mat-error>
-
-          </mat-form-field>
-          <p class="maxlength">
-            {{textarea.value.length}}/{{200}}</p> -->
-
             <app-common-text-area [row]="1" [column]="10" [label]="labelMessage.LABEL_SKILL" [labelStyle]="'light'" [inputFormControl]="getControl('skill')" ></app-common-text-area>
         </div>
       </div>
       <div class="buttonGroup">
-        <button class="btn_cancel" (click)="onNoClick()" mat-raised-button>
+        <button class="btn_cancel" (click)="onNoClick()" mat-raised-button type="reset">
           {{ labelMessage.BUTTON_CANCEL }}
         </button>
         <button class="btn_primary" type="submit" mat-raised-button>{{ labelMessage.BUTTON_SUBMIT }}</button>

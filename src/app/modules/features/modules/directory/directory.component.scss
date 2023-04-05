@@ -31,18 +31,8 @@ section {
         display: flex;
         gap: 30px;
 
-        .label {
-          font-family: "Lato";
-          font-size: 14px;
-          color: #96a5b8;
-          font-weight: 500;
-          line-height: 1.4;
-          margin-bottom: 4px;
-        }
-
         .formfield {
-          display: flex;
-          flex-direction: column;
+
           width: -webkit-fill-available;
         }
       }
@@ -84,10 +74,12 @@ section {
       position: relative;
       transform: scale(1);
       transition: all 0.9s ease 0s;
+
       figure {
         margin-bottom: 20px;
         height: 130px;
         z-index: 1;
+
         img {
           width: 100%;
           height: 130px;
@@ -138,12 +130,14 @@ section {
       }
 
       &:hover {
-   
+
         padding: 30px 0 25px;
         border-bottom: 15px solid #1e70cd;
         position: relative;
+
         figure {
           margin-bottom: 20px;
+
           img {
             background-color: #f7f5ec;
             width: 100%;
@@ -155,8 +149,9 @@ section {
             transition: all 0.5s ease 0s;
           }
 
-          
+
         }
+
         ::after {
           content: "";
           width: 100%;
@@ -171,45 +166,30 @@ section {
           transform: scale(1);
           transition: all 0.5s ease 0s;
         }
-    
+
       }
 
-    
+
     }
-    // ::before{
-    //   content: "";
-    //   width: 100%;
-    //   height: 0;
-    //   border-radius: 50%;
-    //   background-color: #1369ce;
-    //   position: absolute;
-    //   bottom: 135%;
-    //   right: 0;
-    //   left: 0;
-    //   opacity: 0.9;
-    //   transform: scale(3);
-    //   transition: all 0.3s linear 0s;
-    //   z-index: 11;
-    // }
-  }
-  
-  ::ng-deep {
-  .mat-form-field-appearance-outline .mat-form-field-flex {
-    box-shadow: 0px 4px 8px rgb(44 39 56 / 4%) !important;
   }
 
-  .mat-form-field-appearance-outline .mat-form-field-infix {
-    padding: 12px 0px 12px 0px;
+  ::ng-deep {
+    .mat-form-field-appearance-outline .mat-form-field-flex {
+      box-shadow: 0px 4px 8px rgb(44 39 56 / 4%) !important;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+      padding: 12px 0px 12px 0px;
+    }
+
+    .mat-form-field-outline {
+      background-color: white;
+      border-radius: 5px;
+    }
+
+    .mat-select-disabled .mat-select-trigger {
+      cursor: not-allowed !important;
+    }
   }
-  
-  .mat-form-field-outline {
-    background-color: white;
-    border-radius: 5px;
-  }
-  
-  .mat-select-disabled .mat-select-trigger {
-    cursor: not-allowed !important;
-  }
-}
 
 }

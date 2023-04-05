@@ -280,12 +280,12 @@ export class QualificationComponent implements OnInit {
 
   createForm() {
     this.qualificationForm = this.formBuilder.group({
-      school: this._formService.getControl("school"),
-      education: this._formService.getControl("last_name"),
+      school: this._formService.getControl("name"),
+      education: this._formService.getControl("name"),
       time_from: this._formService.getControl("time_from"),
       time_to: this._formService.getControl("time_to"),
       language: this._formService.getControl("language"),
-      professional_course: this._formService.getControl("professional_course", false ),
+      professional_course: this._formService.getControl("name", false ),
       description: this._formService.getControl("description"),
     });
   }

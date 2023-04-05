@@ -7,7 +7,7 @@ import { VALIDATION_CRITERIA } from "src/app/constants/validation-criteria";
   providedIn: "root",
 })
 export class FormService {
-  constructor() {}
+  constructor() { }
 
   VALIDATION = {
     email: [
@@ -19,49 +19,25 @@ export class FormService {
       Validators.minLength(VALIDATION_CRITERIA.passwordMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.passwordMaxLength),
     ],
-    // new_password: [
-    //   Validators.pattern(PATTERN.password),
-    //   Validators.minLength(VALIDATION_CRITERIA.passwordMinLength),
-    //   Validators.maxLength(VALIDATION_CRITERIA.passwordMaxLength),
-    // ],
-    // old_password: [
-    //   Validators.pattern(PATTERN.password),
-    //   Validators.minLength(VALIDATION_CRITERIA.passwordMinLength),
-    //   Validators.maxLength(VALIDATION_CRITERIA.passwordMaxLength),
-    // ],
-    confirm_password: [
-      Validators.pattern(PATTERN.password),
-      Validators.minLength(VALIDATION_CRITERIA.passwordMinLength),
-      Validators.maxLength(VALIDATION_CRITERIA.passwordMaxLength),
-    ],
 
-    first_name: [
-      Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
-      Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),
-    ],
     name: [
       Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),
-    ]
-    ,
+      Validators.pattern(PATTERN.name),
 
-    last_name: [
-      Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
-      Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),
     ],
-    candidate_name:[ Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
-      Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),],
     dob: [],
     gender: [],
     contact_number: [
       Validators.minLength(VALIDATION_CRITERIA.phoneMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.phoneMaxLength),
+      Validators.pattern(PATTERN.phone)
     ],
     marital_status: [],
-    tot_exp_month: [],
-    tot_exp_years: [],
-    rel_exp_year: [],
-    rel_exp_month: [],
+    tot_exp_month: [ Validators.pattern(PATTERN.phone)],
+    tot_exp_years: [ Validators.pattern(PATTERN.phone)],
+    rel_exp_year: [ Validators.pattern(PATTERN.phone)],
+    rel_exp_month: [ Validators.pattern(PATTERN.phone)],
     address: [
       Validators.minLength(VALIDATION_CRITERIA.addressMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.addressMaxLength),
@@ -76,20 +52,20 @@ export class FormService {
       Validators.minLength(VALIDATION_CRITERIA.descMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.descMaxLength),
     ],
-    department_name:[],
-    job_code:[],
-    location:[],
-    experience:[],
+    department_name: [],
+    job_code: [],
+    location: [],
+    experience: [],
     position_title: [],
     candidate_experience: [],
     cv: [],
     skill: [],
     job_location: [],
-    chkbox:[],
-    dsr:[]
+    chkbox: [],
+    dsr: []
   };
   getControl(name: string, requierd = true) {
-    
+
     // @ts-ignore: unreachable code error
 
     let compose = [...this.VALIDATION[name]];
@@ -100,9 +76,11 @@ export class FormService {
         compose.splice(0, 0, Validators.required);
       }
     }
-    if(name==='chkbox'){
-      return [false,compose]
+    if (name === 'chkbox') {
+      return [false, compose]
     }
     return [null, compose];
   }
+
+
 }
