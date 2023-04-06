@@ -8,47 +8,51 @@
 
 section {
     padding: 0px !important;
-    background-color: #fff;
+    
+    .wraper {
+        background-color: #fff;
+        border-radius: 11px;
 
-    .header {
-        border-bottom: 1px solid gainsboro;
+        .header {
+            border-bottom: 1px solid gainsboro;
 
-        .header-text {
-            color: #3246d3;
-            font-size: 24px;
-            word-spacing: 1px;
-            padding: 11px 25px 11px 15px;
-            font-weight: 500;
-        }
-
-    }
-
-    form {
-        padding: 20px;
-
-        .row {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            gap: 1.2rem;
-        }
-   
-
-        .row3 {
-            display: grid;
-            grid-template-columns: auto auto;
-
-            .inputs {
-                display: grid;
-                grid-template-columns: auto auto;
-                gap: 1.2rem;
+            .header-text {
+                color: #3246d3;
+                font-size: 24px;
+                word-spacing: 1px;
+                padding: 11px 25px 11px 15px;
+                font-weight: 500;
             }
 
         }
 
-        .saveButton {
-            border: none;
-            cursor: pointer;
-            color: white;
+        form {
+            padding: 20px;
+
+            .row {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 1.2rem;
+            }
+
+
+            .row3 {
+                display: grid;
+                grid-template-columns: auto auto;
+
+                .inputs {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    gap: 1.2rem;
+                }
+
+            }
+
+            .saveButton {
+                border: none;
+                cursor: pointer;
+                color: white;
+            }
         }
     }
 
@@ -57,19 +61,21 @@ section {
 
 section {
     @media only screen and (max-width: 1500px) {
-        form{
+        form {
             .row3 {
                 grid-template-columns: auto;
             }
         }
     }
+
     @media only screen and (max-width: 750px) {
-        form{
-            .row{
+        form {
+            .row {
                 grid-template-columns: auto;
             }
-            .row3{
-                .inputs{
+
+            .row3 {
+                .inputs {
                     grid-template-columns: auto;
 
                 }

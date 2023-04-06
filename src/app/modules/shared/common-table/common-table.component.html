@@ -1,14 +1,14 @@
 <section>
-<div class="header" *ngIf="heading">
-  <h3 class="heading">{{heading}}</h3>
-</div>
-<div *ngIf="searchFilter" class="filter">
+  <div class="header" *ngIf="heading">
+    <h3 class="heading">{{heading}}</h3>
+  </div>
+  <div *ngIf="searchFilter" class="filter">
 
-  <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline">
     <mat-label>Search</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Search" #input>
   </mat-form-field>
-</div>
+  </div>
 
   <table mat-table [dataSource]="dataSourceForTable" matSort>
 
@@ -65,7 +65,7 @@
 
           <ng-container *ngSwitchCase="'html'">
 
-              <div [innerHTML]="sanitizer.bypassSecurityTrustHtml( element[row?.key] )"></div>
+            <div [innerHTML]="sanitizer.bypassSecurityTrustHtml( element[row?.key] )"></div>
           </ng-container>
 
           <!-- type Link Data -->
@@ -105,40 +105,40 @@
                   </a>
                 </ng-template> -->
 
-                <ng-container [ngSwitch]="item.type"> 
+                <ng-container [ngSwitch]="item.type">
 
                   <ng-container *ngSwitchCase="'route'">
                     <a [routerLink]="[item?.route|absolutePath,item?.routeID]">
-                      <button class="action_button" [ngClass]="item.btnStyle" >
-                        {{item?.text|titlecase}} 
+                      <button class="action_button" [ngClass]="item.btnStyle">
+                        {{item?.text|titlecase}}
                         <ng-container *ngIf="item.icon; else othrBtn">
                           <mat-icon class="mat-18">{{ item.icon }} </mat-icon>
                         </ng-container>
-  
+
                         <ng-template #othrBtn>
-                         {{item.btnText|titlecase}}
+                          {{item.btnText|titlecase}}
                         </ng-template>
                       </button>
                     </a>
                   </ng-container>
 
                   <ng-container *ngSwitchCase="'download'">
-                    <a [href]="item.link" download >
-                      <button  class="action_button" [ngClass]="item.btnStyle" >
+                    <a [href]="item.link" download>
+                      <button class="action_button" [ngClass]="item.btnStyle">
                         {{item?.text|titlecase}}
                         <mat-icon class="mat-18">{{ item.icon }} </mat-icon>
                       </button>
                     </a>
                   </ng-container>
                   <ng-container *ngSwitchCase="'dialogOpen'">
-                    <button class="action_button" [ngClass]="item.btnStyle"  (click)="action(item ,indx)">
-                      {{item?.text|titlecase}} 
+                    <button class="action_button" [ngClass]="item.btnStyle" (click)="action(item ,indx)">
+                      {{item?.text|titlecase}}
                       <ng-container *ngIf="item.icon; else othrBtn">
                         <mat-icon class="mat-18">{{ item.icon }} </mat-icon>
                       </ng-container>
 
                       <ng-template #othrBtn>
-                       {{item.btnText|titlecase}}
+                        {{item.btnText|titlecase}}
                       </ng-template>
                     </button>
                   </ng-container>
@@ -166,8 +166,8 @@
     </tr>
   </table>
 
-  
 
-    <mat-paginator *ngIf="pagination"   aria-label="Select page"  [pageSizeOptions]="paginationSizes" [pageSize]="defaultPageSize"  showFirstLastButtons ></mat-paginator>
+
+  <mat-paginator *ngIf="pagination" [pageSizeOptions]="paginationSizes" [pageSize]="defaultPageSize" showFirstLastButtons></mat-paginator>
 
 </section>

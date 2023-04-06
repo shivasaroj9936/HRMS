@@ -1,9 +1,5 @@
 @import 'src/scss/buttons.scss';
-@import 'src/scss/dashbord-card-heading.scss';
-@import 'src/app/modules/features/modules/users/assets/assets.component.scss';
 section {
-
-
     .request {
         background-color: #fff;
         border-radius: 5px;
@@ -33,17 +29,8 @@ section {
         }
     }
 
-    .main {
-        background-color: #fff;
+    .table {
         margin-top: 1rem;
-        padding: 1.2rem;
-        border-radius: 5px;
-
-        .header {
-            .heading {
-                color: var(--header-text-color);
-            }
-        }
 
     }
 }

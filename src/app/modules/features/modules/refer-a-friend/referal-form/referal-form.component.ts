@@ -22,7 +22,7 @@ export class ReferalFormComponent implements OnInit {
     private _formService: FormService,
     public dialogRef: MatDialogRef<ReferalFormComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private notificationService:NotificationService
+    private notificationService: NotificationService
   ) {
     this.createForm();
   }
@@ -64,9 +64,14 @@ export class ReferalFormComponent implements OnInit {
     return this.referCandidateForm?.controls[control] as FormControl;
   }
   onSubmit() {
-    console.log(this.referCandidateForm);
-    this.notificationService.showSuccess('Saved','Refferal');
-    this.dialogRef.close();
+    console.log(this.referCandidateForm,
+        
+      );
+    // this.referCandidateForm.clearAsyncValidators();
+    this.notificationService.showSuccess('Saved', 'Refferal form');
+    if (this.referCandidateForm.valid) {
+      this.dialogRef.close();
+    }
 
 
   }

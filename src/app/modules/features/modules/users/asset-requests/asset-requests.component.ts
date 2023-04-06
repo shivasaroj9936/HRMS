@@ -51,7 +51,7 @@ export class AssetRequestsComponent implements OnInit {
 
   createForm() {
     this.assetRequestForm = this.formBuilder.group({
-      asset_category: this._formService.getControl("cv"),
+      asset_category: this._formService.getControl("name"),
       quantity: this._formService.getControl("cv"),
       priority: this._formService.getControl("cv"),
       require_date: this._formService.getControl("cv"),

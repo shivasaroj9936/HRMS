@@ -26,13 +26,7 @@ export class TicketsComponent implements OnInit {
     { heading: "Status", key: 'status', isSortable: '', type: 'text', link: 'client-details' },
     { heading: "Date", key: 'date', isSortable: '', type: 'text', link: 'client-details', class: 'red' },
   ]
-  Table_DATA: any[] = [
-    {
-      action: [{ icon: 'arrow_forward', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 }],
-      ticket_code: 'Short Leave', priority: '01/01/2022', employee: '01/01/2022',
-      subject: '01/01/2022', status: 'pending', date: '	Suyash Saxena(AI057)'
-    }
-  ]
+  Table_DATA: any[] = [ ]
   constructor(private formBuilder: FormBuilder, private _formService: FormService, private notificationService: NotificationService,
     private datePipe: DatePipe
 
