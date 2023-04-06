@@ -58,8 +58,12 @@
     }
 
     .actions {
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns:49% auto;
+        gap: 1rem;
         padding: 0.9rem 0 0 0;
 
         .view_details,.refer {
@@ -70,14 +74,19 @@
 
 
 @media only screen and (max-width: 1300px) {
-    .heading_wraper {
-        padding: 0;
-    }
+    .job_details{
 
+        .heading_wraper {
+            padding: 0;
+        }
+        
     .actions {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+        display: grid;
+        grid-template-columns: auto;
         gap: 10px;
+    }
     }
 
 }

@@ -14,10 +14,10 @@
                 <mat-icon *ngIf="imageSrc" class="remove" (click)="remove()" >cancel</mat-icon>
 
                 <img src="{{imageSrc}}" class="profilePreviewImg" onerror="this.src='/assets/default_male.jpg'">
-                <div class="remove-pic">
+                <!-- <div class="remove-pic">
                     <input type="checkbox">
                     <p class="remove-value">{{uiMessage.REMOVE_PIC_VALUE}}</p>
-                </div>
+                </div> -->
                 <div class="classyButton">
                     <button type="submit" class="btn_primary" mat-raised-button>{{uiMessage.BUTTON_VALUE}}</button>
                 </div>

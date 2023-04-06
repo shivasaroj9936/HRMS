@@ -49,21 +49,6 @@ export class BasicInformationComponent implements OnInit {
 
 
   save() {
-    // this.basicInformationForm.controls['name'].patchValue(this.basicInformationForm.controls['name'].value?.trim());
-    // this.basicInformationForm.controls['email'].patchValue(this.basicInformationForm.controls['email'].value?.trim());
-    // this.basicInformationForm.controls['password'].patchValue(this.basicInformationForm.controls['password'].value?.trim());
-    // console.log(this.basicInformationForm.value, 'data user ');
-
-    // if (this.basicInformationForm.valid) {
-    //   let data = {
-    //     name: this.basicInformationForm.controls['name'].value,
-    //     email: this.basicInformationForm.controls['email'].value,
-    //     password: this.basicInformationForm.controls['password'].value,
-    //   }
-    //   console.log(data, 'data user ');
-
-
-    // }
 
     if (this.basicInformationForm.valid) {
       this.notificationService.showSuccess('Saved', 'Basic Information');
@@ -76,10 +61,4 @@ export class BasicInformationComponent implements OnInit {
 
     }
   }
-  // trimValue(form:FormGroup){
-  //   form.controls.forEach(element => {
-
-  //   });
-  // }
-
 }

@@ -24,9 +24,7 @@ export class GalleryComponent implements OnInit, AfterViewInit {
 
   buttonShow: boolean = true;
 
-  @ViewChildren("listofDivs", { read: TemplateRef }) listToShow!: QueryList<
-    ElementRef<HTMLDivElement>
-  >;
+  @ViewChildren("listofDivs", { read: TemplateRef }) listToShow!: QueryList< ElementRef<HTMLDivElement>>;
   carouselConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 3, md: 3, lg: 3, all: 0 },
     load: 1,
