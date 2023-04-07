@@ -39,7 +39,7 @@ $hrms-theme: mat.define-light-theme((color: (primary: $hrms-primary,
 html,
 body {
   height: 100%;
-  font-family: Roboto, "Helvetica Neue", sans-serif!important;
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
 }
 
 body {
@@ -78,4 +78,10 @@ body {
     background: rgb(86, 86, 87) !important;
     border-radius: 10px !important;
   }
-}
+
+  // ::ng-deep {
+  //   .cdk-overlay-pane {
+  //     overflow-y: auto;
+  //   }
+  // }
+} 

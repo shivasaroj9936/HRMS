@@ -18,9 +18,9 @@ import { NotificationsComponent } from "./feature-parts/notifications/notificati
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CovidHelpDeskComponent } from './feature-parts/covid-help-desk/covid-help-desk.component';
 import { CommonInputModule } from "../shared/common-input/common-input.module";
-import { CommonTextEditorModule } from "../shared/common-text-editor/common-text-editor.module";
 import { CommonTextAreaModule } from "../shared/common-text-area/common-text-area.module";
 import { CarouselModule } from "../shared/carousel/carousel.module";
+import { HelpComponent } from "./feature-parts/help/help.component";
 
 const MATERIAL = [
   MatSidenavModule,
@@ -40,6 +40,7 @@ const MATERIAL = [
     ListItemComponent,
     NotificationsComponent,
     CovidHelpDeskComponent,
+    HelpComponent
   ],
   imports: [
     CommonModule,

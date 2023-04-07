@@ -17,6 +17,9 @@ section {
         top: -25px;
         right: -24px;
         cursor: pointer;
+        &:hover{
+            color: red;
+        }
     }
 
     header {

@@ -9,6 +9,7 @@ import { AttendanceComponent } from './components/attendance/attendance.componen
 import { SubTopicsComponent } from './components/sub-topics/sub-topics.component';
 import { DetailsComponent } from './components/details/details.component';
 import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
+import { BreadcrumbModule } from 'src/app/modules/shared/breadcrumb/breadcrumb.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CommonTableModule } from 'src/app/modules/shared/common-table/common-ta
     TrainingDetailsRoutingModule,
     MatTabsModule,
     MatButtonModule,
-    CommonTableModule
+    CommonTableModule,
+    BreadcrumbModule
   ]
 })
 export class TrainingDetailsModule { }

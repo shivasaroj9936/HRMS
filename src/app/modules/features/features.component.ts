@@ -13,9 +13,9 @@ import { CovidHelpDeskComponent } from "./feature-parts/covid-help-desk/covid-he
 export class FeaturesComponent implements OnInit, AfterViewInit {
   @ViewChild("sidenav") sidenav!: MatSidenav;
   isShowing = true;
-  showSubmenu: boolean = false;
-  isExpanded = true;
-  smallWindow = false;
+  // showSubmenu: boolean = false;
+  isExpanded:boolean = true;
+  smallWindow:boolean = false;
   constructor(private observer: BreakpointObserver,private dialog:MatDialog) { }
 
   ngOnInit(): void { }

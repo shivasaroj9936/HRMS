@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MyPerformanceRoutingModule } from './my-performance-routing.module';
 import { MyPerformanceComponent } from './my-performance.component';
 import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
+import { BreadcrumbModule } from 'src/app/modules/shared/breadcrumb/breadcrumb.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/com
   imports: [
     CommonModule,
     MyPerformanceRoutingModule,
-    CommonDropdownModule
+    CommonDropdownModule,
+    BreadcrumbModule
   ]
 })
 export class MyPerformanceModule { }

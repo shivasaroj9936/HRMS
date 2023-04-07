@@ -52,6 +52,7 @@ export class GalleryComponent implements OnInit, AfterViewInit {
       maxHeight: '63vh',
       height: '100%',
       width: '100%',
+      disableClose:true
     });
   }
 }

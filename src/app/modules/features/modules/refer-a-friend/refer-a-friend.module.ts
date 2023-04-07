@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { ReferAFriendComponent } from './refer-a-friend.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-co
     MatInputModule,
     ReferAFriendRoutingModule,
     MatSelectModule,
+    MatIconModule
   ]
 })
 export class ReferAFriendModule { }

@@ -31,11 +31,15 @@ section {
   
   .close {
     position: absolute;
-    top: -24px;
-    right: -24px;
-    background: rgb(97, 84, 84);
-    color: #fff;
+    top: -21px;
+    right: -19px;
+    // background: rgb(97, 84, 84);
+    // color: #fff;
     cursor: pointer;
     border: none;
+    &:hover{
+      color: red;
+    }
+
   }
 }

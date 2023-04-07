@@ -59,9 +59,11 @@ export class TrainingDialogComponent implements OnInit {
   onSubmit() {
     if(this.feedbackForm.valid){
       this.notificationService.showSuccess('Saved','Feedback');
-        
       this.dialogRef.close();
       this.feedbackForm.reset();
+    }
+    else{
+      this.notificationService.showError('All Field Requierd','Feedback');
 
     }
     console.log(this.feedbackForm);

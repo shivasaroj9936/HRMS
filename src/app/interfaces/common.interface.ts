@@ -4,6 +4,9 @@ export interface IRoute {
   path: string;
   fullUrl: string;
 }
+export interface route {
+  [index: string] : Array <{ key: string; value: string; }>;
+}
 
 export interface SideNavItem {
   title: string;
@@ -11,6 +14,7 @@ export interface SideNavItem {
   route?: string;
   isActive: boolean;
   options?: Array<any>;
+  subMenuClicked?:boolean
 }
 
 export const sideNavList: SideNavItem[] = [
@@ -25,6 +29,7 @@ export const sideNavList: SideNavItem[] = [
   {
     title: "Enterpreneurship Program",
     icon: "person",
+    subMenuClicked:false,
     options: [
       {
         subTitle: "Explore",
@@ -37,6 +42,7 @@ export const sideNavList: SideNavItem[] = [
   {
     title: "My Links",
     icon: "grid_view",
+    subMenuClicked:false,
     options: [
       {
         subTitle: "Insurance Verification Details",
@@ -59,6 +65,7 @@ export const sideNavList: SideNavItem[] = [
   {
     title: "Finance",
     icon: "payments",
+    subMenuClicked:false,
     options: [
       {
         subTitle: "Salary Slip",

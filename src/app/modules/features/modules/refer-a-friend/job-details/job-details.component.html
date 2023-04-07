@@ -43,8 +43,7 @@
                 <label class="bonus_info">Referral bonus will be
                     <strong><span class="text_primary">Rs. 2000</span> </strong> for more
                     information read
-                    <strong><span class="tnc text_primary" data-toggle="modal" data-target="#tncModal">Terms &amp;
-                            Conditions</span></strong>
+                    <strong><span class="tnc text_primary" (click)="termAndConditionsDialog()" >Terms &amp; Conditions</span></strong>
                 </label>
             </p>
         </div>
@@ -91,10 +90,6 @@
             <div class="jd_descp">
                 <ul>
                     <li *ngFor="let item of job.job_qualification"> {{item}}</li>
-
-                    <!-- <li>Education: Graduate/Post Graduate</li>
-                    <li>Skills : Blockchain, ethereium, javaScript</li>
-                    <li>Abilities: To Write Clean &amp; reusable code</li> -->
                 </ul>
             </div>
         </div>

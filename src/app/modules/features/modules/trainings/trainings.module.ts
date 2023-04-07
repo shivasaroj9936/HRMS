@@ -14,7 +14,6 @@ import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation
 import { CancelEnrollmentDialogComponent } from './cancel-enrollment-dialog/cancel-enrollment-dialog.component';
 import { RequestTrainingDialogComponent } from './request-training-dialog/request-training-dialog.component';
 import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/common-dropdown.module';
-import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CommonTextAreaModule } from 'src/app/modules/shared/common-text-area/common-text-area.module';
 import { CommonInputModule } from 'src/app/modules/shared/common-input/common-input.module';
@@ -41,7 +40,7 @@ import { CommonInputModule } from 'src/app/modules/shared/common-input/common-in
     CommonDropdownModule,
     MatDialogModule,
     CommonTextAreaModule,
-    CommonInputModule
+    CommonInputModule,
   ]
 })
 export class TrainingsModule { }

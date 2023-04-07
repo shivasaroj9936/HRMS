@@ -39,6 +39,7 @@ export class AppreciationComponent implements OnInit,AfterViewInit {
       // maxHeight: '55vh',
       // height: '100%',
       // width: '100%',
+      disableClose:true
     });
   }
 

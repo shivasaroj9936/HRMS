@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { JobOpening, JobOpeningList } from '../../dashboard/interfaces/interfaces';
+import { TermsAndConditionsComponent } from '../terms-and-conditions/terms-and-conditions.component';
 
 @Component({
   selector: 'app-job-details',
@@ -29,7 +31,7 @@ export class JobDetailsComponent implements OnInit {
     'Skills : Blockchain, ethereium, javaScript',
     'Abilities: To Write Clean &amp; reusable code'
   ]
-  constructor(private _actRoute: ActivatedRoute) { }
+  constructor(private _actRoute: ActivatedRoute,private dialog:MatDialog) { }
 
   ngOnInit(): void {
     this.jobId = this._actRoute.snapshot.params.jobId;
@@ -41,6 +43,9 @@ export class JobDetailsComponent implements OnInit {
     });
     console.log(this.job);
 
+  }
+  termAndConditionsDialog(){
+    this.dialog.open(TermsAndConditionsComponent,{})
   }
 
 }
