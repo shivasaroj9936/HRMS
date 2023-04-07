@@ -15,7 +15,6 @@ import { NotificationService } from 'src/app/services/notification-service/notif
 export class MyDsrComponent implements OnInit {
 
   toggle = false;
-  leaveTypes: string[] = ['Planned Leave', 'Privileged Leave', 'Emergency Leave', 'Short Leave', 'All Reamaining Leave']
   dsrForm!: FormGroup;
   filterForm!: FormGroup;
   noWork = false;
@@ -42,6 +41,11 @@ export class MyDsrComponent implements OnInit {
     date: '10/04/2022', logged_hr: 'pending', level_1: '	Suyash Saxena(AI057)', level_2: 'HR (Human Resourse)'
   }
   ]
+
+  submissionStatus:string[]=['All','Submitted','Due'];
+  projects:string[]=['All','Trainee Project Angular'];
+  finalApprovalStatus:string[]=['All','Pending','Approved','Rejected']
+  hours:string[]=['Hourse','Less than 5 Hourse','Greater than 5 and Less than equal to 8','Greater than 8','Greater than 10']
   constructor(private formBuilder: FormBuilder, private _formService: FormService, private notificationService: NotificationService, private datePipe: DatePipe) {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
 

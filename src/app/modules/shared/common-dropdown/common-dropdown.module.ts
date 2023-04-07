@@ -6,6 +6,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation-error.module';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -19,8 +20,8 @@ import { ValidationErrorModule } from 'src/app/pipes/validation-error/validation
     MatSelectModule,
     MatInputModule,
     ReactiveFormsModule,
-    ValidationErrorModule
-
+    ValidationErrorModule,
+    MatIconModule
     
   ],
   exports:[CommonDropdownComponent]

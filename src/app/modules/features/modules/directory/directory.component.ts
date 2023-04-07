@@ -42,7 +42,7 @@ export class DirectoryComponent implements OnInit {
   let name =this.getControl('name').value.toLowerCase();
   let newData = this.data.filter((item)=>{
     if(tech=='all'){
-      return item.EMP_NAME.toLowerCase() == name
+      return item.EMP_NAME.toLocaleLowerCase().includes( name.toLowerCase());
     }else{
       return (item.EMP_NAME.toLowerCase() == name && item.EMP_TECHNOLOGY.toLowerCase() == tech);
 

@@ -8,7 +8,7 @@
 
 section {
     padding: 0px !important;
-    
+
     .wraper {
         background-color: #fff;
         border-radius: 11px;
@@ -36,9 +36,10 @@ section {
             }
 
 
-            .row3 {
+            .exprience {
                 display: grid;
                 grid-template-columns: auto auto;
+                gap: 1.2rem;
 
                 .inputs {
                     display: grid;
@@ -59,27 +60,50 @@ section {
 }
 
 
-section {
-    @media only screen and (max-width: 1500px) {
-        form {
-            .row3 {
-                grid-template-columns: auto;
+@media only screen and (max-width: 1500px) {
+        section {
+            .wraper{
+
+                form {
+                    .exprience {
+                        
+                        grid-template-columns: auto;
+                    }
             }
         }
     }
+}
 
-    @media only screen and (max-width: 750px) {
+
+@media only screen and (max-width: 780px) {
+    section {
+        .wraper{
+
         form {
             .row {
                 grid-template-columns: auto;
             }
 
-            .row3 {
+            .exprience {
                 .inputs {
                     grid-template-columns: auto;
 
                 }
-            }
+            }}
         }
     }
+}
+
+@media only screen and (max-width: 1270px ) and (min-width: 1180px ) {
+    section {
+        .wraper{
+
+            form {
+                .row {
+                    
+                    grid-template-columns: auto auto;
+                }
+        }
+    }
+}
 }

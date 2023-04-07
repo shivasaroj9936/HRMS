@@ -57,22 +57,35 @@ section {
                         font-size: 16px;
                     }
                 }
+
                 .actions {
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
-                    
+
                     .save {
-                        background-color:#3246d3;
+                        background-color: #3246d3;
                         color: #fff;
                     }
-                    
+
                     .cancel {
-                        background-color:#3246d3;
+                        background-color: #3246d3;
                         color: #fff;
                         margin-right: 1rem;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    section {
+        .container_wraper {
+            display: grid;
+            grid-template-columns: auto;
+            .left{
+                display: none;
             }
         }
     }

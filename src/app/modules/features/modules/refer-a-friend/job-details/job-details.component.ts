@@ -45,7 +45,9 @@ export class JobDetailsComponent implements OnInit {
 
   }
   termAndConditionsDialog(){
-    this.dialog.open(TermsAndConditionsComponent,{})
+    this.dialog.open(TermsAndConditionsComponent,{
+      disableClose:true
+    })
   }
 
 }
