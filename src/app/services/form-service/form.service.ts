@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { Validators } from "@angular/forms";
+import { Injectable, ViewChild } from "@angular/core";
+import { FormGroupDirective, Validators } from "@angular/forms";
 import { PATTERN } from "src/app/constants/pattern";
 import { VALIDATION_CRITERIA } from "src/app/constants/validation-criteria";
 
@@ -7,6 +7,7 @@ import { VALIDATION_CRITERIA } from "src/app/constants/validation-criteria";
   providedIn: "root",
 })
 export class FormService {
+
   constructor() { }
 
   VALIDATION = {
@@ -80,7 +81,7 @@ export class FormService {
       return [false, compose]
     }
     return [null, compose];
-  }
+  } 
 
 
 }

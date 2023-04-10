@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NoSpecialCharectorModule } from 'src/app/directives/no-special-charector/no-special-charector.module';
 import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoid-first-space.module';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -21,7 +22,8 @@ import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoi
     ReactiveFormsModule,
     ValidationErrorModule,
     NoSpecialCharectorModule,
-    AvoidFirstSpaceModule
+    AvoidFirstSpaceModule,
+    MatIconModule
   ],
   exports:[CommonInputComponent]
 })

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -6,14 +6,22 @@ import { FormControl } from '@angular/forms';
   templateUrl: './common-text-editor.component.html',
   styleUrls: ['./common-text-editor.component.scss']
 })
-export class CommonTextEditorComponent implements OnInit {
+export class CommonTextEditorComponent implements OnInit,AfterContentChecked {
   @Input() inputFormControl!:FormControl ;
   @Input() label!: string;
   @Input() labelStyle!: string;
 
-  constructor() { }
+  constructor(private cdr: ChangeDetectorRef) { }
+
 
   ngOnInit(): void {
   }
+  ngAfterContentChecked() {
+    this.cdr.detectChanges();
+  }
+
+
+
+
 
 }

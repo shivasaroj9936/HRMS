@@ -9,7 +9,7 @@
                   
                      <app-common-input directiveName="noSpecialChar" [labelStyle]="'dark'" [label]="labelMessage.FIRST_NAME" [inputFormControl]="getControl('first_name')"></app-common-input>
                      <app-common-input [labelStyle]="'dark'" [label]="labelMessage.LAST_NAME" [inputFormControl]="getControl('last_name')"></app-common-input>
-                     <app-common-input [labelStyle]="'dark'" [label]="labelMessage.DATE_OF_BIRTH" [inputFormControl]="getControl('dob')"></app-common-input>
+                     <app-common-date-picker  [placeHolder]="'DOB'"  [label]="labelMessage.DATE_OF_BIRTH" [inputFormControl]="getControl('dob')">"></app-common-date-picker>
                      <app-common-dropdown [label]="labelMessage.GENDER" [data]="genderValue" [dropdownDownControlName]="getControl('gender')" ></app-common-dropdown>
                      <app-common-dropdown [label]="labelMessage.MARITAL_STATUS" [data]="maritalStatusValue" [dropdownDownControlName]="getControl('marital_status')" ></app-common-dropdown>
                      <app-common-input [labelStyle]="'dark'" [label]="labelMessage.CONTACT" [inputFormControl]="getControl('contact_number')"></app-common-input>

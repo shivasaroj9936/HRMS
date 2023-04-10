@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormService } from 'src/app/services/form-service/form.service';
@@ -12,7 +12,7 @@ import { NotificationService } from 'src/app/services/notification-service/notif
   providers: [DatePipe]
 
 })
-export class MyDsrComponent implements OnInit {
+export class MyDsrComponent implements OnInit  ,AfterContentChecked{
 
   toggle = false;
   dsrForm!: FormGroup;
@@ -46,7 +46,10 @@ export class MyDsrComponent implements OnInit {
   projects:string[]=['All','Trainee Project Angular'];
   finalApprovalStatus:string[]=['All','Pending','Approved','Rejected']
   hours:string[]=['Hourse','Less than 5 Hourse','Greater than 5 and Less than equal to 8','Greater than 8','Greater than 10']
-  constructor(private formBuilder: FormBuilder, private _formService: FormService, private notificationService: NotificationService, private datePipe: DatePipe) {
+  constructor(private formBuilder: FormBuilder, private _formService: FormService,
+     private notificationService: NotificationService, private datePipe: DatePipe,
+     private cdr:ChangeDetectorRef
+     ) {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
 
   }
@@ -115,6 +118,9 @@ export class MyDsrComponent implements OnInit {
       this.dsrForm.reset();
       this.noWork = false
     }
+  }
+  ngAfterContentChecked() {
+    this.cdr.detectChanges();
   }
 
 }

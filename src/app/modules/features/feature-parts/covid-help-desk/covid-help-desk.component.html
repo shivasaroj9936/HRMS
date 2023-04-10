@@ -22,7 +22,7 @@
                         Concerned person will get in touch with you on the earliest.
                     </p>
                 </div>
-                <form [formGroup]="covidHelpForm">
+                <form [formGroup]="covidHelpForm" (ngSubmit)="save()">
 
                     <app-common-input [labelStyle]="'light'" [label]="'Title'"
                         [inputFormControl]="getControl('title')"></app-common-input>

@@ -172,39 +172,44 @@ section {
     flex-direction: column;
     padding: 0;
     gap: 0;
-    .header{
+
+    .header {
       display: flex;
       align-items: center;
-      border-bottom: 1px solid #f3f7fc; 
+      border-bottom: 1px solid #f3f7fc;
       padding: 11px 25px 11px 15px;
-      .text{
+
+      .text {
         background-color: #26B4FF;
-         color: #fff;
-         padding: 0.5rem 2rem;
-         font-size: 0.89rem;
-         margin: 0;
-         border-radius: 5px;
+        color: #fff;
+        padding: 0.5rem 2rem;
+        font-size: 0.89rem;
+        margin: 0;
+        border-radius: 5px;
       }
     }
-    .search_panel_right{
+
+    .search_panel_right {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0 1rem;
 
     }
-    .search_panel_right h2{
-        color: #494949;
-        font-family: 'Segoe UI';
-        font-weight: 700;
-        font-size: 1.5rem;
-      }
+
+    .search_panel_right h2 {
+      color: #494949;
+      font-family: 'Segoe UI';
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
 
     .content_body {
       display: grid;
       grid-template-columns: auto auto auto auto;
       gap: 2rem;
-      margin:5px 1rem;
+      margin: 5px 1rem;
+
       .cal_grid_panel {
         border: 1px solid #E9E9E9;
         border-radius: 10px;
@@ -251,12 +256,14 @@ section {
 
           .cal_awards_wrap {
             width: 70%;
+
             .count {
               display: flex;
               // justify-content: space-between;
               align-items: center;
               margin: 0 0 6px 0;
-              .num{
+
+              .num {
                 margin-left: 5px;
               }
             }
@@ -268,14 +275,23 @@ section {
             .award {
               color: #F7C417;
             }
-            .cal_arrow{
+
+            .cal_arrow {
               position: absolute;
               right: 30px;
               bottom: 32px;
               font-size: 2rem;
               transition: right 0.3s 0.05s;
-              :hover{
-                transform-origin: right 50%;
+
+        
+            }
+          }
+          &:hover {
+            .cal_awards_wrap{
+
+              .cal_arrow{
+                transition: 2s;
+                right: 20px;
               }
             }
           }

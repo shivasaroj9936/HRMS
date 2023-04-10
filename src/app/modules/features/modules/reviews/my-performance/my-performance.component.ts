@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { MYPERFORMACE_VALUE } from 'src/app/interfaces/common.interface';
-
+import {RatingDialogComponent} from 'src/app/modules/features/modules/reviews/my-performance/components/rating-dialog/rating-dialog.component'
 @Component({
   selector: 'app-my-performance',
   templateUrl: './my-performance.component.html',
@@ -20,9 +21,14 @@ export class MyPerformanceComponent implements OnInit {
   
   
 
-  constructor() { }
+  constructor(private dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  openRatingDialog(){
+    this.dialog.open(RatingDialogComponent,{
+
+    })
+  }
 }

@@ -32,7 +32,7 @@ export class QualificationEditDailogComponent implements OnInit , AfterContentCh
   }
 
   ngOnInit(): void {
-    console.log(this.data);
+    console.log(this.data,'fffffffff');
 
     this.createForm()
     this.setValue();
@@ -41,7 +41,7 @@ export class QualificationEditDailogComponent implements OnInit , AfterContentCh
   createForm() {
     this.qualificationForm = this.formBuilder.group({
       school: this._formService.getControl("school"),
-      education: this._formService.getControl("last_name"),
+      education: this._formService.getControl("name"),
       time_from: this._formService.getControl("time_from"),
       time_to: this._formService.getControl("time_to"),
       language: this._formService.getControl("language"),

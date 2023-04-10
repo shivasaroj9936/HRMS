@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { AbstractControl, FormControl } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { AbstractControl, FormControl } from '@angular/forms';
   templateUrl: './common-text-area.component.html',
   styleUrls: ['./common-text-area.component.scss']
 })
-export class CommonTextAreaComponent implements OnInit {
+export class CommonTextAreaComponent implements OnInit ,AfterContentChecked{
   @Input() inputFormControl!:FormControl ;
   @Input() label!: string;
   @Input() data:any;
@@ -17,9 +17,12 @@ export class CommonTextAreaComponent implements OnInit {
   @Input() row:number=4;
   @Input() maxLength:number=200;
 
-  constructor() { }
+  constructor(private cdr: ChangeDetectorRef) { }
+
 
   ngOnInit(): void {
   }
-
+  ngAfterContentChecked() {
+    this.cdr.detectChanges();
+  }
 }

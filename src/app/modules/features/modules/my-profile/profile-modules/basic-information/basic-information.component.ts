@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormControlName, FormGroup } from '@angular/forms';
+import { AfterContentChecked, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import {  FormBuilder,  FormGroup, FormGroupDirective } from '@angular/forms';
 import { slideInRight } from 'src/animations/slide-in-right';
 import { BASIC_INFORMATION, FORM_LABEL, GENDER_INPUT_DROPDOWN, MARITAL_DROPDOWN } from 'src/app/constants/ui-texts/dashboard-card';
 import { FormService } from 'src/app/services/form-service/form.service';
@@ -11,14 +11,15 @@ import { NotificationService } from 'src/app/services/notification-service/notif
   styleUrls: ['./basic-information.component.scss'],
   animations: [slideInRight]
 })
-export class BasicInformationComponent implements OnInit {
+export class BasicInformationComponent implements OnInit,AfterContentChecked {
   uiMessage = BASIC_INFORMATION
   labelMessage = FORM_LABEL
   genderValue = GENDER_INPUT_DROPDOWN
   maritalStatusValue = MARITAL_DROPDOWN
   basicInformationForm!: FormGroup;
+  @ViewChild(FormGroupDirective) formGroupDirective!: FormGroupDirective;
 
-  constructor(private formBuilder: FormBuilder, private _formService: FormService, private notificationService: NotificationService) {
+  constructor(private formBuilder: FormBuilder, private _formService: FormService, private notificationService: NotificationService,private cdr: ChangeDetectorRef) {
 
   }
 
@@ -52,13 +53,14 @@ export class BasicInformationComponent implements OnInit {
 
     if (this.basicInformationForm.valid) {
       this.notificationService.showSuccess('Saved', 'Basic Information');
-      this.basicInformationForm.reset();
-      this.basicInformationForm.clearValidators();
-      // this.basicInformationForm.();
-
+      console.log(this.basicInformationForm);
+      
+      this.formGroupDirective.resetForm()
     } else {
-      // this.basicInformationForm.markAllAsTouched();
 
     }
+  }
+  ngAfterContentChecked() {
+    this.cdr.detectChanges();
   }
 }

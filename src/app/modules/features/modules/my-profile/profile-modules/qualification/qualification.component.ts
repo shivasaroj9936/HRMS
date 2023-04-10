@@ -1,10 +1,8 @@
 import { DatePipe } from "@angular/common";
-import { Component, OnInit } from "@angular/core";
+import { AfterContentChecked, ChangeDetectorRef, Component, OnInit } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
 import { MatTableDataSource } from "@angular/material/table";
-import { Observable } from "rxjs";
-import { map, startWith } from "rxjs/operators";
 import { slideInRight } from "src/animations/slide-in-right";
 import {
   BASIC_INFORMATION,
@@ -23,7 +21,7 @@ import { QualificationEditDailogComponent } from "./components/qualification-edi
   providers: [DatePipe],
   animations: [slideInRight],
 })
-export class QualificationComponent implements OnInit {
+export class QualificationComponent implements OnInit,AfterContentChecked {
   myControl = new FormControl("");
   uiMessage = BASIC_INFORMATION;
   labelMessage = FORM_LABEL;
@@ -269,7 +267,8 @@ export class QualificationComponent implements OnInit {
     private _formService: FormService,
     private datePipe: DatePipe,
     private notficationService: NotificationService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private cdr: ChangeDetectorRef
   ) {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
   }
@@ -294,12 +293,11 @@ export class QualificationComponent implements OnInit {
     return this.qualificationForm.controls[control];
   }
 
-  async onSubmit() {
+  onSubmit() {
+    console.log(this.dataSource);
+    
     if (this.qualificationForm.valid) {
-      this.qualificationForm.value["time"] = this.datePipe.transform(
-        this.getControl("time_from").value - this.getControl("time_to").value,
-        "yyyy-MM-dd"
-        );
+      this.qualificationForm.value["time"] = this.datePipe.transform( this.getControl("time_from").value - this.getControl("time_to").value, "yyyy-MM-dd" );
         this.qualificationForm.value["emp_name"] = "Shiva Saroj(AI 1580)";
         this.qualificationForm.value["email"] = "shiva.saroj@appinventiv.com";
         this.qualificationForm.value['action']=[  {    btnStyle: "delete", icon: "delete", type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },  ];
@@ -310,22 +308,21 @@ export class QualificationComponent implements OnInit {
 
       console.log(this.qualificationForm.value);
       this.notficationService.showSuccess("Added", "Qualification");
-      // this.qualificationForm.;
-      // this.createForm();
+
     }
   }
 
   editQualification( index:number): void {
     const dialogRef = this.dialog.open(QualificationEditDailogComponent, {
-      data: this.Table_DATA[index],
+      data: this.dataSource.data[index],
       disableClose: true,
     });
 
     dialogRef.afterClosed().subscribe((result: any) => {
       if(result){
-        this.Table_DATA[index]={...this.Table_DATA[index],...result}
-        this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
- 
+        this.dataSource.data[index]={...this.dataSource.data[index],...result}
+        this.dataSource._updateChangeSubscription();
+        
         
       }
     });
@@ -341,8 +338,8 @@ export class QualificationComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result: string) => {
       console.log("The dialog was closed", result);
       if (result) {
-        this.Table_DATA.splice(index, 1);
-        this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+        this.dataSource.data.splice(index, 1);
+        this.dataSource._updateChangeSubscription();
 
       }
     });
@@ -357,5 +354,8 @@ export class QualificationComponent implements OnInit {
     if (event.item.btnStyle == "delete") {
       this.deleteConfirmation(event.index);
     }
+  }
+  ngAfterContentChecked() {
+    this.cdr.detectChanges();
   }
 }

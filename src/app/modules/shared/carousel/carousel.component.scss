@@ -6,6 +6,7 @@
   height: 25px;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
 }
 
 
@@ -76,6 +77,7 @@
 }
 
 .myPoint li {
+  cursor: pointer;
   display: inline-block;
   border-radius: 50%;
   background: #D6D6D6;

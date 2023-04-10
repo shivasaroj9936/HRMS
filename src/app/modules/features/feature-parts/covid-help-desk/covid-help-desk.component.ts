@@ -5,9 +5,10 @@ import {
   OnInit,
   QueryList,
   TemplateRef,
+  ViewChild,
   ViewChildren,
 } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, FormGroupDirective } from "@angular/forms";
 import { MatDialogRef } from "@angular/material/dialog";
 import { NguCarouselConfig } from "@ngu/carousel";
 import { FormService } from "src/app/services/form-service/form.service";
@@ -32,6 +33,7 @@ export class CovidHelpDeskComponent implements OnInit, AfterViewInit {
   ];
 
   covidHelpForm!: FormGroup;
+  @ViewChild(FormGroupDirective) formGroupDirective!: FormGroupDirective;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -41,9 +43,7 @@ export class CovidHelpDeskComponent implements OnInit, AfterViewInit {
 
   ) {}
 
-  @ViewChildren("listofDivs", { read: TemplateRef }) listToShow!: QueryList<
-    ElementRef<HTMLDivElement>
-  >;
+  @ViewChildren("listofDivs", { read: TemplateRef }) listToShow!: QueryList< ElementRef<HTMLDivElement>>;
   carouselConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
     load: 1,
@@ -80,11 +80,9 @@ export class CovidHelpDeskComponent implements OnInit, AfterViewInit {
   save() {
     if (this.covidHelpForm.valid) {
       this.notificationService.showSuccess("Saved", "Your Information");
-      this.covidHelpForm.reset();
-      this.covidHelpForm.clearValidators();
-      // this.covidHelpForm.();
+      this.formGroupDirective.resetForm();
+      this.dialogRef.close();
     } else {
-      // this.covidHelpForm.markAllAsTouched();
     }
   }
 }

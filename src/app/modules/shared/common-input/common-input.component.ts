@@ -19,7 +19,8 @@ export class CommonInputComponent implements OnInit {
   @Input() labelStyle:any;
   @Input() maxLength:number=200;
   @Input() directiveName!:string;
-
+  @Input() passwordType=false;
+  hide=true;
 
 
   constructor() { }

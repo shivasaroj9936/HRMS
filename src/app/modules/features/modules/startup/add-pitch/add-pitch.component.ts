@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MY_PITCH } from 'src/app/constants/routes';
 import { FormService } from 'src/app/services/form-service/form.service';
 import { ADD_PITCH } from '../../dashboard/interfaces/interfaces';
 
@@ -13,7 +15,9 @@ export class AddPitchComponent implements OnInit {
   addPitchForm!: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private _formService: FormService,) { }
+    private _formService: FormService,
+    private _router:Router
+    ) { }
 
   ngOnInit(): void {
     this.createForm();
@@ -45,4 +49,7 @@ export class AddPitchComponent implements OnInit {
 
   }
   onCancel() { }
+  toMyPitch(){
+    this._router.navigate([MY_PITCH.fullUrl] )
+  }
 }

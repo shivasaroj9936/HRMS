@@ -16,6 +16,7 @@ import { DigitOnlyModule } from 'src/app/directives/digit-only/digit-only.module
 import { AvoidFirstSpaceModule } from 'src/app/directives/avoid-first-space/avoid-first-space.module';
 import { CommonInputModule } from 'src/app/modules/shared/common-input/common-input.module';
 import { CommonTextAreaModule } from 'src/app/modules/shared/common-text-area/common-text-area.module';
+import { CommonDatePickerModule } from 'src/app/modules/shared/common-date-picker/common-date-picker.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CommonTextAreaModule } from 'src/app/modules/shared/common-text-area/co
     DigitOnlyModule,
     AvoidFirstSpaceModule,
     CommonInputModule,
-    CommonTextAreaModule
+    CommonTextAreaModule,
+    CommonDatePickerModule
   ]
 })
 export class BasicInformationModule { }

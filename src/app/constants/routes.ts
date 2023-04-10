@@ -145,6 +145,12 @@ export const ADD_PITCH: IRoute = {
     return `/${STARTUP.fullUrl}/${this.path}`;
   },
 };
+export const MY_PITCH: IRoute = {
+  path: "my-pitch",
+  get fullUrl(): string {
+    return `/${STARTUP.fullUrl}/${this.path}`;
+  },
+};
 export const FINANCE: IRoute = {
   path: "finance",
   get fullUrl(): string {
