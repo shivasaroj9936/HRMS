@@ -9,7 +9,6 @@ section {
     .heading {
       color: var(--header-text-color);
       font-size: 1.3rem;
-      font-weight: 600;
     }
   }
 
@@ -43,7 +42,6 @@ section {
         .profile_info {
           .name {
             h3 {
-              font-family: "Segoe UI";
               font-size: 1rem;
               font-weight: 600 !important;
               margin: 0;
@@ -53,7 +51,6 @@ section {
           .basic_info {
             .login_details {
               strong {
-                font-family: "Segoe UI";
               }
 
               .tech {
@@ -82,8 +79,7 @@ section {
       }
 
       .award_honors {
-        // display: grid;
-        // grid-template-columns: 65% 35%;
+
         display: flex;
         justify-content: space-between;
         gap: 1rem;
@@ -199,8 +195,7 @@ section {
 
     .search_panel_right h2 {
       color: #494949;
-      font-family: 'Segoe UI';
-      font-weight: 700;
+      font-weight: 500;
       font-size: 1.5rem;
     }
 

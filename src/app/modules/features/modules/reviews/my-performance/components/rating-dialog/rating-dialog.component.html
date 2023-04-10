@@ -1,75 +1,43 @@
-<div class="modal-content" id="skip_rating">
-    <div class="card cal__popup">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="cal__nav__wrapper p_name_sec" id="arrow__anim">
-    
-                        <ul>
-                            <li style="visibility:hidden" id="modal_pre_li">
-                                <div class="arrow arrow--left" id="modal_pre" data-count="1" data-total="1">
-                                    Previous
-                                    <span></span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="head__panel">
-                                    <span>PROJECT NAME: <b>Trainee Project Angular</b></span>
-                                    <div class="reviewed_by">
-                                        REVIEWED BY: <span><b>Rabban Ahmad (Tech Lead)</b></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li style="visibility:hidden" id="modal_next_li">
-                                <div class="arrow arrow--right" id="modal_next" data-count="2" data-total="1">
-                                    Next
-                                    <span></span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="flexrow_wrap">
-                <div class="hounour_wrap">
-                    <h6>HONOURS</h6>
-                    <span>N/A</span>            </div>
-    
-                <div class="flex__row">
-                                    <div class="rating__count">
-                        <span>4.2</span>
-                    </div>
-                                        <div class="rating_sum_head">
-                            <span>Technical Skills</span>
-                            <b>4.0</b>
-                        </div>
-                                        <div class="rating_sum_head">
-                            <span>Ownership of Delivery</span>
-                            <b>4.0</b>
-                        </div>
-                                        <div class="rating_sum_head">
-                            <span>Teamwork</span>
-                            <b>4.0</b>
-                        </div>
-                                        <div class="rating_sum_head">
-                            <span>Process Adherence</span>
-                            <b>5.0</b>
-                        </div>
-                                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="suggestion_panel">
-                        <div class="suggestion__list">
-                            <div class="flex_col">
-                                                            <!-- What went Good? END -->
-    
-                                                        </div>
-                            <div class="flex_col">
-                                                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section>
+  <mat-icon mat-dialog-close class="close" >close</mat-icon>
+  <div class="main_wraper">
+    <div class="header">
+      <div class="reviewed_by">
+        PROJECT NAME: <span class="target_text">Trainee Project Angular </span>
+      </div>
+      <div class="reviewed_by">
+        REVIEWED BY: <span class="target_text"> Rabban Ahmad (Tech Lead)</span>
+      </div>
+    </div>
+    <div class="main">
+      <div class="hounour_wrap">
+        <h4>HONORS</h4>
+        <!-- <ul></ul> -->
+        <span>N/A</span>
+      </div>
+      <div class="flex_row">
+        <div class="rating_sum_head">
+          <b class="number total">{{((data.technical_rating+data.ownership_rating+
+            data.teamWork_rating+data.process_rating)/4)|number :'1.1-2'}}</b>
+
         </div>
-    </div></div>
+        <div class="rating_sum_head">
+          <span class="tech">Technical Skills</span>
+          <b class="number">{{data.technical_rating|number :'1.1-2'}}</b>
+        </div>
+        <div class="rating_sum_head">
+          <span class="tech">Ownership of Delivery</span>
+          <b class="number">{{data.ownership_rating|number :'1.1-2'}}</b>
+        </div>
+        <div class="rating_sum_head">
+          <span class="tech">Teamwork</span>
+          <b class="number">{{data.teamWork_rating|number :'1.1-2'}}</b>
+        </div>
+        <div class="rating_sum_head">
+          <span class="tech">Process Adherence</span>
+          <b class="number">{{data.process_rating|number :'1.1-2'}}</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

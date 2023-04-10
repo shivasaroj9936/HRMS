@@ -1,6 +1,6 @@
 <section>
     <div class="breadcrumb">
-<app-breadcrumb [breadcrumb]="'my-performance'"></app-breadcrumb>
+    <app-breadcrumb [breadcrumb]="'my-performance'"></app-breadcrumb>
 
     </div>
     <div class="header">
@@ -42,7 +42,9 @@
         <div class="right">
             <div class="flex_panel">
                 <div class="rating_count">
-                    <span class="number">5.0</span>
+                    <span class="number ">{{((performanceValue.tech_total+performanceValue.ownership_total+performanceValue.teamwork_total
+                        +performanceValue.Process_total
+                        )/4)|number :'1.1-2'}}</span>
                 </div>
                 <div class="cal_nav_wrapper">
                     <span class="cal_date"> {{'Jan 2021 - TILL NOW'}}</span>
@@ -50,67 +52,68 @@
             </div>
             <div class="flex_row">
                 <div class="rating_sum_head">
-                    <span class="tech">Technical Skills</span>
-                    <b class="number">5.0</b>
+                    <span class="tech">{{performanceValue.TECHNICAL_LABEL|titlecase}}</span>
+                    <b class="number ">{{performanceValue.tech_total|number :'1.1-2'}}</b>
                 </div>
                 <div class="rating_sum_head">
-                    <span class="tech">Technical Skills</span>
-                    <b class="number">5.0</b>
+                    <span class="tech">{{performanceValue.OWNERSHIP_LABEL|titlecase}}</span>
+                    <b class="number">{{performanceValue.ownership_total|number :'1.1-2'}}</b>
                 </div>
                 <div class="rating_sum_head">
-                    <span class="tech">Technical Skills</span>
-                    <b class="number">5.0</b>
+                    <span class="tech">{{performanceValue.TEAMWORK_LABEL|titlecase}}</span>
+                    <b class="number">{{performanceValue.teamwork_total|number :'1.1-2'}}</b>
                 </div>
                 <div class="rating_sum_head">
-                    <span class="tech">Technical Skills</span>
-                    <b class="number">5.0</b>
+                    <span class="tech"> {{performanceValue.PROCESS_LABEL|titlecase}}</span>
+                    <b class="number ">{{performanceValue.Process_total|number :'1.1-2'}}</b>
                 </div>
             </div>
         </div>
     </div>
     <div class="main_wraper dashboard_card">
         <div class="header">
-            <h3 class="text">Monthly Rating</h3>
+            <h3 class="text">{{performanceValue.button|titlecase}}</h3>
         </div>
         <div class="search_panel_right">
             <div class="head_panel">
-                <h2>Monthly Performance Calendar</h2>
+                <h2> {{performanceValue.calendar|titlecase}}</h2>
             </div>
             <div class="head_panel_search">
-                <app-common-dropdown [label]="'Select Year :'" [dropdownDownControlName]="yearFormControl" [data]="years"></app-common-dropdown>
+                <app-common-dropdown [label]="performanceValue.select_year" [dropdownDownControlName]="yearFormControl" [data]="years"></app-common-dropdown>
             </div>
+
         </div>
         <div class="content_body">
-            <ng-container *ngFor="let item of items">
+            <ng-container *ngFor="let item of reviewData?.monthlyRating">
                 <div class="cal_grid_panel">
-                    <ng-container *ngIf="0">
+                    <ng-container *ngIf="!item.isRating">
 
                         <div class="no_data">
-                            <span class="month_name">June</span>
+                            <span class="month_name">{{item?.month|titlecase}}</span>
                         </div>
                     </ng-container>
-                    <ng-container *ngIf="10">
+                    <ng-container *ngIf="item?.isRating">
 
-                        <div class="data">
+                        <div class="data" (click)="openRatingDialog(item)">
                             <div class="flex_panel">
-                                <span class="month_name">June</span>
-                                <span class="month_rate">4.2</span>
+                                <span class="month_name">{{item?.month|titlecase}}</span>
+                                <span class="month_rate">{{item.rating|number :'1.1-2'}}</span>
 
                             </div>
                             <div class="cal_awards_wrap">
                                 <div class="count award">
                                     <span>
-                                        AWARDS :
+                                        {{item.award_title|titlecase}} 
                                     </span>
-                                    <span class="num"> 0 </span>
+                                    <span class="num"> {{item.Awards|number :'1.1-2'}} </span>
                                 </div>
                                 <div class="count honour">
                                     <span>
-                                        HONOURS :
+                                        {{item.honour_title|titlecase}}
                                     </span>
-                                    <span class="num"> 0 </span>
+                                    <span class="num"> {{item.Honour|number :'1.1-2'}} </span>
                                 </div>
-                                <span class="cal_arrow" (click)="openRatingDialog()">
+                                <span class="cal_arrow" >
                                     &gt;
                                 </span>
                             </div>

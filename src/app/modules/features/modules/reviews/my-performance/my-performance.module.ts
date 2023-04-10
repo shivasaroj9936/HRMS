@@ -7,6 +7,7 @@ import { CommonDropdownModule } from 'src/app/modules/shared/common-dropdown/com
 import { BreadcrumbModule } from 'src/app/modules/shared/breadcrumb/breadcrumb.module';
 import { RatingDialogComponent } from './components/rating-dialog/rating-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MyPerformanceRoutingModule,
     CommonDropdownModule,
     BreadcrumbModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule
   ]
 })
 export class MyPerformanceModule { }

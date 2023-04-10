@@ -21,7 +21,6 @@ section {
 
   .submenu_active {
     .sub {
-
       .sidenav_text,
       .item_icon {
         color: var(--side-nav-active-color);
@@ -58,6 +57,8 @@ section {
       top: 0;
       bottom: 0;
     }
+
+
   }
 
   .item_text {
