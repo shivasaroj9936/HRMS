@@ -28,8 +28,10 @@ section {
         mat-card-content {
             display: flex;
             justify-content: center;
-            .form{
+
+            .form {
                 width: 80%;
+                padding: 1rem 0px;
             }
         }
 
@@ -37,7 +39,7 @@ section {
             width: 100%;
             display: flex;
             justify-content: center;
-           
+
             button {
                 background-color: #26B4FF;
                 color: #ffff;
@@ -45,22 +47,34 @@ section {
                 border-radius: 0;
             }
         }
+
         .bottom_text {
             text-align: center;
             height: 50px;
             width: 100%;
             border-top: 1px solid rgba(24, 28, 33, 0.06);
+
             .text {
                 margin-top: 20px;
                 color: var(--shadow-color);
             }
         }
     }
-    
+
     ::ng-deep {
-        
+
         .mat-form-field-appearance-legacy .mat-form-field-infix {
             background-color: rgba(232, 237, 255);
+        }
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    section {
+
+        .mat-card {
+            width: 90%;
+            
         }
     }
 }

@@ -11,7 +11,7 @@ import { NotificationService } from "src/app/services/notification-service/notif
 })
 export class LoginWithCredentialComponent implements OnInit {
   @Input() loginForm!: FormGroup;
-  hide = false;
+  hide = true;
   constructor(private _router:Router,
     private notificationService: NotificationService
     

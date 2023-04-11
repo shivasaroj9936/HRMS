@@ -117,6 +117,9 @@ export class MyDsrComponent implements OnInit  ,AfterContentChecked{
       this.toggle = false;
       this.dsrForm.reset();
       this.noWork = false
+    }else{
+      this.notificationService.showError('All fields', 'Requierd');
+
     }
   }
   ngAfterContentChecked() {

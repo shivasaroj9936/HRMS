@@ -62,15 +62,16 @@ export class TicketsComponent implements OnInit {
       this.ticketForm.value['ticket_code'] = '8762';
       this.ticketForm.value['employee'] = 'Shiva Saroj(AI 1580)';
       this.ticketForm.value['action'] = [{ icon: 'arrow_forward', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 }];
-
-
       this.Table_DATA.push(this.ticketForm.value);
       this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
-
       this.notificationService.showSuccess('Ticket', 'Added');
       console.log(this.ticketForm.value);
       this.toggle = false;
       this.ticketForm.reset();
+    }else{
+      this.notificationService.showError('All fields', 'Requierd');
+
+
     }
   }
 
