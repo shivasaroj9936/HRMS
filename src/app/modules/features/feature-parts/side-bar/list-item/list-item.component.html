@@ -1,7 +1,6 @@
 <section>
-  <mat-list-item (click)="showSubmenu = !showSubmenu" [routerLink]="item.route|absolutePath" 
-      [routerLinkActive]="item.route?'is_active':''" [disabled]="!item.isActive"  >
-    <div class="item_text ">
+  <mat-list-item  (click)="showSubmenu = !showSubmenu" [routerLink]="item.route|absolutePath"   [routerLinkActive]="item.route?'is_active':''" [disabled]="!item.isActive"  >
+    <div class="item_text">
       <mat-icon class="item_icon">{{ item.icon }}</mat-icon>
       <p class="sidenav_text" *ngIf="isShowing">
         {{ item.title }}

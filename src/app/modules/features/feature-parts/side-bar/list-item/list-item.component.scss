@@ -20,7 +20,9 @@ section {
   }
 
   .submenu_active {
+
     .sub {
+
       .sidenav_text,
       .item_icon {
         color: var(--side-nav-active-color);
@@ -43,9 +45,9 @@ section {
   .is_active {
     color: var(--side-nav-active-color) !important;
 
-    .sidenav_text {
-      color: var(--side-nav-active-color);
-    }
+    // .sidenav_text {
+    //   color: var(--side-nav-active-color) !important;
+    // }
 
     .item_text::before {
       position: absolute;
@@ -57,7 +59,9 @@ section {
       top: 0;
       bottom: 0;
     }
-
+    // .item_text{
+    //   color: red !important;
+    // }
 
   }
 
@@ -111,3 +115,4 @@ section {
     }
   }
 }
+

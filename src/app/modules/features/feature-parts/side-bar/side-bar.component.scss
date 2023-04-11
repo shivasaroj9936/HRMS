@@ -2,26 +2,29 @@ section {
 
     position: relative;
     max-width: 250px;
-    
+
     :host::ng-deep {
-
+        // .mat_side_list{
+        //     overflow-y: scroll;
+        // }
         .mat-drawer .mat-sidenav {
-            
-            position: fixed !important;
-        top: 0;
-        bottom: 0;
-        z-index: 3;
-        outline: 0;
-        box-sizing: border-box;
-        overflow-y: auto;
-        transform: translate3d(-100%, 0, 0);
-    }
-    .mat-list-base .mat-list-item .mat-list-item-content{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1.5rem;
 
+            position: fixed !important;
+            top: 0;
+            bottom: 0;
+            z-index: 3;
+            outline: 0;
+            box-sizing: border-box;
+            overflow-y: auto;
+            transform: translate3d(-100%, 0, 0);
+        }
+
+        .mat-list-base .mat-list-item .mat-list-item-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+
+        }
     }
-}
 }

@@ -7,19 +7,20 @@ section {
   background-color: #fff;
   padding: 0.75rem !important;
   border-radius: 11px;
+
   .heading {
     font-size: 24px;
     color: #3246d3;
     padding: 11px 25px 11px 15px;
     border-bottom: 1px solid #f3f7fc;
-    font-weight:500;
+    font-weight: 500;
 
   }
 
   .filter {
     display: grid;
     width: 30%;
-   
+
   }
 
 
@@ -29,6 +30,7 @@ section {
     background-color: #fafafa00 !important;
 
   }
+
   // td:nth-of-type(odd) {
   //   background-color: #fff5f5 !important;
 
@@ -37,10 +39,13 @@ section {
     width: 100%;
     border-radius: 10px;
 
+    min-width: 800px;
+    overflow-x: scroll;
+    overflow: hidden;
     th {
       width: fit-content;
       background-color: #fff;
-     border-top: 1px solid #dededf;
+      border-top: 1px solid #dededf;
 
     }
 
@@ -119,46 +124,17 @@ section {
   }
 
   ::ng-deep {
-    // .mat-paginator-range-actions{
-    //   bottom: -10px;
-    //   position: absolute;
-    // }
-    //   .mat-icon-button {
-    //     position: inherit;
-    //     padding: 0;
-    //     min-width: 0;
-    //     width: 40px !important;
-    //     height: 40px !important;
-    //     flex-shrink: 0 ;
-    //     line-height: 40px !important;
-    //     border-radius: 50% !important;
-    //   }
-      // .mat-paginator {
-   
-      //   .mat-form-field-wrapper{
-      //     border: 1px solid black !important;
-      //   }
 
-      // }
+    .mat-paginator{
 
-    //   .mat-sort-header-container {
-    //     text-align: center;
-    //     width: fit-content;
-    //   }
-    // .mat-select-value {
-    //   font-size: 20px;
-    //   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    // }
-    // .mat-option-text {
-    //   font-size: 20px;
-    //   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    // }
+      min-width: 800px;
+    }
 
     .mat-paginator-page-size {
       position: absolute;
-      // top: 0;
       left: 10px;
     }
+
     .mat-select-arrow {
       width: 0;
       height: 0;
@@ -168,10 +144,15 @@ section {
       margin: 0 4px;
     }
 
-    
-    .mat-form-field{
-      // border: 1px solid black;
+
+    .mat-form-field {
       appearance: 'outline';
     }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  table {
+    overflow-x: scroll;
   }
 }

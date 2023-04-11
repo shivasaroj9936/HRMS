@@ -41,7 +41,7 @@ export class TicketsComponent implements OnInit {
 
   createForm() {
     this.ticketForm = this.formBuilder.group({
-      subject: this._formService.getControl('cv'),
+      subject: this._formService.getControl('name'),
       department: this._formService.getControl('cv',),
       ticket_category: this._formService.getControl('cv',),
       priority: this._formService.getControl('cv',),
