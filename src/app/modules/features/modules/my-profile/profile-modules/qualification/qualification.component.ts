@@ -1,6 +1,6 @@
 import { DatePipe } from "@angular/common";
-import { AfterContentChecked, ChangeDetectorRef, Component, OnInit } from "@angular/core";
-import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
+import { AfterContentChecked, ChangeDetectorRef, Component, OnInit, ViewChild } from "@angular/core";
+import { FormBuilder, FormControl, FormGroup, FormGroupDirective } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
 import { MatTableDataSource } from "@angular/material/table";
 import { slideInRight } from "src/animations/slide-in-right";
@@ -22,6 +22,8 @@ import { QualificationEditDailogComponent } from "./components/qualification-edi
   animations: [slideInRight],
 })
 export class QualificationComponent implements OnInit,AfterContentChecked {
+  @ViewChild(FormGroupDirective) formGroupDirective!: FormGroupDirective;
+
   myControl = new FormControl("");
   uiMessage = BASIC_INFORMATION;
   labelMessage = FORM_LABEL;
@@ -280,7 +282,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
   createForm() {
     this.qualificationForm = this.formBuilder.group({
       school: this._formService.getControl("name"),
-      education: this._formService.getControl("name"),
+      education: this._formService.getControl("cv"),
       time_from: this._formService.getControl("time_from"),
       time_to: this._formService.getControl("time_to"),
       language: this._formService.getControl("language"),
@@ -297,7 +299,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
     console.log(this.dataSource);
     
     if (this.qualificationForm.valid) {
-      this.qualificationForm.value["time"] = this.datePipe.transform( this.getControl("time_from").value - this.getControl("time_to").value, "yyyy-MM-dd" );
+      this.qualificationForm.value["time"] =  Math.floor((this.getControl("time_to").value - this.getControl("time_from").value)/(1000 * 60 * 60 * 24));
         this.qualificationForm.value["emp_name"] = "Shiva Saroj(AI 1580)";
         this.qualificationForm.value["email"] = "shiva.saroj@appinventiv.com";
         this.qualificationForm.value['action']=[  {    btnStyle: "delete", icon: "delete", type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },  ];
@@ -308,6 +310,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
 
       console.log(this.qualificationForm.value);
       this.notficationService.showSuccess("Added", "Qualification");
+      this.formGroupDirective.resetForm()
 
     }
   }
@@ -322,6 +325,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
       if(result){
         this.dataSource.data[index]={...this.dataSource.data[index],...result}
         this.dataSource._updateChangeSubscription();
+        this.notficationService.showSuccess(' Successfully','Item Updated')
         
         
       }
@@ -340,7 +344,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
       if (result) {
         this.dataSource.data.splice(index, 1);
         this.dataSource._updateChangeSubscription();
-
+        this.notficationService.showSuccess('Deleted Successfully','Item')
       }
     });
   }

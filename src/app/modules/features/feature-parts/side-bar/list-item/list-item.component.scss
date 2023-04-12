@@ -98,14 +98,14 @@ section {
 
   }
 
-  .mat-list-item {
-    color: var(--side-nav-text-color);
-    font-family: "sf_ui_displaysemibold";
+  // .mat-list-item {
+  //   color: var(--side-nav-text-color);
 
-    &:disabled {
-      background-color: var(--disabled-color);
-    }
-  }
+  //   &:disabled {
+  //     // background-color: var(--disabled-color);
+  //     opacity: 0;
+  //   }
+  // }
 
   :hover {
 

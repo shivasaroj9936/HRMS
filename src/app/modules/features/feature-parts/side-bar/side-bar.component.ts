@@ -1,6 +1,13 @@
 import { BreakpointObserver } from "@angular/cdk/layout";
-import { Component, Input, OnInit, Output, EventEmitter, AfterViewInit } from "@angular/core";
-import { sideNavList } from "src/app/interfaces/common.interface";
+import {
+  Component,
+  Input,
+  OnInit,
+  Output,
+  EventEmitter,
+  AfterViewInit,
+} from "@angular/core";
+import { SideNavItem, sideNavList } from "src/app/interfaces/common.interface";
 
 @Component({
   selector: "app-side-bar",
@@ -9,27 +16,33 @@ import { sideNavList } from "src/app/interfaces/common.interface";
 })
 export class SideBarComponent implements OnInit, AfterViewInit {
   @Input() isExpanded!: boolean;
-  // @Input()  sidenav!: MatSidenav;
-
   @Output() stateChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() isShowing!: boolean;
-  // showSubmenu: boolean = false;
-  // showSubSubMenu: boolean = false;
-  sideNavList = sideNavList;
+  sideNavList: SideNavItem[] = sideNavList;
+  currentItemIndex!: number;
+  toggle=true;
+  constructor() {}
 
-  // toShowSubMenu={
-  //   showSubmenu:false,
-  //   showAnotherSubmenu:false
-  // };
-  constructor(private observer: BreakpointObserver) { }
+  ngOnInit(): void {}
+  ngAfterViewInit(): void {}
 
-  ngOnInit(): void {
-  }
-  ngAfterViewInit(): void {
-    // this.observer.observe
-  }
+  itemClick(item: SideNavItem, index: number) {
+    // console.log(item, index);
 
-  expand() {
-    // this.stateChange.emit(this.isExpanded);
+    this.sideNavList.forEach((sideItem: SideNavItem) => {
+      sideItem.subMenuClicked = false;
+    });
+    // if (this.currentItemIndex == index) {
+    //   this.sideNavList[index].subMenuClicked = this.toggle;
+    //   this.toggle=!this.toggle
+    //   return
+    // } else {
+    //   this.sideNavList[index].subMenuClicked = true;
+    // }
+    // this.toggle=!this.toggle
+
+    // this.currentItemIndex = index;
+      this.sideNavList[index].subMenuClicked = true;
+
   }
 }

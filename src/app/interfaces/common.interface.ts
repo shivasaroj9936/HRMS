@@ -89,7 +89,7 @@ export const sideNavList: SideNavItem[] = [
     isActive: true,
   },
   {
-    title: "Reviews", icon: "grid_view", options: [
+    title: "Reviews", icon: "grid_view", subMenuClicked:false,options: [
 
       {
         subTitle: "My Performance",
@@ -100,7 +100,7 @@ export const sideNavList: SideNavItem[] = [
     ], isActive: true
   },
   {
-    title: "Refer a Friend", icon: "groups", options: [
+    title: "Refer a Friend", icon: "groups", subMenuClicked:false,options: [
       {
         subTitle: "Job Openinings",
         subicon: "work",
@@ -113,7 +113,7 @@ export const sideNavList: SideNavItem[] = [
     ], isActive: true
   },
   {
-    title: "Recruitment", icon: "check_box", options: [
+    title: "Recruitment", icon: "check_box", subMenuClicked:false,options: [
 
       {
         subTitle: "My Interviews",
@@ -124,7 +124,7 @@ export const sideNavList: SideNavItem[] = [
     ], isActive: true
   },
   {
-    title: "Freshers Training", icon: "school", options: [
+    title: "Freshers Training", icon: "school", subMenuClicked:false,options: [
       {
         subTitle: "My Training",
         subicon: "horizontal_rule",
@@ -134,7 +134,7 @@ export const sideNavList: SideNavItem[] = [
     ], isActive: true
   },
   {
-    title: "Training", icon: "school", options: [
+    title: "Training", icon: "school", subMenuClicked:false,options: [
       {
         subTitle: "Upcoming Training",
         subicon: "horizontal_rule",
@@ -162,7 +162,7 @@ export const sideNavList: SideNavItem[] = [
     ], isActive: true
   },
   {
-    title: "Assests Inventory", icon: "science", options: [
+    title: "Assests Inventory", icon: "science", subMenuClicked:false,options: [
 
       {
         subTitle: "My Assets Inventory",
@@ -186,7 +186,7 @@ export const sideNavList: SideNavItem[] = [
     ], isActive: true
   },
   {
-    title: "Attendance", icon: "schedule", options: [
+    title: "Attendance", icon: "schedule", subMenuClicked:false,options: [
 
       {
         subTitle: "Attendance Calendar",
@@ -209,7 +209,7 @@ export const sideNavList: SideNavItem[] = [
     ], isActive: true
   },
   {
-    title: "Leave", icon: "calendar_today", options: [
+    title: "Leave", icon: "calendar_today", subMenuClicked:false,options: [
 
       {
         subTitle: "My Leave",
@@ -227,7 +227,7 @@ export const sideNavList: SideNavItem[] = [
     ], isActive: true
   },
   {
-    title: "Tickets", icon: "view_day", options: [
+    title: "Tickets", icon: "view_day", subMenuClicked:false,options: [
       {
         subTitle: "Tickets",
         subicon: "horizontal_rule",
@@ -237,7 +237,7 @@ export const sideNavList: SideNavItem[] = [
     ], isActive: true
   },
   {
-    title: "DSR", icon: "calendar_today", options: [
+    title: "DSR", icon: "calendar_today", subMenuClicked:false,options: [
       {
         subTitle: "MY DSR",
         subicon: "checklist",

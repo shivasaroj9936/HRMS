@@ -15,7 +15,7 @@ import { AbsoluteRoutingPipe } from "src/app/pipes/absolute-routing/absolute-rou
 export class ListItemComponent implements OnInit {
   showSubmenu = false;
   @Input()isShowing!:boolean;
-  @Input() item:any;
+  @Input() item!:SideNavItem;
 
   constructor(
       public dialog:MatDialog,
@@ -50,4 +50,7 @@ export class ListItemComponent implements OnInit {
     }
     
   }
+  // itemClick(){
+  //   this.showSubmenu=!this.showSubmenu;
+  // }
 }

@@ -59,8 +59,11 @@ overflow: hidden;
 
 :host::ng-deep {
 
-    .mat-drawer-inner-container::-webkit-scrollbar {
-        display: none;
+    .mat-drawer-inner-container{
+        overflow: hidden;
+        &:hover{
+            overflow-y: overlay !important;
+        }
 
     }
 
