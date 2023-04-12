@@ -18,6 +18,8 @@ export class CommonInputComponent implements OnInit {
   @Input() formfieldCSS:any;
   @Input() labelStyle:any;
   @Input() maxLength:number=200;
+  @Input() minLength!:number;
+
   @Input() directiveName!:string;
   @Input() passwordType=false;
   hide=true;

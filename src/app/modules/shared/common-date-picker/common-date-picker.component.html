@@ -1,5 +1,5 @@
 <div class="formfield" *ngIf="inputControl">
-    <mat-label class="label">{{label }}</mat-label>
+    <mat-label class="label" [ngClass]="labelStyle" >{{label }}</mat-label>
      <mat-form-field appearance="outline"  >
     <input readonly matInput [matDatepicker]="picker" [formControl]="$any(inputControl)" [placeholder]="placeHolder" (click)="onDateClick()" />
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>

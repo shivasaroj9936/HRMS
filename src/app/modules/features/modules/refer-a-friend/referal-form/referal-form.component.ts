@@ -68,8 +68,8 @@ export class ReferalFormComponent implements OnInit {
         
       );
     // this.referCandidateForm.clearAsyncValidators();
-    this.notificationService.showSuccess('Saved', 'Refferal form');
     if (this.referCandidateForm.valid) {
+      this.notificationService.showSuccess('Saved', 'Refferal form');
       this.dialogRef.close();
     }
 

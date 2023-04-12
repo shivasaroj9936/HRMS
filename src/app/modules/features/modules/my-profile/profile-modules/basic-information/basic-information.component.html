@@ -21,9 +21,9 @@
                             {{uiMessage.TOTAL_WORK_EXP}}
                         </p>
                         <div class="inputs">
-                            <app-common-input [labelStyle]="'dark'" [label]="labelMessage.YEAR" [inputFormControl]="getControl('tot_exp_years')"></app-common-input>
+                            <app-common-input [minLength]="4" [maxLength]="4" [labelStyle]="'dark'" [label]="labelMessage.YEAR" [inputFormControl]="getControl('tot_exp_years')"></app-common-input>
 
-                            <app-common-input [labelStyle]="'dark'" [label]="labelMessage.MONTH" [inputFormControl]="getControl('tot_exp_month')"></app-common-input>
+                            <app-common-input  [minLength]="1" [maxLength]="2" [labelStyle]="'dark'" [label]="labelMessage.MONTH" [inputFormControl]="getControl('tot_exp_month')"></app-common-input>
 
                         </div>
                     </div>
@@ -34,9 +34,9 @@
                         </p>
 
                         <div class="inputs">
-                            <app-common-input [labelStyle]="'dark'" [label]="labelMessage.YEAR" [inputFormControl]="getControl('rel_exp_year')"></app-common-input>
+                            <app-common-input [minLength]="4" [maxLength]="4"  [labelStyle]="'dark'" [label]="labelMessage.YEAR" [inputFormControl]="getControl('rel_exp_year')"></app-common-input>
 
-                            <app-common-input [labelStyle]="'dark'" [label]="labelMessage.MONTH" [inputFormControl]="getControl('rel_exp_month')"></app-common-input>
+                            <app-common-input [minLength]="1" [maxLength]="2"  [labelStyle]="'dark'" [label]="labelMessage.MONTH" [inputFormControl]="getControl('rel_exp_month')"></app-common-input>
 
                         </div>
                     </div>

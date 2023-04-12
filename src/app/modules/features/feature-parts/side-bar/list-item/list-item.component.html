@@ -1,6 +1,6 @@
 <section>
-  <mat-list-item   [routerLink]="(item.route||'' ) |absolutePath"   [routerLinkActive]="item.route?'is_active':''" [disabled]="!item.isActive"  >
-    <div class="item_text">
+  <mat-list-item     [routerLink]="(item.route||'' ) |absolutePath"   [routerLinkActive]="item.route?'is_active':''" [disabled]="!item.isActive"  >
+    <div class="item_text"  >
       <mat-icon class="item_icon">{{ item.icon }}</mat-icon>
       <p class="sidenav_text" *ngIf="isShowing">
         {{ item.title }}
@@ -10,7 +10,7 @@
   </mat-list-item>
   <ng-container *ngIf="item.options && item.options.length">
     <ng-container *ngFor="let subMenuItem of item.options">
-        <mat-list-item [ngClass]="{ expanded: item.subMenuClicked  }" *ngIf="item.subMenuClicked && isShowing &&item.subMenuClicked"
+        <mat-list-item [ngClass]="{ expanded: item.subMenuClicked  }" *ngIf="item.subMenuClicked && isShowing"
           [routerLink]="subMenuItem.route|absolutePath" [routerLinkActive]="subMenuItem.route?'submenu_active':''">
           <div class="sub item_text" *ngIf="!subMenuItem.link;else link">
             <mat-icon class="item_icon">{{ subMenuItem?.subicon }}</mat-icon>

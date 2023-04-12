@@ -19,30 +19,28 @@ export class SideBarComponent implements OnInit, AfterViewInit {
   @Output() stateChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() isShowing!: boolean;
   sideNavList: SideNavItem[] = sideNavList;
-  currentItemIndex!: number;
-  toggle=true;
+  // currentItemIndex!: number;
+  // currentItem:string='';
   constructor() {}
 
-  ngOnInit(): void {}
-  ngAfterViewInit(): void {}
+  ngOnInit(): void {
+    // document.querySelector('isActive')
+    // if(document.querySelector('.submenu_active')){
+    //   console.log('hiii');
+      
+    // }
+  }
+  ngAfterViewInit(): void {
+    
+  
+  }
 
   itemClick(item: SideNavItem, index: number) {
-    // console.log(item, index);
+    // console.log(item,this.currentItem);
 
     this.sideNavList.forEach((sideItem: SideNavItem) => {
-      sideItem.subMenuClicked = false;
+        sideItem.subMenuClicked = false;
     });
-    // if (this.currentItemIndex == index) {
-    //   this.sideNavList[index].subMenuClicked = this.toggle;
-    //   this.toggle=!this.toggle
-    //   return
-    // } else {
-    //   this.sideNavList[index].subMenuClicked = true;
-    // }
-    // this.toggle=!this.toggle
-
-    // this.currentItemIndex = index;
-      this.sideNavList[index].subMenuClicked = true;
-
+    this.sideNavList[index].subMenuClicked=true;
   }
 }

@@ -40,9 +40,9 @@ export class MyLeaveComponent implements OnInit,AfterContentChecked {
   columns = [
     { heading: 'Action', key: 'action', type: 'action', action: [{}] },
     { heading: "Leave Type", key: 'leave_type', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Request From", key: 'start_date', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Request To", key: 'end_date', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Applied On", key: 'applied_on', isSortable: '', type: 'text', link: 'client-details' },
+    { heading: "Request From", key: 'start_date', isSortable: '', type: 'date', link: 'client-details' },
+    { heading: "Request To", key: 'end_date', isSortable: '', type: 'date', link: 'client-details' },
+    { heading: "Applied On", key: 'applied_on', isSortable: '', type: 'date', link: 'client-details' },
     { heading: "Status", key: 'status', isSortable: '', type: 'text', link: 'client-details' },
     { heading: "Level 1", key: 'level_1', isSortable: '', type: 'text', link: 'client-details',class:'red' },
     { heading: "Level 2", key: 'level_2', isSortable: '', type: 'text', link: 'client-details',class:'red'  },
@@ -92,8 +92,8 @@ export class MyLeaveComponent implements OnInit,AfterContentChecked {
       this.leaveForm.value["level_2"] = 'Suyash Saxena(AI057)';
       this.leaveForm.value["status"] = 'pending';
       this.leaveForm.value['action']=[ {icon:'arrow_forward',route:'LEAVE_DETAILS',type:'route',routeID:121}];
-      this.Table_DATA.push(this.leaveForm.value);
-      this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+      this.dataSource.data.push(this.leaveForm.value);
+      this.dataSource._updateChangeSubscription();
       this.notificationService.showSuccess('Leave','Saved');
       this.toggle=false;
       this.leaveForm.reset() ;

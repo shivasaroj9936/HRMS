@@ -109,9 +109,8 @@ export class MyDsrComponent implements OnInit  ,AfterContentChecked{
       this.dsrForm.value['emp_name'] = 'Shiva Saroj(AI 1580)';
       this.dsrForm.value['email'] = 'shiva.saroj@appinventiv.com';
       this.dsrForm.value['action'] = [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 }];
-      this.Table_DATA.push(this.dsrForm.value);
-      this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
-      console.log(this.dsrForm.value);
+      this.dataSource.data.push(this.dsrForm.value);
+      this.dataSource._updateChangeSubscription()
 
       this.notificationService.showSuccess('DSR', 'Added');
       this.toggle = false;

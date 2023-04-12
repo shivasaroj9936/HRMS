@@ -53,7 +53,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
       heading: "Time Period",
       key: "time",
       isSortable: "isSortable",
-      type: "text",
+      type: "date",
     },
     {
       heading: "Education Level",
@@ -101,7 +101,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
     email: "shivavasaroj@appinventiv.com",
     education: "B.Tech",
     time: "01/01/2022",
-    school: "Appinventiv 2 ",
+    school: "Appinventiv 3 ",
     language:'Hindi',
     time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
     time_to:'01/05/2022',
@@ -112,7 +112,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
   email: "shivavasaroj@appinventiv.com",
   education: "B.Tech",
   time: "01/01/2022",
-  school: "Appinventiv 2 ",
+  school: "Appinventiv 4 ",
   language:'Hindi',
   time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
   time_to:'01/05/2022',
@@ -123,7 +123,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
       email: "shivavasaroj@appinventiv.com",
       education: "B.Tech",
       time: "01/01/2022",
-      school: "Appinventiv 2 ",
+      school: "Appinventiv 3 ",
       language:'Hindi',
       time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
       time_to:'01/05/2022',
@@ -134,7 +134,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
       email: "shivavasaroj@appinventiv.com",
       education: "B.Tech",
       time: "01/01/2022",
-      school: "Appinventiv 2 ",
+      school: "Appinventiv q214 ",
       language:'Hindi',
       time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
       time_to:'01/05/2022',
@@ -145,7 +145,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
       email: "shivavasaroj@appinventiv.com",
       education: "B.Tech",
       time: "01/01/2022",
-      school: "Appinventiv 4 ",
+      school: "Appinventiv 5 ",
       language:'Hindi',
       time_from:'Thu Apr 13 2023 00:00:00 GMT+0530 (India Standard Time) {}',
       time_to:'01/05/2022',
@@ -296,19 +296,18 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
   }
 
   onSubmit() {
-    console.log(this.dataSource);
     
     if (this.qualificationForm.valid) {
       this.qualificationForm.value["time"] =  Math.floor((this.getControl("time_to").value - this.getControl("time_from").value)/(1000 * 60 * 60 * 24));
         this.qualificationForm.value["emp_name"] = "Shiva Saroj(AI 1580)";
         this.qualificationForm.value["email"] = "shiva.saroj@appinventiv.com";
         this.qualificationForm.value['action']=[  {    btnStyle: "delete", icon: "delete", type: "dialogOpen", routeID: 121,  }, { icon: "edit", type: "dialogOpen", routeID: 121, btnStyle: "edit" },  ];
-        this.Table_DATA.push(this.qualificationForm.value);
-      this.qualificationForm.reset();
-      this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
-      console.log(this.dataSource);
+        // this.Table_DATA.push(this.qualificationForm.value);
+        this.dataSource.data.push(this.qualificationForm.value)
+      // this.qualificationForm.reset();
+      // this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+      this.dataSource._updateChangeSubscription();
 
-      console.log(this.qualificationForm.value);
       this.notficationService.showSuccess("Added", "Qualification");
       this.formGroupDirective.resetForm()
 
@@ -316,6 +315,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
   }
 
   editQualification( index:number): void {
+    
     const dialogRef = this.dialog.open(QualificationEditDailogComponent, {
       data: this.dataSource.data[index],
       disableClose: true,
@@ -340,7 +340,6 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
     });
 
     dialogRef.afterClosed().subscribe((result: string) => {
-      console.log("The dialog was closed", result);
       if (result) {
         this.dataSource.data.splice(index, 1);
         this.dataSource._updateChangeSubscription();
@@ -350,6 +349,7 @@ export class QualificationComponent implements OnInit,AfterContentChecked {
   }
 
   eventFromTable(event: any) {
+    
     if (event.item.btnStyle == "edit") {
 
       this.editQualification(event.index);

@@ -27,7 +27,9 @@
                 </div>
                 <div class="formfield 3">
                  
-                <app-common-input [labelStyle]="'light'" [label]="labelMessage.DOB" [inputFormControl]="getControl('DOB')"></app-common-input>
+                <!-- <app-common-input[label]="labelMessage.DOB" [inputFormControl]="getControl('DOB')"></app-common-input> -->
+                <app-common-date-picker  [labelStyle]="'light'"  [placeHolder]="'DOB'"  [label]="labelMessage.DOB" [inputFormControl]="getControl('dob')">"></app-common-date-picker>
+
 
                 </div>
             </div>

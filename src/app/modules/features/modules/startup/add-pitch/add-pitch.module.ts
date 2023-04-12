@@ -12,6 +12,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
 import { CommonTextEditorModule } from 'src/app/modules/shared/common-text-editor/common-text-editor.module';
 import { CommonFileInputModule } from 'src/app/modules/shared/common-file-input/common-file-input.module';
 import { CommonInputModule } from 'src/app/modules/shared/common-input/common-input.module';
+import { CommonDatePickerModule } from 'src/app/modules/shared/common-date-picker/common-date-picker.module';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CommonInputModule } from 'src/app/modules/shared/common-input/common-in
     EditorModule,
     CommonTextEditorModule,
     CommonFileInputModule,
-    CommonInputModule
+    CommonInputModule,
+    CommonDatePickerModule
   ]
 })
 export class AddPitchModule { }
