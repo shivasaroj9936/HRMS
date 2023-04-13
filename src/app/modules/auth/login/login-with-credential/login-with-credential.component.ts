@@ -32,6 +32,8 @@ export class LoginWithCredentialComponent implements OnInit {
         password: this.loginForm.controls['password'].value,
       }
       this.notificationService.showSuccess('Successfull','Login')
+
+      localStorage.setItem('token', Math.floor(Math.random() * 10000).toString())
       this._router.navigate([ADMIN.fullUrl])
     }
   }

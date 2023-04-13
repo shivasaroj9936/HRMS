@@ -12,10 +12,9 @@ section {
   .basic_card {
     .header {
       .header_text {
-        font-family: "Lato";
-        font-size: 24px;
+        font-size: 1.5rem;
         color: #199cff;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 1.2;
         margin-bottom: 0;
       }
@@ -194,4 +193,40 @@ section {
     }
   }
 
+}
+
+
+@media only screen and (max-width: 1030px) {
+  section{
+    .employees{
+      grid-template-columns: auto auto;
+    } 
+  }
+}
+
+@media only screen and (max-width: 712px) {
+  section{
+    .basic_card{
+      form{
+      grid-template-columns: auto;
+      .filter{
+        flex-direction: column;
+      gap: 0;
+        
+
+      }
+      .actions{
+        padding-left: 0;
+        margin-bottom: 1rem;
+        .reset{
+          margin-left: 0;
+        }
+      }
+
+      }
+    }
+    .employees{
+      grid-template-columns: auto;
+    } 
+  }
 }

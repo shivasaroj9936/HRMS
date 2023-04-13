@@ -15,7 +15,7 @@ section {
             padding: 11px 25px 11px 15px;
 
             .heading {
-                font-size: 20px;
+                font-size: 1.25rem;
                 color: #3246d3;
                 font-weight: 500;
                 margin: 0;
@@ -48,11 +48,11 @@ section {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                margin-bottom: 20px;
+                margin-bottom: 1.25rem;
             }
 
             .dsr_list ul li h4 {
-                font-size: 15px;
+                font-size: 0.938rem;
                 margin-left: 10px;
                 word-wrap: break-word;
                 margin-right: 10px;
@@ -69,7 +69,7 @@ section {
                 background-color: #3246d3;
                 min-width: 70px;
                 margin-right: 10px;
-                font-size: 22px;
+                font-size: 1.375rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -106,7 +106,7 @@ section {
     }
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 61.25rem) {
     section {
 
         .row {

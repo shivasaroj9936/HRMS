@@ -34,18 +34,18 @@ export class ReferalFormComponent implements OnInit {
   onClose() { }
   createForm() {
     this.referCandidateForm = this.formBuilder.group({
-      department_name: this._formService.getControl("department_name"),
+      department_name: this._formService.getControl("name"),
       job_code: this._formService.getControl("job_code"),
-      location: this._formService.getControl("location"),
+      location: this._formService.getControl("name"),
       experience: this._formService.getControl("experience"),
-      job_location: this._formService.getControl("job_location"),
+      job_location: this._formService.getControl("name"),
       candidate_name: this._formService.getControl("name"),
-      position_title: this._formService.getControl("position_title"),
+      position_title: this._formService.getControl("name"),
       candidate_experience: this._formService.getControl("candidate_experience"),
       email: this._formService.getControl("email"),
       contact_number: this._formService.getControl("contact_number"),
       cv: this._formService.getControl("cv"),
-      skill: this._formService.getControl("skill"),
+      skill: this._formService.getControl("name"),
     });
   }
   setValueInForm() {

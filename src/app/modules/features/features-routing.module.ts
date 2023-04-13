@@ -1,6 +1,7 @@
 import { Component, NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { ATTENDANCE, DASHBOARD, DIRECTORY, DSR, ENTREPRENEURSHIP_PROGRAM, FRESHERS, MY_INTERVIEWS, MY_LINKS, PROFILE, PROJECT, REFER_CANDIDATE, REVIEWS, STARTUP, TRAININGS, USERS } from "src/app/constants/routes";
+import { AuthGuard } from "src/app/guards/auth/auth.guard";
 import { FeaturesComponent } from "./features.component";
 
 const routes: Routes = [
@@ -16,6 +17,8 @@ const routes: Routes = [
           import("./modules/dashboard/dashboard.module").then(
             (m) => m.DashboardModule
           ),
+          // canActivate:[AuthGuard]
+
       },
       {
         path: PROFILE.path,

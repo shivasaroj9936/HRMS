@@ -1,10 +1,11 @@
 @import 'src/scss/buttons.scss';
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 section {
   .header {
     background: gainsboro;
@@ -15,6 +16,7 @@ section {
     margin-left: -24px;
     margin-right: -24px;
     margin-bottom: 1rem;
+
     .heading {
       padding: 16px 16px 5px 30px;
       font-size: 1.3rem;
@@ -30,7 +32,8 @@ section {
       border-radius: 50%;
       padding: 5px;
       cursor: pointer;
-      .icon{
+
+      .icon {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -40,7 +43,7 @@ section {
   }
 
   .form {
-    padding: 16px;
+    padding: 3px 16px;
 
     .hash_heading {
       .mydetails {
@@ -76,7 +79,7 @@ section {
     .inputs {
       display: grid;
       grid-template-columns: 50% 50%;
-      gap: 15px;
+      gap: 10px;
 
       .formfield {
         display: flex;
@@ -118,33 +121,50 @@ section {
 
     }
   }
-  ::-webkit-scrollbar {
-    width: 4px !important;
-    overflow-y: scroll !important;
-    background: rgb(190, 189, 189) !important;
-    box-shadow: inset 0 0 4px #707070 !important;
-  }
 
-  ::-webkit-scrollbar-thumb {
-    background: rgb(86, 86, 87) !important;
-    border-radius: 10px !important;
-  }
+  // ::-webkit-scrollbar {
+  //   width: 4px !important;
+  //   overflow-y: scroll !important;
+  //   background: rgb(190, 189, 189) !important;
+  //   box-shadow: inset 0 0 4px #707070 !important;
+  // }
 
+  // ::-webkit-scrollbar-thumb {
+  //   background: rgb(86, 86, 87) !important;
+  //   border-radius: 10px !important;
+  // }
+
+  // ::ng-deep {
+  //   .mat-form-field-appearance-outline .mat-form-field-flex {
+  //     box-shadow: 0px 4px 8px rgb(44 39 56 / 4%);
+  //   }
+
+  //   .cdk-overlay-dark-backdrop {
+  //     background: rgba(0, 0, 0, 0.80);
+
+  //   }
+  //   .cdk-overlay-pane {
+  //     overflow-y: auto !important;
+  //   }
+  // }
 }
+// ::ng-deep{
+  // .mat-dialog-container{
+  //   overflow-y: scroll;
+  // }
+  
+  // .cdk-overlay-pane {
+  //   overflow-y: scroll !important;
+  // }
+// }
 
-::ng-deep {
-  .mat-form-field-appearance-outline .mat-form-field-flex {
-    box-shadow: 0px 4px 8px rgb(44 39 56 / 4%);
-  }
-
-  .cdk-overlay-dark-backdrop {
-    background: rgba(0, 0, 0, 0.80);
-
-  }
-  .cdk-overlay-pane{
-    overflow-y: auto;
-  }
-}
+// :host {
+//   ::ng-deep {
+//     .cdk-overlay-pane {
+//       overflow-y: auto !important;
+//     }
+//   }
+// }
 
 @media (max-width:1011px) {
   section {
@@ -178,8 +198,9 @@ section {
     }
   }
 }
+
 @media (min-width:1011px) {
-  section{
+  section {
     width: 700px;
 
   }

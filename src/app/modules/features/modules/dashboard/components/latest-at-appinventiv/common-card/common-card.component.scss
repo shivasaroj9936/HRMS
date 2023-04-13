@@ -89,3 +89,10 @@ section {
     }
   }
 }
+
+@media only screen and (max-width: 760px) and (min-width:560px){
+section {
+  width: 30rem;
+}
+
+}

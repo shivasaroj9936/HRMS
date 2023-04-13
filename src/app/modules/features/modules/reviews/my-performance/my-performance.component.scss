@@ -50,9 +50,6 @@ section {
 
           .basic_info {
             .login_details {
-              strong {
-              }
-
               .tech {
                 margin: 5px 0;
                 display: block;
@@ -87,7 +84,7 @@ section {
         .hounour_wrap {
           background-color: #cbe7ff;
           border-radius: 10px;
-          padding: 20px;
+          padding: 1.25rem;
           width: 65%;
         }
 
@@ -123,7 +120,7 @@ section {
 
         .cal_nav_wrapper {
           background-color: #fff;
-          padding: 5px 50px;
+          padding: 0.313rem 3.125rem;
           border-radius: 10px;
 
           .cal_date {
@@ -298,6 +295,7 @@ section {
 }
 
 @media only screen and (max-width: 850px) {
+
   section {
     .dashboard_card {
       display: flex;
@@ -315,6 +313,10 @@ section {
 
       .right {
         width: initial;
+      }
+      .content_body{
+        grid-template-columns: auto auto auto;
+        gap: 0.5rem;
       }
     }
   }
@@ -346,6 +348,10 @@ section {
           }
 
         }
+      }
+      .content_body{
+        grid-template-columns: auto  auto;
+        // gap: 0.5rem;
       }
     }
   }

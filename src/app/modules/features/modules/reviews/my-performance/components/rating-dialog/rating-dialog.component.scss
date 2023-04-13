@@ -1,70 +1,98 @@
 section {
   position: relative;
-  .close{
+
+  .close {
     position: absolute;
     right: -19px;
-   top: -21px;
-   cursor: pointer;
-   &:hover{
-    color: red;
-   }
+    top: -21px;
+    cursor: pointer;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  .main_wraper {
+    width: 55rem;
+
+    .header {
+      text-align: center;
+      padding: 0 0 20px 0;
+      border-bottom: 1px solid #F5F5F5;
+      margin-bottom: 35px;
+
+      .reviewed_by {
+        .target_text {
+          color: #000;
+          font-size: 1rem;
+          font-weight: 500;
+
+        }
+      }
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      .hounour_wrap {
+        background-color: #cbe7ff;
+        border-radius: 10px;
+        padding: 20px;
+        // margin-right: 1rem;
+      }
+
+      .flex_row {
+        display: flex;
+        background: #edffd2;
+        border-radius: 10px;
+        flex-wrap: wrap;
+        .rating_sum_head {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          //   margin: 0 5px;
+          padding: 28px 12px;
+          width: 100%;
+
+          .tech {
+            font-size: 12px;
+            font-weight: 400;
+            display: block;
+            min-height: 34px;
+          }
+
+          width: max-content;
+
+          .number {
+            font-size: 1rem;
+          }
+
+          .total {
+            font-size: 3rem;
+            background: #E5FEC0;
+          }
+        }
+      }
+    }
+  }
 }
 
-    .main_wraper {
-        width: 55rem;
+@media only screen and (max-width: 1130px) {
+  section{
+    .main_wraper{
+    width: 40rem;
 
-        .header {
-            text-align: center;
-            padding: 0 0 20px 0;
-            border-bottom: 1px solid #F5F5F5;
-            margin-bottom: 35px;
-            .reviewed_by{
-              .target_text{
-                color:#000;
-                font-size: 1rem;
-                font-weight: 500;
-
-              }
-            }
-        }
-
-        .main {
-            display: flex;
-            flex-wrap: wrap;
-            .hounour_wrap {
-                background-color: #cbe7ff;
-                border-radius: 10px;
-                padding: 20px;
-                margin-right: 1rem;
-            }
-            .flex_row {
-                display: flex;
-                background: #edffd2;
-                  border-radius: 10px;
-                .rating_sum_head {
-                  display: flex;
-                  justify-content: center;
-                  flex-direction: column;
-                  text-align: center;
-                //   margin: 0 5px;
-                  padding: 28px 12px;
-                  width: 100%;
-        
-                  .tech {
-                    font-size: 12px;
-                    font-weight: 400;
-                    display: block;
-                    min-height: 34px;                  }
-                    width: max-content;
-                  .number {
-                    font-size: 1rem;
-                  }
-                  .total{
-                    font-size: 3rem;
-                    background: #E5FEC0;
-                  }
-                }
-              }
-        }
     }
+  }
+}
+
+@media only screen and (max-width: 752px) {
+  section{
+    .main_wraper{
+    width: 100%;
+
+    }
+  }
 }

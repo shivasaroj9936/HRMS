@@ -83,7 +83,8 @@ section {
                 .icon {
                     font-size: 28px;
                 }
-               .icon:hover{
+
+                .icon:hover {
                     color: rgb(77, 182, 252);
                 }
             }
@@ -123,9 +124,10 @@ section {
         .close_notification {
             cursor: pointer;
             margin: 10px;
-          
+
         }
-        .close_notification:hover{
+
+        .close_notification:hover {
             color: rgb(77, 182, 252);
         }
 
@@ -173,27 +175,33 @@ section {
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 630px) {
     section {
-        .notification_box {
-            display: none;
-        }
 
-        .mat-toolbar {
+            .mat-toolbar {
+                height: 100px;
 
+                justify-content: center;
+                flex-direction: column;
+                .left {
+                    // justify-content: space-between;
+                    justify-content: center;
+                    width: 100%;
+                }
 
-            .left {
-                justify-content: space-between;
-                width: 100%;
+                .right {
+
+                    // display: none;
+                    .profile {
+                        .name {
+                            display: none;
+                        }
+                    }
+                }
+
+                .muted_text {
+                    display: none;
+                }
             }
-
-            .right {
-                display: none;
-            }
-
-            .muted_text {
-                display: none;
-            }
-        }
     }
 }

@@ -7,7 +7,7 @@
 section {
     height: 100vh;
     position: relative;
-overflow: hidden;
+    overflow: hidden;
 
     header {
         padding: 8px 16px;
@@ -84,3 +84,20 @@ overflow: hidden;
 
 
 }
+
+@media only screen and (max-width: 630px) {
+
+    section {
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    
+        header {
+            height: 100px;
+            padding: 0;
+        }
+    
+        .mat-sidenav-container {
+            height: calc(100vh - 100px);
+        }
+}}

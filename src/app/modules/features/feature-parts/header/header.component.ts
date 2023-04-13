@@ -54,6 +54,7 @@ export class HeaderComponent implements OnInit,AfterViewInit {
     dialogRef.afterClosed().subscribe((result: string) => {
       console.log("The dialog was closed", result);
       if (result) {
+        localStorage.clear();
         this._router.navigate(['/auth'])
       }
     });
