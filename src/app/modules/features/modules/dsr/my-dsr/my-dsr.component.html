@@ -35,9 +35,10 @@
     </div>
 
     <div class="filter">
-        <form [formGroup]="filterForm" (ngSubmit)="onFilter()">  <app-common-date-picker [label]="'Start Date'" [inputFormControl]="getFilterControl('start_date')"></app-common-date-picker>
-            <app-common-date-picker [label]="'Start Date'" [inputFormControl]="getFilterControl('start_date')"></app-common-date-picker>     
-             <app-common-dropdown [label]="'Submission Status'" [data]="submissionStatus"  [dropdownDownControlName]="getFilterControl('submission_status')"></app-common-dropdown>
+        <form [formGroup]="filterForm" (ngSubmit)="onFilter()"> 
+            <app-common-date-picker [label]="'Start Date'" [inputFormControl]="getFilterControl('start_date')" [maxDate]="getFilterControl('end_date').value" ></app-common-date-picker>
+            <app-common-date-picker [label]="'End Date'" [inputFormControl]="getFilterControl('end_date')" [minDate]="getFilterControl('start_date').value" ></app-common-date-picker>     
+            <app-common-dropdown [label]="'Submission Status'" [data]="submissionStatus"  [dropdownDownControlName]="getFilterControl('submission_status')"></app-common-dropdown>
             <app-common-dropdown [label]="'Project'" [data]="projects" [dropdownDownControlName]="getFilterControl('project')"></app-common-dropdown>
             <app-common-dropdown [label]="'Final Approval Status'" [data]="finalApprovalStatus"[dropdownDownControlName]="getFilterControl('final_approve')"></app-common-dropdown>
             <app-common-dropdown [label]="'Hours'" [data]="hours" [dropdownDownControlName]="getFilterControl('hours')"></app-common-dropdown>
@@ -53,10 +54,7 @@
     
     
     <div class="table">
-        <div class="header">
-            <h3 class="heading">List All Worksheets</h3>
-        </div>
-        <app-common-table [pagination]="true" [searchFilter]="true" [columns]="columns" [dataSourceForTable]="dataSource"></app-common-table>
+        <app-common-table [heading]="'List All Worksheets'" [pagination]="true" [searchFilter]="true" [columns]="columns" [dataSourceForTable]="dataSource"></app-common-table>
 
     </div>
 

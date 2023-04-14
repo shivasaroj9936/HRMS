@@ -16,8 +16,8 @@ section {
     // flex-wrap: wrap;
     figure {
       img {
-        width: 160px !important;
-        height: 160px !important;
+        width: 10rem !important;
+        height: 10rem !important;
         box-shadow: 0px 3px 11px -7px rgb(0 0 0 / 30%);
         padding: 4px;
         border-radius: 50%;
@@ -29,9 +29,7 @@ section {
 
       .name {
         h3 {
-          font-family: "Segoe UI";
-          font-size: 30px;
-          font-weight: 500 !important;
+          font-size: 1.875rem;
           margin-bottom: 10px;
         }
       }
@@ -39,9 +37,8 @@ section {
       .basic_info {
         .login_details {
           strong {
-            font-size: 15px;
-            font-weight: 600;
-            font-family: "Segoe UI";
+            font-size: 0.938rem;
+            font-weight: 400;
           }
         }
       }
@@ -122,13 +119,35 @@ section {
       display: grid;
       grid-template-columns: auto;
       figure{
-        // height: 100px;
-        // width: 100px;
+        img {
+          width: 5rem !important;
+          height: 5rem !important;
+          box-shadow: 0px 3px 11px -7px rgb(0 0 0 / 30%);
+          padding: 4px;
+          border-radius: 50%;
+        }
         text-align: center;
       }
-      // .profile_info{
-      //   margin: 0;
-      // }
+      .profile_info {
+        margin-left: 3rem;
+  
+        .name {
+          h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+          }
+        }
+  
+        .basic_info {
+          .login_details {
+            strong {
+              font-size: 0.9rem;
+              font-weight: 400;
+             
+            }
+          }
+        }
+      }
     }
    }
 }

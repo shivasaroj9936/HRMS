@@ -12,4 +12,5 @@ export const PATTERN = {
     descArabic: /^[\u0621-\u064A0-9_@./#&+-`~!$%^*()=,"']+$/,
     colourHexCode: "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
     subdomain: /^[a-zA-Z]+((['-][a-zA-Z ])?[a-zA-Z]*)*$/,
+    month: /^(0[1-9]|1[0-2])$/
 };

@@ -2,10 +2,10 @@
 
 section {
   overflow-x: auto !important;
-
+  overflow-y: hidden;
   position: relative !important;
   background-color: #fff;
-  padding: 0.75rem !important;
+  padding: 0.85rem !important;
   border-radius: 11px;
 
   .heading {
@@ -36,21 +36,23 @@ section {
 
   // }
   table {
-    width: 100%;
+    // width: 100%;
     border-radius: 10px;
 
-    min-width: 800px;
+    min-width: 100%;
     overflow-x: scroll;
     overflow: hidden;
     th {
       width: fit-content;
       background-color: #fff;
       border-top: 1px solid #dededf;
+      min-width: 80px;
 
     }
 
 
     td {
+      min-width: 80px;
       .name {
         display: flex;
         align-items: center;
@@ -127,7 +129,7 @@ section {
 
     .mat-paginator{
 
-      min-width: 800px;
+      min-width: 100%;
     }
 
     .mat-paginator-page-size {
@@ -152,7 +154,54 @@ section {
 }
 
 @media only screen and (max-width: 850px) {
-  table {
-    overflow-x: scroll;
+
+  section{
+
+    table {
+      overflow-x: scroll;
+    }
+    
+    ::ng-deep {
+
+    .mat-paginator{
+      
+      min-width: 100%;
+    }
   }
 }
+}
+
+@media only screen and (max-width: 550px) {
+  section{
+    .heading{
+      font-size: 1rem;
+    padding: 5px 12px 5px 6px;
+    margin: 0;
+
+    }
+    table {
+      overflow-x: scroll;
+  }
+  
+  ::ng-deep {
+    
+    .mat-paginator-container{
+      
+      flex-direction: column !important;
+    }
+    .mat-paginator-page-size{
+      margin: -25px 0px;
+    }
+    .mat-form-field-appearance-outline .mat-form-field-wrapper{
+      margin: 0;
+    }
+  }
+  }
+  
+}
+// @media only screen and (max-width: 411px) {
+//   table {
+//     // overflow-x: scroll;
+//     // min-width: 50px;
+//   }
+// }

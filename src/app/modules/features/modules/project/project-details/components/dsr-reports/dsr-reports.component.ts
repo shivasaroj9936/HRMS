@@ -30,8 +30,8 @@ export class DsrReportsComponent implements OnInit {
       pm_pproval_status: this._formService.getControl("gender"),
       am_pproval_status: this._formService.getControl("marital_status"),
       rm_pproval_status: this._formService.getControl("contact_number"),
-      final_pproval_status: this._formService.getControl("tot_exp_years"),
-      hours: this._formService.getControl("tot_exp_month"),
+      final_pproval_status: this._formService.getControl("year"),
+      hours: this._formService.getControl("month"),
     });
   }
 

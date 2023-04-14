@@ -96,7 +96,17 @@ section {
 
 @media only screen and (max-width: 850px) {
     section {
+        .header {
 
+            padding: 11px 25px 11px 15px;
+
+            .heading {
+                font-size: 1rem;
+                color: #3246d3;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
         .row {
 
             form {

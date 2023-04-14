@@ -12,6 +12,9 @@ section {
       gap: 1.2rem;
     }
   }
+  .table{
+    margin-top: 1rem;
+  }
 }
 
 section {
@@ -24,13 +27,20 @@ section {
     }
   }
 }
-
-// .table{
-//   overflow-x: auto;
-//   margin-top: 2rem !important;
-//   width: auto !important;
-//   app-common-table{
-//     width: inherit !important;
-//     overflow-x: auto !important;
-//   }
-// }
+@media only screen and (max-width: 411px) {
+    section {
+    // overflow: hidden;
+    .table{
+      width: 260px !important;
+      margin: 20px;
+      // overflow-x: scroll;
+      // margin-top: 2rem !important;
+      // width: 410px !important;
+      // app-common-table{
+      //   width: inherit !important;
+      //   overflow-x: auto !important;
+      // }
+    }
+ 
+  }
+}

@@ -33,8 +33,8 @@
 
                 </div>
                 <div class="date">
-                    <app-common-date-picker [label]="'Start Date'" [inputFormControl]="getControl('start_date')" ></app-common-date-picker>
-                    <app-common-date-picker [label]="'End Date'" [inputFormControl]="getControl('end_date')" ></app-common-date-picker>
+                    <app-common-date-picker [label]="'Start Date'" [inputFormControl]="getControl('start_date')" [maxDate]="getControl('end_date').value" ></app-common-date-picker>
+                    <app-common-date-picker [label]="'End Date'" [inputFormControl]="getControl('end_date')" [minDate]="getControl('start_date').value" ></app-common-date-picker>
 
                 </div>
                 <div class="row">

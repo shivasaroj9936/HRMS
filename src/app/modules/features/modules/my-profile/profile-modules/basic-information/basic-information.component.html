@@ -21,9 +21,9 @@
                             {{uiMessage.TOTAL_WORK_EXP}}
                         </p>
                         <div class="inputs">
-                            <app-common-input [minLength]="4" [maxLength]="4" [labelStyle]="'dark'" [label]="labelMessage.YEAR" [inputFormControl]="getControl('tot_exp_years')"></app-common-input>
+                            <app-common-input [minValue]="1950" [maxValue]="2023" [minLength]="4" [maxLength]="4" [labelStyle]="'dark'" [label]="labelMessage.YEAR" [inputFormControl]="getControl('tot_exp_years')"></app-common-input>
 
-                            <app-common-input  [minLength]="1" [maxLength]="2" [labelStyle]="'dark'" [label]="labelMessage.MONTH" [inputFormControl]="getControl('tot_exp_month')"></app-common-input>
+                            <app-common-input  [minLength]="1" [maxLength]="12" [labelStyle]="'dark'" [label]="labelMessage.MONTH" [inputFormControl]="getControl('tot_exp_month')"></app-common-input>
 
                         </div>
                     </div>
@@ -44,14 +44,6 @@
 
 
                 <div class="row4 address">
-                    <!-- <label class="label">{{labelMessage.ADDRESS}}</label>
-                    <mat-form-field appearance="outline" class="addressFormfield">
-                        <textarea type="text" placeholder="Message" class="inputMessage" matInput cdkTextareaAutosize formControlName="address"
-                            cdkAutosizeMinRows="4" cdkAutosizeMaxRows="7"
-                            [placeholder]="labelMessage.ADDRESS"></textarea>
-                            <mat-error>{{ getControl("address") | validate : labelMessage.ADDRESS }}</mat-error>
-
-                    </mat-form-field> -->
                 <app-common-text-area [row]="3" [column]="10" [label]="labelMessage.ADDRESS" [labelStyle]="'light'" [inputFormControl]="getControl('address')" ></app-common-text-area>
 
                 </div>

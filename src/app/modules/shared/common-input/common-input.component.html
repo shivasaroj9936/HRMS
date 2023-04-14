@@ -1,7 +1,7 @@
 <div class="formfield 1">
     <label class="label" [ngClass]="labelStyle"  >{{label|titlecase}}</label>
     <mat-form-field appearance="outline" class="increaseFormfield">
-        <input appNoSpecialChar appInputRestriction="directiveName" [maxlength]="maxLength" [minlength]="minLength"  appAvoidFirstSpace [placeholder]="label" matInput  [formControl]="$any(inputControl)"  [type]="hide&&passwordType ? 'password' : 'text'" >
+        <input appNoSpecialChar appInputRestriction="directiveName"   [maxlength]="maxLength" [minlength]="minLength"  [max]="maxValue" [min]="minValue"  appAvoidFirstSpace [placeholder]="label" matInput  [formControl]="$any(inputControl)"  [type]="hide&&passwordType ? 'password' : 'text'" >
         <mat-error>{{ inputControl | validate : label }}</mat-error>
         <mat-icon *ngIf="passwordType" matSuffix class="eye" (click)="hide = !hide">{{ hide ? "visibility_off" : "visibility" }}
         </mat-icon>

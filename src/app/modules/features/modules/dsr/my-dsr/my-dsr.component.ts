@@ -63,7 +63,6 @@ export class MyDsrComponent implements OnInit  ,AfterContentChecked{
       project: this._formService.getControl('cv'),
       date: this._formService.getControl('cv',),
       logged_hr: this._formService.getControl('cv',),
-      // no_work_done: this._formService.getControl('chkbox',),
       description: this._formService.getControl('dsr'),
     });
 

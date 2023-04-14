@@ -45,7 +45,7 @@ export class ReferalFormComponent implements OnInit {
       email: this._formService.getControl("email"),
       contact_number: this._formService.getControl("contact_number"),
       cv: this._formService.getControl("cv"),
-      skill: this._formService.getControl("name"),
+      skill: this._formService.getControl("description"),
     });
   }
   setValueInForm() {

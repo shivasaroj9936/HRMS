@@ -35,4 +35,7 @@ export const PATTERN_ERRORS = (pattern: string | RegExp, key: string) :any =>{
     if (pattern == PATTERN.subdomain) {
         return `Please enter a valid ${key.toLowerCase()}`;
     }
+    if (pattern == PATTERN.month) {
+        return `Please enter a valid ${key.toLowerCase()}`;
+    }
 };

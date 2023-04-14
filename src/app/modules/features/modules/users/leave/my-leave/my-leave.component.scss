@@ -131,6 +131,15 @@ section {
         .leave {
             grid-template-columns: auto ;
         }
+        .add_leave{
+            form{
+                gap: 1rem;
+            }
+            .date{
+                gap: 1rem;
+
+            }
+        }
     }
 }
 @media only screen and (max-width: 1000px) {
@@ -139,6 +148,7 @@ section {
        .add_leave{
         form{
             grid-template-columns: auto;
+
             .date {
                 grid-template-columns: auto;
     

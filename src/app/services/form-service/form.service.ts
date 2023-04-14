@@ -25,7 +25,6 @@ export class FormService {
       Validators.minLength(VALIDATION_CRITERIA.nameMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.nameMaxLength),
       Validators.pattern(PATTERN.name),
-
     ],
     dob: [],
     gender: [],
@@ -35,10 +34,8 @@ export class FormService {
       Validators.pattern(PATTERN.phone)
     ],
     marital_status: [],
-    tot_exp_month: [ Validators.pattern(PATTERN.phone)],
-    tot_exp_years: [ Validators.pattern(PATTERN.phone)],
-    rel_exp_year: [ Validators.pattern(PATTERN.phone)],
-    rel_exp_month: [ Validators.pattern(PATTERN.phone)],
+    month: [ Validators.pattern(PATTERN.month)],
+    year: [ Validators.pattern(PATTERN.phone)],
     address: [
       Validators.minLength(VALIDATION_CRITERIA.addressMinLength),
       Validators.maxLength(VALIDATION_CRITERIA.addressMaxLength),

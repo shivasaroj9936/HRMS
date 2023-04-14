@@ -20,6 +20,8 @@ export class CommonInputComponent implements OnInit {
   @Input() maxLength:number=200;
   @Input() minLength!:number;
 
+  @Input() maxValue:number=200;
+  @Input() minValue!:number;
   @Input() directiveName!:string;
   @Input() passwordType=false;
   hide=true;

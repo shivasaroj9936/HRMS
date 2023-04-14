@@ -35,10 +35,10 @@ export class BasicInformationComponent implements OnInit,AfterContentChecked {
       gender: this._formService.getControl('gender'),
       marital_status: this._formService.getControl('marital_status'),
       contact_number: this._formService.getControl('contact_number'),
-      tot_exp_years: this._formService.getControl('tot_exp_years'),
-      tot_exp_month: this._formService.getControl('tot_exp_month'),
-      rel_exp_year: this._formService.getControl('rel_exp_year'),
-      rel_exp_month: this._formService.getControl('rel_exp_month'),
+      tot_exp_years: this._formService.getControl('year'),
+      tot_exp_month: this._formService.getControl('month'),
+      rel_exp_year: this._formService.getControl('year'),
+      rel_exp_month: this._formService.getControl('month'),
       address: this._formService.getControl('address'),
     });
   }

@@ -1,7 +1,7 @@
 <div class="formfield" *ngIf="inputControl">
     <mat-label class="label" [ngClass]="labelStyle" >{{label }}</mat-label>
      <mat-form-field appearance="outline"  >
-    <input readonly matInput [matDatepicker]="picker" [formControl]="$any(inputControl)" [placeholder]="placeHolder" (click)="picker.open()" />
+    <input readonly matInput [matDatepicker]="picker" [formControl]="$any(inputControl)" [placeholder]="placeHolder" [max] = "maxDate" [min]="minDate" (click)="picker.open()" />
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
     <mat-error  >{{ inputControl| validate : (label==' '?'Date':label) }}</mat-error>
