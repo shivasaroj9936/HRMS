@@ -22,7 +22,7 @@ export class MyPerformanceComponent implements OnInit {
       this.reviewData=this.performanceValue.reviewData.find((item)=>{
       return  item.year==val;
       });
-      console.log(this.reviewData);
+      // console.log(this.reviewData);
       
     });
   }

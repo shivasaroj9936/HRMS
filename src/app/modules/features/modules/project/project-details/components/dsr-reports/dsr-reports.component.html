@@ -5,8 +5,8 @@
         </div>
           <form [formGroup]="filterForm" (ngSubmit)="search()">
 
-            <app-common-input [labelStyle]="'dark'" [label]="'Date From'" [inputFormControl]="getControl('date_from')"></app-common-input>
-            <app-common-input [labelStyle]="'dark'" [label]="'Date to'" [inputFormControl]="getControl('date_to')"></app-common-input>
+            <app-common-date-picker  [maxDate]="getControl('date_to').value" [placeHolder]="'Date from'"  [label]="'Date From'" [inputFormControl]="getControl('date_from')"></app-common-date-picker>
+            <app-common-date-picker  [minDate]="getControl('date_from').value" [placeHolder]="'Date to'"  [label]="'Date To'" [inputFormControl]="getControl('date_to')"></app-common-date-picker>
             <app-common-dropdown [label]="'Department'" [data]="departments" [dropdownDownControlName]="getControl('submission_status')" ></app-common-dropdown>
             <app-common-dropdown [label]="'Project Resource'" [data]="departments" [dropdownDownControlName]="getControl('department')" ></app-common-dropdown>
             <app-common-dropdown [label]="'Submission Status'" [data]="departments" [dropdownDownControlName]="getControl('project_resource')" ></app-common-dropdown>

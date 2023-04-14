@@ -1,6 +1,7 @@
 import { AfterContentChecked, ChangeDetectorRef, Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { trim } from 'src/app/constants/helperMethods';
 import { BASIC_INFORMATION } from 'src/app/constants/routes';
 import { FORM_LABEL, LANGUAGE_DROPDOWN } from 'src/app/constants/ui-texts/dashboard-card';
 import { FormService } from 'src/app/services/form-service/form.service';
@@ -32,16 +33,17 @@ export class QualificationEditDailogComponent implements OnInit , AfterContentCh
   }
 
   ngOnInit(): void {
-    console.log(this.data,'fffffffff');
+    // console.log(this.data,'fffffffff');
 
     this.createForm()
     this.setValue();
   }
 
   createForm() {
+
     this.qualificationForm = this.formBuilder.group({
       school: this._formService.getControl("school"),
-      education: this._formService.getControl("name"),
+      education: this._formService.getControl("cv"),
       time_from: this._formService.getControl("time_from"),
       time_to: this._formService.getControl("time_to"),
       language: this._formService.getControl("language"),
@@ -50,19 +52,27 @@ export class QualificationEditDailogComponent implements OnInit , AfterContentCh
     });
   }
   setValue(){
-    this.qualificationForm.patchValue({...this.data});
+    this.qualificationForm.patchValue(this.data);
     // this.getControl('school').patchValue(this.data.school);
-    this.getControl('time_from').patchValue('01/01/2022');
+    // this.getControl('time_from').patchValue('01/01/2022');
     // this.getControl('school').patchValue(this.data.school);
-    console.log(this.qualificationForm.value);
+    // console.log(this.qualificationForm.value);
     
 
   }
   getControl(control: any) {
     return this.qualificationForm.controls[control] as FormControl;
   }
-  onSubmit(){}
+  onSubmit(){
+    this.checkValidation();
+    if(this.qualificationForm.valid){
+      this.dialogRef.close(this.qualificationForm.value);
+    }
+  }
   ngAfterContentChecked() {
     this.cdr.detectChanges();
+  }
+  checkValidation() {
+    this.qualificationForm.patchValue(trim(this.qualificationForm.value))
   }
 }

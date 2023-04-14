@@ -45,7 +45,7 @@ export class AddPitchComponent implements OnInit {
     return this.addPitchForm?.controls[control] as FormControl;
   }
   onSubmit() {
-    console.log(this.addPitchForm);
+    // console.log(this.addPitchForm);
 
   }
   onCancel() { }

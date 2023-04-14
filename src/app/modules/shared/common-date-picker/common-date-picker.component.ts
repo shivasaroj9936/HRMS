@@ -39,8 +39,8 @@ export class CommonDatePickerComponent implements OnInit {
     // })
   }
 
-  onDateClick(){
-    const date=this.datePipe.transform(this.inputControl.value,"yyy-MM-dd");
-    this.inputControl.patchValue(date)
-  }
+  // onDateClick(){
+  //   const date=this.datePipe.transform(this.inputControl.value,"yyy-MM-dd");
+  //   this.inputControl.patchValue(date)
+  // }
 }

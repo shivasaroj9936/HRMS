@@ -23,11 +23,11 @@ section {
 
                 .letter {
                     margin: 0;
-                    width: 60px;
-                    height: 60px;
+                    width: 3.75rem;
+                    height: 3.75rem;
                     border-radius: 7px;
                     background-color: #3246d3;
-                    font-size: 31px;
+                    font-size: 1.938rem;
                     font-weight: 600;
                     color: #fff;
                     display: flex;
@@ -55,7 +55,7 @@ section {
         }
 
         .mat-expansion-panel-header {
-            min-height: 60px;
+            min-height: 3.75rem;
             padding: 10px 13px;
             border-bottom: 1px solid rgba(24, 28, 33, 0.06);
             border-radius: none;
@@ -68,7 +68,7 @@ section {
                     margin-left: 10px;
 
                     .no_doc {
-                        font-size: 16px;
+                        font-size: 1rem;
                         color: #9a9c9c;
                         text-transform: capitalize;
                         word-wrap: break-word;
@@ -79,7 +79,7 @@ section {
                     .heading {
                         margin: 0;
                         text-align: left;
-                        font-size: 22px;
+                        font-size: 1.375rem;
                         font-weight: 500;
                         color: #2f3031;
                         text-transform: capitalize;
@@ -88,4 +88,120 @@ section {
             }
         }
     }
+}
+
+
+@media only screen and (max-width: 1080px) {
+    section {
+    
+        .exp_panel_wraper {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 2rem;
+    
+            .exp_panel {
+    
+                .panel {
+                    width: 100%;
+    
+                    .letter {
+                        margin: 0;
+                        width: 2.75rem;
+                        height: 2.75rem;
+                        font-size: 1rem;
+                    
+                    }
+                }
+    
+            }
+    
+        }
+    
+        ::ng-deep {
+    
+    
+            .mat-expansion-panel-header {
+                min-height: 2.75rem;
+                padding: 10px 13px;
+       
+    
+                .text {
+           
+    
+                    .inner {
+                        margin-left: 10px;
+    
+                        .no_doc {
+                            font-size: 0.8rem;
+                   
+                        }
+    
+                        .heading {
+                    
+                            font-size: 1rem;
+                    
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media only screen and (max-width: 500px) {
+    section {
+    
+        .exp_panel_wraper {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 1rem;
+    
+            .exp_panel {
+    
+                .panel {
+                    width: 100%;
+    
+                    .letter {
+                        margin: 0;
+                        width: 1.75rem;
+                        height: 1.75rem;
+                        font-size: 0.8rem;
+                    
+                    }
+                }
+    
+            }
+    
+        }
+    
+        ::ng-deep {
+    
+    
+            .mat-expansion-panel-header {
+                min-height: 2.75rem;
+                padding: 5px 8px;
+       
+    
+                .text {
+           
+    
+                    .inner {
+                        margin-left: 10px;
+    
+                        .no_doc {
+                            font-size: 0.7rem;
+                   
+                        }
+    
+                        .heading {
+                    
+                            font-size: 0.7rem;
+                    
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }

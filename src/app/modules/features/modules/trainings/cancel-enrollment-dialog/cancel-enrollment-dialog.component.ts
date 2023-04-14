@@ -11,7 +11,7 @@ import { FEEDBACK_LABELS } from '../../dashboard/interfaces/interfaces';
 })
 export class CancelEnrollmentDialogComponent implements OnInit {
   LABELS=FEEDBACK_LABELS;
-  brief= new FormControl('',Validators.required);
+  brief= new FormControl('',[Validators.required,Validators.minLength(10)]);
   constructor(
     public dialogRef: MatDialogRef<CancelEnrollmentDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -24,10 +24,12 @@ export class CancelEnrollmentDialogComponent implements OnInit {
     this.dialogRef.close();
   }
   onSubmit(){
+    this.brief.patchValue(this.brief.value.trim());
     if(this.brief.valid){
       this.notificationService.showSuccess('Saved','Brief Reason');
      this.dialogRef.close();
 
     }
   }
+
 }

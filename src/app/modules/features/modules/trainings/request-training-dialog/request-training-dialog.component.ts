@@ -1,9 +1,10 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { trim } from 'src/app/constants/helperMethods';
 import { FormService } from 'src/app/services/form-service/form.service';
 import { NotificationService } from 'src/app/services/notification-service/notification.service';
-import {  TRAINING_REQUEST } from '../../dashboard/interfaces/interfaces';
+import { TRAINING_REQUEST } from '../../dashboard/interfaces/interfaces';
 
 @Component({
   selector: 'app-request-training-dialog',
@@ -11,15 +12,15 @@ import {  TRAINING_REQUEST } from '../../dashboard/interfaces/interfaces';
   styleUrls: ['./request-training-dialog.component.scss']
 })
 export class RequestTrainingDialogComponent implements OnInit {
-  requestTraining=TRAINING_REQUEST
-  trainingNames=['dddddd','wwwwwww','rrrrrrrr']
+  requestTraining = TRAINING_REQUEST
+  trainingNames = ['dddddd', 'wwwwwww', 'rrrrrrrr']
   trainingRequestForm!: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
     private _formService: FormService,
     public dialogRef: MatDialogRef<RequestTrainingDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private notificationService:NotificationService
+    private notificationService: NotificationService
   ) {
     this.createForm();
   }
@@ -35,8 +36,8 @@ export class RequestTrainingDialogComponent implements OnInit {
       team_name: this._formService.getControl("department_name"),
       learning_are: this._formService.getControl("description"),
       organinization_need: this._formService.getControl("description"),
-      interest_to_give_training: this._formService.getControl("department_name",false),
-      timing: this._formService.getControl("department_name",false),      
+      interest_to_give_training: this._formService.getControl("department_name"),
+      timing: this._formService.getControl("department_name"),
     });
   }
   setValueInForm() {
@@ -51,16 +52,19 @@ export class RequestTrainingDialogComponent implements OnInit {
     return this.trainingRequestForm?.controls[control] as FormControl;
   }
   onSubmit() {
-    if(this.trainingRequestForm.valid){
-      this.notificationService.showSuccess('Saved',this.requestTraining.heading);
+    this.checkValidation()
+    if (this.trainingRequestForm.valid) {
+      this.notificationService.showSuccess('Saved', this.requestTraining.heading);
       this.dialogRef.close();
-      this.trainingRequestForm.reset();
+    } else {
+      this.notificationService.showError('Error !', 'Please Provide All Information ');
 
     }
-    console.log(this.trainingRequestForm);
-
   }
   onNoClick(): void {
     this.dialogRef.close();
+  }
+  checkValidation() {
+    this.trainingRequestForm.patchValue(trim(this.trainingRequestForm.value))
   }
 }

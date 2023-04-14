@@ -43,9 +43,11 @@ section {
                     color: #2f3031;
                     font-size: 0.938rem;
                 }
-                .link{
+
+                .link {
                     color: #000;
-                    &:hover{
+
+                    &:hover {
                         color: var(--primary-color);
                     }
                 }
@@ -58,11 +60,136 @@ section {
                 font-size: 0.938rem;
                 font-weight: 500;
                 margin: 5px 0px;
-                .icon{
-                    color:#3246d3;
+
+                .icon {
+                    color: #3246d3;
                     cursor: pointer;
                 }
             }
         }
     }
+}
+
+// @media only screen and (max-width: 1080px) {
+//     section {
+//         margin-top: 1rem;
+
+//         .row {
+//             .tagHeader {
+//                 border-bottom: 1px solid #f3f7fc;
+//                 display: flex;
+//                 justify-content: space-between;
+//                 align-items: center;
+//                 padding: 11px 25px 11px 15px;
+
+//                 .heading {
+//                     font-size: 1.25rem;
+//                     color: #3246d3;
+//                     font-weight: 500;
+//                     margin: 0;
+//                 }
+//             }
+
+//             .card {
+//                 padding: 10px;
+//                 border-radius: 11px;
+//                 border: 1px solid rgba(0, 0, 0, 0.16);
+//                 box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+//                 margin-bottom: 1.25rem;
+
+//                 .card_header {
+//                     display: flex;
+//                     justify-content: space-between;
+//                     align-items: center;
+//                     font-weight: 500;
+//                     margin-right: 10px;
+//                     color: #2f3031;
+//                     font-size: 1.25rem;
+
+//                     h6 {
+//                         margin: 0;
+//                         color: #2f3031;
+//                         font-size: 0.938rem;
+//                     }
+
+//                     .link {
+//                         color: #000;
+
+//                         &:hover {
+//                             color: var(--primary-color);
+//                         }
+//                     }
+//                 }
+
+//                 .download {
+//                     display: flex;
+//                     align-items: center;
+//                     color: #9a9c9c;
+//                     font-size: 0.938rem;
+//                     font-weight: 500;
+//                     margin: 5px 0px;
+
+//                     .icon {
+//                         color: #3246d3;
+//                         cursor: pointer;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@media only screen and (max-width: 500px) {
+    section {
+        margin-top: 1rem;
+
+        .row {
+            .tagHeader {
+         
+                // padding: 11px 25px 11px 15px;
+                padding: 2px 12px 6px 7px;
+
+                .heading {
+                    font-size: 1rem;
+                }
+            }
+
+            .card {
+                padding: 10px;
+                border-radius: 11px;
+                border: 1px solid rgba(0, 0, 0, 0.16);
+                box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+                margin-bottom: 1.25rem;
+
+                .card_header {
+        
+                    font-size: 1rem;
+
+                    h6 {
+                        font-size: 0.8rem;
+                    }
+
+                    .link {
+                        color: #000;
+                        font-size: 0.8rem;
+                        &:hover {
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+
+                .download {
+               
+                    font-size: 0.8rem;
+                    margin: 5px 0px;
+
+                    .icon {
+                        color: #3246d3;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
 }

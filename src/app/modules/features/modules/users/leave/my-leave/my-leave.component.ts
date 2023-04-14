@@ -84,7 +84,7 @@ export class MyLeaveComponent implements OnInit,AfterContentChecked {
     return this.leaveForm?.controls[control];
   }
   onSubmit(){
-    console.log(this.leaveForm);
+    // console.log(this.leaveForm);
     if(this.leaveForm.valid){
       const today=new Date();
       this.leaveForm.value["applied_on"] = this.datePipe.transform( today, "yyyy-MM-dd" );

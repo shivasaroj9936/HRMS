@@ -46,7 +46,7 @@ export class ChangePasswordComponent implements OnInit {
 
   save() {
     if (this.passwordResetForm.valid) {
-      console.log(this.passwordResetForm);
+      // console.log(this.passwordResetForm);
 
       this._notificationService.showSuccess('Updated','Password');
       this.passwordResetForm.reset();

@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AddTagDialogComponent } from './components/add-tag-dialog/add-tag-dialog.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { CommonDatePickerModule } from "src/app/modules/shared/common-date-picker/common-date-picker.module";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MatInputModule } from "@angular/material/input";
     // MatChipsModule
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    CommonDatePickerModule
   ],
 })
 export class ProjectDetailsModule {}

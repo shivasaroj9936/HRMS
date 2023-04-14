@@ -33,7 +33,7 @@ export class ListItemComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result: string) => {
-      console.log("The dialog was closed", result);
+      // console.log("The dialog was closed", result);
       if (result) {
         this._router.navigate(['/auth'])
       }
@@ -41,7 +41,7 @@ export class ListItemComponent implements OnInit {
   }
 
   logOut(route:string){
-    console.log(route);
+    // console.log(route);
     
     if(route=='ACCOUNT'){
       this.logoutConfirmation();

@@ -12,7 +12,7 @@
     </div>
     <div class="action">
         <button  mat-button class="project_btn cancel" (click)="onNoClick()">Cancel</button>
-        <button mat-button class="save project_btn" [mat-dialog-close]="inputValue.value"   [disabled]="inputValue.invalid">
+        <button mat-button class="save project_btn" [mat-dialog-close]="inputValue.value"   (click)=" add()"  [disabled]="inputValue.invalid">
             Add
         </button>
     </div>

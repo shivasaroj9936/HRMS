@@ -15,15 +15,18 @@ export class AddTagDialogComponent implements OnInit {
   ) {}
 
   onNoClick(): void {
-    this.data=this.inputValue.value;
-    console.log(this.data);
+    this.dialogRef.close();
     
-    this.dialogRef.close(this.inputValue.value);
+    
   }
-
+  
   ngOnInit(): void {
-    console.log(this.inputValue.value);
+    // console.log(this.inputValue.value);
     
   }
+  add(){
+    this.data=this.inputValue.value;
+    this.dialogRef.close(this.inputValue.value);
 
+  }
 }

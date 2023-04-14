@@ -66,7 +66,7 @@ export class TrainingDialogComponent implements OnInit {
       this.notificationService.showError('All Field Requierd','Feedback');
 
     }
-    console.log(this.feedbackForm);
+    // console.log(this.feedbackForm);
 
   }
   onNoClick(): void {

@@ -65,7 +65,7 @@ export class TicketsComponent implements OnInit {
       this.Table_DATA.push(this.ticketForm.value);
       this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
       this.notificationService.showSuccess('Ticket', 'Added');
-      console.log(this.ticketForm.value);
+      // console.log(this.ticketForm.value);
       this.toggle = false;
       this.ticketForm.reset();
     }else{

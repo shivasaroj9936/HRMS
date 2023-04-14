@@ -22,16 +22,16 @@ export class DsrReportsComponent implements OnInit {
 
   createForm() {
     this.filterForm = this.formBuilder.group({
-      date_from: this._formService.getControl("dob"),
-      date_to: this._formService.getControl("dob"),
+      date_from: this._formService.getControl("cv"),
+      date_to: this._formService.getControl("cv"),
       submission_status: this._formService.getControl("cv"),
       department: this._formService.getControl("cv"),
       project_resource: this._formService.getControl("cv"),
-      pm_pproval_status: this._formService.getControl("gender"),
-      am_pproval_status: this._formService.getControl("marital_status"),
-      rm_pproval_status: this._formService.getControl("contact_number"),
-      final_pproval_status: this._formService.getControl("year"),
-      hours: this._formService.getControl("month"),
+      pm_pproval_status: this._formService.getControl("cv"),
+      am_pproval_status: this._formService.getControl("cv"),
+      rm_pproval_status: this._formService.getControl("cv"),
+      final_pproval_status: this._formService.getControl("cv"),
+      hours: this._formService.getControl("cv"),
     });
   }
 

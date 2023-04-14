@@ -41,7 +41,7 @@ export class JobDetailsComponent implements OnInit {
         return;
       }
     });
-    console.log(this.job);
+    // console.log(this.job);
 
   }
   termAndConditionsDialog(){

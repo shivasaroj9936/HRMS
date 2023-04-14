@@ -73,7 +73,7 @@ export class AssetDeclarationComponent implements OnInit {
     return this.assetDeclarationForm?.controls[control] as FormControl;
   }
   onSubmit() {
-    console.log(this.assetDeclarationForm.value);
+    // console.log(this.assetDeclarationForm.value);
     if(this.assetDeclarationForm.valid){
       this.assetDeclarationForm.value['s_no']=this.Table_DATA.length;
       this.assetDeclarationForm.value['added']='yes';
