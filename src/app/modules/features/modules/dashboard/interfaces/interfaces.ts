@@ -6,6 +6,15 @@ import {
   QULIFICATION,
   SHIFT,
 } from "src/app/constants/routes";
+export interface USERDATA{
+  name:string,
+  dob : string,
+  gender:string,
+  email:string,
+  emp_id:string,
+  last_login?: string,
+  designation?:string
+}
 
 export interface JobOpening {
   jobLogo: string;
@@ -30,6 +39,7 @@ export interface IDIRECTORY_DATA {
   BIRTH_DATE: string;
   BIRTH_MONTH: string;
 }
+
 
 export interface ProfilePart {
   icon: string;
@@ -437,14 +447,13 @@ export const PROFILE_PARTS: ProfilePart[] = [
 
 export const Gallery_DATA: IGALLERYDATA[] = [
   {
-    IMAGE: "/assets/gallery/award_1674822333816.jpg",
+    IMAGE:'/assets/gallery/award_122.jpg',
     HEADING: "Republic Day-2023",
     NUM: 5,
     BUTTON: "View",
     ALBUM: [
       "/assets/gallery/award_1672378171227.jpg",
       "/assets/gallery/award_1672292016846.jpg",
-      "/assets/gallery/award_1674822333816.jpg",
       "/assets/gallery/award_166719426194.jpeg",
     ],
   },
@@ -455,7 +464,6 @@ export const Gallery_DATA: IGALLERYDATA[] = [
     BUTTON: "View",
     ALBUM: [
       "/assets/gallery/award_1672378171227.jpg",
-      "/assets/gallery/award_1674822333816.jpg",
       "/assets/gallery/award_1672292016846.jpg",
       "/assets/gallery/award_166719426194.jpeg",
     ],
@@ -469,7 +477,6 @@ export const Gallery_DATA: IGALLERYDATA[] = [
       "/assets/gallery/award_1672378171227.jpg",
       "/assets/gallery/award_1672292016846.jpg",
       "/assets/gallery/award_166719426194.jpeg",
-      "/assets/gallery/award_1674822333816.jpg",
     ],
   },
   {
@@ -478,7 +485,6 @@ export const Gallery_DATA: IGALLERYDATA[] = [
     NUM: 5,
     BUTTON: "View",
     ALBUM: [
-      "/assets/gallery/award_1674822333816.jpg",
       "/assets/gallery/award_1672378171227.jpg",
       "/assets/gallery/award_1672292016846.jpg",
       "/assets/gallery/award_166719426194.jpeg",
@@ -808,7 +814,6 @@ export const REFERRAL = {
 // ];
 
 // export const Gallery_DATA :IGALLERYDATA[]=[
-//   {IMAGE:'/assets/gallery/award_1674822333816.jpg',HEADING:'Republic Day-2023',NUM:5,BUTTON:'View'},
 //   {IMAGE:'/assets/gallery/award_1672378171227.jpg',HEADING:'Best Place To Work Award',NUM:5,BUTTON:'View'},
 //   {IMAGE:'/assets/gallery/award_1672292016846.jpg',HEADING:'Christmas Celebration -2022',NUM:5,BUTTON:'View'},
 //   {IMAGE:'/assets/gallery/award_166719426194.jpeg',HEADING:'Diwali Party -2022',NUM:5,BUTTON:'View'},

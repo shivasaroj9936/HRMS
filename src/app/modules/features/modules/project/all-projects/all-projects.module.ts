@@ -11,6 +11,7 @@ import { AllProjectsGridComponent } from './components/all-projects-grid/all-pro
 import { AllProjectsListComponent } from './components/all-projects-list/all-projects-list.component';
 import { CommonTableModule } from 'src/app/modules/shared/common-table/common-table.module';
 import { GridProjectCardComponent } from './components/grid-project-card/grid-project-card.component';
+import { AbsoluteRoutingModule } from 'src/app/pipes/absolute-routing/absolute-routing.module';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { GridProjectCardComponent } from './components/grid-project-card/grid-pr
     AllProjectsRoutingModule,
     MatButtonToggleModule,
     MatIconModule,
-    CommonTableModule
+    CommonTableModule,
+    AbsoluteRoutingModule
   ]
 })
 export class AllProjectsModule { }

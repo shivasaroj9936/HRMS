@@ -115,26 +115,26 @@ section {
                 gap: 1rem;
             }
 
-            // .dsr_analytic {
-            //     .dsr_list ul li h4 {
-            //         font-size: 0.538rem;
-            //         margin-left: 10px;
-            //     }
 
-            //     .dsr_list ul li span {
+        }
 
-            //         min-width: 50px;
-            //         margin-right: 10px;
-            //         font-size: 0.538rem;
-            //         padding: 10px 0;
+        .dsr_analytic {
 
-            //     }
+            // .dsr_list ul li h4 {
+            //     font-size: 1rem;
+            //     margin-left: 10px;
             // }
+            .dsr_list ul li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 0 !important;
+            }
         }
     }
 }
 
-@media only screen and (max-width: 61.25rem) {
+@media only screen and (max-width: 980px) {
     section {
 
         .row {
@@ -144,7 +144,10 @@ section {
                 gap: 0;
             }
         }
+
         .dsr_analytic {
+            margin-bottom: 0 !important;
+
             .dsr_list ul li h4 {
                 font-size: 1rem;
                 margin-left: 10px;
@@ -152,10 +155,10 @@ section {
 
             .dsr_list ul li span {
 
-                min-width: 50px;
+                min-width: 50px !important;
                 margin-right: 10px;
-                font-size: 0.738rem;
-                padding: 10px 0;
+                font-size: 0.8rem !important;
+                padding: 5px 0 !important;
 
             }
         }

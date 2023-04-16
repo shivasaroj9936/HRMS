@@ -82,10 +82,8 @@ section {
 
                     .heading {
                         font-family: "Lato";
-                        // font-size: 16px;
                         color: #199CFF;
                         font-weight: 600;
-                        // line-height: 1.9;
                         text-transform: uppercase;
                         border-bottom: none;
                     }
@@ -123,6 +121,14 @@ section {
                 .new_members {
                     width: 80vw;
                 }
+
+                .latest_opeanings {
+                    border-right: none;
+                  
+                }
+
+
+
             }
             @media only screen and (max-width: 1000px) {
                 .new_members {

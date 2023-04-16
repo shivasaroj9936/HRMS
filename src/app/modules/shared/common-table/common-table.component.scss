@@ -1,7 +1,7 @@
 @import 'src/scss/buttons.scss';
 
 section {
-  overflow-x: auto !important;
+  // overflow-x: auto !important;
   overflow-y: hidden;
   position: relative !important;
   background-color: #fff;
@@ -35,99 +35,106 @@ section {
   //   background-color: #fff5f5 !important;
 
   // }
-  table {
-    // width: 100%;
-    border-radius: 10px;
+  .table_wraper {
+    overflow-x: auto !important;
 
-    min-width: 100%;
-    overflow-x: scroll;
-    overflow: hidden;
-    th {
-      width: fit-content;
-      background-color: #fff;
-      border-top: 1px solid #dededf;
-      min-width: 80px;
+    table {
+      // width: 100%;
 
-    }
+      border-radius: 10px;
 
+      min-width: 100%;
+      overflow-x: scroll;
+      overflow: hidden;
 
-    td {
-      min-width: 80px;
-      .name {
-        display: flex;
-        align-items: center;
+      th {
+        width: fit-content;
+        background-color: #fff;
+        border-top: 1px solid #dededf;
+        min-width: 80px;
 
-        .icon {
-          color: #F40D36;
-          margin-right: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .green {
-          color: green;
-          font-size: 20px;
-        }
-
-        .red {
-          color: #F40D36;
-          font-size: 20px;
-
-        }
       }
 
-      .action {
-        display: flex;
-        flex-wrap: wrap;
 
-        a {
-          text-decoration: none;
-        }
+      td {
+        min-width: 80px;
 
-        mat-icon {
-          cursor: pointer;
-        }
-
-        .action_button {
-          background: none;
-          border: none;
+        .name {
           display: flex;
           align-items: center;
 
+          .icon {
+            color: #F40D36;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .green {
+            color: green;
+            font-size: 20px;
+          }
+
+          .red {
+            color: #F40D36;
+            font-size: 20px;
+
+          }
         }
 
-        .link {
-          text-decoration: underline !important;
-          font-weight: 400;
-          color: #1e70cd;
-          background-color: transparent;
-          cursor: pointer;
-        }
+        .action {
+          display: flex;
+          flex-wrap: wrap;
 
-        .btn_add_new {
-          background-color: #fff;
-          color: orange;
-        }
+          a {
+            text-decoration: none;
+          }
 
-        .delete {
-          color: red;
-        }
+          mat-icon {
+            cursor: pointer;
+          }
 
-        .edit {
-          color: var(--primary-color);
+          .action_button {
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+
+          }
+
+          .link {
+            text-decoration: underline !important;
+            font-weight: 400;
+            color: #1e70cd;
+            background-color: transparent;
+            cursor: pointer;
+          }
+
+          .btn_add_new {
+            background-color: #fff;
+            color: orange;
+          }
+
+          .delete {
+            color: red;
+          }
+
+          .edit {
+            color: var(--primary-color);
+          }
         }
       }
-    }
 
-    mat-icon {
-      margin-right: 4px;
+      mat-icon {
+        margin-right: 4px;
+      }
     }
   }
 
   ::ng-deep {
 
-    .mat-paginator{
+    .mat-paginator {
 
       min-width: 100%;
     }
@@ -155,50 +162,54 @@ section {
 
 @media only screen and (max-width: 850px) {
 
-  section{
+  section {
 
     table {
       overflow-x: scroll;
     }
-    
+
     ::ng-deep {
 
-    .mat-paginator{
-      
-      min-width: 100%;
+      .mat-paginator {
+
+        min-width: 100%;
+      }
     }
   }
-}
 }
 
 @media only screen and (max-width: 550px) {
-  section{
-    .heading{
+  section {
+    .heading {
       font-size: 1rem;
-    padding: 5px 12px 5px 6px;
-    margin: 0;
+      padding: 5px 12px 5px 6px;
+      margin: 0;
 
     }
+
     table {
       overflow-x: scroll;
-  }
-  
-  ::ng-deep {
-    
-    .mat-paginator-container{
-      
-      flex-direction: column !important;
     }
-    .mat-paginator-page-size{
-      margin: -25px 0px;
-    }
-    .mat-form-field-appearance-outline .mat-form-field-wrapper{
-      margin: 0;
+
+    ::ng-deep {
+
+      .mat-paginator-container {
+
+        flex-direction: column !important;
+      }
+
+      .mat-paginator-page-size {
+        margin: -25px 0px;
+      }
+
+      .mat-form-field-appearance-outline .mat-form-field-wrapper {
+        margin: 0;
+      }
     }
   }
-  }
-  
+
 }
+
 // @media only screen and (max-width: 411px) {
 //   table {
 //     // overflow-x: scroll;

@@ -25,8 +25,8 @@ export class AddTagDialogComponent implements OnInit {
     
   }
   add(){
-    this.data=this.inputValue.value;
-    this.dialogRef.close(this.inputValue.value);
+    this.data=this.inputValue.value?.trim();
+    this.dialogRef.close(this.data);
 
   }
 }

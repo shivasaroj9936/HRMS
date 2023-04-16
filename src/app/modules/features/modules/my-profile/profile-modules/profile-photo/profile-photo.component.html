@@ -7,7 +7,7 @@
             <form class="form" [formGroup]="imgForm" (ngSubmit)="save()">
                 <div class="container-1">
                     <p class="browse">{{uiMessage.BROWSE_VALUE}}</p>
-                    <input type="file" accept=".jpg,.png,.jpeg" (change)="readURL($event)" formControlName="img">
+                    <input type="file" accept=".jpg,.png,.jpeg"  #fileInput (change)="readURL($event)" formControlName="img">
                     <br>
                     <small>{{uiMessage.FORMAT}}</small>
                 </div>

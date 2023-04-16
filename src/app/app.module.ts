@@ -23,8 +23,9 @@ import { MatProgressBarModule } from "@angular/material/progress-bar";
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       closeButton:true,
-      timeOut:1500,
+      timeOut:2000,
       progressBar:true,
+      positionClass: 'toast-top-center',
     }),
     MatButtonModule,
     MatDialogModule

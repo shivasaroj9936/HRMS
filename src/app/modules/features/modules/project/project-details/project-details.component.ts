@@ -19,7 +19,9 @@ export class ProjectDetailsComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result: string) => {
       // console.log("The dialog was closed", result);
-      this.chips.push(result.trim());
+      if(result?.length){
+        this.chips.push(result?.trim());
+      }
     });
   }
 

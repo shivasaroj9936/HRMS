@@ -1,5 +1,7 @@
 import { AfterContentChecked, AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
+import { UtilityServiceService } from 'src/app/services/utility-service/utility-service.service';
+import { USERDATA } from './interfaces/interfaces';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +10,7 @@ import { NguCarouselConfig } from '@ngu/carousel';
 })
 export class DashboardComponent implements OnInit, AfterViewInit, AfterContentChecked {
 
-
+  userData!:USERDATA;
   referralData = [
 
     {
@@ -44,11 +46,14 @@ export class DashboardComponent implements OnInit, AfterViewInit, AfterContentCh
     velocity: 0.2,
   };
 
-  constructor(private cdr: ChangeDetectorRef) { }
+  constructor(private cdr: ChangeDetectorRef,private utilityService:UtilityServiceService) { }
 
   ngOnInit(): void {
+    this.userData=this.utilityService.userData;
   }
+
   ngAfterViewInit(): void {
+
     this.listToShow.forEach((item) => {
       this.dataSource.push(item);
     })

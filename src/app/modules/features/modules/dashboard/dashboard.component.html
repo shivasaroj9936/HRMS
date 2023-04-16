@@ -2,11 +2,11 @@
     <header>
         <div class="emp_basic_info">
             <div class="emp_image">
-                <img src="/assets/default_male.jpg" alt="user_image">
+                <img src="/assets/default_male.jpg" alt="user_image" [title]="userData?.name" >
             </div>
             <div class="emp_name">
                 <span>Hello!</span>
-                <h2>Shiva Saroj</h2>
+                <h2>{{userData?.name}}</h2>
             </div>
         </div>
     </header>

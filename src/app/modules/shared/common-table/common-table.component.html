@@ -5,10 +5,11 @@
   <div *ngIf="searchFilter" class="filter">
 
     <mat-form-field appearance="outline">
-    <mat-label>Search</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Search" #input>
-  </mat-form-field>
+      <mat-label>Search</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Search" #input>
+    </mat-form-field>
   </div>
+<div class="table_wraper">
 
   <table mat-table [dataSource]="dataSourceForTable" matSort>
 
@@ -83,7 +84,7 @@
             <div class="action">
               <ng-container *ngFor="let item of element['action']">
 
-            
+
 
                 <ng-container [ngSwitch]="item.type">
 
@@ -111,7 +112,8 @@
                     </a>
                   </ng-container>
                   <ng-container *ngSwitchCase="'dialogOpen'">
-                    <button class="action_button" [ngClass]="item.btnStyle" (click)="action(item ,dataSourceForTable.filteredData.indexOf(element))">
+                    <button class="action_button" [ngClass]="item.btnStyle"
+                      (click)="action(item ,dataSourceForTable.filteredData.indexOf(element))">
                       {{item?.text|titlecase}}
                       <ng-container *ngIf="item.icon; else othrBtn">
                         <mat-icon class="mat-18">{{ item.icon }} </mat-icon>
@@ -146,8 +148,8 @@
     </tr>
   </table>
 
-
-
-  <mat-paginator *ngIf="pagination" [pageSizeOptions]="paginationSizes" [pageSize]="defaultPageSize" showFirstLastButtons></mat-paginator>
+  <mat-paginator *ngIf="pagination" [pageSizeOptions]="paginationSizes" [pageSize]="defaultPageSize"
+    showFirstLastButtons></mat-paginator>
+  </div>
 
 </section>

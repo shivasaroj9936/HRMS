@@ -4,7 +4,6 @@ import { Router } from "@angular/router";
 import { ConfirmationDialogComponent } from "src/app/dialogs/confirmation-dialog/confirmation-dialog.component";
 import {  SideNavItem } from "src/app/interfaces/common.interface";
 import { AbsoluteRoutingPipe } from "src/app/pipes/absolute-routing/absolute-routing.pipe";
-// import * as routes from "../../constants/routes";
 
 @Component({
   selector: "app-list-item",
@@ -33,7 +32,6 @@ export class ListItemComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result: string) => {
-      // console.log("The dialog was closed", result);
       if (result) {
         this._router.navigate(['/auth'])
       }
@@ -41,8 +39,6 @@ export class ListItemComponent implements OnInit {
   }
 
   logOut(route:string){
-    // console.log(route);
-    
     if(route=='ACCOUNT'){
       this.logoutConfirmation();
     }else{
@@ -50,7 +46,10 @@ export class ListItemComponent implements OnInit {
     }
     
   }
-  // itemClick(){
-  //   this.showSubmenu=!this.showSubmenu;
+
+  // parentChecker(navBarItem: any): boolean {
+  //   let checker = this.router.url.slice(7);
+  //   let subMenuOptions = navBarItem.options;
+  //   return subMenuOptions && subMenuOptions.some((subMenuItem: any) => subMenuItem.routerLink == checker);
   // }
 }

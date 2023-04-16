@@ -7,6 +7,8 @@ import { ConfirmationDialogComponent } from 'src/app/dialogs/confirmation-dialog
 import { HelpComponent } from 'src/app/modules/features/feature-parts/help/help.component';
 import { delay } from 'rxjs/operators'
 import { slideInRight } from 'src/animations/slide-in-right';
+import { USERDATA } from '../../modules/dashboard/interfaces/interfaces';
+import { UtilityServiceService } from 'src/app/services/utility-service/utility-service.service';
 
 
 @Component({
@@ -30,14 +32,16 @@ export class HeaderComponent implements OnInit,AfterViewInit {
 
   isExpanded=true;
   profileOpen=false;
+  userData!: USERDATA;
   constructor(
     private observer: BreakpointObserver,
     private _router:Router,
-    public dialog:MatDialog
+    public dialog:MatDialog,
+    private utilityService: UtilityServiceService
   ) { }
 
   ngOnInit(): void {
-
+    this.userData=this.utilityService.userData;
   }
   ngAfterViewInit(): void {
    
