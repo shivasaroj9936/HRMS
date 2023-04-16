@@ -13,17 +13,6 @@
     line-height: 1.4;
   }
 
-  // ::ng-deep{
-  //     .mat-form-field-appearance-fill .mat-form-field-flex {
-  //         background: none;
-  //         padding: 0;
-  //     }
-  //     .mat-form-field-appearance-fill .mat-form-field-flex{
-  //         padding: 0 !important;
-
-  //     }
-  // }
-
   ::ng-deep {
 
 
@@ -32,6 +21,13 @@
       top: -5px;
       right: -8px;
       background-color: transparent;
+    }
+
+
+    .mat-toolbar.mat-primary {
+      background-color: var(--primary-color) !important;
+      // --primary-color:#26b4ff;
+
     }
   }
 }

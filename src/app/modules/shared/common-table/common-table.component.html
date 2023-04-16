@@ -89,7 +89,7 @@
                 <ng-container [ngSwitch]="item.type">
 
                   <ng-container *ngSwitchCase="'route'">
-                    <a [routerLink]="[item?.route|absolutePath,item?.routeID]">
+                    <a [routerLink]="[item?.route|absolutePath,dataSourceForTable.filteredData.indexOf(element)]">
                       <button class="action_button" [ngClass]="item.btnStyle">
                         {{item?.text|titlecase}}
                         <ng-container *ngIf="item.icon; else othrBtn">

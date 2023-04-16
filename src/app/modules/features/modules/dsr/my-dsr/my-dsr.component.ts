@@ -4,6 +4,8 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormService } from 'src/app/services/form-service/form.service';
 import { NotificationService } from 'src/app/services/notification-service/notification.service';
+import { UtilityServiceService } from 'src/app/services/utility-service/utility-service.service';
+import { USERDATA } from '../../dashboard/interfaces/interfaces';
 
 @Component({
   selector: 'app-my-dsr',
@@ -28,34 +30,24 @@ export class MyDsrComponent implements OnInit  ,AfterContentChecked{
     { heading: "Total(Logged Hr)", key: 'logged_hr', isSortable: 'yes', type: 'text', link: 'client-details' },
     { heading: 'Final Approval', key: 'action', type: 'action', action: [{}] },
   ]
-  Table_DATA: any[] = [{
-    s_no: 1, type: 'text', isSortable: 'sortable', action: [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'DSR_DETAILS', type: 'route', routeID: 121 }], emp_name: 'Nikhil Dubey', email: 'abc@yopmail.com', employment_type: 'Permanent',
-    date: '31/02/2022', logged_hr: 'pending', level_1: '	Suyash Saxena(AI057)', level_2: 'HR (Human Resourse)'
-  },
-  {
-    s_no: 2, type: 'text', isSortable: 'sortable', action: [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'DSR_DETAILS', type: 'route', routeID: 121 }], emp_name: 'Shiva Saroj', email: 'nikhil@g.com', employment_type: 'Permanenet',
-    date: '21/03/2022', logged_hr: 'pending', level_1: '	Suyash Saxena(AI057)', level_2: 'HR (Human Resourse)'
-  },
-  {
-    s_no: 3, type: 'text', isSortable: 'sortable', action: [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'DSR_DETAILS', type: 'route', routeID: 121 }], emp_name: 'Shivam Shukla', email: 'Raj@yopmail.com', employment_type: 'Permanent',
-    date: '10/04/2022', logged_hr: 'pending', level_1: '	Suyash Saxena(AI057)', level_2: 'HR (Human Resourse)'
-  }
-  ]
+  Table_DATA: any[] =[];
 
   submissionStatus:string[]=['All','Submitted','Due'];
   projects:string[]=['All','Trainee Project Angular'];
   finalApprovalStatus:string[]=['All','Pending','Approved','Rejected']
   hours:string[]=['Hourse','Less than 5 Hourse','Greater than 5 and Less than equal to 8','Greater than 8','Greater than 10']
+  userData!:USERDATA;
   constructor(private formBuilder: FormBuilder, private _formService: FormService,
      private notificationService: NotificationService, private datePipe: DatePipe,
-     private cdr:ChangeDetectorRef
-     ) {
-    this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
-
-  }
-
-  ngOnInit(): void {
-    this.createForm();
+     private cdr:ChangeDetectorRef,
+     private utilityService:UtilityServiceService
+     ) {  }
+    
+    ngOnInit(): void {
+      this.createForm();
+      this.userData =this.utilityService.userData;
+      this.Table_DATA=this.utilityService.dsrList;
+      this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
   }
 
   createForm() {
@@ -104,11 +96,15 @@ export class MyDsrComponent implements OnInit  ,AfterContentChecked{
     if (this.dsrForm.valid) {
       this.dsrForm.value['s_no'] = this.Table_DATA.length + 1;
       this.dsrForm.value['date'] = this.datePipe.transform(this.getControl('date').value, 'yyyy-MM-dd');
-      this.dsrForm.value['employment_type'] = 'permanent';
-      this.dsrForm.value['emp_name'] = 'Shiva Saroj(AI 1580)';
-      this.dsrForm.value['email'] = 'shiva.saroj@appinventiv.com';
-      this.dsrForm.value['action'] = [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'LEAVE_DETAILS', type: 'route', routeID: 121 }];
+      this.dsrForm.value['employment_type'] = this.userData.designation;
+      this.dsrForm.value['emp_name'] = this.userData.name;
+      // this.dsrForm.value['project_name'] = 'Project Trainee Angular';
+      this.dsrForm.value['email'] = this.userData.email;
+      this.dsrForm.value['action'] = [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'DSR_DETAILS', type: 'route', routeID: 121 }];
+      this.utilityService.dsrList.push(this.dsrForm.value);
+
       this.dataSource.data.push(this.dsrForm.value);
+
       this.dataSource._updateChangeSubscription()
 
       this.notificationService.showSuccess('DSR', 'Added');

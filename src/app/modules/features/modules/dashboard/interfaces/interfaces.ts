@@ -13,7 +13,8 @@ export interface USERDATA{
   email:string,
   emp_id:string,
   last_login?: string,
-  designation?:string
+  designation?:string,
+  technology?:string
 }
 
 export interface JobOpening {

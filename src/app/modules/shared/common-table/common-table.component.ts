@@ -43,9 +43,7 @@ export class CommonTableComponent implements OnInit {
     }
   }
 
-  constructor(public sanitizer:DomSanitizer,
-   
-    ) { }
+  constructor(public sanitizer:DomSanitizer ) { }
 
 
   ngOnInit(): void {
