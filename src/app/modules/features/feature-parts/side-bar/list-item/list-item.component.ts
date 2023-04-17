@@ -1,58 +1,67 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, Output ,EventEmitter} from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
+import { ACCOUNT } from "src/app/constants/routes";
 import { ConfirmationDialogComponent } from "src/app/dialogs/confirmation-dialog/confirmation-dialog.component";
-import {  SideNavItem } from "src/app/interfaces/common.interface";
+import { SideNavItem, sideNavList } from "src/app/interfaces/common.interface";
 import { AbsoluteRoutingPipe } from "src/app/pipes/absolute-routing/absolute-routing.pipe";
 
 @Component({
   selector: "app-list-item",
   templateUrl: "./list-item.component.html",
   styleUrls: ["./list-item.component.scss"],
-  providers:[AbsoluteRoutingPipe]
+  providers: [AbsoluteRoutingPipe],
 })
 export class ListItemComponent implements OnInit {
   showSubmenu = false;
-  @Input()isShowing!:boolean;
-  @Input() item!:SideNavItem;
+  @Input() isShowing!: boolean;
+  @Input() item!: SideNavItem;
+  @Output()  sideItemClick = new EventEmitter<any>()
+  sideNavList: SideNavItem[] = sideNavList;
 
   constructor(
-      public dialog:MatDialog,
-      private _router:Router,
-      private absRoutePipe:AbsoluteRoutingPipe
+    public dialog: MatDialog,
+    private _router: Router,
+    private absRoutePipe: AbsoluteRoutingPipe,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
-    ) {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(this._router.url.slice(7));
+  }
   logoutConfirmation() {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       data: {
-        heading: 'Are You Sure To Logout ?'
+        heading: "Are You Sure To Logout ?",
       },
       disableClose: true,
     });
 
     dialogRef.afterClosed().subscribe((result: string) => {
       if (result) {
-        this._router.navigate(['/auth'])
+        localStorage.clear();
+        this._router.navigate([ACCOUNT.fullUrl]);
       }
     });
   }
 
-  logOut(route:string){
-    if(route=='ACCOUNT'){
-      this.logoutConfirmation();
-    }else{
-      this._router.navigate([this.absRoutePipe.transform(route)])
-    }
-    
+  parentChecker(): any {
+  //   let checker = this._router.url;
+  //   let subMenuOptions = this.item.options;
+  //   console.log(checker, subMenuOptions);
+
+  //   return (
+  //     subMenuOptions &&
+  //     subMenuOptions.some((subMenuItem: any) => {
+  //       checker.includes(this.absRoutePipe.transform(subMenuItem.route));
+  //       console.log(this.absRoutePipe.transform(subMenuItem.route));
+        
+  //     })
+  //   );
   }
 
-  // parentChecker(navBarItem: any): any {
-  //   let checker = this._router.url.slice(7);
-  //   let subMenuOptions = navBarItem.options;
-  //   console.log(checker,subMenuOptions);
-    
-  //   return subMenuOptions && subMenuOptions.some((subMenuItem: any) => subMenuItem.route == checker);
-  // }
+
+  SubMenuClicked(item:any){
+    this.sideItemClick.emit(item)
+  }
 }

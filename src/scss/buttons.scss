@@ -20,18 +20,23 @@
 
 .btn_cancel {
     border: 1.5px solid rgba(150, 165, 184, 0.5);
+    box-shadow: 0px 1px 4px rgb(0 0 0 / 12%), inset 0px 2px 0px rgb(255 255 255 / 24%);
+
     background-color: #ffffff;
     border-radius: 4px;
     padding: 0px 1rem;
     border: 1.5px solid rgba(150, 165, 184, 0.5);
     font-size: 0.9rem;
-    color: #96A5B8;
+    // color: #96A5B8;
+    color: #199CFF;
+
     font-weight: 500;
     transition-delay: 2ms;
     cursor: pointer;
 
     &:hover {
-        color: #199CFF;
+        // color: #199CFF;
+        opacity: 0.7;
 
     }
 }
@@ -57,7 +62,7 @@
     cursor: pointer;
     outline: none;
     box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
-    font-size: 0.938px;
+    font-size: 0.938rem;
     font-weight: 500;
 }
 

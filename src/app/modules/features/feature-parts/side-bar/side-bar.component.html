@@ -1,7 +1,7 @@
 <section>
     <mat-nav-list class="mat_side_list">
         <ng-container *ngFor="let item of sideNavList;let indexOfelement=index; ">
-            <app-list-item [item]="item"  [isShowing]="isShowing" (click)="itemClick(item,indexOfelement)"  ></app-list-item>
+            <app-list-item [item]="item"  [isShowing]="isShowing"  (sideItemClick)="sideItemClicked($event)" ></app-list-item>
         </ng-container>
     </mat-nav-list>
 </section>

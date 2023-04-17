@@ -86,9 +86,10 @@ section {
         .action {
           display: flex;
           flex-wrap: wrap;
-
+          // cursor: pointer;
           a {
             text-decoration: none;
+            cursor: pointer;
           }
 
           mat-icon {

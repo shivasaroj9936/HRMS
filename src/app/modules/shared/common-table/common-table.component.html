@@ -108,7 +108,7 @@
                   <ng-container *ngSwitchCase="'download'">
                     <a [href]="item.link" download>
                       <button class="action_button" [ngClass]="item.btnStyle">
-                        {{item?.text|titlecase}}
+                        {{item?.text|titlecase}} 
                         <mat-icon class="mat-18">{{ item.icon }} </mat-icon>
                       </button>
                     </a>

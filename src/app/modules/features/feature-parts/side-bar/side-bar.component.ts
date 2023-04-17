@@ -19,7 +19,7 @@ export class SideBarComponent implements OnInit, AfterViewInit {
   @Output() stateChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() isShowing!: boolean;
   sideNavList: SideNavItem[] = sideNavList;
-  // currentItemIndex!: number;
+  currentItemIndex!: number;
   // currentItem:string='';
   constructor() {}
 
@@ -35,12 +35,20 @@ export class SideBarComponent implements OnInit, AfterViewInit {
   
   }
 
-  itemClick(item: SideNavItem, index: number) {
-    // console.log(item,this.currentItem);
 
-    this.sideNavList.forEach((sideItem: SideNavItem) => {
-        sideItem.subMenuClicked = false;
-    });
-    this.sideNavList[index].subMenuClicked=true;
+  sideItemClicked(event:any){
+
+    if(event.hasOwnProperty('title')){
+      const itemIndex = this.sideNavList.findIndex(item=>item.title===event.title);
+
+      this.sideNavList.forEach((sideItem: SideNavItem,index) => {
+          if(index!=itemIndex ){
+            sideItem.subMenuClicked=false;
+          }
+      });
+      
+      this.sideNavList[itemIndex].subMenuClicked=!this.sideNavList[itemIndex].subMenuClicked
+    }
+    
   }
 }
