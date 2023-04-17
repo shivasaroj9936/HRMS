@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { LoaderService } from './services/loader-service/loader.service';
 
 @Component({
@@ -10,7 +10,7 @@ export class AppComponent implements OnInit{
   showLoader = false;
 
   title = 'HRMS';
-  constructor( private loaderService:LoaderService){
+  constructor( private loaderService:LoaderService,private cdr:ChangeDetectorRef){
 
   }
   ngOnInit(): void {
@@ -19,5 +19,8 @@ export class AppComponent implements OnInit{
         this.showLoader=false;
       },0)
     })
+  }
+  ngAfterContentChecked() {
+    this.cdr.detectChanges();
   }
 }

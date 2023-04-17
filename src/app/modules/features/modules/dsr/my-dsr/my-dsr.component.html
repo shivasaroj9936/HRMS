@@ -1,11 +1,11 @@
 <section>
 
-    <div class="add_leave">
+    <div  class="add_leave">
         <div class="header">
             <h3 class="heading">Create New DSR</h3>
             <button class="btn_add_new" (click)="toggle=!toggle">+Add New</button>
         </div>
-        <form *ngIf="toggle" [formGroup]="dsrForm" (ngSubmit)="onSubmit()">
+        <form  [@fadeInUp] *ngIf="toggle" [formGroup]="dsrForm" (ngSubmit)="onSubmit()">
 
             <div class="left">
                 <div class="row">
@@ -55,6 +55,8 @@
     
     <div class="table">
         <app-common-table [heading]="'List All Worksheets'" [pagination]="true" [searchFilter]="true" [columns]="columns" [dataSourceForTable]="dataSource"></app-common-table>
+        <!-- <app-common-table [heading]="'List All Worksheets'" [pagination]="true" [searchFilter]="true" [columns]="columns" [tableDataNew]="Table_DATA"></app-common-table> -->
+
 
     </div>
 

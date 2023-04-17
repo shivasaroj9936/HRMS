@@ -20,6 +20,7 @@ export class ListItemComponent implements OnInit {
       public dialog:MatDialog,
       private _router:Router,
       private absRoutePipe:AbsoluteRoutingPipe
+
     ) {}
 
   ngOnInit(): void {}
@@ -47,9 +48,11 @@ export class ListItemComponent implements OnInit {
     
   }
 
-  // parentChecker(navBarItem: any): boolean {
-  //   let checker = this.router.url.slice(7);
+  // parentChecker(navBarItem: any): any {
+  //   let checker = this._router.url.slice(7);
   //   let subMenuOptions = navBarItem.options;
-  //   return subMenuOptions && subMenuOptions.some((subMenuItem: any) => subMenuItem.routerLink == checker);
+  //   console.log(checker,subMenuOptions);
+    
+  //   return subMenuOptions && subMenuOptions.some((subMenuItem: any) => subMenuItem.route == checker);
   // }
 }

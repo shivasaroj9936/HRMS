@@ -64,7 +64,7 @@ export class ReferalFormComponent implements OnInit {
     return this.referCandidateForm?.controls[control] as FormControl;
   }
   onSubmit() {
-    // console.log(this.referCandidateForm);
+    console.log(this.referCandidateForm);
     // this.referCandidateForm.clearAsyncValidators();
     if (this.referCandidateForm.valid) {
       this.notificationService.showSuccess('Saved', 'Refferal form');

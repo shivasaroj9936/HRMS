@@ -5,6 +5,13 @@
 }
 
 section {
+  // position: relative;
+  // ::after{
+  //     position: absolute;
+  //     content: '*';
+  //     color:red;
+  // }
+
   .sidenav_text {
     color: var(--side-nav-text-color);
     font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -22,7 +29,6 @@ section {
   .submenu_active {
 
     .sub {
-
       .sidenav_text,
       .item_icon {
         color: var(--side-nav-active-color);
@@ -45,9 +51,9 @@ section {
   .is_active {
     color: var(--side-nav-active-color) !important;
 
-    // .sidenav_text {
-    //   color: var(--side-nav-active-color) !important;
-    // }
+    .sidenav_text {
+      color: var(--side-nav-active-color) !important;
+    }
 
     .item_text::before {
       position: absolute;

@@ -2,6 +2,7 @@ import { DatePipe } from '@angular/common';
 import { AfterContentChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
+import { fadeInUpAnimation } from 'src/animations/fade-in-up.animation';
 import { FormService } from 'src/app/services/form-service/form.service';
 import { NotificationService } from 'src/app/services/notification-service/notification.service';
 import { UtilityServiceService } from 'src/app/services/utility-service/utility-service.service';
@@ -11,7 +12,8 @@ import { USERDATA } from '../../dashboard/interfaces/interfaces';
   selector: 'app-my-dsr',
   templateUrl: './my-dsr.component.html',
   styleUrls: ['./my-dsr.component.scss'],
-  providers: [DatePipe]
+  providers: [DatePipe],
+  animations:[fadeInUpAnimation]
 
 })
 export class MyDsrComponent implements OnInit  ,AfterContentChecked{
@@ -101,7 +103,7 @@ export class MyDsrComponent implements OnInit  ,AfterContentChecked{
       // this.dsrForm.value['project_name'] = 'Project Trainee Angular';
       this.dsrForm.value['email'] = this.userData.email;
       this.dsrForm.value['action'] = [{ icon: '', btnStyle: 'btn_add_new', btnText: 'pending', route: 'DSR_DETAILS', type: 'route', routeID: 121 }];
-      this.utilityService.dsrList.push(this.dsrForm.value);
+      // this.utilityService.dsrList.push(this.dsrForm.value);
 
       this.dataSource.data.push(this.dsrForm.value);
 

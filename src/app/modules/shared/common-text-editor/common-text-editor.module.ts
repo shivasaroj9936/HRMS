@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CommonTextEditorComponent } from './common-text-editor.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { EditorModule } from '@tinymce/tinymce-angular';
+import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 
 
 
@@ -16,6 +16,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     EditorModule
 
   ],
+  // providers:[{provide:TINYMCE_SCRIPT_SRC,useValue:'tinymce/tinymce.min.js'}],
   exports:[CommonTextEditorComponent]
 })
 export class CommonTextEditorModule { }

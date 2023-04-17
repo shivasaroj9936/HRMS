@@ -6,9 +6,10 @@ import { AbstractControl, FormControl } from '@angular/forms';
   template: `
 <div class="formfield 1">
     <label class="label" [ngClass]="labelStyle"  >{{label|titlecase}}</label>
-    <mat-form-field appearance="outline" class="increaseFormfield">
+    <mat-form-field appearance="outline" class="increaseFormfield"  >
     <input readonly [ngxMatTimepicker]="picker" [format]="24" matInput  [formControl]="$any(inputControl)"  >
     <ngx-mat-timepicker #picker></ngx-mat-timepicker  >
+    <mat-icon matSuffix  >schedule</mat-icon>
         <mat-error>{{ inputControl | validate : label }}</mat-error>
     </mat-form-field>
 </div>

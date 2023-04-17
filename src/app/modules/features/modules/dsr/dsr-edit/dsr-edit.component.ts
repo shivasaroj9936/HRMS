@@ -13,13 +13,8 @@ import { UtilityServiceService } from "src/app/services/utility-service/utility-
 })
 export class DsrEditComponent implements OnInit {
   dsrForm!: FormGroup;
-  leaveTypes: string[] = [
-    "Planned Leave",
-    "Privileged Leave",
-    "Emergency Leave",
-    "Short Leave",
-    "All Reamaining Leave",
-  ];
+  projects:string[]=['All','Trainee Project Angular'];
+
   // routeID: string|number=0;
   dsr: any;
   routeID: any;
@@ -38,13 +33,13 @@ export class DsrEditComponent implements OnInit {
     this.dsr = this.utilityService.dsrList[this.routeID];
 
     this.createForm();
-    this.dsrForm.patchValue(this.dsr)
-    // this.getControl("project").patchValue("Trainee Project Angular");
-    // this.getControl("date").setValue("03/01/2023");
-    // this.getControl("logged_hr").setValue("08:00");
-    // this.getControl("description").setValue(
-    //   '<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">Meetings</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; NA&nbsp;</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">Task&nbsp;</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; &nbsp;Bug fixing [2hr]</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; &nbsp;Portal registration [1 hr]</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; Working on job openings module [ 3 hr]</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">Challenges</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">NA</p>'
-    // );
+    // this.dsrForm.patchValue(this.dsr)
+    this.getControl("project").patchValue("Trainee Project Angular");
+    this.getControl("date").setValue("03/01/2023");
+    this.getControl("logged_hr").setValue("08:00");
+    this.getControl("description").setValue(
+      '<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">Meetings</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; NA&nbsp;</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">Task&nbsp;</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; &nbsp;Bug fixing [2hr]</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; &nbsp;Portal registration [1 hr]</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; Working on job openings module [ 3 hr]</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">Challenges</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">NA</p>'
+    );
   }
 
   createForm() {

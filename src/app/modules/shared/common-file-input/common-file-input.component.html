@@ -3,7 +3,7 @@
     <mat-form-field appearance="outline" class="field"  >
       <input matInput readonly  (click)="fileInput.click()" />
       <!-- <input class="inner"  type="file" [accept]="fileType" [formControl]="inputFormControl"   /> -->
-      <input type="file" class="inner" [accept]="fileType"  #fileInput (change)="fileChangeEvent($event)" />
+      <input type="file" class="inner" [accept]="fileType"  #fileInput (change)="fileChangeEvent($event)" [formControl]="inputFormControl" />
       <mat-error  >{{ inputFormControl| validate : label }}</mat-error>
     </mat-form-field>
   </div>

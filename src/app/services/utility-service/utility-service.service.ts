@@ -16,7 +16,8 @@ export class UtilityServiceService {
     emp_id:'AI 1580',
     last_login:' Feb-01-2023 12:25 PM from 172.31.25.47',
     designation:'Software Engineer',
-    technology:'Angular'
+    technology:'Angular',
+    img:'/assets/default_male.jpg',
   }
 
 

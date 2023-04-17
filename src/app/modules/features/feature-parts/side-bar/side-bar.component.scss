@@ -4,9 +4,7 @@ section {
     max-width: 250px;
 
     :host::ng-deep {
-        // .mat_side_list{
-        //     overflow-y: scroll;
-        // }
+    
         .mat-drawer .mat-sidenav {
 
             position: fixed !important;
@@ -24,7 +22,7 @@ section {
             justify-content: space-between;
             align-items: center;
             padding: 1rem 1.5rem;
-
+           
         }
     }
 }

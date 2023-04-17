@@ -14,7 +14,8 @@ export interface USERDATA{
   emp_id:string,
   last_login?: string,
   designation?:string,
-  technology?:string
+  technology?:string,
+  img?:string
 }
 
 export interface JobOpening {
