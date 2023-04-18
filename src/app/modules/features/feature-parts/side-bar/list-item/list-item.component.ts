@@ -27,7 +27,8 @@ export class ListItemComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // console.log(this._router.url.slice(7));
+
+    
   }
   logoutConfirmation() {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {

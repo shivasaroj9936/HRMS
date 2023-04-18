@@ -11,12 +11,12 @@
                     <app-common-input [label]="'Subject'" [inputFormControl]="getControl('subject')"></app-common-input>
                 </div>
                 <div class="row">
-                    <app-common-dropdown [label]="'Department'" [data]="leaveTypes" [dropdownDownControlName]="getControl('department')" ></app-common-dropdown>
+                    <app-common-dropdown [label]="'Department'" [data]="['IT','Admin']" [dropdownDownControlName]="getControl('department')" ></app-common-dropdown>
                 </div>
                 <div class="row">
-                    <app-common-dropdown [label]="'Ticket Category'" [data]="leaveTypes" [dropdownDownControlName]="getControl('ticket_category')" ></app-common-dropdown>
+                    <app-common-dropdown [label]="'Ticket Category'" [data]="ticketCategory" [dropdownDownControlName]="getControl('ticket_category')" ></app-common-dropdown>
                 </div>     <div class="row">
-                    <app-common-dropdown [label]="'Priority'" [data]="leaveTypes" [dropdownDownControlName]="getControl('priority')" ></app-common-dropdown>
+                    <app-common-dropdown [label]="'Priority'" [data]="['Low','Medium','High']" [dropdownDownControlName]="getControl('priority')" ></app-common-dropdown>
                 </div>
                
             </div>

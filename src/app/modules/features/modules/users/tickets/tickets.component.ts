@@ -14,7 +14,8 @@ import { NotificationService } from 'src/app/services/notification-service/notif
 })
 export class TicketsComponent implements OnInit {
   toggle = false;
-  leaveTypes: string[] = ['Planned Leave', 'Privileged Leave', 'Emergency Leave', 'Short Leave', 'All Reamaining Leave']
+  ticketCategory: string[] = ['IT', 'Admin']
+
   ticketForm!: FormGroup;
   dataSource!: MatTableDataSource<any>;
   columns = [

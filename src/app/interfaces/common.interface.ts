@@ -14,17 +14,19 @@ export interface SideNavItem {
   route?: string;
   isActive: boolean;
   options?: Array<any>;
-  subMenuClicked?:boolean
+  subMenuClicked?:boolean,
+  movingIcon?:boolean
 }
 
 export const sideNavList: SideNavItem[] = [
   { title: "Home", icon: "home", isActive: true, route: "DASHBOARD" },
-  { title: "My Profile", icon: "person", isActive: true, route: "PROFILE" },
+  { title: "My Profile", icon: "person", isActive: true, route: "PROFILE",movingIcon:true },
   {
     title: "Directory",
     icon: "description",
     isActive: true,
     route: "DIRECTORY",
+    movingIcon:true
   },
   {
     title: "Enterpreneurship Program",
@@ -38,6 +40,8 @@ export const sideNavList: SideNavItem[] = [
       },
     ],
     isActive: true,
+    movingIcon:true
+
   },
   {
     title: "My Links",

@@ -6,12 +6,21 @@
 
         <p class="sidenav_text" *ngIf="isShowing" [ngClass]="{'is_active':parentChecker()}" >
           {{ item.title }}
-        </p>
+        <!-- <mat-icon class="moving_icon"  *ngIf="item.movingIcon">verified</mat-icon> -->
+      </p>
+      <div class="moving_icon"  *ngIf="item.movingIcon">
+        <img src="../../../../../../assets/rotate_icon.png" alt="">
+      </div>
       </ng-container>
         <ng-template #logOut> 
           <p class="sidenav_text" *ngIf="isShowing" (click)="logoutConfirmation()"  >
             {{ item.title }} 
+          <!-- <mat-icon class="moving_icon"  *ngIf="item.movingIcon">verified</mat-icon> -->
+
           </p>
+          <div class="moving_icon" *ngIf="item.movingIcon">
+            <img src="../../../../../../assets/rotate_icon.png" alt="">
+          </div>
         </ng-template>
       </div>
     <mat-icon class="menu-button" [ngClass]="{ rotated: item.subMenuClicked }" *ngIf="item.options">expand_more</mat-icon>

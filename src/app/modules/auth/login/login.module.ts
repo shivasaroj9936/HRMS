@@ -32,7 +32,8 @@ import { LoginWithCredentialComponent } from './login-with-credential/login-with
     MatButtonModule,
     ReactiveFormsModule,
     AbsoluteRoutingModule,
-    ValidationErrorModule
-  ]
+    ValidationErrorModule,
+  ],
+  
 })
 export class LoginModule { }

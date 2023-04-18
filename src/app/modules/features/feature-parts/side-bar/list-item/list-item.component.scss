@@ -12,14 +12,37 @@ section {
   //     color:red;
   // }
 
-  
+  .moving_icon {
+    
+    height: 1rem;
+    width: 1rem;
+    
+    img {
+      margin-bottom: 5px;
+      animation: rotate 5s infinite;
+      
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
 
   .sidenav_text {
+    // position: relative;
     color: var(--side-nav-text-color);
     font-family: Roboto, "Helvetica Neue", sans-serif;
     font-size: 15px;
     font-weight: 500;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .sub {
@@ -31,6 +54,7 @@ section {
   .submenu_active {
 
     .sub {
+
       .sidenav_text,
       .item_icon {
         color: var(--side-nav-active-color);
@@ -67,6 +91,7 @@ section {
       top: 0;
       bottom: 0;
     }
+
     // .item_text{
     //   color: red !important;
     // }
@@ -124,3 +149,18 @@ section {
   }
 }
 
+
+// ::ng-deep {
+
+//   .item_text {
+//     .sidenav_text {
+//       .moving_icon {
+
+//         .mat-icons {
+//           height: 1rem !important;
+//           width: 1rem !important;
+//         }
+//       }
+//     }
+//   }
+// }

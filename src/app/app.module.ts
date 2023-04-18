@@ -9,6 +9,8 @@ import { ConfirmationDialogComponent } from './dialogs/confirmation-dialog/confi
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { environment } from 'src/environments/environment';
+import { AngularFireModule, FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,8 @@ import { MatProgressBarModule } from "@angular/material/progress-bar";
       positionClass: 'toast-top-center',
     }),
     MatButtonModule,
-    MatDialogModule
-    
+    MatDialogModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

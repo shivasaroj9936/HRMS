@@ -20,7 +20,6 @@ export class SideBarComponent implements OnInit, AfterViewInit {
   @Input() isShowing!: boolean;
   sideNavList: SideNavItem[] = sideNavList;
   currentItemIndex!: number;
-  // currentItem:string='';
   constructor() {}
 
   ngOnInit(): void {
