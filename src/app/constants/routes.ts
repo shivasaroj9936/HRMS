@@ -90,6 +90,31 @@ export const DIRECTORY: IRoute = {
   },
 };
 
+export const FOOD: IRoute = {
+  path: 'food',
+  get fullUrl(): string {
+    return `/${ADMIN.fullUrl}/${this.path}`;
+  }
+}
+export const LUNCH: IRoute = {
+  path: 'lunch',
+  get fullUrl(): string {
+    return `/${FOOD.fullUrl}/${this.path}`;
+  }
+}
+export const PURCHASE_LUNCH_COUPON: IRoute = {
+  path: 'purchase-lunch-coupon',
+  get fullUrl(): string {
+    return `/${FOOD.fullUrl}/${this.path}`;
+  }
+}
+export const DINNER: IRoute = {
+  path: 'dinner',
+  get fullUrl(): string {
+    return `/${FOOD.fullUrl}/${this.path}`;
+  }
+}
+
 export const MY_LINKS: IRoute = {
   path: "my-links",
   get fullUrl(): string {

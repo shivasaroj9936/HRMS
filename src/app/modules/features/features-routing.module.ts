@@ -1,6 +1,6 @@
 import { Component, NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { ATTENDANCE, DASHBOARD, DIRECTORY, DSR, ENTREPRENEURSHIP_PROGRAM, FRESHERS, MY_INTERVIEWS, MY_LINKS, PROFILE, PROJECT, REFER_CANDIDATE, REVIEWS, STARTUP, TRAININGS, USERS } from "src/app/constants/routes";
+import { ATTENDANCE, DASHBOARD, DIRECTORY, DSR, ENTREPRENEURSHIP_PROGRAM, FOOD, FRESHERS, MY_INTERVIEWS, MY_LINKS, PROFILE, PROJECT, REFER_CANDIDATE, REVIEWS, STARTUP, TRAININGS, USERS } from "src/app/constants/routes";
 import { AuthGuard } from "src/app/guards/auth/auth.guard";
 import { FeaturesComponent } from "./features.component";
 
@@ -22,17 +22,15 @@ const routes: Routes = [
       },
       {
         path: PROFILE.path,
-        loadChildren: () =>
-          import("./modules/my-profile/my-profile.module").then(
-            (m) => m.MyProfileModule
-          ),
+        loadChildren: () => import("./modules/my-profile/my-profile.module").then( (m) => m.MyProfileModule ),
       },
       {
         path: DIRECTORY.path,
-        loadChildren: () =>
-          import("./modules/directory/directory.module").then(
-            (m) => m.DirectoryModule
-          ),
+        loadChildren: () => import("./modules/directory/directory.module").then((m) => m.DirectoryModule ),
+      },
+      {
+        path:FOOD.path,
+        loadChildren:()=>import('./modules/food/food.module').then((m)=>m.FoodModule)
       },
       {
         path:MY_LINKS.path,
@@ -77,6 +75,7 @@ const routes: Routes = [
         path:PROJECT.path,
         loadChildren:()=>import('./modules/project/project.module').then((m)=>m.ProjectModule)
       },
+
       
     ],
   },

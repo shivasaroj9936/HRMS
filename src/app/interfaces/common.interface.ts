@@ -29,6 +29,25 @@ export const sideNavList: SideNavItem[] = [
     movingIcon:true
   },
   {
+    title: "Food",
+    icon: "restaurant",
+    isActive: true,
+    // route: "FOOD",
+    movingIcon:false,
+    options: [
+      {
+        subTitle: "Lunch Coupon",
+        subicon: "lunch_dining",
+        route: "FOOD",
+      },
+      {
+        subTitle: "Request Dinner",
+        subicon: "dinner_dining",
+        route: "DINNER",
+      },
+    ],
+  },
+  {
     title: "Enterpreneurship Program",
     icon: "person",
     subMenuClicked:false,

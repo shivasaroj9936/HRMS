@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div class="back" (click)="backToFood()">
+        <mat-icon>arrow_back</mat-icon>
+    </div>
+    <div class="lunchcoupon_maintop">
+        <h4>Lunch Coupon</h4>
+        <p class="lowerpara">
+            <i class="fas fa-info-circle"></i>
+            <span style="font-weight: bold;">Note: </span> You can purchase/cancel a coupon for the upcoming day before 6 p.m. today.        </p>
+    </div>
+    <div class="amountdue ">
+
+        <div class="toppart">
+            <h4>Amount Due</h4>
+            <h4 class="avabcoupon">Available coupon for purchase: <span id="available-coupon-count">0</span></h4>
+        </div>
+        <h3 class="availamountdue">₹<span id="couponDueAmount">475</span></h3>
+        <div class="amntduebtnpart">
+            <p class="lowerpara">
+                <mat-icon>exclamation</mat-icon>   <span style="font-weight: bold;">Note:</span> Amount due need to paid in cash in account office.                        </p>
+        </div>
+    </div>
+    <div class="middle" [formGroup]="couponForm">
+
+        <app-common-input directiveName="noSpecialChar" [labelStyle]="'dark'" [label]="'Coupon Count'" [inputFormControl]="couponForm.controls['coupon_count']"></app-common-input>
+        <app-common-input directiveName="noSpecialChar" [labelStyle]="'dark'" [label]="'Total Amount'" [inputFormControl]="couponForm.controls['total_amount']"></app-common-input>
+
+        <div class="actions ">
+
+            <button mat-button (click)="buyCoupons()" class="btn_primary">submit</button>
+
+            <button mat-button class="btn_cancel" (click)="backToFood()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <app-lunch-calendar [myCalendar]="myCalendar" [options]="options" (calendarData)="updateCalendarData($event)">
+        </app-lunch-calendar>
+
+    </div>
+</div>
