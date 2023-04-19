@@ -1,1 +1,38 @@
-<p>dinner works!</p>
+<section>
+
+    <div class="add_leave">
+        <div class="header">
+            <div class="lunchcoupon_maintop">
+                <h4> Dinner Request</h4>
+                <p class="lowerpara">
+                    <i class="fas fa-info-circle"></i>
+                    <span style="font-weight: bold;">Note: </span> You can purchase/cancel a coupon for the upcoming day before 6 p.m. today.        </p>
+            </div>
+            <button class="btn_primary" mat-raised-button (click)="toggle=!toggle">Request Dinner</button>
+        </div>
+        <form [@fadeInUp] *ngIf="toggle" [formGroup]="dinnerRequestForm" (ngSubmit)="onSubmit()">
+
+            <div class="left">
+                <div class="row">
+                    <app-common-dropdown [label]="'Project'" [data]="projects"
+                        [dropdownDownControlName]="getControl('project')"></app-common-dropdown>
+                </div>
+                <div class="half_day">
+                    <app-common-date-picker [label]="'Date'"
+                        [inputFormControl]="getControl('date')"></app-common-date-picker>
+                </div>
+
+            </div>
+            <div class="right">
+                <app-common-text-editor [label]="'Reason for late stay'"
+                    [inputFormControl]="getControl('description')"></app-common-text-editor>
+            </div>
+            <div class="actions">
+                <button class="btn_primary save" mat-raised-button type="submit">Add</button>
+                <button class="btn_cancel cancel" mat-raised-button type="reset" (click)="toggle=false"> Cancel</button>
+
+            </div>
+        </form>
+
+    </div>
+</section>

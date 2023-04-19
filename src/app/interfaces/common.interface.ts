@@ -38,7 +38,7 @@ export const sideNavList: SideNavItem[] = [
       {
         subTitle: "Lunch Coupon",
         subicon: "lunch_dining",
-        route: "FOOD",
+        route: "LUNCH",
       },
       {
         subTitle: "Request Dinner",

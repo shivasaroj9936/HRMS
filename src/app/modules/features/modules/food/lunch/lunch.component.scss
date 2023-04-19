@@ -2,103 +2,134 @@
 @import 'src/scss/buttons.scss';
 
 
-.container{
+.container {
 
-    .buy-coupons{
+    .buy-coupons {
         display: grid;
         grid-template-columns: 55% 43%;
         column-gap: 2%;
         width: 95%;
         margin: auto;
         margin-top: 2rem;
-        .left{
+
+        .left {
             background-color: #fff;
-            border: 1px solid  #DCE2E9 ;
+            border: 1px solid #DCE2E9;
             display: grid;
             border-radius: 5px;
             padding: 6px 1rem;
-            .amount{
-                @include flex(center,space-between);
-                p{
-                    color:blue;
-                    font-size: 15px;
+
+            .amount {
+                @include flex(center, space-between);
+
+                p {
+                    color: blue;
+                    font-size: 0.89rem;
                 }
             }
-            h3{
-                color:blue;
+
+            h3 {
+                color: blue;
                 font-size: 2rem;
             }
-            .details{
-                p{
+
+            .details {
+                p {
                     margin-bottom: 0px;
                 }
-                button{
+
+                button {
                     height: 2rem;
                     width: 7rem;
                     cursor: pointer;
                     border: 1px solid gray;
-                    background-color:#fff;
-                    color:blue;
+                    background-color: #fff;
+                    color: blue;
                     border-radius: 5px;
                 }
-                @include flex(center,space-between);
+
+                @include flex(center, space-between);
             }
         }
-        .right{
+
+        .right {
             display: grid;
             justify-content: center;
             background-color: #fff;
-            border: 1px solid  #DCE2E9 ;
+            border: 1px solid #DCE2E9;
             border-radius: 5px;
             padding: 6px 1rem;
 
-            .purchase{
-                @include flex(center,center);
+            .purchase {
+                @include flex(center, center);
             }
-            button{
-                font-size: 15px;
+
+            button {
+                font-size: 0.89rem;
                 // @include blue-button(2.5rem,18rem);
             }
         }
     }
 
-    .main{
+    .main {
         border-radius: 1rem;
         background-color: #fff;
         width: 95%;
-        margin: auto;   
+        margin: auto;
         margin-bottom: 2rem;
         margin-top: 10px;
         padding: 2%;
         overflow: auto;
-        .table-heading{
-            @include flex(center,space-between);
-            .legend{
-                @include flex(center,flex-start);
-                gap:16px;
-                span{
+
+        .table-heading {
+            @include flex(center, space-between);
+
+            .legend {
+                @include flex(center, flex-start);
+                gap: 1rem;
+
+                span {
                     font-size: 1.1rem;
                     padding-right: 5px;
                 }
-                .coupon-purchased{
-                    color:#a4ffcc;
+
+                .coupon-purchased {
+                    color: #a4ffcc;
                     background-color: #a4ffcc;
                 }
-            
-                .coupon-available{
+
+                .coupon-available {
                     background-color: #bdc8fa;
-                    color:#bdc8fa;
+                    color: #bdc8fa;
                 }
-                .locked{
-                    color:#bfbfbf;
+
+                .locked {
+                    color: #bfbfbf;
                     background-color: #bfbfbf;
                 }
-                .holiday{
-                    color:#ff989e;
+
+                .holiday {
+                    color: #ff989e;
                     background-color: #ff989e;
                 }
-               
-            }       
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .container {
+        .buy-coupons {
+
+        grid-template-columns: auto;
+        gap: 1rem;
+        .right{
+            button{
+                font-size: 0.8rem;
+                border: none;
+            }
+        }
         }
     }
 }

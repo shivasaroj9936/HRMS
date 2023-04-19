@@ -13,10 +13,10 @@ import { USERDATA } from '../../dashboard/interfaces/interfaces';
   templateUrl: './my-dsr.component.html',
   styleUrls: ['./my-dsr.component.scss'],
   providers: [DatePipe],
-  animations:[fadeInUpAnimation]
+  animations: [fadeInUpAnimation]
 
 })
-export class MyDsrComponent implements OnInit  ,AfterContentChecked{
+export class MyDsrComponent implements OnInit, AfterContentChecked {
 
   toggle = false;
   dsrForm!: FormGroup;
@@ -32,24 +32,26 @@ export class MyDsrComponent implements OnInit  ,AfterContentChecked{
     { heading: "Total(Logged Hr)", key: 'logged_hr', isSortable: 'yes', type: 'text', link: 'client-details' },
     { heading: 'Final Approval', key: 'action', type: 'action', action: [{}] },
   ]
-  Table_DATA: any[] =[];
+  Table_DATA: any[] = [];
 
-  submissionStatus:string[]=['All','Submitted','Due'];
-  projects:string[]=['All','Trainee Project Angular'];
-  finalApprovalStatus:string[]=['All','Pending','Approved','Rejected']
-  hours:string[]=['Hourse','Less than 5 Hourse','Greater than 5 and Less than equal to 8','Greater than 8','Greater than 10']
-  userData!:USERDATA;
-  constructor(private formBuilder: FormBuilder, private _formService: FormService,
-     private notificationService: NotificationService, private datePipe: DatePipe,
-     private cdr:ChangeDetectorRef,
-     private utilityService:UtilityServiceService
-     ) {  }
-    
-    ngOnInit(): void {
-      this.createForm();
-      this.userData =this.utilityService.userData;
-      this.Table_DATA=this.utilityService.dsrList;
-      this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+  submissionStatus: string[] = ['All', 'Submitted', 'Due'];
+  projects: string[] = ['All', 'Trainee Project Angular'];
+  finalApprovalStatus: string[] = ['All', 'Pending', 'Approved', 'Rejected']
+  hours: string[] = ['Hourse', 'Less than 5 Hourse', 'Greater than 5 and Less than equal to 8', 'Greater than 8', 'Greater than 10']
+  userData!: USERDATA;
+  constructor(
+    private formBuilder: FormBuilder,
+    private _formService: FormService,
+    private notificationService: NotificationService, private datePipe: DatePipe,
+    private cdr: ChangeDetectorRef,
+    private utilityService: UtilityServiceService
+  ) { }
+
+  ngOnInit(): void {
+    this.createForm();
+    this.userData = this.utilityService.userData;
+    this.Table_DATA = this.utilityService.dsrList;
+    this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
   }
 
   createForm() {
@@ -113,7 +115,7 @@ export class MyDsrComponent implements OnInit  ,AfterContentChecked{
       this.toggle = false;
       this.dsrForm.reset();
       this.noWork = false
-    }else{
+    } else {
       this.notificationService.showError('All fields', 'Requierd');
 
     }

@@ -13,51 +13,53 @@ import { CouponsHistoryComponent } from './coupons-history/coupons-history.compo
   styleUrls: ['./food.component.scss']
 })
 export class FoodComponent implements OnInit {
+  constructor(){}
+  ngOnInit(){}
 
-  constructor( private _foodCalendarService:FoodCalendarDataService, private _dialog:MatDialog,
-     private _router:Router ) { }
+  // constructor( private _foodCalendarService:FoodCalendarDataService, private _dialog:MatDialog,
+  //    private _router:Router ) { }
 
-  showTable = false;
-  myCalendar = [];
-  options = {
-    edit:false,
-    cancel:true
-  }
-  ngOnInit(): void {
+  // showTable = false;
+  // myCalendar = [];
+  // options = {
+  //   edit:false,
+  //   cancel:true
+  // }
+  // ngOnInit(): void {
 
     
-    if(this._foodCalendarService.myCalendar.length == 0){
-      console.log("new Formation");
-      this._foodCalendarService.createCalendarData()
-      this.myCalendar = this._foodCalendarService.myCalendar
-    }else{
-      this.myCalendar = this._foodCalendarService.myCalendar
-      console.log('usingOld');
-    }
+  //   if(this._foodCalendarService.myCalendar.length == 0){
+  //     console.log("new Formation");
+  //     this._foodCalendarService.createCalendarData()
+  //     this.myCalendar = this._foodCalendarService.myCalendar
+  //   }else{
+  //     this.myCalendar = this._foodCalendarService.myCalendar
+  //     console.log('usingOld');
+  //   }
     
-    console.log(this._foodCalendarService.myCalendar,"9999");
-  }
+  //   console.log(this._foodCalendarService.myCalendar,"9999");
+  // }
 
-  purchaseCoupons(){
-    this._router.navigate(['admin/food/purchase-coupons'])
-  }
-  updateCalendarData(data:any){
+  // purchaseCoupons(){
+  //   this._router.navigate(['admin/food/purchase-coupons'])
+  // }
+  // updateCalendarData(data:any){
 
-    console.log(data,"JUMPKAR2");
-    this.myCalendar = data;
-    this._foodCalendarService.myCalendar = data
+  //   console.log(data,"JUMPKAR2");
+  //   this.myCalendar = data;
+  //   this._foodCalendarService.myCalendar = data
     
-  }
+  // }
 
-  viewDetails(){
-    let config = {
-      minWidth:'29rem',
-      data:'',
-      minHeight:'50vh',
-      panelClass:'app-full-bleed-dialog'
-    }
-    this._dialog.open(CouponsHistoryComponent,config);
-  }
+  // viewDetails(){
+  //   let config = {
+  //     minWidth:'29rem',
+  //     data:'',
+  //     minHeight:'50vh',
+  //     panelClass:'app-full-bleed-dialog'
+  //   }
+  //   this._dialog.open(CouponsHistoryComponent,config);
+  // }
 
 
  
