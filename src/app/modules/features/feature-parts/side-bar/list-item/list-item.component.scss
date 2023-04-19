@@ -5,22 +5,11 @@
 }
 
 section {
-  // position: relative;
-  // ::after{
-  //     position: absolute;
-  //     content: '*';
-  //     color:red;
-  // }
-
   .moving_icon {
-    
-    height: 1rem;
-    width: 1rem;
-    
     img {
       margin-bottom: 5px;
       animation: rotate 5s infinite;
-      
+      width: 1.3rem;
       @keyframes rotate {
         from {
           transform: rotate(0deg);
@@ -34,7 +23,6 @@ section {
   }
 
   .sidenav_text {
-    // position: relative;
     color: var(--side-nav-text-color);
     font-family: Roboto, "Helvetica Neue", sans-serif;
     font-size: 15px;
@@ -92,10 +80,6 @@ section {
       bottom: 0;
     }
 
-    // .item_text{
-    //   color: red !important;
-    // }
-
   }
 
   .item_text {
@@ -131,15 +115,6 @@ section {
 
   }
 
-  // .mat-list-item {
-  //   color: var(--side-nav-text-color);
-
-  //   &:disabled {
-  //     // background-color: var(--disabled-color);
-  //     opacity: 0;
-  //   }
-  // }
-
   :hover {
 
     .item_text,
@@ -148,19 +123,3 @@ section {
     }
   }
 }
-
-
-// ::ng-deep {
-
-//   .item_text {
-//     .sidenav_text {
-//       .moving_icon {
-
-//         .mat-icons {
-//           height: 1rem !important;
-//           width: 1rem !important;
-//         }
-//       }
-//     }
-//   }
-// }
