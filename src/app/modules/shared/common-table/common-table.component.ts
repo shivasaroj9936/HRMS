@@ -10,6 +10,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class CommonTableComponent implements OnInit {
   @Output() newItemEvent = new EventEmitter<any>();
+  today= new Date();
   headerRow: any = [];
   data = {
     Module: '',
@@ -48,6 +49,8 @@ export class CommonTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.columns.map((tableColumn: any) => this.headerRow.push(tableColumn.heading));
+    console.log(this.today);
+    
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

@@ -16,7 +16,7 @@ import { USERDATA } from '../../dashboard/interfaces/interfaces';
   animations: [fadeInUpAnimation]
 
 })
-export class MyDsrComponent implements OnInit, AfterContentChecked {
+export class MyDsrComponent implements OnInit {
 
   toggle = false;
   dsrForm!: FormGroup;
@@ -28,7 +28,7 @@ export class MyDsrComponent implements OnInit, AfterContentChecked {
     { heading: "Emp Name", key: 'emp_name', isSortable: 'yes', type: 'text', link: 'client-details' },
     { heading: "Email", key: 'email', isSortable: '', type: 'text', link: 'client-details' },
     { heading: "Employment Type", key: 'employment_type', isSortable: 'yes', type: 'text', link: 'client-details' },
-    { heading: "Date", key: 'date', isSortable: 'yes', type: 'text', link: 'client-details' },
+    { heading: "Date", key: 'date', isSortable: 'yes', type: 'date', link: 'client-details' },
     { heading: "Total(Logged Hr)", key: 'logged_hr', isSortable: 'yes', type: 'text', link: 'client-details' },
     { heading: 'Final Approval', key: 'action', type: 'action', action: [{}] },
   ]
@@ -43,7 +43,6 @@ export class MyDsrComponent implements OnInit, AfterContentChecked {
     private formBuilder: FormBuilder,
     private _formService: FormService,
     private notificationService: NotificationService, private datePipe: DatePipe,
-    private cdr: ChangeDetectorRef,
     private utilityService: UtilityServiceService
   ) { }
 
@@ -93,6 +92,16 @@ export class MyDsrComponent implements OnInit, AfterContentChecked {
   }
   onFilter() {
     console.log(this.filterForm);
+    const filteredData = this.Table_DATA.filter((item) => {
+      const start_date= new Date(this.getFilterControl('start_date').value).getTime();
+      const end_date= new Date(this.getFilterControl('end_date').value).getTime();
+      const dsr_date =  new Date(item.date).getTime();
+      console.log(dsr_date ,start_date , end_date);
+      
+      return (dsr_date  >= start_date&& dsr_date  <= end_date  );
+      // && (this.getFilterControl('final_approve').value.toLowerCase())==item.action[0].btnText 
+    })
+    console.log(filteredData)
 
   }
   onSubmit() {
@@ -119,9 +128,6 @@ export class MyDsrComponent implements OnInit, AfterContentChecked {
       this.notificationService.showError('All fields', 'Requierd');
 
     }
-  }
-  ngAfterContentChecked() {
-    this.cdr.detectChanges();
   }
 
 }

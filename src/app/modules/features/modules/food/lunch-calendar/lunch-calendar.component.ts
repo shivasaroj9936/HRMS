@@ -99,9 +99,6 @@ export class LunchCalendarComponent implements OnInit {
   }
 
   selectAll(data:any){
- 
-    
-    
     this.myCalendar.map((week:any)=>{
       week.map((day:any)=>{
         if(day.hasOwnProperty('booked')){
@@ -117,11 +114,7 @@ export class LunchCalendarComponent implements OnInit {
         }
       })
     })
-
     this.calendarData.emit(this.myCalendar);
-
-
-
   }
 
 

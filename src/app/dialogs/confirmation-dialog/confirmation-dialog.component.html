@@ -1,14 +1,20 @@
 <section>
-    <div class="header">
+    <div class="header"   [ngClass]="{warn:data.getReason}">
         <h3 class="heading">{{ data.heading }}</h3>
     </div>
     <div class="main">
-        <div class="icon_box">
-            <h1 class="icon">?</h1>
-        </div>
+        <ng-container *ngIf="!data.getReason; else reason ">
+
+            <div class="icon_box"   >
+                <h1 class="icon">?</h1>
+            </div>
+        </ng-container>
+            <ng-template #reason>
+                <app-common-text-area [row]="3" [column]="10" [label]="'Reason'" [labelStyle]="'dark'" [inputFormControl]="control" ></app-common-text-area>
+            </ng-template>
     </div>
     <div class="action">
         <button mat-button class="btn_cancel" [mat-dialog-close]="false">Cancel</button>
-        <button mat-button [mat-dialog-close]="true" class="btn_primary">Confirm</button>
+        <button mat-button [mat-dialog-close]="true" class="btn_primary" [disabled]="data?.getReason&& control.invalid" >Confirm</button>
     </div>
 </section>

@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormService } from 'src/app/services/form-service/form.service';
 import { NotificationService } from 'src/app/services/notification-service/notification.service';
+import { UtilityServiceService } from 'src/app/services/utility-service/utility-service.service';
 
 @Component({
   selector: 'app-my-leave',
@@ -47,21 +48,22 @@ export class MyLeaveComponent implements OnInit,AfterContentChecked {
     { heading: "Level 1", key: 'level_1', isSortable: '', type: 'text', link: 'client-details',class:'red' },
     { heading: "Level 2", key: 'level_2', isSortable: '', type: 'text', link: 'client-details',class:'red'  },
   ]
-  Table_DATA: any[] = [
-   {action:[{icon:'arrow_forward',route:'LEAVE_DETAILS',type:'route',routeID:121}],leave_type:'Short Leave',start_date:'01/01/2022',end_date:'01/01/2022',applied_on:'01/01/2022',status:'pending',level_1:'	Suyash Saxena(AI057)',level_2:'HR (Human Resourse)'}
-  ]
+  Table_DATA!: any[];
   constructor(private formBuilder: FormBuilder, private _formService: FormService,
     private notificationService:NotificationService,
     private datePipe:DatePipe,
-    private cdr:ChangeDetectorRef
+    private cdr:ChangeDetectorRef,
+    private utilityService:UtilityServiceService,
+
     
     ) {
-    this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
-
-  }
-
-  ngOnInit(): void {
-    this.createForm();
+      
+    }
+    
+    ngOnInit(): void {
+      this.createForm();
+      this.Table_DATA=this.utilityService.leaveList;
+      this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
   }
 
   createForm() {

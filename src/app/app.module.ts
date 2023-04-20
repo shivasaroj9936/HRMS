@@ -11,6 +11,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { environment } from 'src/environments/environment';
 import { AngularFireModule, FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { CommonTextAreaModule } from './modules/shared/common-text-area/common-text-area.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { AngularFireModule, FIREBASE_OPTIONS } from '@angular/fire/compat';
     AppRoutingModule,
     MatProgressBarModule,
     BrowserAnimationsModule,
+    CommonModule,
+    CommonTextAreaModule,
     ToastrModule.forRoot({
       closeButton:true,
       timeOut:2000,

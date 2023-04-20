@@ -1,5 +1,5 @@
 <div class="address">
-    <label class="label" [ngClass]="labelStyle" >{{label}}</label>
+    <label class="label" [ngClass]="labelStyle" >{{label|titlecase}}</label>
     <mat-form-field appearance="outline" class="addressFormfield">
         <textarea [maxlength]="maxLength"  #textarea type="text" placeholder="Message" class="inputMessage" matInput cdkTextareaAutosize [formControl]="inputFormControl"
             [cdkAutosizeMinRows]="row" [cdkAutosizeMaxRows]="column"
