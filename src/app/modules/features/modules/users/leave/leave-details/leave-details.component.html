@@ -2,10 +2,10 @@
     <div class="leave_status">
         <div class="names">
             <span class="name">
-                1 : Suyash Saxena
+                1 : {{Table_DATA.level_1}}
             </span>
             <span class="name">
-                2 : HR (Human Resourse)
+                2 : {{Table_DATA.level_2}}
             </span>
         </div>
         <div class="progress_bar" style="background:red"></div>
@@ -15,8 +15,9 @@
         <div class="table_container">
             <div class="header">
                 <h3 class="heading">Leave Details</h3>
-                
-                <button *ngIf="compareTime"  mat-raised-button color="warn"  (click)="RevokeConfirmation()" >Revoke Leave</button>
+
+                <button *ngIf="compareTime" mat-raised-button color="warn" (click)="RevokeConfirmation()">Revoke
+                    Leave</button>
             </div>
             <table class="table">
                 <tbody>
@@ -24,27 +25,38 @@
 
                         <tr>
                             <th scope="row" style="border-top:0px;">{{head?.heading}}</th>
-                            <td class="text-right">{{Table_DATA[head.key]}}</td>
+
+                            <ng-container [ngSwitch]="head.type">
+
+                                <ng-container *ngSwitchCase="'date'">
+                                    <td class="text-right">{{Table_DATA[head.key]|date:'dd/MM/yyyy'}}</td>
+
+                                </ng-container>
+
+                                <ng-container *ngSwitchCase="'text'">
+                                    <td class="text-right">{{Table_DATA[head.key]|titlecase}} </td>
+
+                                </ng-container>
+
+                                <ng-container *ngSwitchCase="'doc'">
+
+                                    <td class="text-right">
+                                        <span data-toggle="tooltip" data-placement="top" title="Download">
+                                            <a
+                                                href="https://dashboard.appinventiv.com/admin/download?type=leave&amp;filename=">
+                                                <mat-icon>download</mat-icon>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </ng-container>
+
+                            </ng-container>
                         </tr>
                     </ng-container>
-
-                    <tr>
-                        <th scope="row">Uploaded Document</th>
-                        <td class="text-right">
-                            <span data-toggle="tooltip" data-placement="top" title="Download">
-                                <a href="https://dashboard.appinventiv.com/admin/download?type=leave&amp;filename=">
-                                    <!-- <button type="button" class="btn icon-btn btn-xs btn-outline-info waves-effect waves-light"> -->
-                                    <mat-icon>download</mat-icon>
-                                    <!-- </button> -->
-                                </a>
-                            </span>
-                        </td>
-                    </tr>
-
                 </tbody>
             </table>
             <div class="reason">
-             <div [innerHTML]="sanitizer.bypassSecurityTrustHtml( Table_DATA?.reason)"></div>
+                <div [innerHTML]="sanitizer.bypassSecurityTrustHtml( Table_DATA?.reason)"></div>
 
             </div>
         </div>
@@ -56,8 +68,8 @@
                 </div>
 
                 <div class="card_body">
-                           <p> <span>{{Table_DATA?.level_1 |titlecase}}</span> {{Table_DATA?.status|titlecase}}</p>
-                           <p> <span>{{Table_DATA?.level_2|titlecase}}</span> {{Table_DATA?.status|titlecase}}</p>
+                    <p> <span>{{Table_DATA?.level_1 |titlecase}}</span> {{Table_DATA?.status|titlecase}}</p>
+                    <p> <span>{{Table_DATA?.level_2|titlecase}}</span> {{Table_DATA?.status|titlecase}}</p>
 
                 </div>
             </div>

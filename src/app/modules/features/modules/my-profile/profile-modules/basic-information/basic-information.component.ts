@@ -53,11 +53,11 @@ export class BasicInformationComponent implements OnInit,AfterContentChecked {
   save() {
     this.checkValidation();
     if (this.basicInformationForm.valid) {
-      this.notificationService.showSuccess('Saved', 'Basic Information');
+      this.notificationService.showSuccess('Basic Information Saved','');
       // console.log(this.basicInformationForm);
       this.formGroupDirective.resetForm()
     } else {
-      this.notificationService.showError('Error !', 'Please Provide All Information');
+      this.notificationService.showError( 'Please Provide All Information','');
 
     }
   }

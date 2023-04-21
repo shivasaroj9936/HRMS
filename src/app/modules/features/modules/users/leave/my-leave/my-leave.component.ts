@@ -75,7 +75,7 @@ export class MyLeaveComponent implements OnInit,AfterContentChecked {
       half_day: this._formService.getControl('cv',false),
       start_date: this._formService.getControl('cv'),
       end_date: this._formService.getControl('cv'),
-      remark: this._formService.getControl('cv'),
+      remark: this._formService.getControl('name'),
       document: this._formService.getControl('cv'),
       reason: this._formService.getControl('address'),
     });
