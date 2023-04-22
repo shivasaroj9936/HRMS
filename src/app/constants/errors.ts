@@ -9,7 +9,7 @@ export const PATTERN_ERRORS = (pattern: string | RegExp, key: string) :any =>{
         return `Please enter a valid ${key.toLowerCase()}`;
     }
     if (pattern == PATTERN.password) {
-        return `${toTitleCase(key)} can not contain blank spaces`;
+        return `${toTitleCase(key)} must contain capital letter,special charector and number`;
     }
     if (pattern == PATTERN.name) {
         return `${toTitleCase(key)} can not contain blank space, digits or special characters`;

@@ -63,7 +63,7 @@
         .amntduebtnpart {
             display: flex;
             justify-content: space-between;
-            align-items: end;
+            align-items: flex-end;
         }
 
         .lowerpara {
@@ -87,8 +87,6 @@
         padding: 1% 3%;
         gap: 2rem;
 
-        // .inputs {
-        // }
 
         .actions {
             .btn_primary {
@@ -100,7 +98,6 @@
     .bottom {
         border: 1px solid #DCE2E9;
         background-color: #fff;
-        // width: 97%;
         min-width: 80%;
         overflow-x: auto;
         border-radius: 10px;

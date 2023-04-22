@@ -7,16 +7,16 @@
         <p class="sidenav_text" *ngIf="isShowing" [ngClass]="{'is_active':parentChecker()}" >
           {{ item.title }}
       </p>
-      <div class="moving_icon"  *ngIf="item.movingIcon">
-        <img src="../../../../../../assets/rotate_icon.png" alt="">
+      <div class="moving_icon"  *ngIf="item.movingIcon && isShowing">
+        <img src="/assets/rotate_icon.png" alt="">
       </div>
       </ng-container>
         <ng-template #logOut> 
-          <p class="sidenav_text" *ngIf="isShowing" (click)="logoutConfirmation()"  >
+          <p class="sidenav_text" *ngIf="isShowing && isShowing" (click)="logoutConfirmation()"  >
             {{ item.title }} 
           </p>
           <div class="moving_icon" *ngIf="item.movingIcon">
-            <img src="../../../../../../assets/rotate_icon.png" alt="">
+            <img src="/assets/rotate_icon.png" alt="">
           </div>
         </ng-template>
       </div>
