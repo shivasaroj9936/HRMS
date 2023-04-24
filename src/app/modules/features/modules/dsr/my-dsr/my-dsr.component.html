@@ -44,7 +44,7 @@
             <app-common-dropdown [label]="'Hours'" [data]="hours" [dropdownDownControlName]="getFilterControl('hours')"></app-common-dropdown>
             <div class="actions">
                 <button class="btn_primary save" mat-raised-button type="submit">Search</button>
-                <button class="btn_cancel cancel" mat-raised-button type="reset"> Reset</button>
+                <button class="btn_cancel cancel" mat-raised-button type="reset" (click)="resetFilter()"> Reset</button>
             </div>
         </form>
     </div>

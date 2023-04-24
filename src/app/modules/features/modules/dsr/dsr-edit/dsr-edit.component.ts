@@ -35,7 +35,7 @@ export class DsrEditComponent implements OnInit {
     this.createForm();
     // this.dsrForm.patchValue(this.dsr)
     this.getControl("project").patchValue("Trainee Project Angular");
-    this.getControl("date").setValue("03/01/2023");
+    this.getControl("date").setValue("2023-03-01");
     this.getControl("logged_hr").setValue("08:00");
     this.getControl("description").setValue(
       '<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">Meetings</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; NA&nbsp;</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">Task&nbsp;</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; &nbsp;Bug fixing [2hr]</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; &nbsp;Portal registration [1 hr]</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">&nbsp; Working on job openings module [ 3 hr]</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">Challenges</p>\n<p style="box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; border: 0px; font-family: Lato; font-size: 14px; background-color: #ffffff;">NA</p>'
@@ -54,7 +54,7 @@ export class DsrEditComponent implements OnInit {
     return this.dsrForm?.controls[control] as FormControl;
   }
   onUpdate() {
-    this.notificationService.showSuccess("DSR", "Updated");
+    this.notificationService.showSuccess("DSR Updated SuccesFully", "");
     this._router.navigate([MY_DSR.fullUrl]);
   }
 }

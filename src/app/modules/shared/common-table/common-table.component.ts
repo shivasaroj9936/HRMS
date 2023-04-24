@@ -49,7 +49,7 @@ export class CommonTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.columns.map((tableColumn: any) => this.headerRow.push(tableColumn.heading));
-    console.log(this.today);
+    // console.log(this.today);
     
   }
   applyFilter(event: Event) {

@@ -8,6 +8,8 @@ import { CommonInputModule } from 'src/app/modules/shared/common-input/common-in
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonTextEditorModule } from 'src/app/modules/shared/common-text-editor/common-text-editor.module';
+import { CommonDatePickerModule } from 'src/app/modules/shared/common-date-picker/common-date-picker.module';
+import { CommonTimePickerModule } from 'src/app/modules/shared/common-time-picker/common-time-picker.module';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { CommonTextEditorModule } from 'src/app/modules/shared/common-text-edito
     CommonInputModule,MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonTextEditorModule
+    CommonTextEditorModule,
+    CommonDatePickerModule,
+    CommonTimePickerModule
   ]
 })
 export class DsrEditModule { }
