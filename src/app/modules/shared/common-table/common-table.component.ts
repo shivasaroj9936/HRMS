@@ -1,4 +1,4 @@
-import { Component,  Input, OnInit, Output, ViewChild ,EventEmitter} from '@angular/core';
+import { Component,  Input, OnInit, Output, ViewChild ,EventEmitter, OnChanges, SimpleChanges} from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -8,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './common-table.component.html',
   styleUrls: ['./common-table.component.scss']
 })
-export class CommonTableComponent implements OnInit {
+export class CommonTableComponent implements OnInit ,OnChanges{
   @Output() newItemEvent = new EventEmitter<any>();
   today= new Date();
   headerRow: any = [];
@@ -65,6 +65,10 @@ export class CommonTableComponent implements OnInit {
     this.dataSourceForTable.sort = this.matSort;
     this.dataSourceForTable.paginator = this.matPaginator;
 
+  }
+  ngOnChanges(): void {
+    this.dataSourceForTable.sort = this.matSort;
+    this.dataSourceForTable.paginator = this.matPaginator;
   }
 
   action(item:any,index:any){

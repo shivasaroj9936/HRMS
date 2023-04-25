@@ -125,37 +125,38 @@ export class MyDsrComponent implements OnInit {
   }
   onFilter() {
     console.log(this.filterForm.value);
-    
+    console.log(this.Table_DATA);
+
     const start_date = new Date(
       this.getFilterControl("start_date").value
     ).getTime();
     const end_date = new Date(
       this.getFilterControl("end_date").value
     ).getTime();
-    const status =  this.getFilterControl("start_date").value;
-    const project =  this.getFilterControl("project").value;
-    const hours =  this.getFilterControl("hours").value ;
+    const status = this.getFilterControl("start_date").value;
+    const project = this.getFilterControl("project").value;
+    const hours = this.getFilterControl("hours").value;
 
-    const finalApprovalStatus =  this.getFilterControl("start_date").value;
+    const finalApprovalStatus = this.getFilterControl("start_date").value;
 
     const filteredData = this.Table_DATA.filter((item) => {
       const dsr_date = new Date(item.date).getTime();
 
- 
-      return (start_date && end_date
+      return start_date && end_date
         ? dsr_date >= start_date && dsr_date <= end_date
         : end_date
         ? dsr_date <= end_date
-        : dsr_date >= start_date)  ;
+        : dsr_date >= start_date;
     });
     // || (finalApprovalStatus!='all'?finalApprovalStatus==item.action[0].btnText:true)
     console.log(filteredData);
-    this.dataSource = new MatTableDataSource<any>(filteredData);
-    
-  }
-  resetFilter(){
-    this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+    this.Table_DATA=filteredData;
 
+    this.dataSource = new MatTableDataSource<any>(filteredData);
+    this.dataSource._updateChangeSubscription();
+  }
+  resetFilter() {
+    this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
   }
 
   onSubmit() {

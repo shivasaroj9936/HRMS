@@ -57,7 +57,7 @@ export class RequestTrainingDialogComponent implements OnInit {
       this.notificationService.showSuccess('Saved', this.requestTraining.heading);
       this.dialogRef.close();
     } else {
-      this.notificationService.showError('Error !', 'Please Provide All Information ');
+      this.notificationService.showError( 'Please Provide All Information','');
 
     }
   }

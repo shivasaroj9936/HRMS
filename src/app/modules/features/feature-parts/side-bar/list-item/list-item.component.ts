@@ -5,12 +5,16 @@ import { ACCOUNT } from "src/app/constants/routes";
 import { ConfirmationDialogComponent } from "src/app/dialogs/confirmation-dialog/confirmation-dialog.component";
 import { SideNavItem, sideNavList } from "src/app/interfaces/common.interface";
 import { AbsoluteRoutingPipe } from "src/app/pipes/absolute-routing/absolute-routing.pipe";
+import { fadeInUpAnimation } from "src/animations/fade-in-up.animation";
 
 @Component({
   selector: "app-list-item",
   templateUrl: "./list-item.component.html",
   styleUrls: ["./list-item.component.scss"],
   providers: [AbsoluteRoutingPipe],
+  // animations:[f]
+  animations: [fadeInUpAnimation],
+
 })
 export class ListItemComponent implements OnInit {
   showSubmenu = false;
