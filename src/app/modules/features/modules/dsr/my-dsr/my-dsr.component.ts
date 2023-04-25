@@ -3,6 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
 import { MatTableDataSource } from "@angular/material/table";
 import { fadeInUpAnimation } from "src/animations/fade-in-up.animation";
+import { MY_DSR_TABLE_HEADING } from "src/app/constants/table-headers";
 import { FormService } from "src/app/services/form-service/form.service";
 import { NotificationService } from "src/app/services/notification-service/notification.service";
 import { UtilityServiceService } from "src/app/services/utility-service/utility-service.service";
@@ -21,45 +22,7 @@ export class MyDsrComponent implements OnInit {
   filterForm!: FormGroup;
   noWork = false;
   dataSource!: MatTableDataSource<any>;
-  columns = [
-    { heading: "Sr.No.", key: "s_no", isSortable: "yes", type: "text" },
-    {
-      heading: "Emp Name",
-      key: "emp_name",
-      isSortable: "yes",
-      type: "text",
-      link: "client-details",
-    },
-    {
-      heading: "Email",
-      key: "email",
-      isSortable: "",
-      type: "text",
-      link: "client-details",
-    },
-    {
-      heading: "Employment Type",
-      key: "employment_type",
-      isSortable: "yes",
-      type: "text",
-      link: "client-details",
-    },
-    {
-      heading: "Date",
-      key: "date",
-      isSortable: "yes",
-      type: "date",
-      link: "client-details",
-    },
-    {
-      heading: "Total(Logged Hr)",
-      key: "logged_hr",
-      isSortable: "yes",
-      type: "text",
-      link: "client-details",
-    },
-    { heading: "Final Approval", key: "action", type: "action", action: [{}] },
-  ];
+  columns = MY_DSR_TABLE_HEADING;
   Table_DATA: any[] = [];
 
   submissionStatus: string[] = ["All", "Submitted", "Due"];

@@ -3,6 +3,7 @@ import { MatDialog } from "@angular/material/dialog";
 import { DomSanitizer } from "@angular/platform-browser";
 import { ActivatedRoute, Route, Router } from "@angular/router";
 import { MY_LEAVE } from "src/app/constants/routes";
+import { LEAVE_DETAIS_TABLE_HEADING } from "src/app/constants/table-headers";
 import { ConfirmationDialogComponent } from "src/app/dialogs/confirmation-dialog/confirmation-dialog.component";
 import { NotificationService } from "src/app/services/notification-service/notification.service";
 import { UtilityServiceService } from "src/app/services/utility-service/utility-service.service";
@@ -17,15 +18,7 @@ export class LeaveDetailsComponent implements OnInit {
   today= new Date();
   compareTime!:boolean;
   index=0;
-  heading = [
-
-    { heading: "Leave Type", key: "leave_type"   ,type:'text'},
-    { heading: "Start Date", key: "start_date" ,type:'date'},
-    { heading: "End Date", key: "end_date",type:'date' },
-    { heading: "Applied On", key: "applied_on" ,type:'date'},
-    { heading: "Leave Duration", key: "leave_duration",type:'text' },
-    { heading: "Uploaded Document	", key: "uploaded_document",type:'doc' },
-  ];
+  heading = LEAVE_DETAIS_TABLE_HEADING;
   Table_DATA:any;
     //  {leave_type:'Short Leave',start_date:'01/01/2022',end_date:'01/01/2022',applied_on:'01/01/2022',leave_duration:'5:00 PM - 7:00 PM',uploaded_document:'HR (Human Resourse)'}
    

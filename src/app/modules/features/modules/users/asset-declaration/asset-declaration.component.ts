@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
+import { ASSETDECLARATION_TABLE_HEADING } from 'src/app/constants/table-headers';
 import { FormService } from 'src/app/services/form-service/form.service';
 import { NotificationService } from 'src/app/services/notification-service/notification.service';
 
@@ -21,20 +22,8 @@ export class AssetDeclarationComponent implements OnInit {
 
   dataSource!: MatTableDataSource<any>;
   
-  columns = [
-    { heading: 'S.No', key: 's_no', isSortable: '', type: 'text', },
-    { heading: "Employee Id", key: 'emp_id', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Unique Asset Code", key: 'unique_asset_code', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Serial Number", key: 'serial_no', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Model Number", key: 'model_no', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "OS", key: 'os', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "OS Version", key: 'os_version', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Brand", key: 'brand', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Colour", key: 'colour', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Images", key: 'asset_image', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Is Working ?", key: 'device_working_condition', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: 'Added', key: 'added', isSortable: '', type: 'text', },
-  ]
+  columns = ASSETDECLARATION_TABLE_HEADING;
+
   Table_DATA: any[] = [
     // {s_no:1,status:'under process',request_reason:'work need',priority:'high',request_at:'01/01/2022',asset_category:'Laptop',company:'Appinventiv Technology'}
   ]

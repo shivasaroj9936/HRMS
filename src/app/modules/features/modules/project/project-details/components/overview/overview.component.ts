@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { PLANNED_DELIVERIES_TABLE_HEADING, PROJECT_TEAM_DETAILS_TABLE_HEADING } from 'src/app/constants/table-headers';
 import { NotificationService } from 'src/app/services/notification-service/notification.service';
 
 @Component({
@@ -15,25 +16,8 @@ export class OverviewComponent implements OnInit {
   tags2=['Project Plan','User stories','project App Links','Other'];
 
 
-  plannedDeliveriesColumns = [
-    { heading: "Milestones", key: 'milestones', isSortable: '', type: 'text', },
-    { heading: "Release", key: 'release', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Description", key: 'description', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Into QA Date", key: 'into_qa_date', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Internal Demo Date", key: 'internal_demo_date', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Release Date", key: 'release_date', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Delivery Status", key: 'delivery_status', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "SignOff Status", key: 'signOff_status', isSortable: '', type: 'text', link: 'client-details' },
-  ]
-  teamDetailColumns = [
-    { heading: "Name", key: 'name', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Allocated As", key: 'allocated_as', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Department", key: 'department', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Alloc Hrs", key: 'alloc_hrs', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Exp", key: 'exp', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Relevant Exp", key: 'relevant_exp', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Hrs Log", key: 'hrs_log', isSortable: '', type: 'text', link: 'client-details' },
-  ]
+  plannedDeliveriesColumns = PLANNED_DELIVERIES_TABLE_HEADING;
+  teamDetailColumns = PROJECT_TEAM_DETAILS_TABLE_HEADING;
   Table_DATA: any[] = [];
   Table_DATA1: any[] = [
     {      name: 'Rabban Ahmad', allocated_as: 'Tech Lead', department: 'Angular', alloc_hrs: '0.00', exp: '11.0', relevant_exp: '0.3', hrs_log: '63:0'    },

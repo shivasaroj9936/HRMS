@@ -1,7 +1,5 @@
 import { DatePipe } from "@angular/common";
 import {
-  AfterContentChecked,
-  ChangeDetectorRef,
   Component,
   OnInit,
   ViewChild,
@@ -16,6 +14,7 @@ import { MatDialog } from "@angular/material/dialog";
 import { MatTableDataSource } from "@angular/material/table";
 import { slideInRight } from "src/animations/slide-in-right";
 import { trim } from "src/app/constants/helperMethods";
+import { QUALIFICATION_TABLE_HEADING } from "src/app/constants/table-headers";
 import {
   BASIC_INFORMATION,
   FORM_LABEL,
@@ -54,27 +53,7 @@ export class QualificationComponent implements OnInit {
   qualificationForm!: FormGroup;
 
   dataSource!: MatTableDataSource<any>;
-  columns = [
-    { heading: "Action", key: "action", isSortable: "", type: "action" },
-    {
-      heading: "School/University",
-      key: "school",
-      isSortable: "isSortable",
-      type: "text",
-    },
-    {
-      heading: "Time Period",
-      key: "time",
-      isSortable: "isSortable",
-      type: "date",
-    },
-    {
-      heading: "Education Level",
-      key: "education",
-      isSortable: "isSortable",
-      type: "text",
-    },
-  ];
+  columns = QUALIFICATION_TABLE_HEADING;
   Table_DATA: any;
 
   constructor(

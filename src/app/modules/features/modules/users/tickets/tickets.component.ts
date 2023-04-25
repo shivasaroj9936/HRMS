@@ -2,6 +2,7 @@ import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
+import { TICKET_TABLE_HEADING } from 'src/app/constants/table-headers';
 import { FormService } from 'src/app/services/form-service/form.service';
 import { NotificationService } from 'src/app/services/notification-service/notification.service';
 
@@ -18,15 +19,7 @@ export class TicketsComponent implements OnInit {
 
   ticketForm!: FormGroup;
   dataSource!: MatTableDataSource<any>;
-  columns = [
-    { heading: 'Action', key: 'action', type: 'action', action: [{}] },
-    { heading: "Ticket Code", key: 'ticket_code', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Priority", key: 'priority', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Employee", key: 'employee', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Subject", key: 'subject', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Status", key: 'status', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Date", key: 'date', isSortable: '', type: 'text', link: 'client-details', class: 'red' },
-  ]
+  columns = TICKET_TABLE_HEADING;
   Table_DATA: any[] = [ ]
   constructor(private formBuilder: FormBuilder, private _formService: FormService, private notificationService: NotificationService,
     private datePipe: DatePipe

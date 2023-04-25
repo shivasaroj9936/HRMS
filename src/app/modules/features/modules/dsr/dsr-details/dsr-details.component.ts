@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute } from '@angular/router';
+import { MY_DSR_DETAILS_TABLE_HEADING } from 'src/app/constants/table-headers';
 import { NotificationService } from 'src/app/services/notification-service/notification.service';
 import { UtilityServiceService } from 'src/app/services/utility-service/utility-service.service';
 
@@ -16,21 +17,7 @@ export class DsrDetailsComponent implements OnInit {
   dsr: any;
 
 
-  columns = [
-    { heading: "Sr. No.", key: 's_no', isSortable: '', type: 'text', },
-    { heading: "Project Name", key: 'project_name', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "D s r", key: 'dsr', isSortable: '', type: 'html', link: 'client-details' },
-    { heading: "Status", key: 'status', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "P M Approval", key: 'pm_approval', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "A M Approval", key: 'am_approval', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: 'R M Approval	', key: 'rm_approval', type: 'text', },
-    { heading: 'Final Approval', key: 'final_approval', type: 'text', },
-    { heading: 'Logged Hrs', key: 'logged_hr', type: 'text', },
-    { heading: 'Action', key: 'action', type: 'action', action: [{}] },
-
-
-
-  ]
+  columns = MY_DSR_DETAILS_TABLE_HEADING;
   Table_DATA: any[] = [
     {
     s_no: 1, type: 'text', isSortable: 'sortable', action: [{ icon: 'edit', btnStyle: 'btn_add_new', btnText: 'pending', route: 'DSR_EDIT', type: 'route', routeID: 121 }], project_name: '	Trainee Project Angular', status: 'Submitted',

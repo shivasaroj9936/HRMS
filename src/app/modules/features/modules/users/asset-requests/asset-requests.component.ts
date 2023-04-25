@@ -2,6 +2,7 @@ import { DatePipe } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { MatTableDataSource } from "@angular/material/table";
+import {  ASSET_REQUEST_TABLE_HEADING } from "src/app/constants/table-headers";
 import { FormService } from "src/app/services/form-service/form.service";
 import { NotificationService } from "src/app/services/notification-service/notification.service";
 
@@ -22,16 +23,7 @@ export class AssetRequestsComponent implements OnInit {
 
   dataSource!: MatTableDataSource<any>;
   
-  columns = [
-    { heading: 'S.No', key: 's_no', isSortable: '', type: 'text', },
-    { heading: "Status", key: 'status', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Request Reason", key: 'request_reason', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Priority", key: 'priority', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Request At", key: 'request_at', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Asset Category", key: 'asset_category', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Allocation Type", key: 'allocation_type', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: 'Company', key: 'company', isSortable: '', type: 'text', },
-  ]
+  columns = ASSET_REQUEST_TABLE_HEADING;
   Table_DATA: any[] = [
     {s_no:1,status:'under process',request_reason:'work need',priority:'high',request_at:'01/01/2022',asset_category:'Laptop',company:'Appinventiv Technology'}
   ]

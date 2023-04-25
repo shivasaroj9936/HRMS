@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { TRAING_REQUEST_TABLE_HEADING } from 'src/app/constants/table-headers';
 
 @Component({
   selector: 'app-requested-trainings',
@@ -9,15 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class RequestedTrainingsComponent implements OnInit {
 
   dataSource!: MatTableDataSource<any>;
-  columns = [
-    { heading: 'S.No', key: 's_no', isSortable: '', type: 'text', },
-    { heading: "Training Name", key: 'training_name', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Timeline to conduct", key: 'timeline_to_conduct', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Requested date", key: 'requested_date', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: 'Status', key: 'status', isSortable: '', type: 'text', },
-    { heading: 'Action', key: 'action', type: 'action', action: [{}] },
-
-  ]
+  columns = TRAING_REQUEST_TABLE_HEADING;
   Table_DATA: any[] = [  ]
 
   constructor() { 

@@ -2,6 +2,7 @@ import { DatePipe } from '@angular/common';
 import { AfterContentChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
+import { MY_LEAVE_TABLE_HEADING } from 'src/app/constants/table-headers';
 import { FormService } from 'src/app/services/form-service/form.service';
 import { NotificationService } from 'src/app/services/notification-service/notification.service';
 import { UtilityServiceService } from 'src/app/services/utility-service/utility-service.service';
@@ -38,16 +39,7 @@ export class MyLeaveComponent implements OnInit,AfterContentChecked {
   leaveTypes: string[] = ['Planned Leave', 'Privileged Leave', 'Emergency Leave', 'Short Leave', 'All Reamaining Leave']
   leaveForm!: FormGroup;
   dataSource!: MatTableDataSource<any>;
-  columns = [
-    { heading: 'Action', key: 'action', type: 'action', action: [{}] },
-    { heading: "Leave Type", key: 'leave_type', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Request From", key: 'start_date', isSortable: '', type: 'date', link: 'client-details' },
-    { heading: "Request To", key: 'end_date', isSortable: '', type: 'date', link: 'client-details' },
-    { heading: "Applied On", key: 'applied_on', isSortable: '', type: 'date', link: 'client-details' },
-    { heading: "Status", key: 'status', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Level 1", key: 'level_1', isSortable: '', type: 'text', link: 'client-details',class:'red' },
-    { heading: "Level 2", key: 'level_2', isSortable: '', type: 'text', link: 'client-details',class:'red'  },
-  ]
+  columns = MY_LEAVE_TABLE_HEADING;
   Table_DATA!: any[];
   constructor(private formBuilder: FormBuilder, private _formService: FormService,
     private notificationService:NotificationService,

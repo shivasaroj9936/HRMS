@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { POLICY_DOCUMENTS_TABLE_HEADING } from 'src/app/constants/table-headers';
 
 @Component({
   selector: 'app-policy-documents',
@@ -8,14 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class PolicyDocumentsComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
-  columns = [
-    { heading: '#', key: 's_no', isSortable: '', type: 'text', },
-    { heading: "Name", key: 'name', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "Type", key: 'doc_type', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: 'File Size', key: 'doc_size', isSortable: '', type: 'text', },
-    { heading: 'Last Modified', key: 'last_modification', isSortable: '', type: 'text', },
-    { heading: 'Action', key: 'action', type: 'action', action: [{}] },
-  ]
+  columns = POLICY_DOCUMENTS_TABLE_HEADING;
   Table_DATA: any[] = [
     { s_no: 1, name: ' Appinventiv_Policy_Manual', doc_type: 'pdf', doc_size: '22kb', last_modification: '22/01/2023',  "action": [ {icon:'download',text:'download',type:'download',link:'https://dashboard.appinventiv.com/admin/repository/file-download?file=uploads/hr/policy/Appinventiv_Policy_Manual.pdf'}] },
     { s_no: 2, name: ' Contact_List_Updated_Appinventiv', doc_type: 'jpeg', doc_size: '31kb', last_modification: '22/01/2023',  "action": [ {icon:'download',text:'download',type:'download',link:'/assets/applogo.png'}] },
