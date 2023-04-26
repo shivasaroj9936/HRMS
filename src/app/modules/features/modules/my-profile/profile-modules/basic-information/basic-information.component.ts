@@ -51,6 +51,8 @@ export class BasicInformationComponent implements OnInit,AfterContentChecked {
 
 
   save() {
+    console.log(this.basicInformationForm);
+    
     this.checkValidation();
     if (this.basicInformationForm.valid) {
       this.notificationService.showSuccess('Basic Information Saved','');

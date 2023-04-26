@@ -3,7 +3,7 @@
 section {
   // overflow-x: auto !important;
   overflow-y: hidden;
-  position: relative !important;
+  // position: relative !important;
   background-color: #fff;
   padding: 0.85rem !important;
   border-radius: 11px;
@@ -17,11 +17,14 @@ section {
 
   }
 
-  .filter {
-    display: grid;
-    width: 30%;
+  // .filter {
+  //   // display: grid;
+  //   // width: 30%;
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   width: 100%;
 
-  }
+  // }
 
 
   tr:nth-of-type(odd) {
@@ -37,6 +40,16 @@ section {
   // }
   .table_wraper {
     overflow-x: auto !important;
+    position: relative !important;
+
+    .filter {
+      // display: grid;
+      // width: 30%;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+    }
 
     table {
       // width: 100%;
@@ -86,6 +99,7 @@ section {
         .action {
           display: flex;
           flex-wrap: wrap;
+
           // cursor: pointer;
           a {
             text-decoration: none;
@@ -134,7 +148,10 @@ section {
   }
 
   ::ng-deep {
-
+    .mat-form-field-appearance-outline .mat-form-field-wrapper{
+      margin: 0;
+      // padding-bottom: 5px;
+    }
     .mat-paginator {
 
       min-width: 100%;
@@ -143,6 +160,11 @@ section {
     .mat-paginator-page-size {
       position: absolute;
       left: 10px;
+      top: 10px;
+    }
+    .mat-paginator-range-label{
+      position: absolute;
+      left: 0;
     }
 
     .mat-select-arrow {
@@ -199,9 +221,9 @@ section {
         flex-direction: column !important;
       }
 
-      .mat-paginator-page-size {
-        margin: -25px 0px;
-      }
+      // .mat-paginator-page-size {
+      //   margin: -25px 0px;
+      // }
 
       .mat-form-field-appearance-outline .mat-form-field-wrapper {
         margin: 0;
@@ -211,9 +233,15 @@ section {
 
 }
 
-// @media only screen and (max-width: 411px) {
-//   table {
-//     // overflow-x: scroll;
-//     // min-width: 50px;
-//   }
-// }
+@media only screen and (max-width: 450px) {
+  section {
+    .table_wraper {
+     
+
+      .filter {
+        flex-direction: column;
+        height: 8rem;
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@
   <div class="header" *ngIf="heading">
     <h3 class="heading">{{heading}}</h3>
   </div>
+  <div class="table_wraper">
   <div *ngIf="searchFilter" class="filter">
 
     <mat-form-field appearance="outline">
@@ -9,7 +10,6 @@
       <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Search" #input>
     </mat-form-field>
   </div>
-<div class="table_wraper">
 
   <table mat-table [dataSource]="dataSourceForTable" matSort>
   <!-- <table mat-table [dataSource]="dataSource" matSort> -->

@@ -1,4 +1,4 @@
-import { AfterContentChecked, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { AfterContentChecked, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -6,18 +6,26 @@ import { FormControl } from '@angular/forms';
   templateUrl: './common-text-editor.component.html',
   styleUrls: ['./common-text-editor.component.scss']
 })
-export class CommonTextEditorComponent implements OnInit,AfterContentChecked {
-  @Input() inputFormControl!:FormControl ;
+export class CommonTextEditorComponent implements OnInit, AfterContentChecked {
+  @Input() inputFormControl!: FormControl;
   @Input() label!: string;
   @Input() labelStyle!: string;
+  // tinymce: any;
+  @ViewChild("tinymce") tinymce!: any;
 
-  constructor(private cdr: ChangeDetectorRef) { }
+  constructor() { }
 
 
   ngOnInit(): void {
+
+
   }
   ngAfterContentChecked() {
-    this.cdr.detectChanges();
+
+    // console.log(this.tinymce);
+    // this.tinymce.init={    selector: '#tinymce',
+    //   branding: false
+    // };
   }
 
 
