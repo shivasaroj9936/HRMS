@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { fadeInUpAnimation } from 'src/animations/fade-in-up.animation';
 import { FormService } from 'src/app/services/form-service/form.service';
@@ -18,7 +18,8 @@ export class DinnerComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private _formService: FormService,
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private _elementRef :ElementRef
   ) { }
 
   ngOnInit(): void {
@@ -37,6 +38,14 @@ export class DinnerComponent implements OnInit {
   }
   getControl(control: string): FormControl {
     return this.dinnerRequestForm?.controls[control] as FormControl;
+  }
+  toggleForm() {
+    let content = this._elementRef.nativeElement.querySelector('.form');
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = 2*content.scrollHeight + "px";
+    } 
   }
   onSubmit() {
 

@@ -8,9 +8,9 @@
                     <i class="fas fa-info-circle"></i>
                     <span style="font-weight: bold;">Note: </span> You can purchase/cancel a coupon for the upcoming day before 6 p.m. today.        </p>
             </div>
-            <button class="btn_primary" mat-raised-button (click)="toggle=!toggle">Request Dinner</button>
+            <button class="btn_primary" mat-raised-button (click)="toggleForm()">Request Dinner</button>
         </div>
-        <form [@fadeInUp] *ngIf="toggle" [formGroup]="dinnerRequestForm" (ngSubmit)="onSubmit()">
+        <form class="form" [@fadeInUp]  [formGroup]="dinnerRequestForm" (ngSubmit)="onSubmit()">
 
             <div class="left">
                 <div class="row">
@@ -29,7 +29,7 @@
             </div>
             <div class="actions">
                 <button class="btn_primary save" mat-raised-button type="submit">Add</button>
-                <button class="btn_cancel cancel" mat-raised-button type="reset" (click)="toggle=false"> Cancel</button>
+                <button class="btn_cancel cancel" mat-raised-button type="reset" (click)="toggleForm()"> Cancel</button>
 
             </div>
         </form>
