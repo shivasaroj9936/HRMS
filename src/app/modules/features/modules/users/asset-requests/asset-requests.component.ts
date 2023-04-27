@@ -1,5 +1,5 @@
 import { DatePipe } from "@angular/common";
-import { Component, OnInit } from "@angular/core";
+import { Component, ElementRef, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { MatTableDataSource } from "@angular/material/table";
 import {  ASSET_REQUEST_TABLE_HEADING } from "src/app/constants/table-headers";
@@ -31,7 +31,8 @@ export class AssetRequestsComponent implements OnInit {
     private formBuilder: FormBuilder,
     private _formService: FormService,
     private notificationService:NotificationService,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private _elementRef: ElementRef
   ) {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
 
@@ -55,6 +56,14 @@ export class AssetRequestsComponent implements OnInit {
   getControl(control: string): any {
     return this.assetRequestForm?.controls[control];
   }
+  toggleForm() {
+    let content = this._elementRef.nativeElement.querySelector('.form');
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = 2*content.scrollHeight + "px";
+    } 
+  }
   onSubmit() {
 
     if(this.assetRequestForm.valid){
@@ -65,7 +74,7 @@ export class AssetRequestsComponent implements OnInit {
       this.Table_DATA.push(this.assetRequestForm.value);
       this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
       this.assetRequestForm.reset();
-      this.formToggle=false;
+      this.toggleForm();
       this.notificationService.showSuccess('Asset Request','Saved')
     }
   }

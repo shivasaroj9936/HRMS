@@ -1,9 +1,9 @@
 <section>
     <div class="request">
         <div class="request_button">
-            <button mat-button (click)="formToggle=!formToggle" class="btn_flat">+ {{'Add new asset declaration'|titlecase}}</button>
+            <button mat-button (click)="toggleForm()" class="btn_flat">+ {{'Add new asset declaration'|titlecase}}</button>
         </div>
-        <form [formGroup]="assetDeclarationForm" (ngSubmit)="onSubmit()" *ngIf="formToggle">
+        <form class="form" [formGroup]="assetDeclarationForm" (ngSubmit)="onSubmit()"  >
             <div class="row 1">
                 <app-common-input [style]="'dark'" [label]=" 'Employee IdAI1580' " [inputFormControl]="getControl('emp_id')" ></app-common-input>
                 <app-common-input [style]="'dark'" [label]=" 'Unique Asset Code' " [inputFormControl]="getControl('unique_asset_code')" ></app-common-input>

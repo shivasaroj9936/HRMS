@@ -69,7 +69,10 @@ section {
         form {
             display: grid;
             grid-template-columns: 50% 50%;
-            padding: 1rem;
+            padding: 0 1rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s ease-in-out;
 
             .row {
                 margin: 1rem 0.5rem;
@@ -106,7 +109,7 @@ section {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-
+                margin-bottom: 1rem;
                 .save {
                     background-color: var(--success-color);
                     margin-right: 1rem;

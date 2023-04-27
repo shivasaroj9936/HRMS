@@ -13,17 +13,24 @@ section {
         }
 
         form {
-            padding: 1rem 1.3rem;
+            padding: 0 1.3rem;
+
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s ease-in-out;
             .row {
+                padding: 1rem 0rem;
                 display: grid;
                 grid-template-columns: auto auto auto auto;
                 gap: 1rem;
             }
+      
 
             .action {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                padding-bottom: 1.3rem;
             }
 
         }

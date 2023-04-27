@@ -1,5 +1,5 @@
 import { DatePipe } from "@angular/common";
-import { Component, OnInit } from "@angular/core";
+import { Component, ElementRef, OnInit } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
 import { MatTableDataSource } from "@angular/material/table";
 import { fadeInUpAnimation } from "src/animations/fade-in-up.animation";
@@ -17,7 +17,6 @@ import { USERDATA } from "../../dashboard/interfaces/interfaces";
   animations: [fadeInUpAnimation],
 })
 export class MyDsrComponent implements OnInit {
-  toggle = false;
   dsrForm!: FormGroup;
   filterForm!: FormGroup;
   noWork = false;
@@ -41,7 +40,8 @@ export class MyDsrComponent implements OnInit {
     private _formService: FormService,
     private notificationService: NotificationService,
     private datePipe: DatePipe,
-    private utilityService: UtilityServiceService
+    private utilityService: UtilityServiceService,
+    private _elementRef:ElementRef
   ) {}
 
   ngOnInit(): void {
@@ -67,6 +67,15 @@ export class MyDsrComponent implements OnInit {
       final_approve: this._formService.getControl("cv", false),
       hours: this._formService.getControl("cv", false),
     });
+  }
+
+  toggleForm() {
+    let content = this._elementRef.nativeElement.querySelector('.form');
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = 2*content.scrollHeight + "px";
+    } 
   }
   onSelect() {
     this.noWork = !this.noWork;
@@ -150,7 +159,6 @@ export class MyDsrComponent implements OnInit {
       this.dataSource._updateChangeSubscription();
 
       this.notificationService.showSuccess("DSR Added", "");
-      this.toggle = false;
       this.dsrForm.reset();
       this.noWork = false;
     } else {

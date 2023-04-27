@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { ASSETDECLARATION_TABLE_HEADING } from 'src/app/constants/table-headers';
@@ -30,7 +30,9 @@ export class AssetDeclarationComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private _formService: FormService,
-    private notificationService:NotificationService
+    private notificationService:NotificationService,
+    private _elementRef: ElementRef
+
   ) {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
 
@@ -61,6 +63,14 @@ export class AssetDeclarationComponent implements OnInit {
   getControl(control: string) {
     return this.assetDeclarationForm?.controls[control] as FormControl;
   }
+  toggleForm() {
+    let content = this._elementRef.nativeElement.querySelector('.form');
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = 2*content.scrollHeight + "px";
+    } 
+  }
   onSubmit() {
     // console.log(this.assetDeclarationForm.value);
     if(this.assetDeclarationForm.valid){
@@ -69,7 +79,7 @@ export class AssetDeclarationComponent implements OnInit {
       this.Table_DATA.push(this.assetDeclarationForm.value);
       this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
       this.assetDeclarationForm.reset();
-      this.formToggle=false;
+      this.toggleForm();
       this.notificationService.showSuccess('Asset Declaration','Saved')
     }
   }

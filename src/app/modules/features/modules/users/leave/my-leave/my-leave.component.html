@@ -8,16 +8,19 @@
     <div class="add_leave">
         <div class="header">
             <h3 class="heading">Add Leave </h3>
-            <button class="btn_add_new" (click)="toggle=!toggle">+Add New</button>
+            <!-- <button class="btn_add_new" (click)="toggle=!toggle">+Add New</button> -->
+            <button class="btn_add_new" (click)="toggleForm()">+Add New</button>
+
         </div>
-            <form *ngIf="toggle" [formGroup]="leaveForm" (ngSubmit)="onSubmit()">
+        <!-- [@fadeInUp] -->
+            <form  class="form" #form  [formGroup]="leaveForm" (ngSubmit)="onSubmit()">
 
             <div class="left">
                 <div class="row">
                     <app-common-dropdown [label]="'Leave Type'" [data]="leaveTypes" [dropdownDownControlName]="getControl('leave_type')" ></app-common-dropdown>
                 </div>
                 <div class="half_day">
-                    <ng-container *ngIf="!(getControl('leave_type').value=='Short Leave')">
+                    <ng-container *ngIf="!(getControl('leave_type').value=='Short Leave'  ||getControl('leave_type').value=='All Reamaining Leave' )">
 
                         <mat-checkbox class="example-margin" formControlName="is_half_day" >Half Day ?</mat-checkbox>
                         <mat-radio-group class="radio_buttons" *ngIf="getControl('is_half_day')?.value"  aria-label="Select an option" formControlName="half_day">
@@ -49,7 +52,7 @@
             </div>
             <div class="actions">
                 <button class="btn_primary save" mat-raised-button type="submit">Save</button>
-                <button class="btn_cancel cancel" mat-raised-button type="reset" (click)="toggle=false" > Cancel</button>
+                <button class="btn_cancel cancel" mat-raised-button type="reset" (click)="toggleForm()" > Cancel</button>
 
             </div>
         </form>

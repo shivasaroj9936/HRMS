@@ -23,11 +23,6 @@ export class SideBarComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   ngOnInit(): void {
-    // document.querySelector('isActive')
-    // if(document.querySelector('.submenu_active')){
-    //   console.log('hiii');
-      
-    // }
   }
   ngAfterViewInit(): void {
     
@@ -46,7 +41,7 @@ export class SideBarComponent implements OnInit, AfterViewInit {
           }
       });
       
-      this.sideNavList[itemIndex].subMenuClicked=!this.sideNavList[itemIndex].subMenuClicked
+      this.sideNavList[itemIndex].subMenuClicked=!this.sideNavList[itemIndex].subMenuClicked;
     }
     
   }
