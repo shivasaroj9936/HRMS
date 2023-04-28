@@ -6,10 +6,14 @@
 
 section {
   .moving_icon {
+    width: 20px;
+    height: 20px;
     img {
       margin-bottom: 5px;
       animation: rotate 5s infinite;
-      width: 1.3rem;
+      // width: 1.3rem;
+      width: 20px;
+      height: 20px;
       @keyframes rotate {
         from {
           transform: rotate(0deg);

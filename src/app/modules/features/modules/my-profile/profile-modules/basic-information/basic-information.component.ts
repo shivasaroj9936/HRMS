@@ -1,28 +1,39 @@
-import { AfterContentChecked, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
-import {  FormBuilder,  FormGroup, FormGroupDirective } from '@angular/forms';
-import { slideInRight } from 'src/animations/slide-in-right';
-import { trim } from 'src/app/constants/helperMethods';
-import { BASIC_INFORMATION, FORM_LABEL, GENDER_INPUT_DROPDOWN, MARITAL_DROPDOWN } from 'src/app/constants/ui-texts/dashboard-card';
-import { FormService } from 'src/app/services/form-service/form.service';
-import { NotificationService } from 'src/app/services/notification-service/notification.service';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+} from "@angular/core";
+import { FormArray, FormBuilder, FormGroup, FormGroupDirective } from "@angular/forms";
+import { slideInRight } from "src/animations/slide-in-right";
+import { trim } from "src/app/constants/helperMethods";
+import {
+  BASIC_INFORMATION,
+  FORM_LABEL,
+  GENDER_INPUT_DROPDOWN,
+  MARITAL_DROPDOWN,
+} from "src/app/constants/ui-texts/dashboard-card";
+import { FormService } from "src/app/services/form-service/form.service";
+import { NotificationService } from "src/app/services/notification-service/notification.service";
 
 @Component({
-  selector: 'app-basic-information',
-  templateUrl: './basic-information.component.html',
-  styleUrls: ['./basic-information.component.scss'],
-  animations: [slideInRight]
+  selector: "app-basic-information",
+  templateUrl: "./basic-information.component.html",
+  styleUrls: ["./basic-information.component.scss"],
+  animations: [slideInRight],
 })
-export class BasicInformationComponent implements OnInit,AfterContentChecked {
-  uiMessage = BASIC_INFORMATION
-  labelMessage = FORM_LABEL
-  genderValue = GENDER_INPUT_DROPDOWN
-  maritalStatusValue = MARITAL_DROPDOWN
+export class BasicInformationComponent implements OnInit {
+  uiMessage = BASIC_INFORMATION;
+  labelMessage = FORM_LABEL;
+  genderValue = GENDER_INPUT_DROPDOWN;
+  maritalStatusValue = MARITAL_DROPDOWN;
   basicInformationForm!: FormGroup;
   @ViewChild(FormGroupDirective) formGroupDirective!: FormGroupDirective;
 
-  constructor(private formBuilder: FormBuilder, private _formService: FormService, private notificationService: NotificationService,private cdr: ChangeDetectorRef) {
-
-  }
+  constructor(
+    private formBuilder: FormBuilder,
+    private _formService: FormService,
+    private notificationService: NotificationService,
+  ) { }
 
   ngOnInit(): void {
     this.createForm();
@@ -30,43 +41,38 @@ export class BasicInformationComponent implements OnInit,AfterContentChecked {
 
   createForm() {
     this.basicInformationForm = this.formBuilder.group({
-      first_name: this._formService.getControl('name'),
-      last_name: this._formService.getControl('name'),
-      dob: this._formService.getControl('dob'),
-      gender: this._formService.getControl('gender'),
-      marital_status: this._formService.getControl('marital_status'),
-      contact_number: this._formService.getControl('contact_number'),
-      tot_exp_years: this._formService.getControl('year'),
-      tot_exp_month: this._formService.getControl('month'),
-      rel_exp_year: this._formService.getControl('year'),
-      rel_exp_month: this._formService.getControl('month'),
-      address: this._formService.getControl('address'),
+      first_name: this._formService.getControl("name"),
+      last_name: this._formService.getControl("name"),
+      dob: this._formService.getControl("dob"),
+      gender: this._formService.getControl("gender"),
+      marital_status: this._formService.getControl("marital_status"),
+      contact_number: this._formService.getControl("contact_number"),
+      tot_exp_years: this._formService.getControl("year"),
+      tot_exp_month: this._formService.getControl("month"),
+      rel_exp_year: this._formService.getControl("year"),
+      rel_exp_month: this._formService.getControl("month"),
+      address: this._formService.getControl("address"),
     });
   }
-
 
   getControl(control: string): any {
     return this.basicInformationForm?.controls[control];
   }
 
-
   save() {
-    console.log(this.basicInformationForm);
     
     this.checkValidation();
+    this.notificationService.checkControls(this.basicInformationForm)
     if (this.basicInformationForm.valid) {
-      this.notificationService.showSuccess('Basic Information Saved','');
+      this.notificationService.showSuccess("Basic Information Saved", "");
       // console.log(this.basicInformationForm);
-      this.formGroupDirective.resetForm()
+      this.formGroupDirective.resetForm();
     } else {
-      this.notificationService.showError( 'Please Provide All Information','');
-
+      // this.notificationService.showError("Please Provide All Information", "");
     }
   }
-  ngAfterContentChecked() {
-    this.cdr.detectChanges();
-  }
+
   checkValidation() {
-    this.basicInformationForm.patchValue(trim(this.basicInformationForm.value))
+    this.basicInformationForm.patchValue(trim(this.basicInformationForm.value));
   }
 }
