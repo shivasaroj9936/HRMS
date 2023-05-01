@@ -34,7 +34,7 @@
     <div class="main mt-10 " >
         <div class="table-heading">
 
-            <h2>April 2023</h2>
+            <h2>{{monthNames[currentMonth]}} {{currentYear}}</h2>
             <app-coupon-legend> </app-coupon-legend>
         </div>
         <app-lunch-calendar [myCalendar]="myCalendar" [options]="options" (calendarData)="updateCalendarData($event)"  >

@@ -11,6 +11,11 @@ import { FoodCalendarDataService } from '../services/food-calendar-data.service'
   styleUrls: ['./lunch.component.scss']
 })
 export class LunchComponent implements OnInit {
+   monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    currentMonth:number=0;
+    currentYear:number=0;
 
   constructor( private _foodCalendarService:FoodCalendarDataService, private _dialog:MatDialog,
     private _router:Router ) { }
@@ -22,8 +27,9 @@ export class LunchComponent implements OnInit {
    cancel:true
  }
  ngOnInit(): void {
-
-   
+  const date= new Date();
+  this.currentYear=date.getFullYear()
+  this.currentMonth=date.getMonth();
    if(this._foodCalendarService.myCalendar.length == 0){
      console.log("new Formation");
      this._foodCalendarService.createCalendarData()
