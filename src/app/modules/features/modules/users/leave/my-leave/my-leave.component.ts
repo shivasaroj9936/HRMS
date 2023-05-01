@@ -1,6 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { AfterContentChecked, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { fadeInUpAnimation } from 'src/animations/fade-in-up.animation';
 import { MY_LEAVE_TABLE_HEADING } from 'src/app/constants/table-headers';
@@ -63,10 +63,6 @@ export class MyLeaveComponent implements OnInit, AfterContentChecked {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
     this.getControl('end_time').patchValue('12:00');
     this.getControl('end_time').disable();
-
-
-
-
   }
 
 
@@ -93,6 +89,7 @@ export class MyLeaveComponent implements OnInit, AfterContentChecked {
       reason: this._formService.getControl('address'),
     });
   }
+ 
 
 
   getControl(control: string): any {

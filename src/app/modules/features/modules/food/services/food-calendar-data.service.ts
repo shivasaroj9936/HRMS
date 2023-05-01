@@ -15,12 +15,14 @@ export class FoodCalendarDataService {
   }
   createCalendarData(){
     // 👇️ Current Month 0 ->sun, 1->mon
+
     let date = new Date();
     let firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
     let counter_days = 1;
-    for(let i=0; i<35; i++){
+    const daysInMonth=this.daysInMonth();
+    for(let i=0; i<daysInMonth; i++){
       let temp:any = {};
-      if(i >= firstDay.getDay() - 1 && counter_days<=30){   // no of days in month 30 or 31 or 28
+      if(i >= firstDay.getDay() - 1 && counter_days<=daysInMonth){   // no of days in month 30 or 31 or 28
         let currentDay =  this.getWeekDay(counter_days);
         temp['dayInWeek'] = this.weekDayData[currentDay.getDay()];
         temp['date'] = currentDay.getDate();
@@ -60,5 +62,9 @@ export class FoodCalendarDataService {
   weekDayData = [
     'Sun','Mon','Tue','Wed','Thu','Fri','Sat'
   ]
+  daysInMonth(){
+    let d = new Date();
+    return new Date(d.getFullYear(), d.getMonth()+ 1, 0).getDate()
+  }
 
 }

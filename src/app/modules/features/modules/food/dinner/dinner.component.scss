@@ -2,8 +2,12 @@
 
 section {
     .add_leave {
-
-        .lunchcoupon_maintop {
+        .header{
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+            .lunchcoupon_maintop {
+                flex-wrap: wrap;
             h4 {
                 color: #232328;
                 font-size: 1.9rem;

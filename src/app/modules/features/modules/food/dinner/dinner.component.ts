@@ -59,7 +59,7 @@ export class DinnerComponent implements OnInit {
 
       this.notificationService.showSuccess('Dinner Request  Added', '');
       this.toggle = false;
-      this.dinnerRequestForm.reset();
+      // this.dinnerRequestForm.reset();
     } else {
       this.notificationService.showError('All fields', 'Requierd');
 
