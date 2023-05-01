@@ -37,6 +37,9 @@ export class MyLeaveComponent implements OnInit, AfterContentChecked {
       usedLeave: 1
     }
   ]
+  shortLeaveStartTime=['10:00','12:00','2:00','3:00','5:00'];
+  shortLeaveEndTime=['12:00','2:00','4:00','5:00','7:00'];
+
   leaveTypes: string[] = ['Planned Leave', 'Privileged Leave', 'Emergency Leave', 'Short Leave', 'All Reamaining Leave']
   leaveForm!: FormGroup;
   dataSource!: MatTableDataSource<any>;
@@ -58,6 +61,8 @@ export class MyLeaveComponent implements OnInit, AfterContentChecked {
     this.createForm();
     this.Table_DATA = this.utilityService.leaveList;
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+    this.getControl('end_time').patchValue('12:00');
+    this.getControl('end_time').disable();
 
 
 
@@ -113,5 +118,8 @@ export class MyLeaveComponent implements OnInit, AfterContentChecked {
   }
   ngAfterContentChecked() {
     this.cdr.detectChanges();
+  }
+  dropdownSelection(event:any){
+    this.getControl('end_time').patchValue(this.shortLeaveEndTime[event.itemIndex]);
   }
 }

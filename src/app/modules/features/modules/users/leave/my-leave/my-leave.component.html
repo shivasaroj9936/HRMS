@@ -29,9 +29,10 @@
                         </mat-radio-group>
                     </ng-container>
                     <ng-container *ngIf="(getControl('leave_type').value=='Short Leave')">
-                        <app-common-input [label]="'Start Time'" [inputFormControl]="getControl('start_time')"></app-common-input>
-                        <app-common-input [label]="'End Time'" [inputFormControl]="getControl('end_time')"></app-common-input>
+                        <!-- <app-common-input [label]="'Start Time'" [inputFormControl]="getControl('start_time')"></app-common-input> -->
+                    <app-common-dropdown [label]="'Start Time'" [data]="shortLeaveStartTime" [dropdownDownControlName]="getControl('start_time')" (dropdownSelection)="dropdownSelection($event)" ></app-common-dropdown>
 
+                        <app-common-input [label]="'End Time'" [inputFormControl]="getControl('end_time')"></app-common-input>
                     </ng-container>
 
                 </div>

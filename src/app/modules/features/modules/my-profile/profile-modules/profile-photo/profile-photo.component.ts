@@ -50,12 +50,12 @@ export class ProfilePhotoComponent implements OnInit {
   }
   save() {
     if (this.imgForm.valid) {
-      this.notificationService.showSuccess( "Profile Image Saved", "Profile Image"  );
+      this.notificationService.showSuccess( "Profile Image Saved", ""  );
       this.fileElement.nativeElement.value = null;
       // this.imageSrc='';
 
     }else{
-      this.notificationService.showError( 'Profile Image is Not Selected !'  );
+      this.notificationService.showError( 'Profile Image is Not Selected !',''  );
     }
   }
 }

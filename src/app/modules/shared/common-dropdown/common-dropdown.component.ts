@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, Output ,EventEmitter} from '@angular/core';
 import { AbstractControl, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
@@ -10,12 +10,14 @@ import { VALIDATION_MESSAGES } from 'src/app/constants/messages';
   styleUrls: ['./common-dropdown.component.scss']
 })
 export class CommonDropdownComponent implements OnInit,AfterViewInit {
+  @Output() dropdownSelection = new EventEmitter();
+
   @Input() set dropdownDownControlName(data:FormControl | AbstractControl){
     this.inputFormControl = data;    
   }
    inputFormControl!:FormControl | AbstractControl;
   @Input() label!: string;
-  @Input() data:any;
+  @Input() data:(string|any)[]=[];
   @Input() errorType:any;
   @Input() formfieldCSS:any;
   @Input() labelStyle:any;
@@ -50,6 +52,17 @@ export class CommonDropdownComponent implements OnInit,AfterViewInit {
 
       return res;
     });
+  }
+  selectionChange(event:any){
+    const index= this.data.findIndex((item)=>{
+      return item==event.value;
+    })
+    const returnData={
+      itemIndex:index,
+      value:event.value
+    }
+    this.dropdownSelection.emit(returnData);
+
   }
 }
 
