@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output ,EventEmitter} from "@angular/core";
+import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { ActivatedRoute, Router } from "@angular/router";
 import { ACCOUNT } from "src/app/constants/routes";
@@ -20,7 +20,7 @@ export class ListItemComponent implements OnInit {
   showSubmenu = false;
   @Input() isShowing!: boolean;
   @Input() item!: SideNavItem;
-  @Output()  sideItemClick = new EventEmitter<any>()
+  @Output() sideItemClick = new EventEmitter<any>()
   sideNavList: SideNavItem[] = sideNavList;
 
   constructor(
@@ -28,11 +28,11 @@ export class ListItemComponent implements OnInit {
     private _router: Router,
     private absRoutePipe: AbsoluteRoutingPipe,
     private activatedRoute: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
 
-    
+
   }
   logoutConfirmation() {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
@@ -50,23 +50,27 @@ export class ListItemComponent implements OnInit {
     });
   }
 
-  parentChecker(): any {
-  //   let checker = this._router.url;
-  //   let subMenuOptions = this.item.options;
-  //   console.log(checker, subMenuOptions);
+  parentChecker(SideNavItem: SideNavItem): boolean {
 
-  //   return (
-  //     subMenuOptions &&
-  //     subMenuOptions.some((subMenuItem: any) => {
-  //       checker.includes(this.absRoutePipe.transform(subMenuItem.route));
-  //       console.log(this.absRoutePipe.transform(subMenuItem.route));
-        
-  //     })
-  //   );
+    let activeUrl = this._router.url.slice(7).split('/').pop();
+    let returnValue = false;
+
+    SideNavItem.options?.some((subMenuItem) => {
+      let tocheckUrl = this.absRoutePipe.transform(subMenuItem?.route);
+      if (typeof tocheckUrl == 'string') {
+        tocheckUrl = tocheckUrl.split('/').pop();
+      }
+      if (tocheckUrl == activeUrl) {
+        returnValue = true
+        return
+      }
+    })
+    return returnValue;
+
   }
 
 
-  SubMenuClicked(item:any){
+  SubMenuClicked(item: any) {
     this.sideItemClick.emit(item)
   }
 }

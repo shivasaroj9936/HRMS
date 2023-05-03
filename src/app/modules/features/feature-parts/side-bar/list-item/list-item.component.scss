@@ -5,37 +5,6 @@
 }
 
 section {
-  .moving_icon {
-    width: 20px;
-    height: 20px;
-    img {
-      margin-bottom: 5px;
-      animation: rotate 5s infinite;
-      // width: 1.3rem;
-      width: 20px;
-      height: 20px;
-      @keyframes rotate {
-        from {
-          transform: rotate(0deg);
-        }
-
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    }
-  }
-
-  .sidenav_text {
-    color: var(--side-nav-text-color);
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   .sub {
     padding-left: 20px;
@@ -43,13 +12,18 @@ section {
     transform-origin: top;
   }
 
+  // .child_active{
+  //   color: red;
+  // }
   .submenu_active {
-
+    // .child_active{
+    //   color: blue !important;
+    // }
     .sub {
 
       .sidenav_text,
       .item_icon {
-        color: var(--side-nav-active-color);
+        color: var(--primary-color);
       }
 
     }
@@ -67,10 +41,10 @@ section {
   }
 
   .is_active {
-    color: var(--side-nav-active-color) !important;
+    color: var(--primary-color) !important;
 
     .sidenav_text {
-      color: var(--side-nav-active-color) !important;
+      color: var(--primary-color) !important;
     }
 
     .item_text::before {
@@ -90,6 +64,37 @@ section {
     display: flex;
     gap: 10px;
     align-items: inherit;
+    .sidenav_text {
+      color: var(--side-nav-text-color);
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .moving_icon {
+      width: 20px;
+      height: 20px;
+
+      img {
+        margin-bottom: 5px;
+        animation: rotate 5s infinite;
+        width: 20px;
+        height: 20px;
+
+        @keyframes rotate {
+          from {
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
 
     .item_icon {
       vertical-align: super;
@@ -123,7 +128,7 @@ section {
 
     .item_text,
     .sidenav_text {
-      color: var(--side-nav-active-color);
+      color: var(--primary-color);
     }
   }
 }

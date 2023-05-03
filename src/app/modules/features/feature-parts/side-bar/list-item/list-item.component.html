@@ -1,5 +1,5 @@
 <section>
-  <mat-list-item   (click)="SubMenuClicked(item)"  [routerLink]="(item.route||'' ) |absolutePath"   [routerLinkActive]="item.route?'is_active':''" [disabled]="!item.isActive"  >
+  <mat-list-item   (click)="SubMenuClicked(item)"  [ngClass]="{'is_active':parentChecker(item)}" [routerLink]="(item.route||'' ) |absolutePath"   [routerLinkActive]="item.route?'is_active':''" [disabled]="!item.isActive"  >
     <div class="item_text"  >
       <mat-icon class="item_icon">{{ item.icon }}</mat-icon>
       <ng-container  *ngIf="item.title!='Logout';else logOut"> 

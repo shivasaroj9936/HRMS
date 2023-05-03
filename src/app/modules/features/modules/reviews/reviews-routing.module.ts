@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { MY_PERFORMANCE, REVIEWS } from "src/app/constants/routes";
+import { MY_PERFORMANCE} from "src/app/constants/routes";
 import { ReviewsComponent } from "./reviews.component";
 
 const routes: Routes = [

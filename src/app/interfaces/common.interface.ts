@@ -117,7 +117,7 @@ export const sideNavList: SideNavItem[] = [
       {
         subTitle: "My Performance",
         subicon: "horizontal_rule",
-        route: "REVIEWS",
+        route: "MY_PERFORMANCE",
         // link: "https://hrms.easysourceindia.com/Payroll/",
       },
     ], isActive: true
