@@ -6,10 +6,41 @@
 
 section {
 
+
+  @-webkit-keyframes sidenavDropdownShow {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-0.5rem);
+        transform: translateY(-0.5rem)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes sidenavDropdownShow {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-0.5rem);
+        transform: translateY(-0.5rem)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+
+
   .sub {
     padding-left: 20px;
     transition: transform 300ms ease !important;
     transform-origin: top;
+    -webkit-animation: sidenavDropdownShow .2s ease-in-out;
+    animation: sidenavDropdownShow .2s ease-in-out
   }
 
   // .child_active{

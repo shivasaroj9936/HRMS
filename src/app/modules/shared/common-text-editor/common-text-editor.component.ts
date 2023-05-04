@@ -10,8 +10,7 @@ export class CommonTextEditorComponent implements OnInit, AfterContentChecked {
   @Input() inputFormControl!: FormControl;
   @Input() label!: string;
   @Input() labelStyle!: string;
-  // tinymce: any;
-  @ViewChild("tinymce") tinymce!: any;
+  // @ViewChild("tinymce") tinymce!: any;
 
   constructor() { }
 
@@ -22,10 +21,6 @@ export class CommonTextEditorComponent implements OnInit, AfterContentChecked {
   }
   ngAfterContentChecked() {
 
-    // console.log(this.tinymce);
-    // this.tinymce.init={    selector: '#tinymce',
-    //   branding: false
-    // };
   }
 
 

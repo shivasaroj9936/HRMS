@@ -1,6 +1,6 @@
 import { DatePipe } from "@angular/common";
-import { Component, ElementRef, OnInit } from "@angular/core";
-import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { FormBuilder, FormControl, FormGroup, FormGroupDirective } from "@angular/forms";
 import { MatTableDataSource } from "@angular/material/table";
 import { fadeInUpAnimation } from "src/animations/fade-in-up.animation";
 import { MY_DSR_TABLE_HEADING } from "src/app/constants/table-headers";
@@ -8,6 +8,7 @@ import { FormService } from "src/app/services/form-service/form.service";
 import { NotificationService } from "src/app/services/notification-service/notification.service";
 import { UtilityServiceService } from "src/app/services/utility-service/utility-service.service";
 import { USERDATA } from "../../dashboard/interfaces/interfaces";
+import { trim } from "src/app/constants/helperMethods";
 
 @Component({
   selector: "app-my-dsr",
@@ -35,6 +36,8 @@ export class MyDsrComponent implements OnInit {
     "Greater than 10",
   ];
   userData!: USERDATA;
+  // @ViewChild(FormGroupDirective) formGroupDirective!: FormGroupDirective;
+
   constructor(
     private formBuilder: FormBuilder,
     private _formService: FormService,
@@ -121,8 +124,8 @@ export class MyDsrComponent implements OnInit {
         : dsr_date >= start_date;
     });
     // || (finalApprovalStatus!='all'?finalApprovalStatus==item.action[0].btnText:true)
-    console.log(filteredData);
-    this.Table_DATA=filteredData;
+    // console.log(filteredData);
+    // this.Table_DATA=filteredData;
 
     this.dataSource = new MatTableDataSource<any>(filteredData);
     this.dataSource._updateChangeSubscription();
@@ -132,12 +135,13 @@ export class MyDsrComponent implements OnInit {
   }
 
   onSubmit() {
+    this.checkValidation();
+    this.notificationService.checkControls(this.dsrForm)
+
     if (this.dsrForm.valid) {
       this.dsrForm.value["s_no"] = this.Table_DATA.length + 1;
       this.dsrForm.value["date"] = this.datePipe.transform(
-        this.getControl("date").value,
-        "yyyy-MM-dd"
-      );
+        this.getControl("date").value, "yyyy-MM-dd" );
       this.dsrForm.value["employment_type"] = this.userData.designation;
       this.dsrForm.value["emp_name"] = this.userData.name;
       // this.dsrForm.value['project_name'] = 'Project Trainee Angular';
@@ -159,10 +163,14 @@ export class MyDsrComponent implements OnInit {
       this.dataSource._updateChangeSubscription();
 
       this.notificationService.showSuccess("DSR Added", "");
+      this.toggleForm( )
       this.dsrForm.reset();
       this.noWork = false;
     } else {
-      this.notificationService.showError("All fields Requierd", "");
+      // this.notificationService.showError("All fields Requierd", "");
     }
+  }
+  checkValidation() {
+    this.dsrForm.patchValue(trim(this.dsrForm.value));
   }
 }

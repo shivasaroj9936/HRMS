@@ -31,10 +31,10 @@ export class NotificationService {
 
     keys.every((key) => {
       const error = controls[key].hasError("required");
-      console.log(error);
+      // console.log(error);
 
       if (error) {
-        console.log(controls[key].errors);
+        // console.log(controls[key].errors);
         this.showError(`${key} is requierd`, "");
         return false;
       } else return true;

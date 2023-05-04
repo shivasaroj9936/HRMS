@@ -1,7 +1,6 @@
 <div class="formfield 6">
   <label class="label" [ngClass]="labelStyle">{{ label | titlecase }}</label>
   <editor
-    #tinymce
   
     [init]="{
       height: 300,
@@ -37,4 +36,6 @@
     }"
     [formControl]="inputFormControl"
   ></editor>
+  <!-- <span>{{inputFormControl.value?.trim()?.length==0 && inputFormControl.touched?('Please provide '+label |titlecase):''}}</span>
+  <span>{{inputFormControl.value|json}}</span> -->
 </div>

@@ -65,7 +65,6 @@ export class BasicInformationComponent implements OnInit {
     this.notificationService.checkControls(this.basicInformationForm)
     if (this.basicInformationForm.valid) {
       this.notificationService.showSuccess("Basic Information Saved", "");
-      // console.log(this.basicInformationForm);
       this.formGroupDirective.resetForm();
     } else {
       // this.notificationService.showError("Please Provide All Information", "");
