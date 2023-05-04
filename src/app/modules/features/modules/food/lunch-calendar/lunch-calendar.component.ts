@@ -13,7 +13,7 @@ export class LunchCalendarComponent implements OnInit {
   @Output() calendarData = new EventEmitter<any>();
 
   ngOnInit(): void {
-    console.log(this.myCalendar,"ALWAYS");
+    // console.log(this.myCalendar,"ALWAYS");
     
   }
 
@@ -88,7 +88,7 @@ export class LunchCalendarComponent implements OnInit {
   }
 
   cancelCoupon(i:number,day:any){
-    console.log(i,'----',day);
+    // console.log(i,'----',day);
     this.myCalendar[i].map((item:any)=>{
       if(item.date == day.date){
         item.couponPurchased = false;
@@ -102,10 +102,10 @@ export class LunchCalendarComponent implements OnInit {
     this.myCalendar.map((week:any)=>{
       week.map((day:any)=>{
         if(day.hasOwnProperty('booked')){
-          console.log(day,"DAY");
+          // console.log(day,"DAY");
           
           if(data.checked == true){
-            console.log('9090()()(');
+            // console.log('9090()()(');
             
             day.booked = true
           }else{

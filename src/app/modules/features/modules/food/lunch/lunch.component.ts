@@ -31,15 +31,15 @@ export class LunchComponent implements OnInit {
   this.currentYear=date.getFullYear()
   this.currentMonth=date.getMonth();
    if(this._foodCalendarService.myCalendar.length == 0){
-     console.log("new Formation");
+    //  console.log("new Formation");
      this._foodCalendarService.createCalendarData()
      this.myCalendar = this._foodCalendarService.myCalendar
    }else{
      this.myCalendar = this._foodCalendarService.myCalendar
-     console.log('usingOld');
+    //  console.log('usingOld');
    }
    
-   console.log(this._foodCalendarService.myCalendar,"9999");
+  //  console.log(this._foodCalendarService.myCalendar,"9999");
  }
 
  purchaseCoupons(){
@@ -47,7 +47,7 @@ export class LunchComponent implements OnInit {
  }
  updateCalendarData(data:any){
 
-   console.log(data,"JUMPKAR2");
+  //  console.log(data,"JUMPKAR2");
    this.myCalendar = data;
    this._foodCalendarService.myCalendar = data
    

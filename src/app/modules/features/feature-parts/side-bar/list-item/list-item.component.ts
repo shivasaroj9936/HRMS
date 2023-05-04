@@ -22,7 +22,6 @@ export class ListItemComponent implements OnInit {
   @Input() item!: SideNavItem;
   @Output() sideItemClick = new EventEmitter<any>()
   sideNavList: SideNavItem[] = sideNavList;
-
   constructor(
     public dialog: MatDialog,
     private _router: Router,
@@ -31,7 +30,6 @@ export class ListItemComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
 
   }
   logoutConfirmation() {
@@ -54,7 +52,7 @@ export class ListItemComponent implements OnInit {
 
     let activeUrl = this._router.url.slice(7).split('/').pop();
     let returnValue = false;
-
+  
     SideNavItem.options?.some((subMenuItem) => {
       let tocheckUrl = this.absRoutePipe.transform(subMenuItem?.route);
       if (typeof tocheckUrl == 'string') {
