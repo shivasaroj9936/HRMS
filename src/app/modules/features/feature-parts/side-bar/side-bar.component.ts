@@ -42,6 +42,10 @@ export class SideBarComponent implements OnInit, AfterViewInit {
       });
       
       this.sideNavList[itemIndex].subMenuClicked=!this.sideNavList[itemIndex].subMenuClicked;
+      
+    }else{
+      console.log('vvv');
+      this.stateChange.emit(true);
     }
     
   }

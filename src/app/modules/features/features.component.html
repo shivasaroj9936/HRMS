@@ -4,7 +4,7 @@
   </header>
   <mat-sidenav-container autosize>
     <mat-sidenav #sidenav="matSidenav" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
-      <app-side-bar [isShowing]="isShowing" [isExpanded]="isExpanded"></app-side-bar>
+      <app-side-bar [isShowing]="isShowing" [isExpanded]="isExpanded" (stateChange)="stateChange($event)" ></app-side-bar>
     </mat-sidenav>
     <mat-sidenav-content>
       <main>

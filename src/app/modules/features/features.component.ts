@@ -56,7 +56,11 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
       this.isShowing = false;
     }
   }
-  stateChange(value: any) { }
+  stateChange(value: any) {
+    if(value&&this.sidenav.mode=='over'){
+      this.sidenav?.close();
+    }
+   }
   covidHelp(){
     this.dialog.open(CovidHelpDeskComponent,{
 
