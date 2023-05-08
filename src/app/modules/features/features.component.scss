@@ -7,7 +7,7 @@
 section {
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 
     header {
         padding: 8px 16px;
@@ -25,7 +25,7 @@ section {
         justify-content: space-between;
 
         main {
-            padding: 1.45rem;
+            padding: 1.2rem;
 
 
         }
@@ -60,39 +60,16 @@ section {
 :host::ng-deep {
 
     .mat-drawer-inner-container {
-        overflow: hidden;
+        overflow-y: scroll;
 
         &:hover {
             overflow-y: overlay !important;
-            overflow-y: scroll ;
+            overflow-y: scroll !important;
 
         }
+    
 
     }
-
-
-
-    // .mat-drawer-inner-container {
-    
-    //     &::-webkit-scrollbar {
-    //         background-color: transparent;
-    //         width: 4px;
-    //       }
-    //       &::-webkit-scrollbar-thumb {
-    //         background-color: transparent;
-    //       }
-
-    //     &:hover {
-    //         overflow-y: overlay !important;
-    //     }
-
-    // }
-
-
-
-
-
-
 
     @media only screen and (max-width: 999px) {
         .mat-drawer {
@@ -100,10 +77,10 @@ section {
             position: fixed !important;
             top: 0;
             bottom: 0;
-            z-index: 3;
+            // z-index: 1;
             outline: 0;
             box-sizing: border-box;
-            overflow-y: auto;
+            // overflow-y: auto;
             transform: translate3d(-100%, 0, 0);
         }
 
@@ -134,4 +111,5 @@ section {
         }
 
     }
+    
 }
