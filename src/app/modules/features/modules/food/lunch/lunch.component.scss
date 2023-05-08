@@ -21,7 +21,9 @@
 
             .amount {
                 @include flex(center, space-between);
-
+                h2{
+                    font-size: 1.2rem;
+                }
                 p {
                     color: blue;
                     font-size: 0.89rem;
@@ -39,8 +41,8 @@
                 }
 
                 button {
-                    height: 2rem;
-                    width: 7rem;
+                    height: 32px;
+                    width: 112px;
                     cursor: pointer;
                     border: 1px solid gray;
                     background-color: #fff;
@@ -83,7 +85,9 @@
 
         .table-heading {
             @include flex(center, space-between);
-
+            h2{
+                font-size: 1.5rem;
+            }
             .legend {
                 @include flex(center, flex-start);
                 gap: 1rem;

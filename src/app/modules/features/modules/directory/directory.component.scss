@@ -46,7 +46,7 @@ section {
         }
 
         .icon {
-          font-size: 1.5rem;
+          font-size: 24px;
         }
       }
     }
@@ -59,7 +59,7 @@ section {
     gap: 2rem;
 
     .emp_details_card {
-      padding: 30px 0 40px;
+      padding: 1.875rem 0 2.5rem;
       background-color: #f7f5ec;
       display: flex;
       justify-content: center;
@@ -93,11 +93,11 @@ section {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        font-size: 14px;
+        font-size: 0.875rem;
 
         .name {
           margin: 0 0 5px;
-          font-size: 25px;
+          font-size: 1.563rem;
         }
 
         .designation {

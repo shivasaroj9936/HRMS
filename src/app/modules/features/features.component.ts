@@ -14,9 +14,9 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
   @ViewChild("sidenav") sidenav!: MatSidenav;
   isShowing = true;
   // showSubmenu: boolean = false;
-  isExpanded:boolean = true;
-  smallWindow:boolean = false;
-  constructor(private observer: BreakpointObserver,private dialog:MatDialog) { }
+  isExpanded: boolean = true;
+  smallWindow: boolean = false;
+  constructor(private observer: BreakpointObserver, private dialog: MatDialog) { }
 
   ngOnInit(): void { }
   ngAfterViewInit(): void {
@@ -57,12 +57,12 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
     }
   }
   stateChange(value: any) {
-    if(value&&this.sidenav.mode=='over'){
+    if (value && this.sidenav.mode == 'over') {
       this.sidenav?.close();
     }
-   }
-  covidHelp(){
-    this.dialog.open(CovidHelpDeskComponent,{
+  }
+  covidHelp() {
+    this.dialog.open(CovidHelpDeskComponent, {
 
     })
 

@@ -2,9 +2,9 @@
     <div class="add_leave">
         <div class="header">
             <h3 class="heading">Create New Ticket</h3>
-            <button class="btn_add_new" (click)="toggle=!toggle">+Add New</button>
+            <button class="btn_add_new" (click)="toggleForm()">+Add New</button>
         </div>
-            <form *ngIf="toggle" [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+            <form class="form" [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
 
             <div class="left">
                 <div class="row">
@@ -25,7 +25,7 @@
             </div>
             <div class="actions">
                 <button class="btn_primary save" mat-raised-button type="submit">Save</button>
-                <button class="btn_cancel cancel" mat-raised-button type="reset" (click)="toggle=false" > Cancel</button>
+                <button class="btn_cancel cancel" mat-raised-button type="reset" (click)="toggleForm()" > Cancel</button>
 
             </div>
         </form>

@@ -6,7 +6,7 @@
 
 section {
   .profile_wraper {
-    margin: 0px 12px;
+    // margin: 0px 12px;
     padding: 20px 20px;
     background-color: var(--white-background-color);
     border-radius: 8px;
@@ -62,7 +62,7 @@ section {
         gap: 10px;
         align-items: center;
         width: 100%;
-        font-size: 15px;
+        font-size: 0.938rem;
         color: var(--profile-link-color);
         border: 1px solid #f1f1f2;
         padding: 0.625rem 0.9375rem;

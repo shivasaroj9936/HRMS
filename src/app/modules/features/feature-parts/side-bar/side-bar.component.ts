@@ -31,7 +31,10 @@ export class SideBarComponent implements OnInit, AfterViewInit {
 
 
   sideItemClicked(event:any){
-
+    if(!event.options){
+      this.stateChange.emit(true);
+    }
+    
     if(event.hasOwnProperty('title')){
       const itemIndex = this.sideNavList.findIndex(item=>item.title===event.title);
 
@@ -44,7 +47,6 @@ export class SideBarComponent implements OnInit, AfterViewInit {
       this.sideNavList[itemIndex].subMenuClicked=!this.sideNavList[itemIndex].subMenuClicked;
       
     }else{
-      console.log('vvv');
       this.stateChange.emit(true);
     }
     

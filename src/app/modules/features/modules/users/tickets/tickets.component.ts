@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { TICKET_TABLE_HEADING } from 'src/app/constants/table-headers';
@@ -14,7 +14,6 @@ import { NotificationService } from 'src/app/services/notification-service/notif
 
 })
 export class TicketsComponent implements OnInit {
-  toggle = false;
   ticketCategory: string[] = ['IT', 'Admin']
 
   ticketForm!: FormGroup;
@@ -22,7 +21,9 @@ export class TicketsComponent implements OnInit {
   columns = TICKET_TABLE_HEADING;
   Table_DATA: any[] = [ ]
   constructor(private formBuilder: FormBuilder, private _formService: FormService, private notificationService: NotificationService,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private _elementRef: ElementRef
+
 
   ) {
     this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
@@ -60,13 +61,20 @@ export class TicketsComponent implements OnInit {
       this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
       this.notificationService.showSuccess('Ticket', 'Added');
       // console.log(this.ticketForm.value);
-      this.toggle = false;
       this.ticketForm.reset();
     }else{
       this.notificationService.showError('All fields', 'Requierd');
 
 
     }
+  }
+  toggleForm() {
+    let content = this._elementRef.nativeElement.querySelector('.form');
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = 2*content.scrollHeight + "px";
+    } 
   }
 
 }

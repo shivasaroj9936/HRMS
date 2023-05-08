@@ -1,7 +1,7 @@
 @import "src/scss/colors.scss";
 @import "src/scss/commonscss.scss";
 
-$font-size: 12px;
+$font-size: 0.75rem;
 $fontweight: 500;
 
 * {
@@ -58,7 +58,7 @@ section {
         }
 
         p {
-          font-size: 12px;
+          font-size: 0.75rem;
           color: #96a5b8;
           // font-weight: 500;
           line-height: 1.9;

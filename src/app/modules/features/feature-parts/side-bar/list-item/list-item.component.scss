@@ -98,7 +98,7 @@ section {
     .sidenav_text {
       color: var(--side-nav-text-color);
       font-family: Roboto, "Helvetica Neue", sans-serif;
-      font-size: 15px;
+      font-size: 0.938rem;
       font-weight: 500;
       margin: 0;
       display: flex;
@@ -146,7 +146,7 @@ section {
     transition: transform 300ms ease !important;
     transform: scaleY(0);
     transform-origin: top;
-    padding-left: 30px;
+    padding-left: 1.875rem;
   }
 
   .submenu.expanded {
