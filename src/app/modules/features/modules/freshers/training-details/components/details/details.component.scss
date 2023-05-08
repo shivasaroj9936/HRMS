@@ -1,10 +1,13 @@
 @import 'src/scss/table.scss';
+
 section {
     .row {
         padding: 0.875rem 0.5rem;
+
         .header {
             border-bottom: 1px solid rgba(150, 165, 184, 0.5);
             padding: 0 0 15px 0;
+
             .heading {
                 font-size: 1.125rem;
                 color: #231E1E;
@@ -14,9 +17,10 @@ section {
             }
 
         }
-        .inside_row  {
+
+        .inside_row {
             margin: 0.5rem;
-    
+
             .form_data {
                 display: flex;
                 align-items: center;
@@ -25,39 +29,63 @@ section {
                 line-height: 1.5;
                 margin: 0 10px 0 0;
                 padding: 6px 0;
-    
+
                 .text_primary {
                     color: #199CFF;
                 }
-    
+
                 p {
                     margin: 0;
                     color: #000;
                 }
-    
+
                 label {
-                    min-width: 160px;
+                    min-width: 10rem;
                 }
             }
-            .data{
+
+            .data {
                 display: grid;
                 grid-template-columns: auto auto;
             }
+
             // .title {
             //     display: flex;
             //     // justify-content: space-between;
             // }
-    
+
         }
-        .description{
+
+        .description {
             background-color: #F4F8FF;
-            padding: 24px;
+            padding: 1.5rem;
             border-radius: 4px;
-            margin-top: 15px;
+            margin-top: 0.938rem;
         }
-            ::ng-deep {
-                .table {
-                    border: none;
-        }}
+
+        ::ng-deep {
+            .table {
+                border: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section{
+        .row{
+            .inside_row {
+    
+                .data {
+                    grid-template-columns: auto;
+                }
+    
+                // .title {
+                //     display: flex;
+                //     // justify-content: space-between;
+                // }
+    
+            }
+        }
     }
 }

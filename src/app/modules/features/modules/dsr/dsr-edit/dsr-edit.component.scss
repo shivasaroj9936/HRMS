@@ -1,25 +1,62 @@
 @import 'src/scss/dashbord-card-heading.scss';
 @import 'src/scss/buttons.scss';
-section{
+
+section {
     background-color: #fff;
     border-radius: 5px;
     padding: 1rem;
-    .header{
-        
-        .heading{
+
+    .header {
+
+        .heading {
             border-bottom: 1px solid #f3f7fc;
             color: var(--header-text-color);
         }
     }
-    form{
+
+    form {
         display: grid;
         grid-template-columns: 50% auto;
         gap: 2rem;
-        .second{
-           display: grid;
-        grid-template-columns: auto auto;
+
+        .second {
+            display: grid;
+            grid-template-columns: auto auto;
             gap: 2rem;
         }
     }
 
+}
+
+@media only screen and (max-width: 1100px) {
+    section {
+      
+    
+        form {
+            gap: 1rem;
+          
+            grid-template-columns:auto;
+    
+            .second {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 0rem;
+            }
+        }
+    
+    }
+}
+@media only screen and (max-width: 600px) {
+    section {
+      
+    
+        form {
+          
+            .second {
+                
+                grid-template-columns: auto;
+            }
+        }
+    
+    }
 }

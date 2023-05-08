@@ -11,15 +11,15 @@
 
 
 .newFamily_leftRs {
-  top: -64px;
-  right: 20px;
+  top: -4rem;
+  right: 1.25rem;
   position: absolute;
   @include button_style;
 }
 
 .newFamily_rightRs {
-  right: -20px;
-  top: -64px;
+  right: -1.25rem;
+  top: -4rem;
   position: absolute;
   @include button_style;
 }
@@ -27,8 +27,8 @@
 
 .gallery_leftRs {
   position: absolute;
-  top: -46px;
-  right: 60px;
+  top: -2.875rem;
+  right: 3.75rem;
   bottom: 0;
   @include button_style;
 }
@@ -37,8 +37,8 @@
 
 .gallery_rightRs {
   position: absolute;
-  top: -46px;
-  right: 20px;
+  top: -2.875rem;
+  right: 1.25rem;
   @include button_style;
 
 }

@@ -46,7 +46,7 @@ section {
   }
 
   .profile_part_container {
- 
+    overflow: hidden;
     display: grid;
     grid-template-columns: 20% 78%;
     gap: 1.875rem;
