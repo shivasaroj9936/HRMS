@@ -72,7 +72,8 @@ export class CommonTableComponent implements OnInit ,OnChanges{
   }
 
   action(item:any,index:any){
-
+    console.log(item);
+    
     this.newItemEvent.emit({item,index})
 
   }

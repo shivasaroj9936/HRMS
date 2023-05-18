@@ -9,6 +9,9 @@ import { NotificationService } from "src/app/services/notification-service/notif
 import { UtilityServiceService } from "src/app/services/utility-service/utility-service.service";
 import { USERDATA } from "../../dashboard/interfaces/interfaces";
 import { trim } from "src/app/constants/helperMethods";
+import { Store } from "@ngrx/store";
+import { getDSR } from "src/app/state/data.selector";
+import { addNewDSR } from "src/app/state/data.action";
 
 @Component({
   selector: "app-my-dsr",
@@ -24,7 +27,7 @@ export class MyDsrComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
   columns = MY_DSR_TABLE_HEADING;
   Table_DATA: any[] = [];
-
+  testDsrDataFromStore: any[] = [];
   submissionStatus: string[] = ["All", "Submitted", "Due"];
   projects: string[] = ["All", "Trainee Project Angular"];
   finalApprovalStatus: string[] = ["All", "Pending", "Approved", "Rejected"];
@@ -44,14 +47,22 @@ export class MyDsrComponent implements OnInit {
     private notificationService: NotificationService,
     private datePipe: DatePipe,
     private utilityService: UtilityServiceService,
-    private _elementRef:ElementRef
-  ) {}
+    private _elementRef: ElementRef,
+    // private store:Store<{counter:{counter:number}}>
+    private store: Store<{ Data: any }>
+
+
+  ) { }
 
   ngOnInit(): void {
     this.createForm();
     this.userData = this.utilityService.userData;
-    this.Table_DATA = this.utilityService.dsrList;
-    this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+    this.Table_DATA = [];
+    this.store.select(getDSR).subscribe((data) => {
+      this.Table_DATA=data;
+      this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
+      console.log(data);
+    })
   }
 
   createForm() {
@@ -59,7 +70,7 @@ export class MyDsrComponent implements OnInit {
       project: this._formService.getControl("cv"),
       date: this._formService.getControl("cv"),
       logged_hr: this._formService.getControl("cv"),
-      description: this._formService.getControl("dsr"),
+      dsr: this._formService.getControl("dsr"),
     });
 
     this.filterForm = this.formBuilder.group({
@@ -74,17 +85,17 @@ export class MyDsrComponent implements OnInit {
 
   toggleForm() {
     let content = this._elementRef.nativeElement.querySelector('.form');
-    if (content.style.maxHeight){
+    if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = 2*content.scrollHeight + "px";
-    } 
+      content.style.maxHeight = 2 * content.scrollHeight + "px";
+    }
   }
   onSelect() {
     this.noWork = !this.noWork;
     if (this.noWork) {
       this.getControl("logged_hr").setValue("0:00");
-      this.getControl("description").setValue(" No Work Done Today");
+      this.getControl("dsr").setValue(" No Work Done Today");
       this.getControl("logged_hr").disabled;
     } else {
       this.getControl("logged_hr").reset();
@@ -120,8 +131,8 @@ export class MyDsrComponent implements OnInit {
       return start_date && end_date
         ? dsr_date >= start_date && dsr_date <= end_date
         : end_date
-        ? dsr_date <= end_date
-        : dsr_date >= start_date;
+          ? dsr_date <= end_date
+          : dsr_date >= start_date;
     });
     // || (finalApprovalStatus!='all'?finalApprovalStatus==item.action[0].btnText:true)
     // console.log(filteredData);
@@ -140,8 +151,10 @@ export class MyDsrComponent implements OnInit {
 
     if (this.dsrForm.valid) {
       this.dsrForm.value["s_no"] = this.Table_DATA.length + 1;
+      this.dsrForm.value["id"] = this.Table_DATA.length + 1;
+
       this.dsrForm.value["date"] = this.datePipe.transform(
-        this.getControl("date").value, "yyyy-MM-dd" );
+        this.getControl("date").value, "yyyy-MM-dd");
       this.dsrForm.value["employment_type"] = this.userData.designation;
       this.dsrForm.value["emp_name"] = this.userData.name;
       // this.dsrForm.value['project_name'] = 'Project Trainee Angular';
@@ -156,14 +169,16 @@ export class MyDsrComponent implements OnInit {
           routeID: 121,
         },
       ];
+
+      this.store.dispatch(addNewDSR(this.dsrForm.value))
       // this.utilityService.dsrList.push(this.dsrForm.value);
 
-      this.dataSource.data.push(this.dsrForm.value);
+      // this.dataSource.data.push(this.dsrForm.value);
 
-      this.dataSource._updateChangeSubscription();
+      // this.dataSource._updateChangeSubscription();
 
       this.notificationService.showSuccess("DSR Added", "");
-      this.toggleForm( )
+      this.toggleForm()
       this.dsrForm.reset();
       this.noWork = false;
     } else {

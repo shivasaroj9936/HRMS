@@ -151,7 +151,7 @@ export const MY_DSR_TABLE_HEADING = [
 export const MY_DSR_DETAILS_TABLE_HEADING = [
     { heading: "Sr. No.", key: 's_no', isSortable: '', type: 'text', },
     { heading: "Project Name", key: 'project_name', isSortable: '', type: 'text', link: 'client-details' },
-    { heading: "D s r", key: 'dsr', isSortable: '', type: 'html', link: 'client-details' },
+    { heading: "D S R", key: 'dsr', isSortable: '', type: 'html', link: 'client-details' },
     { heading: "Status", key: 'status', isSortable: '', type: 'text', link: 'client-details' },
     { heading: "P M Approval", key: 'pm_approval', isSortable: '', type: 'text', link: 'client-details' },
     { heading: "A M Approval", key: 'am_approval', isSortable: '', type: 'text', link: 'client-details' },

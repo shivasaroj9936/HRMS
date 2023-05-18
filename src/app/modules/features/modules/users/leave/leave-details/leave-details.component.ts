@@ -35,7 +35,7 @@ export class LeaveDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-     this.index =this.activatedRouter.snapshot.params.id;
+     this.index =this.activatedRouter.snapshot.params.id-1;
     this.Table_DATA=this.utilityService.leaveList[this.index];
     this.compareTime=this.today.getTime() < new Date(this.Table_DATA.end_date).getTime() ;
   }
