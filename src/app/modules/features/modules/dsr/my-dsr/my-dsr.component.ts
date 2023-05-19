@@ -155,10 +155,19 @@ export class MyDsrComponent implements OnInit {
 
       this.dsrForm.value["date"] = this.datePipe.transform(
         this.getControl("date").value, "yyyy-MM-dd");
-      this.dsrForm.value["employment_type"] = this.userData.designation;
+      this.dsrForm.value["employment_type"] = this.userData.emp_type;
       this.dsrForm.value["emp_name"] = this.userData.name;
-      // this.dsrForm.value['project_name'] = 'Project Trainee Angular';
+      this.dsrForm.value['project_name'] = 'Project Trainee Angular';
       this.dsrForm.value["email"] = this.userData.email;
+      this.dsrForm.value["rm_approval"] = 'N/A';
+      this.dsrForm.value["am_approval"] = 'N/A';
+      this.dsrForm.value["pm_approval"] = 'N/A';
+      this.dsrForm.value["final_approval"] = 'pending';
+
+      this.dsrForm.value["status"] = 'submitted';
+
+
+
       this.dsrForm.value["action"] = [
         {
           icon: "",

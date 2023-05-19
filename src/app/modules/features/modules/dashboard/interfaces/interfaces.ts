@@ -15,6 +15,7 @@ export interface USERDATA{
   last_login?: string,
   designation?:string,
   technology?:string,
+  emp_type?:string,
   img?:string
 }
 
