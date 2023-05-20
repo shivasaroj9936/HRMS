@@ -59,7 +59,7 @@ export class MyDsrComponent implements OnInit {
     this.userData = this.utilityService.userData;
     this.Table_DATA = [];
     this.store.select(getDSR).subscribe((data) => {
-      this.Table_DATA=data;
+      this.Table_DATA = data;
       this.dataSource = new MatTableDataSource<any>(this.Table_DATA);
       console.log(data);
     })
@@ -163,11 +163,7 @@ export class MyDsrComponent implements OnInit {
       this.dsrForm.value["am_approval"] = 'N/A';
       this.dsrForm.value["pm_approval"] = 'N/A';
       this.dsrForm.value["final_approval"] = 'pending';
-
       this.dsrForm.value["status"] = 'submitted';
-
-
-
       this.dsrForm.value["action"] = [
         {
           icon: "",
